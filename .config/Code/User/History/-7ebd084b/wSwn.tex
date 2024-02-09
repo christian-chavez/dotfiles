@@ -1,0 +1,30 @@
+\AddToHook{ package/hyperref/before }
+{
+    \PassOptionsToPackage{ implicit = true }{ hyperref }
+}
+
+\documentclass[compress,12pt]{beamer}
+\setbeamerfont{date}{size=\tiny}
+
+
+\input{preamble}
+
+% ----------------------------------------
+\title[Proposal]{
+    {\normalsize The new government}
+    Math Club Proposal
+    }
+\titlegraphic{
+    \includegraphics[scale=0.20]{images/logoECMC.png}
+}
+\institute[]{Yachay Tech University}
+\author[Christian \& Luis]{Christian Chávez \& Luis Arteaga}
+\date{\today}
+% ----------------------------------------
+ 
+
+\begin{document}
+
+    \input{sources/avance01}
+
+\end{document}

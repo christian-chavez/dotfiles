@@ -1,0 +1,609 @@
+ReadyRc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  sources/chap03.tex
+Category 'changed_user':
+  sources/chap03.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg)
+
+Package hyperref Warning: Draft mode on.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap03.tex
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| |
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 5--6
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-|
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd)
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 41--42
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model|
+[1]) [2] (_temp/thesis.aux) )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (2 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: Nothing to do for '/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex'.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  /mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+  thesis.tex
+Category 'changed_user':
+  /mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+  thesis.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg)
+
+Package hyperref Warning: Draft mode on.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1]
+
+LaTeX Warning: Reference `def.category' on page 2 undefined on input line 71.
+
+[2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+
+LaTeX Warning: Reference `def.category' on page 4 undefined on input line 149.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| |
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 5--6
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-|
+
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 41--42
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model|
+[11]) [12] (_temp/thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  _temp/thesis.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg)
+
+Package hyperref Warning: Draft mode on.
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1] [2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| |
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 5--6
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-|
+
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 41--42
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model|
+[11]) [12] (_temp/thesis.aux) )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  /mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+  thesis.tex
+Category 'changed_user':
+  /mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+  thesis.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg) (_temp/thesis.out) (_temp/thesis.out) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1] [2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| 
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 5--6
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-
+
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 41--42
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model
+[11]) [12] (_temp/thesis.aux)
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: References changed.
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  _temp/thesis.out
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg) (_temp/thesis.out) (_temp/thesis.out) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1] [2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| 
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 5--6
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-
+
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 41--42
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model
+[11]) [12] (_temp/thesis.aux) )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  sources/chap03.tex
+Category 'changed_user':
+  sources/chap03.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg) (_temp/thesis.out) (_temp/thesis.out) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1] [2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| 
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 7--8
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-
+
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 43--44
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model
+[11]) [12] (_temp/thesis.aux) )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: All targets () are up-to-date
+
+Rc files read:
+  .latexmkrc
+Latexmk: This is Latexmk, John Collins, 10 Jan. 2024. Version 4.82a.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  sources/chap03.tex
+Category 'changed_user':
+  sources/chap03.tex
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'xelatex  -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error -recorder -output-directory="_temp"  "/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex"'
+------------
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex)
+ \write18 enabled.
+entering extended mode
+(/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/thesis.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+(/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memoir.cls
+Document Class: memoir 2023/08/21 v3.8.1 configurable book, report, article document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/mem11.clo) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/dcolumn.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/delarray.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)))) (/usr/local/texlive/2023/texmf-dist/tex/latex/textcase/textcase.sty)) (./preamble.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd)) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/xebabel.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf)) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def))) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/lmodern.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/csquotes/csquotes.cfg)) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/titlesec/titlesec.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/calc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/ragged2e/ragged2e.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption-memoir.sto))) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thmtools.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-patch.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/parseargs.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-kv.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-autoref.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/aliasctr.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-listof.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-restate.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/thmtools/thm-amsthm.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/marginnote/marginnote.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-abspage.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/zref/zref-base.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/mdframed/md-frame-0.mdf)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def) (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty))) (/usr/local/texlive/2023/texmf-dist/tex/latex/memoir/memhfixc.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/logreq/logreq.def)) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-dm.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-unicode.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-compat.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.def) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/bbx/standard.bbx)) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/biblatex.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty))) (./frontmatter.tex) (_temp/thesis.aux) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg) (_temp/thesis.out) (_temp/thesis.out) (/usr/local/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx) (_temp/thesis.bbl) (./sources/chap02.tex (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omllmm.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omslmsy.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/omxlmex.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1] [2] (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/Udsrom.fd) [3]
+
+LaTeX Warning: Marginpar on page 4 moved by 85.45395pt.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved by 33.7317pt.
+
+[5]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 271.
+See the caption package documentation for explanation.
+
+Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+
+Underfull \hbox (badness 2707) in paragraph at lines 271--271
+\TU/lmr/m/n/9 gf=g∘f (commuting triangles) and
+[6] [7] [8]) (./sources/chap03.tex [9] [10]
+Overfull \hbox (5.04344pt too wide) in paragraph at lines 1--1
+|\TU/NimbusSanL.ttf(0)/m/n/24.88 Geometric realization of a category| 
+
+Overfull \hbox (6.50307pt too wide) in paragraph at lines 3--5
+\TU/lmr/m/n/10.95 the intuition https://ncatlab.org/nlab/show/geometric+realization What
+
+Overfull \hbox (15.64629pt too wide) in paragraph at lines 8--9
+\TU/lmr/m/n/10.95 https://math.stackexchange.com/questions/2371516/geometric-realization-
+[11]
+Overfull \hbox (2.32584pt too wide) in paragraph at lines 44--45
+[]\TU/lmr/m/n/10.95 [ritcher] Simplicial sets are particularly important because they model
+) [12] (_temp/thesis.aux) )
+(see the transcript file for additional information)
+Output written on _temp/thesis.pdf (12 pages).
+SyncTeX written on _temp/thesis.synctex.gz.
+Transcript written on _temp/thesis.log.
+Latexmk: ====Undefined refs and citations with line #s in .tex file:
+  Missing character: There is no ∘ (U+2218) in font [lmroman9-regular]:mapping=tex-text;!
+Latexmk: Getting log file '_temp/thesis.log'
+Latexmk: Examining '_temp/thesis.fls'
+Latexmk: Examining '_temp/thesis.log'
+Latexmk: Found input bbl file '_temp/thesis.bbl'
+Latexmk: Log file says output to '_temp/thesis.pdf'
+Latexmk: Bibliography file(s) from .bcf file:
+  bibliography.bib
+Latexmk: Summary of warnings from last run of *latex:
+  =====Latex reported missing or unavailable character(s).
+=====See log file for details.
+Latexmk: All targets () are up-to-date
+

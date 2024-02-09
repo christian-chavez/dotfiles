@@ -1,0 +1,469 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noindentfirst,es-nodecimaldot,es-tabla]{babel}
+\usepackage{csquotes}
+\usepackage{geometry}
+\usepackage{pdflscape} 
+\usepackage[
+    singlelinecheck=false % <-- important
+]{caption}
+\usepackage{tabularx}
+\newcolumntype{s}{>{\hsize=.35\hsize}X}
+\newcolumntype{n}{>{\hsize=.7\hsize}X}
+\newcolumntype{B}{>{\hsize=1.45\hsize}X}
+\usepackage{ltablex} 
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[]{xcolor}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarksnumbered,
+    hidelinks,
+    colorlinks=true,
+    allcolors=blue,
+}
+\captionsetup{
+    font={footnotesize}, 
+    labelfont={bf},
+}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\usepackage[style=alphabetic]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+% 2024-01-31 Wed 18:48:48 De John --------------
+\usepackage{amsmath, amssymb, amsfonts}
+% -------------------------
+
+
+
+\title{
+    % Introducción al Análisis Topologico de Datos
+    Examinando la Desigualdad en Ecuador: una aplicación del análisis topológico de datos
+}
+\author{Christian Chávez}
+\date{\today}
+
+\begin{document}\maketitle
+
+\begin{abstract}
+    
+\end{abstract}
+
+\section{Introducción}
+
+% Los datos aumentan a un ritmo enorme. Por eso las herramientas que permiten el análisis de datos son importantes. \red{Cita \url{https://www.statista.com/statistics/871513/worldwide-data-created/}}
+
+\subsection{Justificación}
+
+% Our data often encodes extremely valuable information, but is typically large, noisy, and complex, so that extracting useful information from the data can be a real challenge. 
+
+% \textbf{Motivación.} El aumento exponencial de los datos en diversas areas de estudio, la proliferación de los dispositivos de medición y herramientas de simulación han permitido \red{chazal13}
+
+% Los indicadores clásicos son susceptibles al ruido en los datos, como son los outliers. En contraste, el uso de la homología persistente es resistente a tales interferencias.
+% Información adicional. Esto depende de cómo definamos desigualdad y qué características usemos para medirlas. Dado que los métodos clásicos son susceptibles al ruido y se basan en suposiciones subjetivas, usando este nuevo método podríamos descubrir patrones o nuevos factores relevantes para el estudio de la desigualdad.
+
+% \section{Revisión de la literatura sobre desigualdad}
+% % el paper de wasserman-2018 se ve muy bien
+
+\url{https://docs.google.com/document/d/1y1hPm-MjXFFUizz4Zvx4GJLHgws7lTLwFwftI6dcPnU/edit?usp=sharing}
+
+articulos:
+
+Persistent homology: a step-by-step introduction for newcomers
+
+Persistent Homology – State of the art and challenges 
+
+A roadmap for the computation of persistent homology
+
+Cluster Identification via Persistent Homology and Other Clustering 
+
+Techniques, with Application to Liver Transplant Data
+
+
+
+borradores:
+
+El gran éxito de los modelos de aprendizaje automático basados en la homología persistente depende de las características topológicas multiescala obtenidas a partir de estructuras biomoleculares. A diferencia de todos los modelos geométricos y topológicos anteriores, que se centran en la información de la estructura local o estudian propiedades globales cualitativas, la homología persistente incorpora la información geométrica en las invariantes topológicas, proporcionando así las primeras medidas topológicas cuantitativas.
+
+BORRADOR:
+
+El análisis topológico de datos, y en particular la homología persistente, ofrece varias ventajas en comparación con los métodos de análisis de datos más tradicionales, especialmente cuando se trata de conjuntos de datos complejos y de alta dimensionalidad. Aquí hay algunas ventajas clave:
+
+Invariancia topologica: La homología persistente es invariante bajo transformaciones continuas, lo que significa que es robusta frente a deformaciones y cambios en la forma del conjunto de datos. Esto es especialmente útil cuando los datos tienen ruido o variabilidad.
+
+Manejo de alta dimensionalidad: Muchos conjuntos de datos del mundo real son intrínsecamente de alta dimensión. La homología persistente permite analizar la topología del conjunto de datos en varias dimensiones, proporcionando una comprensión más completa de su estructura subyacente.
+
+Deteccion de caracteristicas topologicas:  La homología persistente puede identificar características topológicas importantes, como agujeros, ciclos y componentes conectados, que pueden ser difíciles de capturar con métodos tradicionales. Esto es especialmente útil en la detección de patrones complejos.
+
+Manejo de datos no lineales: Los métodos tradicionales a menudo asumen linealidad en los datos, mientras que la topología computacional puede lidiar con relaciones no lineales y estructuras más complejas
+Aplicaciones en aprendizaje automático:
+
+
+Las ventajas de usar tda sobre herramientas estadísticas clasicas:
+No asume un modelo paramétrico (por ejemplo, en un modelo lineal hay que establecer cuales son las variables, ademas de que se hace un supuesto acerca de la relación entre las variables)
+
+Las características topológicas extraídas son robustas ante el ruido. Más acerca de la estabilidad puede ser encontrado en “Persistent homology: a step-by-step introduction for newcomers”
+
+Toma en cuenta la “conectividad” entre los datos Persistent Homology – State of the art and challenges 
+
+Clustering
+
+Analiza que tan dispersos estan los datos (huecos)
+
+Different scales (persistent homology)
+
+“A major reason for the success of persistent homology as a discipline
+is the existence of fast algorithms to compute the topological summary. Forcomputations, the multi-scale representation of the data is usually written as an inclusion of combinatorial cell complexes, and is represented by the ordered boundary matrix of that cell complex. Persistence is computed by a simple reduction procedure that resembles Gaussian elimination” (Persistent Homology – State of the art and challenges - computable via linear algebra (A roadmap for the computation of persistent homology)
+Even though we have directly compared tda to statistical methods, they are complementary ? - Use of TDA requires the user to be well versed in statistical interpretation. (A roadmap for the computation of persistent homology)
+
+TDA provides a precise definition of qualitative properties of the data
+Persistent homology is flexible as it can be used on a variety of data types such as images, networks, finite metric spaces, time series
+Availability of software
+
+Cluster Identification via Persistent Homology and Other Clustering Techniques, with Application to Liver Transplant Data: Persistent homology can detect certain hidden patterns that standard techniques like clustering miss
+
+Another advantage over usual clustering techniques is that we do not need to know the number of clusters
+PH considers global vs local properties by considering the topology of the data
+
+
+\section{Marco teórico}
+
+El análisis topológico de  datos es una herramienta matemática relativamente nueva, que aplica conceptos de la topología algebraica y otras ramas puras de las matemáticas.
+
+Antes de presentar los fundamentos matemáticos del análisis topológico de datos, dicutiremos las ideas y nociones esenciales que hacen de la homología persistente una herramienta de gran utilidad. Esto lo hacemos con el objetivo de  ayudar al lector no técnico a comprender su funcionamiento.
+
+% Consideremos por facilidad que un conjunto de datos es un conjunto de puntos en el espacio.
+El TDA se fundamenta en el que hecho de que un conjunto de datos, pensado como un conjunto de puntos en el espacio, exhibe una estructura distintiva y  la figura que emerge  nos proporciona información cualitativa y cuantitativa sobre los datos \cite{chazal21}.
+Esta es, de hecho, la motivación principal del TDA:  estudiar la forma de los datos.
+Topologicamente hablando, los aspectos de la figura que nos interesan no están relacionados con distancias, ángulos  o características rígidas similares; los aspectos que son relevantes son aquellos que no cambian al doblar, torcer o estirar (sin romper) un objeto geométrico, como por ejemplo el número de agujeros y componentes conexas\footnote{Por ejemplo el símbolo \(\mathbf{A}\) tiene un agujero mientras \(\mathbf{B}\) tiene dos y \(\mathbf{C}\) no tiene ninguno. Entiendase por componente conexa a una pieza de la figura, por ejemplo el símbolo \(+\) tiene una sola pieza, mientras que el símbolo \(=\) tiene dos, y \(\div\) tiene tres. Deformar estos símbolos sin romper no cambia el número de agujeros ni el número de componentes conexas.} que tiene. La figura x ilustra esto.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/2024-01-30-15-25-17.png}
+    \caption{}%\label{fig:}
+\end{figure}
+
+Ahora bien, ¿a qué nos referimos exactamente con la `figura que emerge' del conjunto de datos?, y ¿cómo estudiamos la misma?
+La respuesta matemática a estas preguntas se expone en la siguiente sección.
+% , con lo que se conoce como complejo simplicial. 
+Por ahora basta la siguiente interpretación en cuanto a la primera concierne. 
+% Supongamos por simplicidad que estamos trabajando con datos bidimensionales, es decir que se pueden graficar y visualizar en un plano. 
+Supongamos que tenemos una figura plana  cualquiera. No es difícil imaginar que esta se puede `aproximar' con polígonos, como si de una distribución de azulejos se tratase. Sin embargo, un momento de reflexión nos revela que todo polígono se puede reconstruir a partir de triángulos.
+Por lo tanto, es posible aproximar la forma de cualquier figura plana utilizando triángulos solamente. Esto hace destacar al triángulo de entre los demás polígonos, atribuyéndole cierta importancia.
+No obstante, aunque nuestra suposición es válida en el caso bidimensional, quisieramos tener un `método de aproximación' válido para cualquier dimensión. 
+En efecto, esto es posible, ya que podemos  generalizar el concepto de triángulo a cualquier dimensión.  Esta noción generalizada se conoce como \textit{símplice}. Así, un 0-símplice es un punto, un 1-símplice es un segmento de recta, un 2-símplice es un triángulo, un 3-símplice es un tetraedro y en general hablamos de un \(n\)-símplice cuando estamos trabajando con \(n\) dimensiones. Ver Figura x.
+Por lo tanto,  podemos usar símplices para aproximar la forma de cualquier figura \(n\) dimensional; además podemos utilizar distintos tipos de simplices en conjunto. Denominaremos a un  conjunto de símplices como \textit{complejo simplicial}.
+Finalmente, ¿cómo se relaciona esto con los datos? Básicamente, desarrollaremos un procedimiento para asignarle un complejo simplicial a un conjunto de datos. A esto nos referimos con la `figura que emerge' de los datos. Los detalles de esta respuesta nos llevan a responder la segunda pregunta.
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/2024-02-02-16-42-52.png}
+    \caption{}\label{fig:simplices}
+\end{figure}
+
+
+Utilizaremos complejos  simpliciales para analizar la información contenida en un conjunto de datos, lo que nos será posible gracias a la aplicación de la homología persistente. 
+% Para estudiar un conjunto de datos  con ayuda de la homología persistente, asociaremos un complejo simplicial a los mismos y nos enfocaremos en estudiar sus propiedades.
+Antes que nada, debemos tener  en cuenta que  los datos se presentan, usualmente, como una nube de puntos en el espacio; son básicamente datos en bruto.
+Con lo que se ha mencionado anteriormente, tal nube de puntos  es un complejo simplicial, una aproximación de sí misma, pues cada punto es un \(0\)-símplice; así que esta aproximación no nos dice nada interesante sobre las características geométricas de los datos.
+En realidad, lo que haremos será seguir un criterio prestablecido para  asociarle un complejo simplicial a la nube de datos, en función de un parámetro.
+En este enfoque, no estudiaremos las propiedades topológicas de los datos directamente, sino más bien de un `engrosamiento' de los mismos. El criterio determinará la estructura del complejo simplicial para  valores específicos del parámetro. 
+% Así, valores distintos del parámetro dan lugar a complejos simpliciales posiblemente distintos para el mismo conjunto de datos.
+En otras palabras, la variación del parámetro nos proporciona información sobre como varía la figura emergente---el complejo simplicial---de la nube de datos. Ver Figura x. 
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/2024-01-29-21-38-46.png}
+    \caption{As we see in the image, la forma de nuestros datos evoluciona a medida que aumentamos el radio (a medida que avanza el tiempo). In general, as the shape of the data evolves topological features (i.e. holes) will appear and disappear. \red{
+        esa evolución se  captura / analiza mediante el nuneri de componntes conexas. En otras palabras, POR EL CAMBIO EN SU HOMOLOGÍA}}%\label{fig:}
+\end{figure}
+
+
+Para ser más precisos, estamos interesados en características topológicas del complejo simplicial, como lo son  el número de agujeros y componentes conexas.\footnote{\red{Ya  habíamos explicado la idea intuitva de hueco utilizando símbolos es decir figuras bidimensionales. Así como generalizamos el concepto de triángulo también existe una generalización de la noción de hueco}}
+Específicamente,
+analizaremos  el cambio en el  número de agujeros a medida que aumentamos el valor del parámetro.
+No obstante, es de igual o mayor interés conocer aquellos agujeros que persisten conforme varía el parámetro; estos representan características importantes del conjunto de datos, en el sentido de que permiten distinguirlo de un conjunto de datos distinto. Es por esta razón que surge la necesidad de una herramienta que nos permita caracterizar y comparar complejos  simpliciales.
+Es aquí donde  la homología persistente desempeña un rol fundamental.
+Con lo que hemos expuesto hasta ahora, podemos concluir que  el cálculo de la homología persistente es, a breves rasgos, la computación del número de agujeros y el análisis de aquellos que perduran según se incremente  el valor del parámetro. Este cálculo nos proporciona información sobre la estructura del conjunto de datos.
+
+% \red{(that right there is the idea that anyone should catch. But it misses something: INTERPRETATION)}
+
+Los resultados obtenidos con la homología persistente se  interpretan con la ayuda de gráficos descriptivos llamados \textit{diagramas de persistencia} y \textit{códigos de barras}.
+Es aquí dónde podemos reconocer información cualitativa y cuantitativa de los datos utilizados.\footnote{\red{Por ejemplo, los códigos de barras son como la rúbrica de una persona, pues presentan información global, lo que está relacionado justamente con la robustes al ruido presente en los datos.}}
+Explicaremos los datelles de la interpretación de este tipo de gráficos  después de haber presentado la base teórica necesaria.
+
+% los huecos que mas persistent son los más importantes, representan características del conjunto de datos que son relevantes. es como rasgos que te permiten identificar a una persona o un objecto, es un rasgo determinante, en el sentido de que si llegas a ver ese rasgo inmediatamente sabes de quien se trata.
+
+En la siguiente sección presentamos los fundamentos matmáticos y formalizamos la terminología que hemos introducido a lo largo de esta breve exposición sobre el uso de  la homología persistente en el TDA.
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/2024-01-29-21-56-14.png}
+    \caption{}%\label{fig:}
+\end{figure}
+
+
+\pagebreak
+\subsection{\red{Fundamentos de TDA}}
+
+
+
+
+
+
+\subsubsection{Construcción de complejos simpliciales}
+
+
+
+
+\subsubsection*{Complejos de Čech}
+
+Muchos de los métodos topológicos usuales utilizan un complejo simplicial como entrada; sin embargo, no todos los objetos a estudiar vienen en esta forma. En esta sección se presentan diversos métodos para la construcción de complejos simpliciales asociados a una nube de puntos, es decir, vinculados a una colección finita de puntos en un espacio métrico. Estos puntos pueden representar una colección de datos numéricos como un subconjunto de $\mathbb{R}^n$.\\
+\\
+\textbf{Definición:} Sea $(X, d)$ un espacio métrico y sea $A \subset X$ una muestra finita de $X$. Considere el escalar $\epsilon \geq 0$. Se llama \textbf{Complejo de Čech} asociado a $A$ con parámetro $\epsilon$, denotado \textbf{Cech$(A, \epsilon)$}, al complejo simplicial definido por las siguientes reglas:
+\begin{enumerate}
+    \item El conjunto de vértices es $A$.
+    \item Un subconjunto $\sigma = \{x_{0}, \ldots, x_{q}\} \subseteq A$ es un $q$-símplice si y solo si $\bigcap_{x \in \sigma} B(x, \epsilon) \neq \emptyset$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Complejo_de_Cech.png}
+  \caption{Seis puntos en el plano y sus correspondientes 3 complejos de Čech Cech$(A, \epsilon)$. Nótese que para la aparición de un 2-símplice es necesaria la intersección de todas las bolas con centro en los correspondientes vértices.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Nótese que $\bigcap_{x\in \sigma}B(x,\epsilon )\neq \emptyset$ implica la creación de un $n$-símplice cuando la intersección de $n$ bolas $B(x,\epsilon )$ es no vacía. Así, los radios de las bolas y sus intersecciones toman un papel importante en los complejos de Čech. Además, si $\sigma$ es un símplice, entonces lo es también cada uno de sus subconjuntos. Por tanto, los complejos de Čech son también complejos simpliciales abstractos. Debido a su buena interpretación geométrica y su utilidad en varios contextos topológicos, los complejos de Čech resultan interesantes, incluso cuando su computación resulta ser todo un desafío.\\
+\\
+\textbf{Definición:} Una \textbf{filtración} de un complejo simplicial $K$ es una secuencia de subcomplejos encajados de $K$: 
+\begin{align*}
+    \emptyset = K^{0}\subset K^{1}\subset ... \subset K^{n}=K
+\end{align*}
+Una filtración puede ser vista como una construcción en la cual nuevos símplices van siendo agregados en cada etapa, donde, para que un símplice $\sigma$ se forme, primero deben formarse todas sus caras. Nótese que la filtración empieza con el complejo vacío $K^{0}=\emptyset$ y termina con el complejo completo $K$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Filtración.png}
+  \caption{Filtración de un complejo simplicial cualquiera.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Definición:} Sea $(X, d)$ un espacio métrico y sea $A \subset X$ una muestra finita de $X$. La \textbf{filtración de Čech} en $A$ es la colección de los complejos simpliciales abstractos $\{Cech(A,\epsilon)\}_{\epsilon \geq 0}$ donde
+\begin{align*}
+    Cech(A,\epsilon_{i}) \subseteq Cech(A,\epsilon_{j}), \text{ para todo } i < j.
+\end{align*}
+Una filtración de Čech proporciona la colección de todos los complejos de Čech en $A$, mientras que un único complejo de Čech depende de la elección de la escala $\epsilon$.
+
+
+
+
+
+\subsubsection*{Complejos de Rips}
+
+
+
+
+A pesar de sus buenas interpretaciones geométricas y propiedades topológicas, en la práctica, el complejo de Čech resulta ser computacionalmente inmanejable. Por ejemplo, es posible que muchas bolas $B(x,\epsilon)$ se superpongan, generando así símplices innecesarios de diferentes dimensiones que solo consumen espacio de almacenamiento.\\
+\\
+Una solución a este problema es reconstruir el complejo utilizando únicamente información sobre la distancia entre sus vértices. De esta manera, no es necesario verificar las intersecciones no vacías en todas las subcolecciones de $B(x,\epsilon)$. Una variante del complejo de Čech es el complejo de Rips, que implementa esta solución.\\
+\\
+\textbf{Definición:} Sea $(X, d)$ un espacio métrico y sea $A \subset X$ una muestra finita de $X$. Considere el escalar $\epsilon \geq 0$. Se llama \textbf{Complejo de Rips} asociado a $A$ con parámetro $\epsilon$, denotado $Rips(A,\epsilon)$, al complejo simplicial definido por las siguientes reglas:
+\begin{enumerate}
+    \item El conjunto de vértices es $A$.
+    \item Un subconjunto $\sigma = \{x_{0}, \ldots , x_{q}\} \subseteq A$ es un $q$-símplice si y solo si $Diam(\sigma)\geq \epsilon$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Complejo_de_Rips.png}
+  \caption{Seis puntos en el plano y sus correspondientes 3 complejos de Rips \textbf{Rips$(A, \epsilon)$}. Nótese que para la aparición de un $n$-símplice se necesita que la distancia entre cualquier par de sus $n+1$ vértices sea a lo sumo $2\epsilon$.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+En algunas ocasiones, los complejos de Rips también se llaman complejos de Vietoris-Rips. Nótese que $Diam(\sigma)\geq \epsilon$ implica que la distancia entre cualquier par de vértices de $\sigma$ es a lo sumo $\epsilon$. Además, si $\sigma$ es un símplice, entonces cada uno de sus subconjuntos también lo es. En otras palabras, los complejos de Rips son, de hecho, complejos simpliciales abstractos.\\
+\\
+\textbf{Definición:} Sea $(X, d)$ un espacio métrico y sea $A \subset X$ una muestra finita de $X$. La \textbf{filtración de Rips} en $A$ es la colección de los complejos simplicales abstractos $\{Rips(A,\epsilon)\}_{\epsilon \geq 0}$ donde
+\begin{align*}
+    Rips(A,\epsilon_{i}) \subseteq Rips(A,\epsilon_{j}), \text{ para todo } i < j
+\end{align*}
+Aunque los conjuntos de vértices de los complejos de Čech y Rips son idénticos, la diferencia radica en los distintos valores que se le asignen a $\epsilon$, ya que de este valor depende la creación de nuevas caras, y por ende, la creación de nuevos complejos simpliciales. Como resultado, $Rips(A,\epsilon) \subseteq Cech(A,\epsilon)$. O sea, el complejo de
+Vietoris-Rips tiene menos o igual número de símplices que el complejo de Čech para un mismo parámetro.\\
+\\
+(gráfico comparacion entre los complejos)\\
+\\
+
+
+\subsubsection*{Nervio de $\mathcal{U}$}
+
+El concepto del nervio resulta útil en la construcción de complejos simpliciales ya que este es un tipo especial de recubrimiento.\\
+\\
+\textbf{Definición:} Sea $X$ un espacio topológico y $\mathcal{U}=\{U_{i}\}_{i \in I}$ un recubrimiento abierto de $X$. Se dice que $\mathcal{U}$ es un \textbf{buen recubrimiento de $X$} si se cumple que
+\begin{enumerate}
+    \item Todos los abiertos $U_{i}$ pertenecen a $\mathcal{U}$.
+    \item La intersección finita y no vacía de q-elementos de $\mathcal{U}$, $U_{i_{1}}\cap \ldots \cap U_{i_{q}}$, es contractil.
+\end{enumerate}
+\textbf{Definición:} Sea $X$ un espacio topológico y sea $\mathcal{U}=\{U_{i}\}_{i \in I}$ un recubrimiento de $X$. El \textbf{nervio} de $\mathcal{U}$, denotado \textbf{$\mathcal{N}(\mathcal{U})$}, es el complejo simplicial abstracto definido por las siguientes reglas:
+\begin{enumerate}
+    \item El conjunto de vértices es $\mathcal{U}=\{U_{i}\}_{i \in I}$.
+    \item Un subconjunto $\sigma = \{U_{i_{1}}, U_{i_{2}}, ... ,U_{i_{q}}\} \subseteq \mathcal{U}$ es un q-símplice si y solo si $U_{i_{1}}\cap U_{i_{2}} \ldots \cap U_{i_{q}} \neq \emptyset$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Nervio_U.png}
+  \caption{Ejemplo de un conjunto $\mathcal{U}$ y su respectivo nervio.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Se entiende que los conjuntos de $\mathcal{U}$ no son vacíos. Antes de continuar es necesario recurrir al siguiente lema:\\
+\\
+\textbf{Lema:} Todo subconjunto convexo de $\mathbf{R}^n$ es contractil.\\
+\\
+Una demostración de este lema se puede encontrar en [Citar la dem.]. Ahora, dado que la colección $\mathcal{U} = {B(a,\epsilon)}_{a \in A}$ es un buen recubrimiento de $A$, ya que toda bola en $\mathbf{R}^n$ es un conjunto convexo, entonces el complejo de Čech es el nervio correspondiente a dicha colección, i.e., 
+\begin{align*}
+    Cech(A,\epsilon) = \mathcal{N}(\{B(a,\epsilon)\}_{a \in A})
+\end{align*}
+
+
+\textbf{Teorema:} \textbf{[Teorema del nervio]} Sea $\mathcal{U}=\{U_{1}, U_{2}, ... ,U_{k}\}$ un recubrimiento finito contable de subconjuntos convexos cerrados de $\mathbf{R}^n$. Entonces, 
+\begin{align*}
+    \bigcup_{i=1}^{k}U_{k} \simeq \mathcal{N}(\mathcal{U})
+\end{align*}
+La demostración de este teorema se puede encontrar en [Citar la dem.]. 
+
+
+
+\subsubsection*{Complejo de Delaunay}
+Pese a su eficiencia sobre el complejo de Čech, el complejo de Rips sigue siendo computacionalmente complicado. A medida que la nube de puntos aumenta, aparecen aglomeraciones donde no interesa conocer en detalle qué pasa en cada uno de sus puntos. Por tanto, se propone como solución \texttt{
+``agrupar''} aglomeraciones de puntos cercanos en uno solo. De esta manera, se reduce la carga computacional sin afectar la estructura topológica. Por ejemplo, para representar la esfera $\mathcal{S}^1$ se necesita una infinidad de 0-símplices. Nótese que como ventaja adicional se logra de cierta manera discretizar espacios continuos. De aquí en adelante, $\Gamma$ denotará un conjunto de puntos de referencia.\\
+\\
+\textbf{Definición:} Sea $\Gamma \subset X$ un subconjunto no-vacío de $X$. Dado un punto de referencia $\gamma \in \Gamma$. Se define la \textbf{Celda de Voronoi} asociadada a $\gamma$ como
+\begin{align*}
+    V_{\gamma}=\{x \in X: \text{ } d(x,\gamma) \leq d(x,\lambda) \text{ para todo } \lambda \in X\backslash A \{ \lambda\}\}
+\end{align*}
+Nótese que las celdas de Voronoi descomponen a $X$ en disitintas regiones, formando además un recubrimiento no abierto de $X$. Para la creación del siguiente complejo simplicial, las aglomeraciones de puntos quedan \texttt{``encapsuladas''} en una celda de Voronoi, de esta manera, todos los puntos de la celda se sustituyen por el de referencia. Cabe recalcar que la intersección entre dos celdas es no-vacía, ya que cada celda incluye su borde.\\
+\\
+\textbf{Definición:} Se dice \textbf{complejo de Delaunay} asociado a $\Gamma$ al nervio del recubrimiento dado por las celdas de Voronoi.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Complejo_de_Voronoi.png}
+  \caption{Izquierda: Nube de puntos en el plano con cuatro agrupaciones representadas por sus puntos de referencia marcados con diferentes colores. Centro: Celdas de Voronoi para los cuatro puntos de referencia. Derecha: Complejo de Delaunay correspondiente a las celdas creadas.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection*{Complejo de Vietoris}
+\textbf{Definición:} Sea $\mathcal{U}=\{U_{1}, U_{2}, ... ,U_{k}\}$ una colección contable de subconjuntos de un espacio finito $X$ tal que $U_{1}\cup ... \cup U_{k}=X$. El \textbf{complejo de Vietoris} de $\mathcal{U}$, denotado \textbf{$\mathcal{V}(\mathcal{U})$}, es el complejo simplicial abstracto definido por las siguientes reglas:
+\begin{enumerate}
+    \item El conjunto de vértices es $\mathcal{U}$.
+    \item Un subconjunto $\sigma \subseteq X$ es un símplice si y solo si existe un $U \in \mathcal{U}$ tal que $\sigma \subseteq U$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{figures/Complejo_Vietoris.png}
+  \caption{Recubrimiento $\mathcal{U}$ de un conjunto de ocho puntos y su respectivo complejo de Vietoris $\mathcal{V}(\mathcal{U})$.}
+%   \label{fig:mi_imagen}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Mientras que los complejos de Čech son nervios associados a la colección $\{Rips(A,\epsilon)\}_{\epsilon \geq 0}$, los complejos de Rips son Complejos de Vietoris asociados a la colección $\{U\}_{Diam(U)\leq \epsilon}$.
+
+
+
+\subsubsection{Homología persistente}
+
+% ver Eldesbrunner, computational topology
+
+Informally, we may define homology as a tool to count the holes in the data. The insight behind homology is the idea that any hole corresponds to a cycle, however not every cycle corresponds to a hole. As we can notice in Figure 1.1, the cycle given by $abc$ is not a hole since it is the boundary of the filled triangle, meanwhile the cycle given by $bdc$ is a hole as it is not a boundary.
+    \begin{figure}[htbp!]
+        \centering
+        \includegraphics[scale=0.5]{figures/Captura de pantalla 2023-11-09 002610.png}
+        \caption{Abstract simplicial complex}
+        \label{fig:enter-label}
+    \end{figure}
+So we will define as a hole any cycle that is not a boundary. Formally, the homology of a simplicial complex $K$ is a sequence of groups, called homology groups. The $k$-th homology group, denoted as $H_k(K)$, is defined as following quotient group
+$$ H_k(K)=\frac{Z_k(K)}{B_k(K)}$$
+where $Z_k(K):=\ker(\partial_k)$ is called the $k$-th group of cycles and $B_k(K):=\text{Im}(\partial_{k+1})$ is the $k$-th group of boundaries. The homology groups are well-defined since $\text{Im}(\partial_{k+1})\subseteq \ker(\partial_k)$ for each $k\in\mathbb{N}$. The intuitive idea of the quotient group is to formally express the idea that the boundaries are equivalent to the zero element, i.e. the cycles that are boundaries are ignored. The result is that the only elements of the homology groups are the holes of dimension $k$. We assign a number $b_k$ to each homology group called the $k$-th Betti number. The $k$-th Betti is exactly the number of holes of dimension holes in the simplicial complex. The $k$-th Betti number may also be calculated as the rank of the $k$-th homology group.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/2024-01-29-20-15-20.png}
+    \caption{Flujo  de trabajo del TDA.}%\label{fig:}
+\end{figure}
+
+
+% “A simplicial complex of a discrete point cloud data can reconstruct the topology of the underlying object--”
+
+
+
+\subsubsection{Diagramas de persistencia}
+
+¿Cómo se convierte un conjunto de datos en un complejo simplicial?
+[En términos simples…] Un conjunto de datos es un conjunto de puntos en Rn. Fijemos un valor 0. Por cada punto p del conjunto, generamos una n-bola de radio \(\varepsilon\) centrada en p. Seguimos un criterio para generar símplices. Por ejemplo, si dos bolas se intersecan, añadimos un segmento que una sus centros. El conjunto (la unión) de todos los símplices resultantes es un complejo simplicial, que depende de \(\varepsilon\). Nos interesan los complejos simpliciales (su realización geométrica) porque contienen información topológica de los datos, e.g. los huecos presentes. [Ver respuesta a la pregunta 4 sobre como se calcula la homología persistente.]
+
+
+Un diagrama de persistencia presenta la evolución de los huecos presentes a medida que cambiamos el valor \(\varepsilon\) escogido del radio. Básicamente, nos permite ver los huecos que persisten a través del tiempo. Ambos ejes tienen el valor del radio como escala. El eje de las abscisas representa el valor del radio en el cual aparecen los huecos, mientras que el otro eje representa el valor en el que desaparecen. Cada punto en el diagrama representa un hueco (de cierta dimensión). 
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{figures/2024-01-29-21-45-50.png}
+    \caption{cada punto en el diagrama corresponde a un rasgo topológico (basicamente un HUECO) }%\label{fig:}
+\end{figure}
+
+
+% \subsubsection{\red{Códigos de barras}}
+% \red{see ghrist for explanation on bar codes}
+
+\subsection{Aplicaciones Previas del TDA}
+
+La \autoref{tab.aplic.tda} muestra  algunas de las más recientes Aplicaciones del  TDA en diferentes campos. 
+Como se puede evidenciar la mayoría de aplicaciones se han realizado en áreas técnicas, siendo muy pocos \red{(o inexistentes)} los estudios que han encontrado aplicaciones en las ciencias sociales. Algunos de estos trajos destacan las ventajas que tiene  el TDA comparado con métodos tradicionales. Un ejemplo de esto es \cite{Nicolau11} donde la aplicación del TDA permitió a los investigadores descubrir un nuevo tipo de cáncer.
+
+
+
+
+
+\newgeometry{
+    margin=1.75cm,
+}
+\begin{landscape}
+    % hi
+    \renewcommand{\arraystretch}{1.5}
+    \footnotesize
+    \begin{tabularx}{\linewidth}{ssssnnB}      
+        \caption{Aplicaciones del TDA, en diferentes campos, usando PH.}\label{tab.aplic.tda}\\
+        \toprule        
+        \textbf{Área} & \textbf{Subárea} & \textbf{Referencia} & \textbf{Método} & \textbf{Aplicación} & \textbf{Tipo de datos} & \textbf{Resumen de la contribución} \\ \midrule\endfirsthead
+        %---------------------------------------------------------------%
+        \caption{(cont.)}            \\
+        \toprule
+        \textbf{Área} & \textbf{Subárea} & \textbf{Referencia} & \textbf{Método} & \textbf{Aplicación} & \textbf{Tipo de datos} & \textbf{Resumen de la contribución} \\ 
+        \midrule
+        \endhead
+        %---------------------------------------------------------------%        
+        Economía & {Mercado  financiero} & \cite{yen21} & {Homología persistente} & Bolsa de valores & Datos de precios de acciones en la bolsa de Singapur (SGX) & Se utiliza PH para analizar datos financieros durante una crisis económica. Utilizando TDA, los autores encuentran que durante los colapsos del mercado, los grupos de homología muestran menos persistencia. El estudio destaca el valor de TDA para analizar patrones durante fluctuaciones del mercado y crisis financiera. \\ 
+        Astronomía & Cosmic Shear & \cite{heydenreich21} & Homología persistente & Análisis de  la distribución de la materia en el universo & Datos proporcionados por reconocimiento de lentes gravitacionales débiles & Se utiliza la homología persistente para estudiar la distribución de materia en el Universo. Los autores muestran que es posible obtener más información cosmológica del mismo conjunto de datos que si se utilizan métodos comunes en la disciplina. Se comparan los resultados obtenidos con otras técnicas y se concluye que es una de las herramientas más potentes de la topología para el estudio de ese tipo de información. \\ 
+        Medicina & Radiología & \cite{oyama19} & Homología persistente & Caracterización y clasificación de tumores hepáticos & Datos de la resonancia magnética del hígado proporcionados por Digital Imaging and Communication in Medicine (DICOM). & Los autores investigaron la precisión para clasificar cánceres hepáticos utilizando PH para caracterizar resonancias magnéticas ponderadas en T1. Los autores destacan una mayor precisión en los resultados al utilizar vectores de características obtenidos a partir de imágenes de persistencia. Los autores mencionan que los métodos aplicados resultan útiles para el diagnóstico de tumores hepáticos asistidos por computadoras. \\ 
+        ~ & Detección de COVID-19 & \cite{hajij21} & Homología persistente & Detección automatizada de COVID-19 a partir de imágenes de rayos X de pecho. & Imágenes de rayos X de pecho de pacientes sanos, con neumonía, con COVID-19. & Se emplea homología persistente para obtener las características topológicas de las imágenes. De cada imagen se obtiene una representación vectorizada del diagrama de persistencia correspondiente. Se entrena una red neuronal enfocada en la detección de COVID-19 la cual toma tanto la imagen como la representación. Se consideran 3 modelos de red neuronal. Los 3 modelos presentan un rendimiento comparable o mejor que un modelo estándar que solo procesa la imagen. \\ 
+        Deporte & Hockey & \cite{goldfarb14} & Homología persistente & Descubrir correlaciones de equipos de la NHL con indicadores de rendimiento ofensivo. & Datos obtenidos del sitio web extraskater.com. Este sitio contiene los datos oficiales de la National Hockey League (NHL). & Se emplea la homología persistente para identificar deficiencias en la composición actual del equipo, con el fin de corregir esas carencias mediante la contratación o intercambio de jugadores. \\
+        Inteligencia artificial & Redes neuronales &  \cite{watanabe21} & Homología persistente & Estudio de las complejidades y de la representación interna de redes neuronales profundas & Redes neuronales entrenadas con los data sets MNIST and CIFAR-10 (vistas como grafos dirigidos con pesos) & Se emplea homología persistente para estudiar la representación interna de redes neuronales, las cuales son vistas como grafos dirigidos con pesos. Los autores señalan que la homología persistente de las redes refleja el exceso de neuronas y la complejidad del problema. \\ 
+        Biologia & Análisis de datos biomoleculares & \cite{meng20} & Homología persistente & Estudio de datos sobre biomoleculas para poner en practica el analisis de datos por homologia persistente & \red{Tipo de dato} & Estudia un grupo de datos de biomoleculas separando en grupos de este modo, se pueden revelar las propiedades funcionales, que están incrustadas en las estructuras locales. \\ \bottomrule
+    \end{tabularx}
+
+\end{landscape}
+\restoregeometry
+
+% BIBLIOGRAPHY
+% lesnik https://www.ias.edu/ideas/2013/lesnick-topological-data-analysis
+
+
+\nocite{*}
+\printbibliography[heading=bibintoc]
+\end{document}

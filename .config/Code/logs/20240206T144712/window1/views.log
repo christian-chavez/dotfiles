@@ -1,0 +1,10 @@
+2024-02-06 14:47:21.826 [info] Added views:workbench.panel.output in workbench.panel.output
+2024-02-06 14:47:21.826 [info] Added views:outline in workbench.view.explorer
+2024-02-06 14:47:21.826 [info] Added views:workbench.scm in workbench.view.scm
+2024-02-06 14:47:21.826 [info] Added views:workbench.view.search in workbench.view.search
+2024-02-06 14:47:21.826 [info] Added views:terminal,workbench.panel.markers.view in workbench.views.service.panel.f0cf5a34-4cd3-4d8e-b46b-2fdf344ac1cb
+2024-02-06 14:47:21.826 [info] Added views:workbench.explorer.fileView in workbench.view.explorer
+2024-02-06 14:47:23.356 [info] Added views:workbench.debug.welcome in workbench.view.debug
+2024-02-06 14:47:27.695 [info] Added views:workbench.panel.repl.view in workbench.panel.repl
+2024-02-06 14:47:31.944 [info] Added views:latex-workshop-commands,latex-workshop-structure,latex-workshop-snippet-view in workbench.views.service.sidebar.bdb1b10b-2470-4c49-8536-f79c0cab8db6
+2024-02-06 14:47:32.770 [info] Added views:~remote.forwardedPorts in ~remote.forwardedPortsContainer

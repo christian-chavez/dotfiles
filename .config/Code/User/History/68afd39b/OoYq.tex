@@ -1,0 +1,213 @@
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{
+    geometry,
+    graphicx,
+    lmodern,
+    microtype,
+    csquotes,
+    lipsum,
+    anyfontsize,
+    url,
+    titlesec,
+    fancyhdr,
+    calc,
+    ragged2e,
+    caption,
+    amsmath,
+    amsfonts,
+    mathtools,
+    amsthm,
+    amssymb,
+    xcolor,
+    thmtools,
+    mdframed,
+    tcolorbox,
+    enumitem,
+    dsfont,
+}
+\tcbuselibrary{theorems}
+
+% --------------------------------------------
+% Theorem-like environments
+
+% \newtheorem{theorem}{Theorem}[chapter] 
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{proposition}[theorem]{Proposition} 
+% \newtheorem{lemma}[theorem]{Lemma} 
+% \newtheorem{example}[theorem]{Example} 
+
+
+%% This is from the experiments folder
+
+\tcbset{
+    mystyle/.style={
+        colback=white, % Transparent background
+        colframe=black, % Frame color
+        coltitle=black, % Title color (adjust as needed)
+        colbacktitle=white,
+        fonttitle=\sectionfontc,
+        sharp corners, % Sharp corners
+        boxrule=0.5pt, % Frame thickness
+        left=3pt, % Reduce left inner space
+        right=3pt, % Reduce right inner space
+        top=3pt, % Reduce top inner space
+        bottom=3pt, % Reduce bottom inner space
+        toptitle=3pt,bottomtitle=2pt,
+        separator sign=\hspace*{10pt},
+        before skip=\baselineskip, % Increase space before the box
+        after skip=\baselineskip, % Increase space after the box
+        description font=\sectionfontc\itshape,   
+        % number format=\thesection.\arabic{mytheorem},
+    }
+}
+
+
+\newtcbtheorem[number within=chapter]{theorem}{Theorem}{mystyle}{theorem}
+\newtcbtheorem[use counter from=theorem]{definition}{Definition}{mystyle}{definition}
+\newtcbtheorem[use counter from=theorem]{proposition}{Proposition}{mystyle}{proposition}
+\newtheoremstyle{uptheorem} 
+{\baselineskip}{\baselineskip}{\upshape}{}{\bfseries}{.}{ }{} 
+\theoremstyle{uptheorem}
+\newtheorem{example}[tcb@cnt@theorem]{Example}
+\newtheorem{lemma}[tcb@cnt@theorem]{Lemma}
+
+\newtheoremstyle{uptheoremv3}{\baselineskip}{}{\upshape\small}{}{\bfseries}{.}{ }{} 
+\theoremstyle{uptheoremv3}
+\newtheorem{remark}[tcb@cnt@theorem]{Remark}
+
+
+
+
+
+% --------------------------------------------
+% Custom font
+
+\newfontfamily\sectionfontc{NimbusSanL.ttf}[
+  Path = nimbussanl/,
+  Extension = .ttf,
+  UprightFont = *,  
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+  Scale = 0.92,
+]
+
+\titleformat{\chapter}[display]
+  {\sectionfontc\mdseries\Huge}
+  {\huge\chaptertitlename\ \thechapter}
+  {1em}
+  {}
+
+\titleformat{\section}
+  {\sectionfontc\mdseries\huge}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\sectionfontc\mdseries\Large}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\sectionfontc\mdseries}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\captionsetup{
+    labelfont=bf,
+    font=footnotesize,
+    justification=raggedright, % Left-align the caption
+    singlelinecheck=false, % Disable single line check for multi-line captions
+}
+% --------------------------------------------
+% Layout & measures
+
+\raggedbottom
+\setlength{\parskip}{0.5\baselineskip}
+\footmarkstyle{\textsuperscript{#1}\;}    % indent the footmark 
+\setlength{\footmarkwidth} {0em}
+\setlength{\footmarksep}   {0em}
+
+
+
+\geometry{
+    % showframe,
+    margin=1.5cm,
+    includeheadfoot,
+    includemp,
+    marginparsep=0.75cm,
+    marginparwidth=5.25cm
+}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LE]{\sectionfontc\mdseries\nouppercase{\leftmark}}
+\fancyhead[RO]{\sectionfontc\mdseries\nouppercase{\rightmark}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{% % <-- this is new
+  \fancyhf{} 
+  \fancyfoot[LE,RO]{\thepage} % same placement as with page style "fancy"
+  \renewcommand{\headrulewidth}{0pt}}
+
+\footnotesinmargin
+
+% SIDECAPTIONS
+\setsidecaps{\marginparsep}{\marginparwidth}
+\sidecapmargin{outer}
+\setsidecappos{t}
+\renewcommand*{\sidecapstyle}{%
+\captionnamefont{\bfseries\foottextfont}
+\captionstyle{\RaggedRight\footnotesize\foottextfont}
+}
+
+% FULLWIDTH environment
+% The following code should be used *after* any changes to the margins and
+% page layout are made (e.g., after the geometry package has been loaded).
+\newlength{\fullwidthlen}
+\setlength{\fullwidthlen}{\marginparwidth}
+\addtolength{\fullwidthlen}{\marginparsep}
+
+\newenvironment{fullwidth}{%
+  \begin{adjustwidth*}{}{-\fullwidthlen}%
+}{%
+  \end{adjustwidth*}%
+}
+
+% Custom commands --------------------------------------------
+
+\newcommand{\qand}{\quad\text{and}\quad}
+\newcommand{\chr}[1]{\textcolor{red}{#1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\renewcommand{\mathbb}[1]{\mathds{#1}}
+\renewcommand{\subset}{\subseteq}
+
+
+
+% --------------------------------------------
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarksnumbered,
+    hidelinks,
+    colorlinks=true,
+    allcolors=blue,
+}
+
+% --------------------------------------------
+% Bibliography
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{bibliography.bib}
+
+

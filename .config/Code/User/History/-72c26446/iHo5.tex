@@ -1,0 +1,389 @@
+\chapter{Introduction}
+
+
+\begin{theorem}[Pasting lemma]
+    see munkres
+\end{theorem}
+
+\chapter{Homotopy theory}
+
+% Basic definitions --------------------------
+
+
+
+Algebraic topology originated from the attemps to construct topological invariants. The most classical ones being the \textit{fundamental group} and the \textit{homology groups}. Topological invariants are helpful in the classication of topological spaces. We  devote this chapter  to the study of the former. Basically,  to each topological space it is possible to associate a group: the fundamental group. In fact, if two spaces are homeomorphic, their fundamental groups must be isomorphic; the converse is not true. Thus, computation of the fundamental group allow us to say when two spaces are not homeomorphic. 
+
+% Thus their fundamental groups are not isomorphic, the spaces cannot be homeomorphic
+Throughout, we denote  by \(I\) the unit interval \([0,1]\) and by \(\mathcal{C}(X,Y)\) the space of continuous functions from \(X\) to \(Y\).
+
+
+\section{Homotopy}
+
+The main motivation for introducing homotopy is to define homotopy of paths for then we can define the fundamental group.
+Homotopy formalizes the idea of continuous deformation. 
+% It may be the case that a continuous map must be transformed into a map with better properties. 
+This allow us to talk about deformation of paths in a topological space.
+% This is need to in turn define the fundamental group
+
+
+\begin{definition}[Homotopy]\label{homotopy}
+    Let \(f\) and \(g\) be two continuous maps from a topological space \(X\) into a topological space \(Y\). Suppose \(H \colon X\times I \to Y\) is a continuous map such that 
+    \[
+        \forall x\in X :\quad H(x,0) = f(x) \qand H(x,1) = g(x).
+    \]
+    We call \(H\) an \textbf{homotopy} from \(f\) to \(g\). We also say that \(f\) and \(g\) are \textbf{homotopic}, which will be denoted \(f\simeq g\). Maps homotopic to a constant map are said to be \textbf{null-homotopic}.
+\end{definition}
+
+% \marginpar{\footnotesize We usually write \(H:f\simeq g\) to denote \(H\) is an homotopy from \(f\) to \(g\).}
+
+In light of this definition, if we fix \(t\in I\),  we can define a mapping \(h_t \colon X\to Y\) by \(h_t(x) = H(x,t)\). This results in a change of viwepoint of \(H\).\footnote{Think of \(t\) as time so that an homotopy between \(f\) and \(g\) is a continuous process of deformation at  \(t\) goes from \(0\) to \(1\).} Indeed, we can think of a homotopy from \(f\) to \(g\) as a family of continuous maps \(\left( h_t \right)_{t\in I}\) such that \(h_0 = f\) and \(h_1 = g\). Certainly,  continuity of \(H\) implies continuity of \(h_t\) for each \(t\in I\); however, the converse is not true.
+
+
+
+% \begin{theorem}{}{}
+%     Given a homotopy \(H\) from \(f\) to \(g\), the map \(h_t\) is continuous for each \(t\in I\).
+%     \chr{leave or drop it}
+% \end{theorem}
+
+% \begin{proof}
+    
+% \end{proof}
+
+\begin{example}
+\begin{enumerate}[label=(\alph*)]
+    \item show continuity of \(h_t\) for each \(t\in I\) does not imply continuity of \(H\). 
+    \item why not define \(H:I\times X\to Y\), i.e. flip the domain?
+    \item put example of Rectilinear homotopy
+\end{enumerate}
+\end{example}
+
+
+\begin{theorem}[ \(\simeq\) is an equivalence relation]\label{homotopy.is.eq.relation}
+    Suppose \(X\)  and \(Y\) are topological spaces. 
+    Homotopy of maps is an equivalence relation on \(\mathcal{C}(X,Y)\).
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}[label=(\roman*)] 
+    \item Any map \(f\in \mathcal{C}(X,Y)\) is homotopic to itself, namely via the constant homotopy \(H\colon X\times I \to Y: (x,t)\mapsto f(x)\). Continuity of \(H\) comes from continuity of \(f\). Thus \(\simeq\) is reflexive.
+    \item  Suppose \(f\simeq g\) where \(f,g\in \mathcal{C}(X,Y)\).\marginpar{\footnotesize Symmetry of \(\simeq\) allow us to say \(H\) is an homotopy \textit{between}  \(f\) and \(g\) whenever \(H\) is an homotopy from \(f\) to \(g\) or otherwise.} This means  there is an homotopy \(H\) from \(f\) to \(g\) with \(H(x,0) =  f(x)\) and \(H(x,1) =  g(x)\) for all \(x\in X\). Then \(G\colon X\times I \to Y: (x,t)\mapsto H(x,1-t)\) is continuous \chr{why?} and satisfies \(G(x,0) = g(x)\) and \(G(x,1) = f(x)\) for all \(x\in X\), i.e. \(G\) is an homotopy from \(g\) to \(f\). Hence \(\simeq\) is symmetric.
+    %  \(g\simeq f\) \(f,g\in \mathcal{C}(X,Y)\).    
+    \item Suppose \(f\simeq g\) and \(g\simeq h\) where \(f,g,h\in \mathcal{C}(X,Y)\). Let \(H,G\colon X\times I\to Y\) be homotopies from \(f\) to \(g\) and from \(g\) to \(h\), respectively. Define the map \(F\colon X\times I \to  Y\) by \[
+        F(x,t) = \begin{cases}
+            H(x,2t)     & \text{if}\quad t\in [0,\frac{1}{2}],\\
+            G(x,2t -1)  & \text{if}\quad t\in [\frac{1}{2},1],
+        \end{cases}
+    \] for all \(x\in X\) and \(t\in I\). Then \(F\) is an homotopy between \(f\) and \(h\). Indeed, notice \(F(x,\frac{1}{2})= H(x,1)=G(x,0)=g(x)\) for all \(x\in X\), so  \(F\) is continuous by the pasting lemma; also \(F(x,0) = H(x,0)= f(x)\) and \(F(x,1) =G(x,1)= h(x)\) for all \(x\in X\). Hence \(\simeq\) is transitive.
+\end{enumerate}
+\end{proof}
+
+
+By Theorem \ref{homotopy.is.eq.relation}, we can split the set  \(\mathcal{C}(X,Y)\) into equivalence classes. We call them \textbf{homotopy classes}. Denote  \[\pi(X,Y) = \mathcal{C}(X,Y) / \simeq.\] 
+% i.e.., \(\pi(X,Y)\) is the  quotient set of \(\mathcal{C}(X,Y)\) by \(\simeq\).
+
+\begin{theorem}[Composition preserves \(\simeq\)]
+    Suppose \(X\), \(Y\) and \(Z\) are topological spaces. Let 
+     \(f_1, f_2 \in \mathcal{C}(X,Y)\) and \(g_1, g_2 \in \mathcal{C}(Y, Z)\). If \(f_1 \simeq f_2\) and \(g_1 \simeq g_2\), then \(g_1 \circ f_1 \simeq g_2\circ f_2\)
+\end{theorem}
+
+\begin{proof}
+    Suppose \(f_1 \simeq f_2\) and \(g_1 \simeq g_2\) and let \(H\) and \(G\) be homotopies from \(f_1\) to \(f_2\) and from \(g_1\) to \(g_2\), respectively. Define \(F\colon X\times I\to Y\) by \[
+        F(x,t) = G(H(x,t),t)
+    \] for all \(x\in X\) and all \(t\in I\). Then \(F\) is an homotopy from \(g_1\circ f_1\) to \(g_2\circ f_2\). Indeed, \(F\) is continuous as it is the composition of continuous functions and  for any \(x\in X\) we have \begin{align*}
+        F(x,0) &= G(H(x,0),0) = G(f_1(x), 0) = g_1(f_1(x))\quad\text{and}\\
+        F(x,1) &= G(H(x,1),1) = G(f_2(x), 1) = g_2(f_2(x)).
+    \end{align*}
+    Therefore \(g_1\circ f_1 \simeq g_2\circ f_2\).
+\end{proof}
+
+
+
+
+% \begin{example}
+%     FIRST DEFINE Homotopy OF SPACES
+%     Example from wikipedia: The circle S1, the plane R2 minus the origin, and the Möbius strip are all homotopy equivalent, although these topological spaces are not homeomorphic.
+% \end{example}
+
+% why do we introduce the following definition?
+
+Sometimes we may need to work  with homotopies that leave some points fixed. Thus we must establish the notion of homotopy respect to a subspace, where deformation does not occur.
+
+\begin{definition}{Relative homotopy}{}
+    Let \(X\) and \(Y\) be topological spaces and \(A\subset X\). A homotopy \(H\) between   maps \(f,g\in \mathcal{C}(X,Y)\) is called \textbf{homotopy relative to} \(A\) if \[
+        \forall x\in A,\forall t\in I : \quad H(x,t) = f(x).
+    \] We say \(f\) and \(g\) are \textbf{homotopic relative to} \(A\).
+\end{definition}
+
+Notice from the definition above that \( f\rvert_A = g\rvert_A \), as \(H(x,t) = g(x)\) for all \(x\in X\) when \(t=1\). When the homotopy between two maps is not relative to any particular subspace, the maps are said to be  \textbf{freely homotopic}.
+
+\begin{example}
+    
+    % froom Lee 
+
+%     Exercise 7.6. Let B subset Rn be any convex set, X be any topological space, and A be
+% any subset of X . Show that any two continuous maps f; g W X ! B that agree on A are
+% homotopic relative to A.
+
+Suppose \(X\) is a topological space, \(A \) a subset of \(X\) and  \(B\subset \R^n\) a  convex set. Let's show that any two continuous maps \(f,g\colon X\to B\) are homotopic relative to \(A\) if \(f\rvert_{A} = g\rvert_A\). Certainly, let \(f,g\in \mathcal{C}(X,B)\)   and suppose they agree on \(A\). Define \(H\colon X\times I\to B\) by \[
+    \forall x\in X,\forall t\in I:\quad H(x,t) = f(x) + t(g(x) - f(x)).
+\] Note \(H\) is continuous and takes values on \(B\) as \(B\) is convex. Also \(H(x,0) = f(x)\) and \(H(x,1) = g(x)\) for all \(x\in X\).
+Then \(H\) is an homotopy between \(f\) and \(g\).  Finally, since \(f(x) = g(x)\) for all \(x\in A\) we have \(H(x,t) = f(x) + t 0 = f(x)\) for all \(x\in X\) and \(t\in I\), as desired. 
+\end{example}
+
+
+
+% [paths] --------------------------
+
+\section{Paths}
+
+We have defined homotopy of continuous functions between topological spaces. Now we consider  the particular case of continuous functions from \([0,1]\) to a topological space, i.e., paths. We already know paths can be used to study topological properties like connectedness. We will give them another purpose: paths can serve as a tool to detect holes in a space. We will make this precise later on.
+
+\begin{definition}{Path}{}
+    A \textbf{path} in a topological space \(X\) is a continuous map from \(I\) to \(X\). If \(f\) is a path in \(X\), we call \(x_0=f(0)\) and \(x_1=f(1)\) the initial and final point of \(f\), respectively. Alternatively, \(f\) is said to be a path in \(X\) from \(x_0\) to \(x_1\).
+    The \textbf{constant path} at \(x\in X\) is the map \(e_{x}\colon I\to X\) given by \(e_x (t) = x\) for all \(t\in I\).
+    % The set of all paths in \(X\) is denoted \(\omega (X)\).
+\end{definition}
+
+\begin{remark}
+    We use \([0,1]\) for   convenience as the domain of paths. There is no loss of generality. Any continuous map \(f\colon  [a,b]\to X\) can be reparametrized to get a continuous map with domain \([0,1]\).  Indeed, define \(g\colon  [0,1]\to X\) by \(g(t) = f(a+t(b-a))\) for all \(t\in [0,1]\).
+\end{remark}
+
+\begin{definition}{Inverse path}{}
+    Let \(X\) be a topological space.
+    For every path \(f\in \mathcal{C}(I,X)\) we define the \textbf{inverse path} \(\bar{f} \colon I\to X\) by \(\bar{f}(t)=f(1-t)\) for all \(t\in I\).
+\end{definition}
+
+\begin{definition}{Loop}{}
+    A \textbf{loop} \(f\) in a topological space \(X\) is a path in \(X\) with same initial and terminal point. This common  point \(x_0\) is called the \textbf{base point} of the loop. We say \(f\) is a loop based at \(x_0\). Denote \(\Omega_1(X,x_0)\) the set of loops in \(X\) at \(x_0\). 
+\end{definition}
+
+
+
+\begin{example} The constant path is a loop. Indeed the \textit{constant loop}.
+    
+    Suppose \(X\) is a topological space. A loop in \(X\) may be regarded as a continuous map from the unit circle \(S^1\) to \(X\). See figure ... 
+            why is this so? quotient when identified 0 with 1
+
+
+    \begin{marginfigure}
+        \captionsetup{type=figure}
+        \includegraphics[width=0.6\linewidth]{images/loops-klein-bottle2}
+        \vspace*{\baselineskip}
+        \caption{Loops on the Klein bottle.}
+    \end{marginfigure}
+            
+\end{example}
+
+We can talk about homotopy of paths. It constitutes  a stronger relation than mere homotopy.
+
+\begin{definition}{Homotopy of paths}{}
+    Suppose \(f\) and \(g\) are two paths in \(X\). A \textbf{path homotopy} between \(f\) and \(g\) is a homotopy from \(f\) to \(g\) relative to \(\partial I = \left\{ 0, 1\right\}\). 
+    We say  \(f\) and \(g\) are \textbf{path homotopic} and denote it by \(f\sim g\).
+\end{definition}
+
+In other words, a path homotopy is one that fixes the endpoints of  paths. Thus we may reformulate the definition as follows. Two paths \(f\) and \(g\) in \(X\) are path homotopic iff they have the same initial point \(x_0\) and same final point \(x_1\) and in addition there is a continuous map \(H\colon I^2 \to X\) such that\marginpar{\footnotesize Think of \(s\) as space and \(t\) as time.} \begin{align*}
+    H(s,0) &= f(s)&& \hspace{-2.5cm}\text{ and }\quad H(s,1) = g(s),\\
+    H(0,t) &= x_0 && \hspace{-2.5cm}\text{ and }\quad H(1,t) = x_1,
+\end{align*}
+for every \((s,t)\in I^2\). 
+
+\begin{theorem}{\(\sim\) is an equivalence relation}{}
+    Let \(X\) be a topological space. Homotopy of paths is an equivalence relation on \(\mathcal{C}(I,X)\).
+\end{theorem}
+
+\begin{remark}
+    We call the equivalence classes under \(\sim\) \textit{path homotopy} classes. If \(f\) is a path we  denote its path homotopy class by \([f]\).
+\end{remark}
+
+\begin{proof} Notice this does not follow from Theorem \ref{theorem:homotopy.is.eq.relation} as path homotopy is a stronger notion than homotopy alone. Nevertheless, we only need to modify the proof to verify that path homotopies fix the endpoints of paths.
+\begin{enumerate}[label=(\roman*)]
+    \item Any path \(f\) in \(X\) is homotopic to itself via the constant homotopy, which trivially fixes the endpoints of \(f\). Thus \(\sim\) is reflexive.
+    \item Suppose \(f\sim g\) where \(f\) and \(g\) are paths in \(X\) such that \(x_0 = f(0) = g(0)\) and \(x_1=f(1)=g(1)\). This means  there is an homotopy \(H\) from \(f\) to \(g\) relative to \(\left\{ 0,1 \right\}\). Then \(G\colon   I^2 \to X: (s,t)\mapsto H(s,1-t)\) is an homotopy from \(g\) to \(f\)   and satisfies 
+    \begin{align*}
+        G(0,t) &= H(0,1-t) =  x_0 \qand G(1,t) = x_1,
+    \end{align*}
+    meaning it is relative to \(\left\{ 0,1 \right\}\). Thus \(g\sim f\). It follows   \(\sim\) is symmetric.
+
+    \item Let \(f\), \(g\) and \(h\) are paths in \(X\) with same starting point \(x_0\) and same terminal point \(x_1\). Suppose \(f\sim g\) and \(g\sim h\). Let \(H,G\colon  I^2 \to X\) be path  homotopies from \(f\) to \(g\) and from \(g\) to \(h\), respectively. Define the map \(F\colon  I^2 \to  Y\) by \[
+        F(s,t) = \begin{cases}
+            H(s,2t)     & \text{if}\quad t\in [0,\frac{1}{2}],\\
+            G(s,2t -1)  & \text{if}\quad t\in [\frac{1}{2},1],
+        \end{cases}
+    \] for all \(s\in I\) and \(t\in I\). Then \(F\) is an homotopy between \(f\) and \(h\) (by Theorem \ref{theorem:homotopy.is.eq.relation}). Because \(H\) and \(G\) are relative to \(\left\{ 0,1 \right\}\), we also have 
+    \[F(0,t) =    x_0 \qand F(1,t) = x_1,\]
+    for all \(t\in I\). Therefore \(f\sim h\), whence we conclude  \(\simeq\) is transitive.
+\end{enumerate}
+    
+    
+    % By definition, path homotopies are homotopies and thus by , we only need to verify  First, \(\sim\) is reflexive since  the constant homotopy between any path and itself trivially fixes its endpoints. On the other hand, 
+    % suppose \(f\sim g\) where \(f,g\in \mathcal{C}(I,X)\) have common endpoints \(x_0 = f(0)=g(0)\) and \(x_1=f(1)=g(1)\) and let \(H\) be a path homotopy between \(f\) and \(g\). Then \(G\colon I\to X: (s,t)\maps to H(s,1-t)\) shows \(g\sim f\). Indeed, 
+    % \begin{align*}
+    %     G(s,0) &= H(s,1) = g(s)&& \hspace{-2.5cm}\text{ and }\quad G(s,1) = H(s,0) = f(s),\\
+    %     G(0,t) &= H(0,1-t) =  x_0 && \hspace{-2.5cm}\text{ and }\quad G(1,t) = x_1,
+    % \end{align*}
+    % It follows from Theorem \ref{theorem:homotopy.is.eq.relation}.
+
+\end{proof}
+
+
+
+\subsection*{Path concatenation}
+
+% \chr{better make explicit * on the set of all paths}
+\begin{definition}{Multiplication of paths}{}
+    Let \(X\) be a topological space. Suppose \(f\) and \(g\) are paths in \(X\) with \(f(1)=g(0)\). In this case we say \(f\) and \(g\) are \textbf{composable}.
+    Define   the \textbf{path multiplication} of \(f\) and \(g\) as the map \(f\cdot g\colon I\to X\) given by 
+      \[
+        f \cdot g (t)= \begin{cases}
+            f(2t)   &\text{if}\quad t\in [0,\frac{1}{2}],\\
+            g(2t-1) &\text{if}\quad t\in [\frac{1}{2},1].
+        \end{cases}
+    \] 
+    % We say \(f\) and \(g\) are \textbf{composable} if \(f(1)=g(0)\).
+\end{definition}
+
+Observe that we cannot formally define \(\cdot\) as an operation on the set \(\mathcal{C}(I,X)\). This is due to the constrain of paths  to agree on one common endpoint, so that their multiplication is continuous.\footnote{Note the pasting lemma is involved here. \chr{ this constrain is solven when working on \(\Omega(X,x_0)\) \(\sim\) comes to solve well definiteness, and \(\Omega(X,x_0)\) to solve the problem of requiring to be concatenable paths.}} For note \(\mathcal{C}(I,X)\) is not even closed under \(\cdot\)  if we not require \(f(1)=g(0)\). 
+
+% This is where \(\sim\) comes into play NOT SURE BOUT THIS. 
+
+
+
+
+% \chr{too much trouble to define \(\cdot\) on \(\mathcal{C}(I,X)/\!\sim\), better wait to later define it only of loops?? may be not, see next remark}
+
+The following theorem tell us \(\cdot\) is well defined on the set of homotopy classes of paths. This bring us closer to   the construction of a set with a group operation.
+%  We will come back to this point in the next section.
+
+\begin{theorem}{Path multiplication  preserves  \(\sim\)}{}
+    % \(\cdot\) is well defined on \(\mathcal{C}(I,X)/\!\sim\)
+    % \(\cdot\colon \mathcal{C}(I,X)/\sim \times \mathcal{C}(I,X)/\sim\to \mathcal{C}(I,X)/\sim\)    
+    Let \(X\) be a topological space. Let \(f,g\in \mathcal{C}(I,X)\). Define the product of path homotopy classes  by \[
+        [f] \cdot [g] = [f\cdot g]
+    \]   provided \(f(1)=g(0)\). Then \(\cdot\) is well defined on \(\mathcal{C}(I,X)/\!\!\sim\). In other words, if \(f\sim \hat{f}\) and \(g\sim \hat{g}\), then \(f\cdot g\sim \hat{f}\cdot\hat{g}\) whenever concatenations are possible.
+\end{theorem}
+
+\begin{remark}
+    Unfortunately \(\mathcal{C}(I,X)/\!\!\sim\) is not a group under product of path homotopy classes.  Notice the condition \(f(1)=g(0)\). Thus \(\cdot\) is not defined for all elements of \(\mathcal{C}(I,X)/\!\!\sim\) but  only for those whose representatives agree on a common endpoint. We can remediate this situation by enforcing all paths to be loops based at   a common point. This is the topic of the next section.
+\end{remark}
+
+\begin{proof}
+    Suppose \(f\sim \hat{f}\) and \(g\sim \hat{g}\). Denote \(x_0 = f(0)\), \(x_1 = f(1)\) and \(x_2=g(1)\). Suppose also  the product \(f\cdot g\) is  defined. Let \(F\) be a path homotopy between \(f\) and \(\hat{f}\). Let \(G\) be a path homotopy between \({g}\) and \(\hat{g}\). Define \(H\colon I^2\to X\) by \[
+        H(s,t) = \begin{cases}
+            F(2s,t)&\forall s\in[ 0,\frac{1}{2}], \forall t\in I,\\
+            G(2s-1,t)&\forall s\in [\frac{1}{2},1], \forall t\in I.
+        \end{cases}
+    \] Note \(H\) takes a single value when \(s=1/2\) as \(F(1, t) = x_1 = G(0,t)\). Thus \(H\) is well defined and it is continuous by the pasting lemma. Also \(\hat{f}\) and \(\hat{g}\) are concatenable because \(\hat{f} (1) = f(1) = g(0) = \hat{g}(0)\). Let \(s \in I\).
+    If \(s\in[0,\frac{1}{2}]\), by definition of path multiplication we get
+    \begin{align*}
+        H(s,0) &= F(2s, 0) = f(2s) = f\cdot g (s)\qand\\
+        H(s,1) &= F(2s, 1) = \hat{f}(2s) = \hat{f}\cdot \hat{g} (s).
+    \end{align*}
+    
+    Similarly, if \(s\in[\frac{1}{2},1]\),
+    \begin{align*}
+        H(s,0) &= G(2s-1, 0) = g(2s-1) = f\cdot g (s)\qand\\
+        H(s,1) &= G(2s-1, 1) = \hat{g}(2s-1) = \hat{f}\cdot \hat{g} (s).
+    \end{align*}    
+    Therefore \[
+        \forall s\in I:\quad H(s,0)= f\cdot g (s)\qand H(s,1)= \hat{f}\cdot \hat{g} (s),
+    \] so \(H\) is an homotopy between \(f\cdot g\) and \(\hat{f}\cdot \hat g\). It is in fact a path homotopy because it leaves the endpoints fixed: \(H(0,t) = F(0,t) = x_0\) and \(H(1,t) = G(1,t) = x_2\) for all \(t\in I\).
+\end{proof}
+
+\begin{example}
+    % Croom pag. 63
+    Ilustrate the multiplication of paths.  The moving point begins ata(0) and follows path a at twice the normal rate, arriving at a(l) when t — .The point then follows path p at twice the normal rate and arrives at /3(1) attime t — 1.
+\end{example}
+
+% \begin{marginfigure}
+%     \captionsetup{type=figure}
+%     % \includegraphics[width=\linewidth]{images/example0.pdf}
+%     \caption{PUT PICTURE OF PRODUCT OF PATHS omg as my daughter would say}
+% \end{marginfigure}
+
+
+
+
+Using path homotopy  classes allows to have well definiteness of path multiplication but also  associativity as the next theorem shows. We aim to construct a group endowed with such operation, so we also need an identity and inverses. Although the next theorem is a step further, we also need closure under the group operation which we still do not have.
+
+
+\begin{theorem}{Properties of multiplication of  path homotopy classes}{}
+    Let \(X\) be a topological space and \(f,g,h\in \mathcal{C}(I,X)\). Suppose \(f(0)=x_0\)  and \(f(1) = x_1\).
+\begin{enumerate}[label=(\roman*)]
+    \item (Associativity) If either \([f]\cdot ([g]\cdot [h])\) or \(([f]\cdot [g])\cdot [h]\) is defined so is the other. Then \[[f]\cdot ([g]\cdot [h]) = ([f]\cdot [g])\cdot [h].\]
+    
+    \item (Identities) The constant maps \(e_{x_0}\) and \(e_{x_1}\) satisfy \[
+        [f]\cdot [e_{x_1}] = [f]\qand [e_{x_0}]\cdot [f] = [f].
+    \]
+    
+    \item (Inverses) The inverse path \(\bar{f}\) satisfies \[
+        [f]\cdot [\bar{f}] = [e_{x_0}] \qand [\bar{f}]\cdot [f] = [e_{x_1}].
+    \]
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+% [The fundamental group] --------------------------
+
+\section{The fundamental group}
+
+The fundamental group is  an algebraic invariant that we can  associate to each  topological space. Studying the algebraic situation give us information about the topological one.   The following theorem is the one we have been aiming at. It remediates the problem we left unsolved in the last section by only considering those paths that start and end at the same point: loops. 
+
+
+
+
+
+
+% Bredon p. 139:
+%  - we associate a group to each topological space, so anything we can say about the algebraic situation gives information about the topological one.
+%  - basically this assignment gave rise to the idea of functor. Indeed category theory has its origin in algebraic topology.
+
+% it is easier to define but more difficult to compute than the homotopy groups.
+
+
+
+\begin{theorem}{Multiplication of path homotopy classes is an operation on \(\Omega_1(X,x_0)  / \!\!\sim\)}{}
+    For any topological space \(X\) and any point \(x_0\in X\), the set \(\Omega_1(X,x_0)  / \!\!\sim\) is a group endowed with the operation  of  multiplication of path homotopy classes.
+\end{theorem}
+
+\begin{proof}
+    
+\end{proof}
+
+\begin{definition}{Fundamental group}{}
+    Let \(X\) be a topological space and \(x_0\)   a point of \(X\).
+    The set \(\Omega_1(X,x_0)  / \!\!\sim\) endowed with the operation  of multiplication of path homotopy classes is called the \textbf{fundamental group} of \(X\) with base point  \(x_0\). It is denoted \(\pi_1(X,x_0)\).
+\end{definition}
+
+
+% Lee: Therefore, the fundamental group is usually
+% used only to study path-connected spaces. When X is path-connected, it turns out
+% that the fundamental groups at different points are all isomorphic; the next theorem
+% gives an explicit isomorphism between them.
+ 
+
+\section{Homotopy equivalence}
+
+lee
+
+We will prove that homeomorphic spaces must have isomorphic fundamental groups. Right there is the importance of the fundamental group: two spaces with different fundamental groups cannot be homotopic and thus not homeomorphic. 
+
+
+
+from Gilles:
+Roughly stated, algebraic topology is the study of functors from the category
+of topological spaces to the category of groups. In other words, we seek
+ways to associate groups (and often objects with even more structure such
+as R-modules) to topological spaces in such a way that homeomorphisms
+give rise to homomorphisms. 
+
+
+fomenko 16 : homotopy equivalences are homotopy versions of homeomorphisms.
+
+
+\begin{example}
+    fomenko 16 p 28
+    An example of nonhomeomorphic homotopy equivalent spaces
+\end{example}

@@ -1,0 +1,10 @@
+# First clear the keys associated with the actions
+quit
+# pan
+
+# Unbind existing scroll operations
+prev_img 4
+next_img 5
+# Set <action> <mouse button>
+zoom_in C-4
+zoom_out C-5

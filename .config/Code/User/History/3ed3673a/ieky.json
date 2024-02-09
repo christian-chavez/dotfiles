@@ -1,0 +1,47 @@
+{
+  "title": "Christian Chávez", 
+  "url": "https://christian-chavez.github.io",
+  "subtitle": "Thoughtful point",
+  "copyright": "© All rights reserved.",
+  "googleAnalyticsId": "",
+  "disqusShortname": "",
+  "postsLimit": 4,
+  "pathPrefix": "/",
+  "menu": [
+    {
+      "label": "Posts",
+      "path": "/"
+    },
+    {
+      "label": "About me",
+      "path": "/pages/about"
+    },
+    {
+      "label": "Contact me",
+      "path": "/pages/contacts"
+    }
+  ],
+  "author": {
+    "name": "Christian Chávez",
+    "photo": "/photo.jpg",
+    "bio": "Mathematics student at Yachay Tech University. Interested in mathematics,  computer science, LaTeX, Unix, among other things.",
+    "contacts": {
+      "rss": "",
+      "email": "",
+      "github": "christian-chavez",
+      "facebook": "#",
+      "telegram": "#",
+      "twitter": "#",
+      "linkedin": "#",
+      "instagram": "#",
+      "mastodon": "#",
+      "line": "",
+      "weibo": "",
+      "gitlab": "",
+      "medium": "",
+      "youtube": "",
+      "codepen": "",
+      "soundcloud": ""
+    }
+  }
+}

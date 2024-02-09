@@ -1,0 +1,190 @@
+2024-02-08 09:57:59.733 [info] Extension host with pid 3633 started
+2024-02-08 09:57:59.733 [info] Skipping acquiring lock for /home/chris/.config/Code/User/workspaceStorage/704cfc0ca932374b47478f68aadb2963.
+2024-02-08 09:58:00.516 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-02-08 09:58:00.594 [info] ExtensionService#_doActivateExtension James-Yu.latex-workshop, startup: false, activationEvent: 'onLanguage:latex'
+2024-02-08 09:58:05.148 [warning] DiagnosticCollection with name 'BibTeX' does already exist.
+2024-02-08 09:58:06.057 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-02-08 09:58:06.195 [info] ExtensionService#_doActivateExtension yzhang.markdown-all-in-one, startup: true, activationEvent: 'workspaceContains:README.md'
+2024-02-08 09:58:06.902 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: yzhang.markdown-all-in-one
+2024-02-08 09:58:06.997 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-02-08 09:58:07.262 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-08 09:58:08.378 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-02-08 09:58:09.095 [info] Eager extensions activated
+2024-02-08 09:58:09.381 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-08 09:58:09.662 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-08 09:58:09.888 [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-02-08 09:58:10.603 [info] ExtensionService#_doActivateExtension equinusocio.vsc-material-theme-icons, startup: false, activationEvent: 'onStartupFinished'
+2024-02-08 09:58:10.940 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-02-08 09:58:13.818 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-08 09:58:14.022 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-08 10:32:06.353 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:32:06.353 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:32:09.398 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:32:09.398 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:34:20.646 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:34:20.646 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:34:22.943 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:34:22.943 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:34:24.580 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:34:24.581 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:34:26.706 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:34:26.707 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:35:25.415 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:25.415 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:35:25.844 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:25.844 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:35:31.200 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:31.200 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:35:35.189 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:35.189 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:35:39.052 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:39.052 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:35:45.013 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:45.014 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:35:45.743 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:45.743 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:35:46.094 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:46.094 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 10:35:58.823 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:35:58.823 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 10:44:46.309 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 10:44:46.309 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 11:15:32.857 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 11:15:32.858 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 12:52:27.130 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 12:52:27.161 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 12:52:27.341 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 12:52:27.341 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 12:52:27.504 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 12:52:27.504 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+2024-02-08 12:52:34.468 [error] [James-Yu.latex-workshop] provider FAILED
+2024-02-08 12:52:34.468 [error] TypeError: Cannot read properties of undefined (reading 'slice')
+	at insertCursor (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math/mathpreviewlib/cursorrenderer.js:64:57)
+	at async Object.onTeX (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/math.js:67:13)
+	at async HoverProvider.provideHover (/home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0/out/src/preview/hover.js:42:31)
+	at async p.provideHover (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:42365)
+2024-02-08 18:53:00.717 [info] Extension host terminating: renderer closed the MessagePort
+2024-02-08 18:53:02.038 [error] Canceled: Canceled
+	at new g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at f.I [as value] (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:924696)
+	at n.y (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-02-08 18:53:02.064 [error] Canceled: Canceled
+	at new g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:110274)
+	at l.U (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:10866)
+	at P.<computed>.j.charCodeAt.P.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:150:8317)
+	at d.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139555)
+	at d.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at p.registerCommand.description (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138317)
+	at d.h (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:140094)
+	at d.g (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:139086)
+	at d.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:141:138993)
+	at Object.executeCommand (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:21333)
+	at set b [as b] (/opt/visual-studio-code/resources/app/extensions/github/dist/extension.js:2:322364)
+	at /opt/visual-studio-code/resources/app/extensions/github/dist/extension.js:2:323005
+	at f.value (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:1016450)
+	at n.y (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1902)
+	at n.z (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:1972)
+	at n.fire (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:80:2188)
+	at Object.m [as dispose] (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:940613)
+	at /opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:945566
+	at Array.forEach (<anonymous>)
+	at p.dispose (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:945552)
+	at u.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3620)
+	at u.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at u.<anonymous> (/opt/visual-studio-code/resources/app/extensions/git/dist/main.js:2:926708)
+	at u.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:137:3717)
+	at s (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:30:754)
+	at f.cb (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:9873)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7808
+	at Array.map (<anonymous>)
+	at f.Y (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:7795)
+	at f.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:154:8068)
+	at s.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:158:1513)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:9802)
+	at MessagePortMain.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:171:6227)
+	at MessagePortMain.emit (node:events:513:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:367) setContext undefined
+2024-02-08 18:53:02.155 [info] Extension host with pid 3633 exiting with code 0

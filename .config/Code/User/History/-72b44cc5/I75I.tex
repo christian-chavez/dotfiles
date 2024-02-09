@@ -1,0 +1,440 @@
+\chapter{Category theory}
+
+Category theory is essentially a theory about functions, or rather an abstraction of the widely know concept of function, yet this abstraction is fundamentally different from its  set theoretical definition. 
+
+The importance of the subject must be emphasized. It was born in the field of algebraic topology in an attempt to define the idea of \textit{natural transformation}. However, it has reached and found applications in areas far beyond algebraic topology. In fact, it can be used as a foundational theory  for mathematics and thus it can replace set theory on this purpose. Basically, the importance and popularity of this theory is due to the fact that functions are everywhere.
+
+% the new concept of function is nothing like The concept of function or map that most are familiar with. need not be anything like it.
+
+% mention that the field (area? branch ? what is this stuff?) was born in  algebraic topology
+
+% the of category was born to define the notion of functor, which in turn was made to define natural transformation. Further, the last one was born to define adjunction, the most important thing in category theory.
+
+
+
+% actually to capture categorically the key ideas that make up the homotopy groups
+
+% Lenienester: it was the desire to formalize the notion of natural transformation that led to the birth of category theory. 
+
+In what follows we do not expose a treatment of category theory as an alternative foundational framework for mathematics, which can be done, but it is not our purpose. Neither we aim to present mathematical foundations for category theory. Our objective is to present the theory from an axiomatic point of view by leaving some things undefined. For instance we rely on the (undefined) notion of \textit{collection of objects}, which must not be taken as a synonym of set. A formal treatment of the foundations of category theory can be found in \red{cita, murfet06}.\footnote{A more apropiate approach would be to work directly with classes as in the NBG theory, but we do not need it here\red{that implies that category theory would be presented inside a set theoretical framework namely NBG, i.e. it would be a formalization using the current foundations rahter than presenting it as a separate (independent) theory}}  Discussing such matters is beyond the scope of this work. Nevetheless, a final comment must be said. The Zermelo-Frankel axiomatic set theory together with the axiom of choice (ZFC) is the most popular theory to provide foundations to do \textit{most} of mathematics, but it is not powerful enoguh to develop category theory. For example, we will need to talk about \textit{large} structures like the ``category of all sets,'' which have no place in ZFC. This justifies the approach we have taken here.
+
+
+In this chapter we state the main concepts and present the terminology needed in  future chapters. Mainly, we lay down  the basic requirements for a categorical interpretation of the  homotopy groups, defined on the previous chapter. This will lead us to the establishment of a theory of homotopy for finite categories.
+
+
+\section{Categories}
+
+
+Roughly speaking, in order to \red{define} a category, some \textit{constituents} must be specified and then show that they satisfy certain conditions. We never define what they are, but we fully specify all the properties that we want those entities to have by stating how they relate to each other. This is captured by the following definition.
+
+% [Topoi] a catogory can initially be conceived as a universe of mathematical discourse, and that such universe is determined by specifying a certain kind of object and a certain kinf of 'function' between objects.
+% Topoi contradicts this, see p. 26
+
+% IDEA: try to follow the outline of a set theory introduction grabbed from some book to present the category-theoretic concepts. thus helping the reader embark into a new teorritory. this helps for comparison.
+
+\begin{definition}[Category]\label{def.category}
+  %  it consist of four pieces of data: objects, morphisms, identities and a composition rule; satisfying two properties.
+  %  - unitality
+  %  - associativity
+  A \textit{category}  \(\mathbf{C}\) consist of the following specifications.%is especified by the following constituents.
+  %satisfies the following specifications.
+  \begin{enumerate}[label=(\roman*)]
+    \item \note{We will usually omit the prefix \(\mathbf{C}\) when it is clear what is the category in context.} A collection \(\ob(\mathbf{C})\), elements of which are called \(\mathbf{C}\)-\textit{objects} and denoted by \(A\), \(B\), \(C\), etc.
+
+    \item \note{We may use  \textit{arrow} or \textit{map} as synonyms of morphism.} A collection \(\ar(\mathbf{C})\), elements of which are called \(\mathbf{C}\)-\textit{morphisms} and  denoted by \(f\), \(g\), \(h\), etc.
+
+    \item \note{Other names for the domain and codomain of an arrow are \textit{source} and \textit{target}, respectively.} For each \(\mathbf{C}\)-morphism \(f\), there are unique associated \(\mathbf{C}\)-objects \(\dom(f)\) and \(\cod(f)\), called the \textit{domain} and \textit{codomain} of \(f\), respectively. We write \(f\colon A\to B\) or \(A\xlongrightarrow{f} B\) to indicate that  \(A = \dom(f)\) and \(B = \cod(f)\). We say that \(f\) is a \(\mathbf{C}\)-morphism from \(A\) to \(B\).
+
+    \item For any two \(\mathbf{C}\)-morphisms \(f\colon A\to B\) and \(g\colon B\to C\), there is a \(\mathbf{C}\)-morphism from \(A\) to \(C\) denoted \(g\circ f\), called the \textit{composite} of \(f\) and \(g\). % We may read it as 'g of f'.
+
+    \item For each \(\mathbf{C}\)-object \(A\), there is a \(\mathbf{C}\)-morphism from \(A\) to \(A\) called the \textit{identity morphism} of \(A\), which we  denote by \(1_A\).
+  \end{enumerate}
+  In addition, the following two properties must hold.
+  \begin{enumerate}[label=(\roman*), start=6]
+    \item (Associativity)%\note{Associativity can be restated by saying that the following diagram commutes.\hfill\par \includegraphics[width=\linewidth]{images/asso.png}}
+    Given \(\mathbf{C}\)-morphisms \(f\colon A \to B\), \(g\colon B\to C\) and \(h\colon C\to D\), \[
+        h\circ (g\circ f) = (h\circ g) \circ f.
+    \]
+    \item (Unitality) For every \(\mathbf{C}\)-morphism \(f\colon A\to B\), \[f\circ 1_A = f = 1_B \circ f.\] 
+  \end{enumerate}
+\end{definition}
+
+\begin{remark}
+    % Discuss the foundations.
+    \doubt{collection of objects is not the same as set.
+    thus justify the use of \(\in\) for collections that are not sets.}
+    The definition is broad enough so that many stuff can be regarded (or shown to be) a category. In fact, neither  the objects of a category  have to be sets nor the morphisms have to be functions in the traditional set theoretical meaning. 
+    % Talk about the especification of a category, i.e. how one declared what is a category and what is not?
+    % \red{sometimes condition (iii) is merged with (ii)}
+\end{remark}
+
+Below we present some examples of categories. Many of these will be used and explored in future chapters. The usual way to \textit{declare} a category is to specify what  the objects and morphisms are and then show the remaining properties of Definition \ref{def.category} hold. 
+Also note how sometimes condition (iii) is merged with (ii)
+
+\begin{example}\note{\textit{In the beginning every axiomatic theory is poor in theorems and     rich in definitions which must be clarified by examples.}\red{cite this? schubert72} }
+\begin{enumerate}[label=\arabic*.]
+    \item The category \(\mathbf{Set}\) has (i) sets as objects  and (ii) functions of sets  as morphisms, which (iii) have a clearly specified domain and codomain as required by the usual set-theoretical definition.
+    \begin{enumerate}[label=(\roman*),start=4]
+        \item %Since composition of function between sets is again a function between sets, we can define the composite of each pair of (composable) functions .
+        Given functions \(f\colon A\to B\) and \(g\colon B\to C\) between sets \(A\), \(B\) and \(C\), define \(g\circ f\colon A\to C:a\mapsto g(f(a))\) as the composite of \(f\) and \(g\). This is the usual composition of functions.
+        \item Every set \(A\) has an identity function \(1_A\colon A\to A:a\mapsto a\). Such function is the identity morphism of \(A\).
+        \item (Associativity) Let \(f\colon A \to B\), \(g\colon B\to C\) and \(h\colon C\to D\) be functions between sets \(A\), \(B\), \(C\) and \(D\). By definition, we have \vspace{-0.5\baselineskip}\begin{align*}
+            h\circ (g\circ f)(a) &=  h(g\circ f (a))\\
+                                 &=  h(g( f (a)))\\
+                                 &=  h\circ g (f(a))\\
+                                 &= (h\circ g) \circ f (a)
+        \end{align*}
+        for every \(a\in A\). Thus, the set theoretic definition implies \(h\circ (g\circ f) = (h\circ g) \circ f\).
+        \item (Unitality) For any function \(f\) from a set \(A\) to a set \(B\) it holds \begin{align*}
+            f\circ 1_A (a) &= f(1_A(a)) = f(a),\quad\text{and}\\
+            1_B \circ f(a) &= 1_B(f(a)) = f(a)
+        \end{align*} for all \(a\in A\). Hence \(f\circ 1_A = f = 1_B \circ f\).
+    \end{enumerate}  
+    % The category \(\mathbf{Set}\) is important because from it more categories can be obtained. 
+
+    \item Categories of structured sets. 
+    \begin{description}[left=0.5\parindent,leftmargin=!,labelwidth=\widthof{\(\mathbb{K}\)-\(\mathbf{Vecti}\)}]%[style=standard,align=setcats,labelwidth=\mylongest,leftmargin=setcats] % 
+        \item[\(\mathbf{Top}\)] The category of topological spaces as objects and continuous functions as morphisms.
+        \item[\(\mathbf{Top_\ast}\)] The category of topological spaces with a base point as objects and continuous functions that preserve base points as morphisms.
+        \item[\(\mathbf{Grp}\)] The category of groups as objects and homomorphisms of groups as morphisms.
+        \item[\(\mathbf{Ab}\)] The category of Abelian groups as objects and homomorphisms of groups as morphisms.
+        \item[\(\mathbf{Rng}\)] The category of rings as objects and homomorphisms of rings as morphisms.
+        \item[\(\mathbb{K}\)-\(\mathbf{Vect}\)]  The category of vector spaces  over a field \(\mathbb{K}\)  as objects and linear maps as morphisms.
+        \item[\(\mathbf{Pos}\)] The category of partially ordered sets as objects and order preserving functions as morphisms.
+        \item[\(\mathbf{Met}\)] The category of  metric spaces as objects and  contractive maps as morphisms.
+    \end{description}
+    These examples have in common that they are all derived from \(\mathbf{Set}\). Indeed, in each case the objects are sets with additonal structure and the morphisms are functions that preserve such structure. There are many more examples of this kind. Note that compositon of continuous functions is a continuous function, compositon of group homomorphisms  is  a group homomorphism, and so on. In fact, the remaining properties that define a category are inmediately inherited from \(\mathbf{Set}\).
+
+    \item Some finite categories. \red{prove / justofy these are categories i.e satisfy the conditions}
+    \begin{marginfigure}
+        \captionsetup{type=figure}
+        \centering
+        \includegraphics[scale=1.0]{images/1.pdf}\par\vspace{3\baselineskip}
+        \includegraphics[scale=1.0]{images/2.pdf}\par\vspace{3\baselineskip}
+        \includegraphics[scale=1.0]{images/2-arrows.pdf}\par\vspace{3\baselineskip}
+        \includegraphics[scale=1.0]{images/3.pdf}\vspace{\baselineskip}
+        \caption{The graph representation of the categories \(\mathbf{1}\), \(\mathbf{2}\), the fre-standing isomorphism and \(\mathbf{3}\), shown in sequential order from top to bottom. The empty category has an empty graph. The objects are depicted as points but it does not mean they are the same. We do not draw the identity arrows and we keep this convention  from now and on.}
+    \end{marginfigure}
+    \begin{description}[left=0.5\parindent,leftmargin=!,labelwidth=\widthof{\(\mathbf{\downdownarrows}i\)}] % ,, labelwidth=\parindent
+        \item[\(\mathbf{0}\)] The empty category. It contains no object and hence no morphism.
+        \item[\(\mathbf{1}\)] It consist of exactly one object and exactly one morphism, namely the identity arrow of such object.
+        \item[\(\mathbf{2}\)] It consist of exactly two objects and exactly one morphism between them in addition to the identities.
+        \item[\(\mathbf{3}\)] It consist of exactly three objects
+        \item[\(\mathbf{\downdownarrows}\)] The  free-standing isomorphism is the category with exactly two objects and eactly two arrows with same domain and codomain. Such arrows are said to be \textit{parallel}.
+    \end{description}
+    These categories have in common that there is only one way to compose the arrows. \red{We define what is a finite ccategory below.}
+    
+    \item \textbf{Every preorder gives rise to  a category.}  Let \((P, \preceq)\) be a preorder. 
+    We can specify a category \(\mathbf{P}\) as follows. The objects of \(\mathbf{P}\) are the elements of \(P\).
+    We declare that there is an arrow from object \(p\) to object \(q\) whenever \(p\preceq q\). Denote this as \(p\to q\).
+    In this way, every morphism has unequivocally determined domain and codomain.
+    On the other hand, we have  \(p\preceq r\) whenever  \(p\preceq q\) and \(q\preceq r\) by transitivity of \(\preceq\).
+    Thus, for any pair of morphisms \(p\to q\) and \(q\to r\), we define their composite as \(p\to r\).
+    Reflexivity of \(\preceq\) ensures there is an identity morphism for every object, since \(p\preceq q  \) for any \(p\in P\).
+    Finally, given that there is only one morphism between every pair of  objects, associativity holds.
+    Unitality comes from the fact that \(p\preceq p\preceq q\preceq q\) is equivalent to \(p\preceq q\).
+
+
+    \item \textbf{Every poset gives rise to a category.} Every poset is a preorder, and thus determines a category by the last example. Note this kind of category is not of structered sets.
+    For instance, it is very different from  \(\mathbf{Pos}\), the category of partially ordered sets. 
+    
+    \item \textbf{Every monoid gives rise to a category.}
+    % Recall  a monoid is a semigroup with unit.
+    Let \(\left( M, \cdot \right)\) be a monoid.
+    We can specify a category \(\mathbf{M}\) as follows.
+    Take any mathematical object and  denote it \(*\).
+    We declare that \(\ob(\mathbf{M})\)  consist only of \(*\).
+    We also state that \(\ar({\mathbf{M}}) = M \).
+    In other words, \(\mathbf{M}\) is a category with only one object and the morphisms are the elements of \(M\).
+    Since we only have one object, there is only one possible way to associate to each morphism a   domain and codomain: every morphism has \(*\) both as domain and codomain; in this way, condition (iii) of \ref{def.category} holds.
+    On the other hand,
+    Given any two elements  \(a\) and \(b\) of \(M\), we know  \(a\cdot b\) is also an element of \(M\).
+    % Thus, given any two \(\mathbf{M}\)-morphisms \(a\) and \(b\), say any two elements  \(a\) and \(b\) of \(M\), we define their composition as \(a\cdot\) 
+    Thus, we define the composite of the morphisms \(a\) and \(b\) as \(a\cdot b\). %, i.e., \(a\circ b = a\cdot b\)
+    The identity morphism of \(*\) is the identity element of \(M\).
+    Finally, associativity and unitality follow directly from the associativity of the monoid operation and the definition of identity element, respectively. 
+    
+    \begin{marginfigure}[3\baselineskip]
+        \captionsetup{type=figure}
+        \centering
+        \includegraphics[scale=1.0]{images/group-as-category.pdf}\vspace{\baselineskip}
+        \caption{A group as a category.}
+    \end{marginfigure}
+    \item \textbf{Every group gives rise to a  category.}
+    Every group is a monoid and thus it can be regarded as a category.
+    Be careful not to conflate this  kind of category   with \(\mathbf{Grp}\), the category of all groups.
+    \red{This category will be of great importance for the homotopy theory of finite categories. true or false?}
+
+    
+\end{enumerate}
+\end{example}
+
+Why do we define subcategories?
+
+%taken from  Michael  (2005), Toposes, Triples and Theories
+\begin{definition}[Subcategories]
+    Let \(\mathbf{C}\) be a category. 
+    A \textit{subcategory} \(\mathbf{D}\) of \(\mathbf{C}\) is a category  where every  \(\mathbf{D}\)-object is a \(\mathbf{C}\)-object, and every  \(\mathbf{D}\)-morphism is a \(\mathbf{C}\)-morphism. In addition, the following conditions hold. \note{These conditions ensure the relationships between elements of \(\mathbf{D}\) stay on \(\mathbf{D}\).}
+    % \(\ob(\mathbf{D})\) and \(\ar(\mathbf{D})\) are subcollections of \(\ob(\mathbf{C})\) and \(\ar(\mathbf{C})\), respectively. In addition,
+    \begin{enumerate}[label=(\roman*)]
+        % \item \(\ob(\mathbf{D})\) is a subcollection of \(\ob(\mathbf{C})\),
+        % \item \(\ar(\mathbf{D})\) is a subcollection of \(\ar(\mathbf{C})\),
+        \item The identity morphism of every \(\mathbf{D}\)-object is a \(\mathbf{D}\)-morphism.
+        \item The domain and codomain of every \(\mathbf{D}\)-morphism are \(\mathbf{D}\)-objects.
+        \item The composition of every pair of (composable) \(\mathbf{D}\)-morphisms is a \(\mathbf{D}\)-morphism.
+        % \item For every \(\mathbf{D}\)-object \(A\), its identity
+    \end{enumerate}
+    
+\end{definition}
+
+\begin{example}
+\begin{enumerate}[label=(\alph*)]
+    \item \(\mathbf{0}\) is a subcategory of any category.
+
+    \item The category whose objects are sets and whose morphisms are injections (or surjections, bijections)   is subcategory of \(\mathbf{Set}\).    
+    \item The category \(\mathbf{Ab}\) of Abelian groups is a subcategory of \(\mathbf{Grp}\).
+    \item We have seen that a group can be regarded as a category. Thus any subgroup of any group determines a category, namely a subcategory of the underlying group.
+
+    % We could also consider surjections or bijections. % or in general any kind of maps whose composition is of the same type.
+    % \item The category whose objects are topological spaces and whose morphisms are   is subcategory of \(\mathbf{Set}\).
+    % \item     \(\mathbf{1}\) is a subcategory of \(\mathbf{2}\) and \(\mathbf{2}\) is a subcategory of \(\mathbf{3}\). \red{r u sure?}
+\end{enumerate}
+\end{example}
+
+The remainder of this section is devoted to adress the issue of the size of categories.
+Sometimes we would like to consider the category of all categories
+or similar constructions. However, 
+there are foundational problems.
+Questions of size.
+
+\begin{definition}[Small and large and categories]
+\begin{itemize}[left=0pt]
+    \item A category is said to be \textit{small} if both its collection of objects and morphisms are sets.
+    \item A category is  \textit{large} if it is not \textit{small}.
+\end{itemize}    
+\end{definition}
+
+\begin{example}
+\begin{enumerate}[label=(\alph*)]
+    \item Cat is the category of all small categories, which itself is a large category.\red{delay for functors}
+    \item \(\mathbf{Set}\) is a large category. For instace, the collection of all sets is not a set---as otherwise Rusell's paradox comes up. Similarly, \(\mathbf{Grp}\), \(\mathbf{Pos}\), \(\mathbf{Top}\) are large.
+\end{enumerate}
+\end{example}
+
+
+The next definition will allows to distinguish even fruther between categories of different size.
+This def will be of use when we define some functors.
+
+\begin{definition}[Hom-sets]
+    Let \(\mathbf{C}\) be any category.
+    For every pair of \(\mathbf{C}\)-objects \(A\) and \(B\), the collection of all morphisms from \(A\) to \(B\) is denoted \(\hom_\mathbf{C}(A,B)\).
+    We call this collection the  \textit{hom-set} between \(A\) and \(B\).
+\end{definition}
+
+\begin{remark}
+    The name hom-sets was inherited from algebra by historical reasons, where the term `homomorphism' is used to refer to the structure preserving functions. 
+    However, the hom-sets do not have to be sets, and the morphisms do not have to be structure-preserving functions.
+\end{remark}
+
+\begin{definition}[Locally small and locally finite categories]
+    \begin{itemize}[left=0pt]
+        \item A category is said to be \textit{locally small} if the hom-set of  each pair of objects is a set.
+        \item A category is said to be \textit{locally finite} if every  hom-set is a finite set.
+    \end{itemize}    
+\end{definition}
+
+Note how definitions x to y are about the size of a category, and in each case, it becomes small.
+Now we present a definition that will be of importance for our future work.
+
+\begin{definition}[Finite category]
+    A category is said to be \textit{finite} if both its collection of objects and morphisms are finite sets.
+\end{definition}
+
+\begin{example}
+    The categories
+    \(\mathbf{0}\), \(\mathbf{1}\), \(\mathbf{2}\), \(\mathbf{3}\), and \( \downdownarrows\) are all finite.
+\end{example}
+
+
+\section{Functors}
+
+S. Eilenberg and S. MacLane, the founding fathers of category theory, stated that the concept of category was born as an auxiliary step towards the notion of functor and natural transformation. \doubt{cita} This resembles the situation in topology where the definition of topology was born in order to formalize the idea of continuous function.
+
+The idea of functor is so important that everything in category theory could be stated in terms of functors. We could start all over again and use functors for everything, no need to define what a category is.
+
+Roughly speaking, a functor is a morphism between categories that preserves the structure: an assigment of  objects to objects and morphisms to morphisms which must preserve identities and compositions. 
+
+\red{Again, note how in the following definition we do not say what a functor \textit{is} but state what it \textit{does}.}
+\begin{marginfigure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/2024-02-04-21-44-10.png}
+    \caption{\url{https://ncatlab.org/nlab/show/functor} Alternative simpler definiiton.  since compositions gf=g∘f (commuting triangles) and identities 1 x (commuting loops) are both simple commuting diagrams, we can combine the above conditions to the single statement:    F preserves commuting diagrams.}%\label{fig:}
+\end{marginfigure}
+
+\begin{definition}[Functor]
+A \textit{functor} \(F\) from a category \(\mathbf{C}\) to a category \(\mathbf{D}\), denoted \(F\colon \mathbf{C} \to \mathbf{D}\),  is a mapping that satisfies the following conditions. \doubt{i like this phrase, it put emphasis on the characteristcs rather than a definition built upon previous things.}
+\begin{enumerate}[label=(\roman*),left=-2mm]
+    \item To each \(\mathbf{C}\)-object \(A\), it assings a unique \(\mathbf{D}\)-object \(F(A)\).
+    \item To each \(\mathbf{C}\)-morphism \(f\colon A\to B\), it assings a unique \(\mathbf{D}\)-morphism \(F(f)\colon F(A)\to  F(B)\).
+    \item \(F(1_A) = 1_{F(A)}\) for every \(\mathbf{C}\)-object \(A\).
+    \item \(F(g\circ f) = F(g) \circ F(f)\) for all \(\mathbf{C}\)-morphisms \(f\colon A\to B\) and \(g\colon B\to C\).
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+    We write \[F(f\colon A\to B) = F(f): F(A)\to F(B)\]
+    to indicate the assigment of morphisms to morphisms described above.
+\end{remark}
+
+Sometimes, what we have defined as functor is called \textit{covariant functor}. We may use these terms  interchangeably. The aditional adjetive is used in order to distinguish from contravariant functors which we now define.
+
+\begin{definition}[Contravariant functor]\marginnote{Think of contravariant functors as ordinary functors that turn arrows around and reverse composition.}
+A \textit{contravariant functor} \(F\)  from a category \(\mathbf{C}\) to a category \(\mathbf{D}\) is a functor from  \(\mathbf{C}^{\text{op}}\) to \(\mathbf{D}\). 
+\end{definition}
+
+The above definition was given for the sake of simplicity, but it is worth making explicitely  that a contravariant functor \(F\colon \mathbf{C}^{\text{op}}\to \mathbf{D}\) takes \(f\colon A\to B\) to \(F(f) \colon F(B)\to F(A)\) and reverses compositions  \(F(g\circ f) = F(f)\circ F(g)\), for all \(\mathbf{C}\)-morphism \(f\colon A\to B\).
+
+\begin{example}
+    % put example of the opposite functor
+    %https://en.wikipedia.org/wiki/Functor#Covariance_and_contravariance
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{The identity functor.} 
+    Let \(\mathbf{C}\) be any category.
+    We can define a functor from \(\mathbf{C}\) to \(\mathbf{C}\)  such that it assings every object and every morphism  to itself.
+    The defining properties of a functor are readily verified.
+    We denote it   \(1_{\mathbf{C}}  \) and call it  the \textit{identity functor} of \(\mathbf{C}\).
+    \item \textbf{The inclusion functor.} The inclusion of a subcategory into its ambient category gives rise to a functor.
+    \item \textbf{The forgetful functor.} Let \(\mathbf{C}\) be a category of structured sets. Define a functor \(U\colon \mathbf{C}\to \mathbf{Set}\) as follows:
+    \begin{enumerate}[label=(\roman*)]
+        \item to every \(\mathbf{C}\)-object, \(U\) assigns its underlying set, and
+        \item to very \(\mathbf{C}\)-morphism, \(U\) assigns its underlying function of sets.
+    \end{enumerate} 
+    In other words, \(U\) removes the structure of the objects and morphisms of \(\mathbf{C}\).
+    Sometimes, \(U\) is called the \textit{underlying functor}.
+    For a specific example, consider the forgetful functor \(U\colon \mathbf{Grp}\to \mathbf{Set}\).
+    In this case,  
+    \[(G,\cdot ) \;\xmapsto{\text{   } U \text{  }}\; G\]
+    for every group \((G, \cdot)\), and  
+    \[ (G,\cdot )\xrightarrow{f}(H, +)\quad\xmapsto{\text{ { } } U \text{ { }}}\quad G\xrightarrow{f} H\]
+    for any group homomorphism \(f\). % from the group \((G,\cdot)\)   to the group \((H,+)\).
+    Note that, although we use the same symbol, the label \(f\) on the left is not the same as the one on the right because they refer to functions that have different domain and codomain.
+    \doubt{The former is a subset of the cartesian product of the sets \((G,\cdot)\)   and \((H,+)\), whereas the latter is a subset of the the cartesian product ofthe sets \(G\) and \(H\).}
+
+    \item duality functor for vector spaces.
+
+\end{enumerate}
+\end{example}
+
+
+\begin{definition}[Full and faithful functors]
+    \begin{enumerate}[label=(\roman*)]
+        \item a faithful functor is a functor that is injective in the home sets. [from wikipedia] This functor makes it possible to think of the objects of the category as sets with additional structure,
+        \item full if 
+        \item fully faithful
+    \end{enumerate}
+     
+    
+    
+\end{definition}
+
+
+
+
+
+
+\subsection{Universal property}
+
+
+\section{New categories from old}
+
+
+\section{More categorical notions}
+
+The concepts covered here are just for reference. 
+They are not needed for future work.
+
+\begin{definition}[Monomorphism]
+    Let \(\mathbf{C}\) be a category and \(A\), \(B\), and \(C\) any   \(\mathbf{C}\)-objects.
+    A morphism \(f\colon B\to C\) is an \textit{epimorphism} if for any pair of morphism \(g,h\colon A\to B\), \[f\circ g = f\circ h\implies g=h.\]
+    In this case we say \(f\) is \textit{left cancellable}.
+\end{definition}
+\begin{remark}
+    This is an abstraction of injective functions of set theory.
+\end{remark}
+
+\begin{example}
+    [maclane] If the functor T: C --> B is faithful and Tf is monic. prove f monic.
+\end{example}
+
+
+\begin{definition}[Epimorphism]
+    Let \(\mathbf{C}\) be a category and \(A\), \(B\), and \(C\) any   \(\mathbf{C}\)-objects.
+    A morphism \(f\colon A\to B\) is an \textit{epimorphism} if for any pair of morphism \(g,h\colon B\to C\), \[g\circ f = h\circ f \implies g=h.\]
+    In this case we say \(f\) is \textit{right cancellable}.
+\end{definition}
+\begin{remark}
+    This is an abstraction of surjective functions of set theory.
+\end{remark}
+
+\begin{example}
+    Prove that the composite of monies is monic, and likewise for epis.
+\end{example}
+
+\begin{definition}[Isomorphism]
+    Let \(\mathbf{C}\) be a category and \(A\) and \(B\)    a pair of \(\mathbf{C}\)-objects. A  morphism \(f\colon A\to B\) is an \textit{isomorphism} if there is a morphism \(g\colon B\to A\) such that \[f\circ g = 1_B\quad\text{and}\quad g\circ f = 1_A.\]
+\end{definition}
+
+\begin{remark}
+    [maclane] 1. Find a category with an arrow which is both epi and monic, but not invertible
+    (e.g., dense subset of a topological space).
+\end{remark}
+
+
+
+\begin{definition}[Isomorphism of categories]
+    Let \(\mathbf{C}\) and \(\mathbf{D}\) be categories.
+    \begin{itemize}[]
+        \item A functor \(F\colon \mathbf{C}\to \mathbf{D}\) is an \textit{isomorphism} if there is a functor \(G\colon \mathbf{D}\to \mathbf{A}\) such that \(F\circ G = 1_{\mathbf{D}}\) and \(G\circ F = 1_{\mathbf{C}}\).
+        \item We say \(\mathbf{C}\) and \(\mathbf{D}\) are \textit{isomorphic} if there is an isomorphism between them.
+    \end{itemize}
+\end{definition}
+
+
+\begin{theorem}[on isomorphisms]
+    statement
+\end{theorem}
+
+
+\begin{definition}[Concrete category]
+    
+\end{definition}
+
+\begin{definition}[Initial and final object]
+    
+\end{definition}
+
+
+\begin{definition}[Product and coproduct]
+    
+\end{definition}
+
+
+
+% \begin{definition}[Pushout and pullback]
+    
+% \end{definition}
+
+
+Duality principle
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.7\textwidth]{figures/2024-02-04-20-52-59.png}
+    \caption{}%\label{fig:}
+\end{figure}
+
+The joy of cats.
+
+Because of this principle, each result in category theory has two equivalent formulations
+(which at first glance might seem to be quite different). However, only one of them needs
+to be proved, since the other one follows by virtue of the Duality Principle.

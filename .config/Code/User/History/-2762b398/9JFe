@@ -1,0 +1,2 @@
+$pdflatex = "xelatex %O %S"
+$go_mode = 3;

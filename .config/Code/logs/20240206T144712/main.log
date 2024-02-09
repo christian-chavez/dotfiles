@@ -1,0 +1,8 @@
+2024-02-06 14:47:14.573 [info] update#setState idle
+2024-02-06 14:47:44.694 [info] update#setState checking for updates
+2024-02-06 14:47:44.710 [info] update#setState available for download
+2024-02-06 15:20:53.453 [info] Extension host with pid 17056 exited with code: 0, signal: unknown.
+2024-02-06 18:44:28.084 [info] Extension host with pid 6539 exited with code: 0, signal: unknown.
+2024-02-06 18:44:29.662 [warning] [storage main] detected slow close() operation: Time: 2350ms, DB size: 86016b, Large Keys: terminal.integrated.bufferState:19903, suggest/memories/recentlyUsedByPrefix:13559, memento/workbench.editors.files.textFileEditor:6517, __$__targetStorageMarker:2404, history.entries:2139
+2024-02-06 18:44:29.966 [warning] [storage main] detected slow close() operation: Time: 2649ms, DB size: 28672b, Large Keys: memento/workbench.parts.editor:3213, __$__targetStorageMarker:1261, terminal.integrated.environmentVariableCollectionsV2:1173, workbench.activity.viewletsWorkspaceState:764, workbench.view.debug.state:528
+2024-02-06 18:44:30.672 [warning] [storage main] detected slow close() operation: Time: 3364ms, DB size: 655360b, Large Keys: iconThemeData:496434, workbench.statusbar.hidden:15167, colorThemeData:13990, history.recentlyOpenedPathsList:9027, terminal.history.entries.commands:5838

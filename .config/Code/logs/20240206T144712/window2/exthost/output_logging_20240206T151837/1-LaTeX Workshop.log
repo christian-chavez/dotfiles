@@ -1,0 +1,58 @@
+[15:18:44.692][Logger] New log placeholder %WS1% registered for /mnt/Mis archivos/Google Drive/Libros/Matemática/Category Theory .
+[15:18:44.692][Extension] Initializing LaTeX Workshop.
+[15:18:46.582][Build][Recipe] Set $LATEXWORKSHOP_DOCKER_LATEX: ""
+[15:18:47.029][Server] Creating LaTeX Workshop http and websocket server.
+[15:18:47.453][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[15:18:47.580][Server] Server successfully started: {"address":"127.0.0.1","family":"IPv4","port":38919} .
+[15:18:47.638][Extension] Extension root: /home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0
+[15:18:47.639][Extension] $PATH: /usr/local/texlive/2023/bin/x86_64-linux:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+[15:18:47.640][Extension] $SHELL: /usr/bin/bash
+[15:18:47.641][Extension] $LANG: en_US.UTF-8
+[15:18:47.641][Extension] $LC_ALL: undefined
+[15:18:47.642][Extension] process.platform: linux
+[15:18:47.643][Extension] process.arch: x64
+[15:18:47.644][Extension] vscode.env.appName: Visual Studio Code
+[15:18:47.645][Extension] vscode.env.remoteName: undefined
+[15:18:47.646][Extension] vscode.env.uiKind: 1
+[15:18:47.652][Config] latex-workshop.latex.recipes: [{"name":"LaTeXMk","tools":["LaTeXMk"]},{"name":"PdfLaTeX","tools":["PdfLaTeX"]},{"name":"PdfLaTeX + Biber + PdfLaTeX (2)","tools":["PdfLaTeX","biber","PdfLaTeX","PdfLaTeX"]},{"name":"Xelatex latexmk","tools":["Xelatex latexmk"]},{"name":"LuaLaTeXMk","tools":["LuaLaTeXMk"]}] .
+[15:18:47.654][Config] latex-workshop.latex.recipe.default: "LaTeXMk" .
+[15:18:47.656][Config] latex-workshop.latex.tools: [{"name":"LaTeXMk","command":"latexmk","args":["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"Xelatex latexmk","command":"latexmk","args":["-xelatex","-synctex=1","-interaction=nonstopmode","-file-line-error","-pdf","-pdflatex=xelatex -shell-escape %O %S","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"PdfLaTeX","command":"pdflatex","args":["-shell-escape","-synctex=1","-interaction=nonstopmode","-file-line-error","%DOC%"]},{"name":"bibtex","command":"bibtex","args":["%DOCFILE%"]},{"name":"biber","command":"biber","args":["%DOCFILE%"]},{"name":"LuaLaTeXMk","command":"latexmk","args":["-synctex=1","-interaction=nonstopmode","-file-line-error","-pdflatex=lualatex","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]}] .
+[15:18:47.663][Config] latex-workshop.latex.outDir: "%DIR%/_temp" .
+[15:18:47.678][Config] latex-workshop.latex.autoBuild.run: "onSave" .
+[15:18:47.687][Config] latex-workshop.latex.clean.fileTypes: ["*.aux"] .
+[15:18:47.710][Config] latex-workshop.view.pdf.viewer: "external" .
+[15:18:47.725][Config] latex-workshop.view.pdf.external.viewer.command: "zathura" .
+[15:18:47.733][Config] latex-workshop.view.pdf.external.viewer.args: ["--synctex-editor-command","code -r -g \"%{input}:%{line}\"","%PDF%"] .
+[15:18:47.735][Config] latex-workshop.view.pdf.external.synctex.command: "zathura" .
+[15:18:47.742][Config] latex-workshop.view.pdf.external.synctex.args: ["--synctex-forward=%LINE%:0:%TEX%","%PDF%"] .
+[15:18:47.815][Config] latex-workshop.message.warning.show: false .
+[15:18:47.816][Config] latex-workshop.message.error.show: false .
+[15:18:47.818][Config] latex-workshop.showContextMenu: true .
+[15:18:47.895][Extension] Trigger characters for intellisense of LaTeX documents: ["\\",",","{"]
+[15:18:47.908][Root] Current workspace folders: ["file://%WS1%"]
+[15:18:47.909][Extension] LaTeX Workshop initialized.
+[15:18:47.912][Root] Current workspaceRootDir: file://%WS1% .
+[15:18:47.922][Server] valdOrigin is http://127.0.0.1:38919
+[15:18:48.204][Viewer][Panel] Internal PDF viewer at http://127.0.0.1:38919/viewer.html?file=pdf..ZmlsZSUzQSUyRiUyRiUyRm1udCUyRk1pcyUyMGFyY2hpdm9zJTJGR29vZ2xlJTIwRHJpdmUlMkZMaWJyb3MlMkZNYXRlbSVDMyVBMXRpY2ElMkZDYXRlZ29yeSUyMFRoZW9yeSUyRlJpZWhsJTIwLSUyMENhdGVnb3J5JTIwVGhlb3J5JTIwaW4lMjBDb250ZXh0JTIwLnBkZg .
+[15:18:48.221][Cacher][Watcher] Watched %WS1%/Riehl - Category Theory in Context .pdf with a new watcher on %WS1% .
+[15:18:48.229][Event] FILE_WATCHED: "%WS1%/Riehl - Category Theory in Context .pdf"
+[15:18:48.231][Viewer] Open PDF tab for file://%WS1%/Riehl - Category Theory in Context .pdf
+[15:18:48.253][Root] No root file found.
+[15:18:48.254][Structure] Structure cleared on undefined root.
+[15:18:48.255][Event] ROOT_FILE_SEARCHED
+[15:18:48.260][Event] STRUCTURE_UPDATED
+[15:18:49.125][Viewer] Handle data type: open
+[15:18:49.415][Server] Preview PDF file: file://%WS1%/Riehl - Category Theory in Context .pdf
+[15:18:50.606][Viewer] Handle data type: loaded
+[15:18:50.607][Event] VIEWER_PAGE_LOADED
+[15:18:58.390][Viewer][Panel] Internal PDF viewer at http://127.0.0.1:38919/viewer.html?file=pdf..ZmlsZSUzQSUyRiUyRiUyRm1udCUyRk1pcyUyMGFyY2hpdm9zJTJGR29vZ2xlJTIwRHJpdmUlMkZMaWJyb3MlMkZNYXRlbSVDMyVBMXRpY2ElMkZDYXRlZ29yeSUyMFRoZW9yeSUyRkxlaW5zdGVyJTIwLSUyMEJhc2ljJTIwQ2F0ZWdvcnklMjBUaGVvcnkucGRm .
+[15:18:58.398][Cacher][Watcher] Watched %WS1%/Leinster - Basic Category Theory.pdf .
+[15:18:58.400][Event] FILE_WATCHED: "%WS1%/Leinster - Basic Category Theory.pdf"
+[15:18:58.401][Viewer] Open PDF tab for file://%WS1%/Leinster - Basic Category Theory.pdf
+[15:18:58.771][Viewer] Handle data type: open
+[15:18:59.110][Server] Preview PDF file: file://%WS1%/Leinster - Basic Category Theory.pdf
+[15:18:59.720][Viewer] Handle data type: loaded
+[15:18:59.721][Event] VIEWER_PAGE_LOADED
+[15:20:53.357][Cacher][Watcher] Reset.
+[15:20:53.358][Cacher][Watcher] Reset.
+[15:20:53.359][Cacher][Watcher] Reset.

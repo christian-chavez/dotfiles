@@ -1,0 +1,48 @@
+{
+  "title": "Christian's blog",
+  "url": "christian-chavez.github.io",
+  "subtitle": "here goes the subtitle",
+  "copyright": "© All rights reserved",
+  "googleAnalyticsId": "what the hail is this",
+  "disqusShortname": "",
+  "postsLimit": 5,
+  "pathPrefix": "/",
+  "menu": [
+    {
+      "label": "Articles",
+      "path": "/"
+    },
+    {
+      "label": "Lecture Notes",
+      "path": "/pages/about"
+    },
+    {
+      "label": "Contact",
+      "path": "/pages/contacts"
+    }
+  ],
+  "author": {
+    "name": "Christian Chávez",
+    "photo": "/photo.jpg",
+    "bio": "Mathematics student at Yachay Tech University. Interested in mathematics,  computer science, LaTeX, Vim, Unix, among other things.",
+    "contacts": {
+      
+      "email": "mailto:kevin.chavez@yachaytech.edu.ec",
+      "github": "christian-chavez",
+      "rss": "#",
+      "facebook": "",
+      "telegram": "",
+      "twitter": "",
+      "linkedin": "",
+      "instagram": "",
+      "mastodon": "",
+      "line": "",
+      "weibo": "",
+      "gitlab": "",
+      "medium": "",
+      "youtube": "#",
+      "codepen": "",
+      "soundcloud": ""
+    }
+  }
+}

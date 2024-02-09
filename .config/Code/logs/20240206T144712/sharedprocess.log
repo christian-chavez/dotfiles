@@ -1,0 +1,15 @@
+2024-02-06 14:47:34.210 [info] Getting Manifest... ms-python.python
+2024-02-06 14:47:34.337 [info] Installing extension: ms-python.python
+2024-02-06 14:47:45.384 [warning] Extension signature verification failed with error 'UnknownError': ms-python.python
+2024-02-06 14:47:51.054 [info] Extracted extension to file:///home/chris/.vscode/extensions/ms-python.python-2024.0.1: ms-python.python
+2024-02-06 14:47:51.128 [info] Renamed to /home/chris/.vscode/extensions/ms-python.python-2024.0.1
+2024-02-06 14:47:51.143 [info] Extracting extension completed. ms-python.python
+2024-02-06 14:47:51.192 [info] Extension installed successfully: ms-python.python
+2024-02-06 14:47:51.211 [info] Marked extension as uninstalled ms-python.python-2024.0.0
+2024-02-06 14:47:51.258 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/chris/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/chris/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30056)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30170)
+    at s.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36175)
+    at s.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:28621)
+    at async E.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:15732)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:100:111319)

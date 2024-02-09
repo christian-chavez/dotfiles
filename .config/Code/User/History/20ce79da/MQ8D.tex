@@ -1,0 +1,227 @@
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+% \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage{
+    geometry,
+    graphicx,
+    lmodern,
+    microtype,
+    csquotes,
+    lipsum,
+    anyfontsize,
+    url,
+    titlesec,
+    fancyhdr,
+    calc,
+    ragged2e,
+    caption,
+    amsmath,
+    amsfonts,
+    mathtools,
+    amsthm,
+    amssymb,
+    xcolor,
+    thmtools,
+    % mdframed,
+    % tcolorbox,
+    enumitem,
+    dsfont,
+    marginnote,
+}
+
+% 2024-01-13 -------------------------
+\usepackage[framemethod=default,usetwoside=false]{mdframed}
+
+\mdfdefinestyle{theoremstyle}{%
+    linecolor=black,
+    linewidth=0.5pt,
+    frametitlerule=true,
+    frametitlerulewidth=0.5pt, 
+    frametitlebackgroundcolor=white,
+    frametitleaboveskip=4pt,
+    frametitlebelowskip=3pt,
+    frametitlefont=\nimbusfont,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+}
+\mdfsetup{skipabove=\topskip,skipbelow=0.5\topskip}
+\mdtheorem[style=theoremstyle, theoremseparator={\hspace{7pt}}, theoremtitlefont=\itshape]
+    {definition}{Definition}[chapter]
+\mdtheorem[style=theoremstyle, theoremseparator={\hspace{7pt}}, theoremtitlefont=\itshape]
+    {theorem}[definition]{Theorem}
+
+\newtheoremstyle{uptheorem} 
+{\baselineskip}{\baselineskip}{\upshape}{}{\bfseries}{.}{ }{} 
+\theoremstyle{uptheorem}
+\newtheorem{example}[definition]{Example}
+\newtheorem{lemma}[definition]{Lemma}
+
+\newtheoremstyle{uptheoremv3}{\baselineskip}{}{\upshape\small}{}{\bfseries}{.}{ }{} 
+\theoremstyle{uptheoremv3}
+\newtheorem{remark}[definition]{Remark}
+
+
+% Custom font --------------------------------------------
+
+\newfontfamily\nimbusfont{NimbusSanL.ttf}[
+  Path = nimbussanl/,
+  Extension = .ttf,
+  UprightFont = *,  
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic,
+  Scale = 0.92,
+]
+
+\titleformat{\chapter}[display]
+  {\nimbusfont\mdseries\Huge}
+  {\huge\chaptertitlename\ \thechapter}
+  {1em}
+  {}
+
+\titleformat{\section}
+  {\nimbusfont\mdseries\huge}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\nimbusfont\mdseries\Large}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\nimbusfont\mdseries}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\captionsetup{
+    labelfont=bf,
+    font=footnotesize,
+    justification=raggedright, % Left-align the caption
+    singlelinecheck=false, % Disable single line check for multi-line captions
+    format=plain,
+    justification=justified,
+}
+% --------------------------------------------
+% Layout & measures
+
+\raggedbottom
+\setlength{\parskip}{0.5\baselineskip}
+\footmarkstyle{\textsuperscript{#1}\;}    % indent the footmark 
+\setlength{\footmarkwidth} {0em}
+\setlength{\footmarksep}   {0em}
+
+\geometry{
+    % showframe,
+    margin=1.5cm,
+    includeheadfoot,
+    includemp,
+    marginparsep=0.75cm,
+    marginparwidth=5.25cm
+}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[LE]{\nimbusfont\mdseries\nouppercase{\leftmark}}
+\fancyhead[RO]{\nimbusfont\mdseries\nouppercase{\rightmark}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{% % <-- this is new
+  \fancyhf{} 
+  \fancyfoot[LE,RO]{\thepage} % same placement as with page style "fancy"
+  \renewcommand{\headrulewidth}{0pt}}
+
+\footnotesinmargin
+
+% SIDECAPTIONS --------------------------------------
+\setsidecaps{\marginparsep}{\marginparwidth}
+\sidecapmargin{outer}
+\setsidecappos{t}
+\renewcommand*{\sidecapstyle}{%
+\captionnamefont{\bfseries\foottextfont}
+\captionstyle{\RaggedRight\footnotesize\foottextfont}
+}
+
+% FULLWIDTH environment
+% The following code should be used *after* any changes to the margins and
+% page layout are made (e.g., after the geometry package has been loaded).
+\newlength{\fullwidthlen}
+\setlength{\fullwidthlen}{\marginparwidth}
+\addtolength{\fullwidthlen}{\marginparsep}
+
+\newenvironment{fullwidth}{%
+  \begin{adjustwidth*}{}{-\fullwidthlen}%
+}{%
+  \end{adjustwidth*}%
+}
+
+% Custom commands --------------------------------------------
+
+\newcommand{\qand}{\quad\text{and}\quad}
+\newcommand{\chr}[1]{\textcolor{red}{#1}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\mathbb}[1]{\mathds{#1}}
+\renewcommand{\subset}{\subseteq}
+
+\DeclareMathOperator{\ob}{Ob}
+\DeclareMathOperator{\ar}{Mo}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{cod}
+
+
+
+% --------------------------------------------
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarksnumbered,
+    hidelinks,
+    colorlinks=true,
+    allcolors=blue,
+}
+
+% --------------------------------------------
+% Bibliography
+
+\usepackage[style=numeric]{biblatex}
+\addbibresource{bibliography.bib}
+
+% 2024-01-18 --------------------------------
+\renewcommand*{\raggedleftmarginnote}{}
+\renewcommand*{\marginfont}{\footnotesize}
+\newcommand{\doubt}[1]{\marginnote{\textcolor{red}{#1}}}
+\newcommand{\note}[1]{\marginnote{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+% 2024-01-19 -----------------------------------
+\setlist[itemize,enumerate]{topsep=0.25\baselineskip, itemsep=0.25\baselineskip}
+% \setlist[itemize]{left=0pt}
+
+% 2024-01-28 from Gilles ----------------------
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\linewidth}
+    \import{./images/}{#1.pdf_tex}
+}
+
+
+\newlength{\mylongest}
+\setlength{\mylongest}{\widthof{The longest label I will need}}
+\addtolength{\mylongest}{\labelsep}
+\SetLabelAlign{CenterWithParen}{\makebox[\mylongest]{(#1)}}
+
+

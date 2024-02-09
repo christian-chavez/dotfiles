@@ -1,0 +1,4 @@
+set selection-clipboard clipboard
+set guioptions ""
+map w adjust_window width
+set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"

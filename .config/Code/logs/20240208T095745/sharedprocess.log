@@ -1,0 +1,5 @@
+2024-02-08 10:15:48.583 [error] [uncaught exception in sharedProcess]: Connection refused for the request 'https://vscode-sync.trafficmanager.net/v1/resource/globalState/a27701e6-3190-471a-abd6-d56bc60fb5ad'.: RequestFailed (UserDataSyncError) syncResource:unknown operationId:unknown: Connection refused for the request 'https://vscode-sync.trafficmanager.net/v1/resource/globalState/a27701e6-3190-471a-abd6-d56bc60fb5ad'.
+    at f.D (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:127841)
+    at async f.resolveResourceContent (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:123639)
+    at async a.getLastSyncUserData (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:17745)
+    at async a.R (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:10051)

@@ -1,0 +1,57 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+numpad_divide",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k ctrl+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+numpad_divide",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k ctrl+u",
+        "command": "-editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "f2",
+        "command": "latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "-latex-workshop.build",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^rsweave$|^jlweave$/"
+    },
+    {
+        "key": "ctrl",
+        "command": "workbench.action.toggleMultiCursorModifier"
+    },
+    {
+        "key": "end",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-acceptSelectedSuggestion",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "-latex-workshop.view",
+        "when": "!config.latex-workshop.bind.altKeymap.enabled && !virtualWorkspace && editorLangId =~ /^latex$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+    }
+]

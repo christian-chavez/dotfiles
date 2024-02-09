@@ -1,0 +1,4 @@
+$pdflatex = "xelatex %O %S";
+$bibtex_use = 2;
+$pdf_mode = 1;
+$go_mode = 3;

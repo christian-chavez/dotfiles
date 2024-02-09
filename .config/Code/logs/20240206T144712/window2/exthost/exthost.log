@@ -1,0 +1,16 @@
+2024-02-06 15:18:37.676 [info] Extension host with pid 17056 started
+2024-02-06 15:18:37.677 [info] Skipping acquiring lock for /home/chris/.config/Code/User/workspaceStorage/d0d99a7feb9ab4c0901969d4201b2043.
+2024-02-06 15:18:37.799 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-02-06 15:18:38.373 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-02-06 15:18:39.242 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-02-06 15:18:39.426 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-06 15:18:39.703 [info] Eager extensions activated
+2024-02-06 15:18:40.069 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-06 15:18:40.118 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-06 15:18:40.279 [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-02-06 15:18:40.696 [info] ExtensionService#_doActivateExtension equinusocio.vsc-material-theme-icons, startup: false, activationEvent: 'onStartupFinished'
+2024-02-06 15:18:41.267 [info] ExtensionService#_doActivateExtension PKief.material-icon-theme, startup: false, activationEvent: 'onStartupFinished'
+2024-02-06 15:18:44.534 [info] ExtensionService#_doActivateExtension James-Yu.latex-workshop, startup: false, activationEvent: 'onCustomEditor:latex-workshop-pdf-hook'
+2024-02-06 15:18:47.530 [warning] DiagnosticCollection with name 'BibTeX' does already exist.
+2024-02-06 15:20:53.311 [info] Extension host terminating: renderer closed the MessagePort
+2024-02-06 15:20:53.365 [info] Extension host with pid 17056 exiting with code 0

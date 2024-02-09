@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1692417426616219-1</unique-id>
+	<command>alacritty --working-directory %f</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>visual-studio-code</icon>
+	<name>Open with Code</name>
+	<submenu></submenu>
+	<unique-id>1692764833846566-1</unique-id>
+	<command>code .</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>application-x-xojpp</icon>
+	<name>Xournal to PDF</name>
+	<submenu></submenu>
+	<unique-id>1693535969049179-1</unique-id>
+	<command>xournalpp -p ./%n.pdf ./%n</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.xopp</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>application-x-xojpp</icon>
+	<name>All xournals to PDF</name>
+	<submenu></submenu>
+	<unique-id>1693536721936769-2</unique-id>
+	<command>for file in *.xopp ; do xournalpp -p &quot;${file}.pdf&quot; &quot;${file}&quot; ; done ;</command>
+	<description></description>
+	<range></range>
+	<patterns>*.xopp</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>application-x-compress</icon>
+	<name>Add to archive</name>
+	<submenu></submenu>
+	<unique-id>1703654083270072-1</unique-id>
+	<command>engrampa -d %F</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>cm_extractfiles</icon>
+	<name>Extract here</name>
+	<submenu></submenu>
+	<unique-id>1703654295628872-2</unique-id>
+	<command>engrampa -h %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>open with magick</name>
+	<submenu></submenu>
+	<unique-id>1703710748208454-1</unique-id>
+	<command>magick display -geometry 800x600 %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>list-remove-all</icon>
+	<name>Delete forever</name>
+	<submenu></submenu>
+	<unique-id>1703800001090552-1</unique-id>
+	<command>rm -r %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Open with evince</name>
+	<submenu></submenu>
+	<unique-id>1705296388373919-2</unique-id>
+	<command>evince %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Open with Zathura</name>
+	<submenu></submenu>
+	<unique-id>1706643071342505-1</unique-id>
+	<command>zathura %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
+</actions>

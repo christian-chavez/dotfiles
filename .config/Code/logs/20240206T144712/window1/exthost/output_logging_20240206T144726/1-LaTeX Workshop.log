@@ -1,0 +1,862 @@
+[14:47:28.152][Logger] New log placeholder %WS1% registered for /mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis .
+[14:47:28.152][Extension] Initializing LaTeX Workshop.
+[14:47:30.142][Build][Recipe] Set $LATEXWORKSHOP_DOCKER_LATEX: ""
+[14:47:30.477][Server] Creating LaTeX Workshop http and websocket server.
+[14:47:30.896][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[14:47:31.192][Server] Server successfully started: {"address":"127.0.0.1","family":"IPv4","port":42741} .
+[14:47:31.240][Extension] Extension root: /home/chris/.vscode/extensions/james-yu.latex-workshop-9.18.0
+[14:47:31.241][Extension] $PATH: /usr/local/texlive/2023/bin/x86_64-linux:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+[14:47:31.241][Extension] $SHELL: /usr/bin/bash
+[14:47:31.242][Extension] $LANG: en_US.UTF-8
+[14:47:31.243][Extension] $LC_ALL: undefined
+[14:47:31.244][Extension] process.platform: linux
+[14:47:31.245][Extension] process.arch: x64
+[14:47:31.245][Extension] vscode.env.appName: Visual Studio Code
+[14:47:31.246][Extension] vscode.env.remoteName: undefined
+[14:47:31.247][Extension] vscode.env.uiKind: 1
+[14:47:31.252][Config] latex-workshop.latex.recipes: [{"name":"LaTeXMk","tools":["LaTeXMk"]},{"name":"PdfLaTeX","tools":["PdfLaTeX"]},{"name":"PdfLaTeX + Biber + PdfLaTeX (2)","tools":["PdfLaTeX","biber","PdfLaTeX","PdfLaTeX"]},{"name":"Xelatex latexmk","tools":["Xelatex latexmk"]},{"name":"LuaLaTeXMk","tools":["LuaLaTeXMk"]}] .
+[14:47:31.254][Config] latex-workshop.latex.recipe.default: "LaTeXMk" .
+[14:47:31.262][Config] latex-workshop.latex.tools: [{"name":"LaTeXMk","command":"latexmk","args":["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"Xelatex latexmk","command":"latexmk","args":["-xelatex","-synctex=1","-interaction=nonstopmode","-file-line-error","-pdf","-pdflatex=xelatex -shell-escape %O %S","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"PdfLaTeX","command":"pdflatex","args":["-shell-escape","-synctex=1","-interaction=nonstopmode","-file-line-error","%DOC%"]},{"name":"bibtex","command":"bibtex","args":["%DOCFILE%"]},{"name":"biber","command":"biber","args":["%DOCFILE%"]},{"name":"LuaLaTeXMk","command":"latexmk","args":["-synctex=1","-interaction=nonstopmode","-file-line-error","-pdflatex=lualatex","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]}] .
+[14:47:31.267][Config] latex-workshop.latex.outDir: "%DIR%/_temp" .
+[14:47:31.300][Config] latex-workshop.latex.autoBuild.run: "onSave" .
+[14:47:31.313][Config] latex-workshop.latex.clean.fileTypes: ["*.aux"] .
+[14:47:31.323][Config] latex-workshop.view.pdf.viewer: "external" .
+[14:47:31.335][Config] latex-workshop.view.pdf.external.viewer.command: "zathura" .
+[14:47:31.336][Config] latex-workshop.view.pdf.external.viewer.args: ["--synctex-editor-command","code -r -g \"%{input}:%{line}\"","%PDF%"] .
+[14:47:31.338][Config] latex-workshop.view.pdf.external.synctex.command: "zathura" .
+[14:47:31.339][Config] latex-workshop.view.pdf.external.synctex.args: ["--synctex-forward=%LINE%:0:%TEX%","%PDF%"] .
+[14:47:31.401][Config] latex-workshop.message.warning.show: false .
+[14:47:31.402][Config] latex-workshop.message.error.show: false .
+[14:47:31.407][Config] latex-workshop.showContextMenu: true .
+[14:47:31.563][Extension] Trigger characters for intellisense of LaTeX documents: ["\\",",","{"]
+[14:47:31.575][Root] Current workspace folders: ["file://%WS1%"]
+[14:47:31.579][Extension] LaTeX Workshop initialized.
+[14:47:31.587][Root] Current workspaceRootDir: file://%WS1% .
+[14:47:31.917][Server] valdOrigin is http://127.0.0.1:42741
+[14:47:35.537][Root] Found root file from '.fls': %WS1%/thesis.tex
+[14:47:35.538][Root] Root file changed: from %WS1%/thesis.tex to %WS1%/thesis.tex, langID latex . Refresh dependencies
+[14:47:35.538][Event] ROOT_FILE_CHANGED: "%WS1%/thesis.tex"
+[14:47:35.540][Cacher][Watcher] Reset.
+[14:47:35.541][Cacher][Watcher] Reset.
+[14:47:35.542][Cacher][Watcher] Reset.
+[14:47:35.550][Cacher] Adding %WS1%/thesis.tex .
+[14:47:35.556][Cacher][Watcher] Watched %WS1%/thesis.tex with a new watcher on %WS1% .
+[14:47:35.556][Event] FILE_WATCHED: "%WS1%/thesis.tex"
+[14:47:35.561][Cacher] Caching %WS1%/thesis.tex .
+[14:47:35.656][Cacher] Input %WS1%/preamble.tex from %WS1%/thesis.tex .
+[14:47:35.658][Cacher] Adding %WS1%/preamble.tex .
+[14:47:35.659][Cacher][Watcher] Watched %WS1%/preamble.tex .
+[14:47:35.660][Event] FILE_WATCHED: "%WS1%/preamble.tex"
+[14:47:35.663][Cacher] Caching %WS1%/preamble.tex .
+[14:47:35.763][Cacher] Updated inputs of %WS1%/preamble.tex .
+[14:47:35.764][Cacher] Parse LaTeX AST: %WS1%/preamble.tex .
+[14:47:35.766][Cacher] Input %WS1%/frontmatter.tex from %WS1%/thesis.tex .
+[14:47:35.770][Cacher] Adding %WS1%/frontmatter.tex .
+[14:47:35.771][Cacher][Watcher] Watched %WS1%/frontmatter.tex .
+[14:47:35.771][Event] FILE_WATCHED: "%WS1%/frontmatter.tex"
+[14:47:35.774][Cacher] Caching %WS1%/frontmatter.tex .
+[14:47:35.775][Cacher] Updated inputs of %WS1%/frontmatter.tex .
+[14:47:35.776][Cacher] Parse LaTeX AST: %WS1%/frontmatter.tex .
+[14:47:35.777][Cacher] Input %WS1%/sources/chap03.tex from %WS1%/thesis.tex .
+[14:47:35.779][Cacher] Adding %WS1%/sources/chap03.tex .
+[14:47:35.780][Cacher][Watcher] Watched %WS1%/sources/chap03.tex with a new watcher on %WS1%/sources .
+[14:47:35.781][Event] FILE_WATCHED: "%WS1%/sources/chap03.tex"
+[14:47:35.783][Cacher] Caching %WS1%/sources/chap03.tex .
+[14:47:35.785][Cacher] Updated inputs of %WS1%/sources/chap03.tex .
+[14:47:35.786][Cacher] Parse LaTeX AST: %WS1%/sources/chap03.tex .
+[14:47:35.787][Cacher] Updated inputs of %WS1%/thesis.tex .
+[14:47:35.788][Cacher] Parse LaTeX AST: %WS1%/thesis.tex .
+[14:47:35.789][Event] ROOT_FILE_SEARCHED
+[14:47:37.351][Cacher] Parsed LaTeX AST: %WS1%/preamble.tex .
+[14:47:37.361][Cacher] Bib %WS1%/bibliography.bib from %WS1%/preamble.tex .
+[14:47:37.362][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[14:47:37.380][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[14:47:37.380][Cacher][Watcher] Watched %WS1%/bibliography.bib with a new watcher on %WS1% .
+[14:47:37.381][Event] FILE_WATCHED: "%WS1%/bibliography.bib"
+[14:47:37.381][Cacher] Updated elements in 29.07 ms: %WS1%/preamble.tex .
+[14:47:37.383][Event] FILE_PARSED: "%WS1%/preamble.tex"
+[14:47:37.384][Cacher] Parsed LaTeX AST: %WS1%/frontmatter.tex .
+[14:47:37.385][Cacher] Updated elements in 0.31 ms: %WS1%/frontmatter.tex .
+[14:47:37.385][Event] FILE_PARSED: "%WS1%/frontmatter.tex"
+[14:47:37.838][Cacher] Parsed LaTeX AST: %WS1%/sources/chap03.tex .
+[14:47:37.857][Cacher] Updated elements in 16.22 ms: %WS1%/sources/chap03.tex .
+[14:47:37.859][Event] FILE_PARSED: "%WS1%/sources/chap03.tex"
+[14:47:37.867][Cacher] Parsed LaTeX AST: %WS1%/thesis.tex .
+[14:47:37.869][File] Calling kpsewhich to resolve memoir.cls .
+[14:47:38.320][Cacher] Updated elements in 450.51 ms: %WS1%/thesis.tex .
+[14:47:38.322][Event] FILE_PARSED: "%WS1%/thesis.tex"
+[14:47:38.326][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[14:47:38.427][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[14:47:38.453][Cacher] Parsed .aux %WS1%/thesis.tex .
+[14:47:38.454][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[14:47:38.457][Structure] Structure force updated with 0 root sections for %WS1%/thesis.tex .
+[14:47:38.459][Event] STRUCTURE_UPDATED
+[14:47:38.462][Intelli][Citation] Parsed 5 bib entries from %WS1%/bibliography.bib .
+[14:47:38.463][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[14:47:38.466][Structure] Structure force updated with 1 root sections for %WS1%/thesis.tex .
+[14:47:38.467][Event] STRUCTURE_UPDATED
+[14:53:46.088][Commander] VIEW command invoked with mode: file:///mnt/Mis%20archivos/Google%20Drive/Tesis%20pregrado/bachelor-thesis/sources/chap03.tex.
+[14:53:46.089][Root] Current workspace folders: ["file://%WS1%"]
+[14:53:46.091][Root] Keep using the same root file: %WS1%/thesis.tex
+[14:53:46.092][Event] ROOT_FILE_SEARCHED
+[14:53:46.092][Event] STRUCTURE_UPDATED
+[14:53:46.094][Viewer] Open external viewer for %WS1%/_temp/thesis.pdf
+[14:53:46.095][Viewer] Execute the external PDF viewer command The command is zathura:["--synctex-editor-command","code -r -g \"%{input}:%{line}\"","%WS1%/_temp/thesis.pdf"].
+[15:12:45.440][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:45.455][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:45.470][Structure][BibTeX] Parsed 5 AST items.
+[15:12:45.475][Structure] Structure updated with 1 entries for %WS1%/bibliography.bib .
+[15:12:45.476][Event] STRUCTURE_UPDATED
+[15:12:45.478][Structure][BibTeX] Parsed 5 AST items.
+[15:12:47.880][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:47.885][Structure][BibTeX] Parsed 5 AST items.
+[15:12:48.491][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:12:48.492][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:12:48.542][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:12:48.543][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:12:48.556][Intelli][Citation] Parsed 5 bib entries from %WS1%/bibliography.bib .
+[15:12:48.557][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:48.558][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:12:48.568][Structure][BibTeX] Parsed 6 AST items.
+[15:12:48.570][Structure] Structure force updated with 5 entries for %WS1%/bibliography.bib .
+[15:12:48.572][Event] STRUCTURE_UPDATED
+[15:12:48.576][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:12:48.578][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:12:48.580][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:12:48.581][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:12:48.586][Intelli][Citation] Parsed 5 bib entries from %WS1%/bibliography.bib .
+[15:12:48.587][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:48.588][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:12:48.591][Structure][BibTeX] Parsed 6 AST items.
+[15:12:48.592][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:12:48.593][Event] STRUCTURE_UPDATED
+[15:12:48.607][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:12:48.609][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:12:48.609][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:12:48.611][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:12:48.612][Build] The languageId of the document: bibtex
+[15:12:48.613][Build] Building root file: %WS1%/thesis.tex
+[15:12:48.615][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:12:48.839][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:12:48.840][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:12:48.843][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:12:48.844][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:12:48.849][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:12:48.850][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:48.851][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:12:48.859][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:12:48.861][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:12:48.862][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:12:48.863][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:12:48.864][Build] The languageId of the document: bibtex
+[15:12:48.865][Build] Building root file: %WS1%/thesis.tex
+[15:12:48.866][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:12:48.871][Structure][BibTeX] Parsed 6 AST items.
+[15:12:48.872][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:12:48.873][Event] STRUCTURE_UPDATED
+[15:12:48.902][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:12:48.903][Build][Recipe] Prepared 1 tools.
+[15:12:49.074][Build][Recipe] outDir: %WS1%/_temp .
+[15:12:49.078][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:12:49.079][Build] env: undefined
+[15:12:49.079][Build] root: %WS1%/thesis.tex
+[15:12:49.080][Build] cwd: %WS1%
+[15:12:49.168][Build] LaTeX build process spawned with PID 15039.
+[15:12:49.177][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:12:49.178][Build][Recipe] Prepared 1 tools.
+[15:12:49.180][Build][Recipe] outDir: %WS1%/_temp .
+[15:12:49.184][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:12:49.190][Structure][BibTeX] Parsed 6 AST items.
+[15:12:51.927][Build] Finished a step in recipe with PID 15039.
+[15:12:51.929][Build] Successfully built %WS1%/thesis.tex .
+[15:12:51.930][Event] BUILD_DONE
+[15:12:51.931][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:12:51.931][Build] env: undefined
+[15:12:51.932][Build] root: %WS1%/thesis.tex
+[15:12:51.933][Build] cwd: %WS1%
+[15:12:51.956][Build] LaTeX build process spawned with PID 15051.
+[15:12:52.278][Build] Finished a step in recipe with PID 15051.
+[15:12:52.279][Build] Successfully built %WS1%/thesis.tex .
+[15:12:52.280][Event] BUILD_DONE
+[15:18:10.399][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:10.429][Structure][BibTeX] Parsed 6 AST items.
+[15:18:11.112][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:11.115][Structure][BibTeX] Parsed 6 AST items.
+[15:18:11.666][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:18:11.669][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:18:11.670][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:18:11.671][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:18:11.672][Build] The languageId of the document: bibtex
+[15:18:11.673][Build] Building root file: %WS1%/thesis.tex
+[15:18:11.674][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:18:11.682][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:18:11.683][Build][Recipe] Prepared 1 tools.
+[15:18:11.688][Build][Recipe] outDir: %WS1%/_temp .
+[15:18:11.691][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:18:11.692][Build] env: undefined
+[15:18:11.692][Build] root: %WS1%/thesis.tex
+[15:18:11.693][Build] cwd: %WS1%
+[15:18:11.762][Build] LaTeX build process spawned with PID 16841.
+[15:18:11.765][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:18:11.766][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:18:11.878][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:18:11.879][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:18:11.884][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:18:11.885][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:11.885][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:18:11.889][Structure][BibTeX] Parsed 6 AST items.
+[15:18:11.890][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:18:11.890][Event] STRUCTURE_UPDATED
+[15:18:14.344][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:14.347][Structure][BibTeX] Parsed 6 AST items.
+[15:18:14.797][Build] Finished a step in recipe with PID 16841.
+[15:18:14.798][Build] Successfully built %WS1%/thesis.tex .
+[15:18:14.799][Event] BUILD_DONE
+[15:18:14.921][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:18:14.922][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:18:14.923][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:18:14.924][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:18:14.925][Build] The languageId of the document: bibtex
+[15:18:14.925][Build] Building root file: %WS1%/thesis.tex
+[15:18:14.926][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:18:14.940][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:18:14.941][Build][Recipe] Prepared 1 tools.
+[15:18:14.946][Build][Recipe] outDir: %WS1%/_temp .
+[15:18:14.973][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:18:14.977][Build] env: undefined
+[15:18:14.981][Build] root: %WS1%/thesis.tex
+[15:18:14.983][Build] cwd: %WS1%
+[15:18:15.044][Build] LaTeX build process spawned with PID 16863.
+[15:18:15.053][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:18:15.054][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:18:15.067][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:18:15.068][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:18:15.081][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:18:15.082][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:15.083][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:18:15.094][Structure][BibTeX] Parsed 6 AST items.
+[15:18:15.096][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:18:15.097][Event] STRUCTURE_UPDATED
+[15:18:15.548][Build] Finished a step in recipe with PID 16863.
+[15:18:15.549][Build] Successfully built %WS1%/thesis.tex .
+[15:18:15.549][Event] BUILD_DONE
+[15:18:16.132][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:16.135][Structure][BibTeX] Parsed 6 AST items.
+[15:18:16.679][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:18:16.681][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:18:16.682][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:18:16.683][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:18:16.683][Build] The languageId of the document: bibtex
+[15:18:16.684][Build] Building root file: %WS1%/thesis.tex
+[15:18:16.685][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:18:16.696][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:18:16.697][Build][Recipe] Prepared 1 tools.
+[15:18:16.700][Build][Recipe] outDir: %WS1%/_temp .
+[15:18:16.716][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:18:16.717][Build] env: undefined
+[15:18:16.718][Build] root: %WS1%/thesis.tex
+[15:18:16.718][Build] cwd: %WS1%
+[15:18:16.753][Build] LaTeX build process spawned with PID 16864.
+[15:18:16.757][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:18:16.758][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:18:16.770][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:18:16.774][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:18:16.793][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:18:16.797][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:16.801][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:18:16.810][Structure][BibTeX] Parsed 6 AST items.
+[15:18:16.813][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:18:16.815][Event] STRUCTURE_UPDATED
+[15:18:17.159][Build] Finished a step in recipe with PID 16864.
+[15:18:17.160][Build] Successfully built %WS1%/thesis.tex .
+[15:18:17.161][Event] BUILD_DONE
+[15:18:17.253][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:17.256][Structure][BibTeX] Parsed 6 AST items.
+[15:18:17.788][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:18:17.791][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:18:17.792][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:18:17.793][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:18:17.794][Build] The languageId of the document: bibtex
+[15:18:17.795][Build] Building root file: %WS1%/thesis.tex
+[15:18:17.795][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:18:17.800][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:18:17.801][Build][Recipe] Prepared 1 tools.
+[15:18:17.805][Build][Recipe] outDir: %WS1%/_temp .
+[15:18:17.807][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:18:17.808][Build] env: undefined
+[15:18:17.808][Build] root: %WS1%/thesis.tex
+[15:18:17.809][Build] cwd: %WS1%
+[15:18:17.834][Build] LaTeX build process spawned with PID 16873.
+[15:18:17.840][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:18:17.841][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:18:17.867][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:18:17.868][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:18:17.874][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:18:17.875][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:17.876][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:18:17.879][Structure][BibTeX] Parsed 6 AST items.
+[15:18:17.880][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:18:17.881][Event] STRUCTURE_UPDATED
+[15:18:18.193][Build] Finished a step in recipe with PID 16873.
+[15:18:18.194][Build] Successfully built %WS1%/thesis.tex .
+[15:18:18.195][Event] BUILD_DONE
+[15:18:21.070][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:21.074][Structure][BibTeX] Parsed 6 AST items.
+[15:18:21.625][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:18:21.629][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:18:21.630][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:18:21.632][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:18:21.633][Build] The languageId of the document: bibtex
+[15:18:21.634][Build] Building root file: %WS1%/thesis.tex
+[15:18:21.635][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:18:21.647][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:18:21.648][Build][Recipe] Prepared 1 tools.
+[15:18:21.651][Build][Recipe] outDir: %WS1%/_temp .
+[15:18:21.660][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:18:21.661][Build] env: undefined
+[15:18:21.661][Build] root: %WS1%/thesis.tex
+[15:18:21.662][Build] cwd: %WS1%
+[15:18:21.694][Build] LaTeX build process spawned with PID 16887.
+[15:18:21.697][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:18:21.698][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:18:21.703][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:18:21.704][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:18:21.710][Intelli][Citation] Parsed 6 bib entries from %WS1%/bibliography.bib .
+[15:18:21.712][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:18:21.713][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:18:21.718][Structure][BibTeX] Parsed 6 AST items.
+[15:18:21.719][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:18:21.721][Event] STRUCTURE_UPDATED
+[15:18:22.214][Build] Finished a step in recipe with PID 16887.
+[15:18:22.215][Build] Successfully built %WS1%/thesis.tex .
+[15:18:22.216][Event] BUILD_DONE
+[15:20:19.820][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:19.823][Structure][BibTeX] Parsed 6 AST items.
+[15:20:20.523][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:20.526][Structure][BibTeX] Parsed 7 AST items.
+[15:20:21.044][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:20:21.046][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:20:21.048][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:20:21.049][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:20:21.050][Build] The languageId of the document: bibtex
+[15:20:21.051][Build] Building root file: %WS1%/thesis.tex
+[15:20:21.052][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:20:21.064][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:20:21.065][Build][Recipe] Prepared 1 tools.
+[15:20:21.069][Build][Recipe] outDir: %WS1%/_temp .
+[15:20:21.072][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:20:21.073][Build] env: undefined
+[15:20:21.074][Build] root: %WS1%/thesis.tex
+[15:20:21.075][Build] cwd: %WS1%
+[15:20:21.108][Build] LaTeX build process spawned with PID 17736.
+[15:20:21.120][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:20:21.121][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:20:21.123][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:20:21.125][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:20:21.141][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:20:21.142][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:21.143][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:20:21.148][Structure][BibTeX] Parsed 7 AST items.
+[15:20:21.149][Structure] Structure force updated with 6 entries for %WS1%/bibliography.bib .
+[15:20:21.151][Event] STRUCTURE_UPDATED
+[15:20:21.661][Build] Finished a step in recipe with PID 17736.
+[15:20:21.662][Build] Successfully built %WS1%/thesis.tex .
+[15:20:21.663][Event] BUILD_DONE
+[15:20:27.510][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:27.513][Structure][BibTeX] Parsed 7 AST items.
+[15:20:29.048][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:29.051][Structure][BibTeX] Parsed 7 AST items.
+[15:20:29.592][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:20:29.595][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:20:29.596][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:20:29.597][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:20:29.598][Build] The languageId of the document: bibtex
+[15:20:29.599][Build] Building root file: %WS1%/thesis.tex
+[15:20:29.600][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:20:29.606][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:20:29.607][Build][Recipe] Prepared 1 tools.
+[15:20:29.609][Build][Recipe] outDir: %WS1%/_temp .
+[15:20:29.613][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:20:29.613][Build] env: undefined
+[15:20:29.614][Build] root: %WS1%/thesis.tex
+[15:20:29.615][Build] cwd: %WS1%
+[15:20:29.639][Build] LaTeX build process spawned with PID 17776.
+[15:20:29.642][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:20:29.643][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:20:29.644][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:20:29.644][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:20:29.648][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:20:29.650][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:29.650][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:20:29.653][Structure][BibTeX] Parsed 7 AST items.
+[15:20:29.654][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:20:29.655][Event] STRUCTURE_UPDATED
+[15:20:30.000][Build] Finished a step in recipe with PID 17776.
+[15:20:30.001][Build] Successfully built %WS1%/thesis.tex .
+[15:20:30.002][Event] BUILD_DONE
+[15:20:30.869][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:30.874][Structure][BibTeX] Parsed 7 AST items.
+[15:20:31.394][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:20:31.397][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:20:31.398][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:20:31.400][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:20:31.401][Build] The languageId of the document: bibtex
+[15:20:31.402][Build] Building root file: %WS1%/thesis.tex
+[15:20:31.402][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:20:31.408][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:20:31.409][Build][Recipe] Prepared 1 tools.
+[15:20:31.412][Build][Recipe] outDir: %WS1%/_temp .
+[15:20:31.415][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:20:31.415][Build] env: undefined
+[15:20:31.416][Build] root: %WS1%/thesis.tex
+[15:20:31.417][Build] cwd: %WS1%
+[15:20:31.441][Build] LaTeX build process spawned with PID 17780.
+[15:20:31.444][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:20:31.445][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:20:31.447][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:20:31.448][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:20:31.453][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:20:31.454][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:31.455][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:20:31.458][Structure][BibTeX] Parsed 7 AST items.
+[15:20:31.459][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:20:31.460][Event] STRUCTURE_UPDATED
+[15:20:31.800][Build] Finished a step in recipe with PID 17780.
+[15:20:31.801][Build] Successfully built %WS1%/thesis.tex .
+[15:20:31.801][Event] BUILD_DONE
+[15:20:36.356][Format][Bib] Start bibtex formatting on user request.
+[15:20:36.358][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[15:20:36.359][Format][Bib] Parse active BibTeX document for AST.
+[15:20:36.362][Format][Bib] Parsed 7 AST items.
+[15:20:36.365][Format][Bib] Formatted %WS1%/bibliography.bib
+[15:20:36.575][Format][Bib] BibTeX action successful. Took 219.29318600008264 ms.
+[15:20:37.092][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:37.095][Structure][BibTeX] Parsed 7 AST items.
+[15:20:37.615][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:20:37.618][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:20:37.620][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:20:37.621][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:20:37.622][Build] The languageId of the document: bibtex
+[15:20:37.623][Build] Building root file: %WS1%/thesis.tex
+[15:20:37.624][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:20:37.628][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:20:37.628][Build][Recipe] Prepared 1 tools.
+[15:20:37.631][Build][Recipe] outDir: %WS1%/_temp .
+[15:20:37.634][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:20:37.634][Build] env: undefined
+[15:20:37.636][Build] root: %WS1%/thesis.tex
+[15:20:37.637][Build] cwd: %WS1%
+[15:20:37.663][Build] LaTeX build process spawned with PID 17822.
+[15:20:37.668][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:20:37.669][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:20:37.671][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:20:37.672][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:20:37.676][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:20:37.677][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:20:37.679][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:20:37.682][Structure][BibTeX] Parsed 7 AST items.
+[15:20:37.683][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:20:37.685][Event] STRUCTURE_UPDATED
+[15:20:38.021][Build] Finished a step in recipe with PID 17822.
+[15:20:38.022][Build] Successfully built %WS1%/thesis.tex .
+[15:20:38.023][Event] BUILD_DONE
+[15:23:19.067][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:19.070][Structure][BibTeX] Parsed 7 AST items.
+[15:23:21.196][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:21.199][Structure][BibTeX] Parsed 7 AST items.
+[15:23:23.592][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:23.595][Structure][BibTeX] Parsed 7 AST items.
+[15:23:24.117][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:23:24.122][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:23:24.123][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:23:24.124][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:23:24.125][Build] The languageId of the document: bibtex
+[15:23:24.125][Build] Building root file: %WS1%/thesis.tex
+[15:23:24.126][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:23:24.130][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:23:24.130][Build][Recipe] Prepared 1 tools.
+[15:23:24.133][Build][Recipe] outDir: %WS1%/_temp .
+[15:23:24.135][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:23:24.135][Build] env: undefined
+[15:23:24.136][Build] root: %WS1%/thesis.tex
+[15:23:24.137][Build] cwd: %WS1%
+[15:23:24.162][Build] LaTeX build process spawned with PID 18737.
+[15:23:24.165][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:23:24.166][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:23:24.167][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:23:24.168][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:23:24.172][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:23:24.173][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:24.173][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:23:24.176][Structure][BibTeX] Parsed 7 AST items.
+[15:23:24.178][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:23:24.179][Event] STRUCTURE_UPDATED
+[15:23:24.509][Build] Finished a step in recipe with PID 18737.
+[15:23:24.511][Build] Successfully built %WS1%/thesis.tex .
+[15:23:24.512][Event] BUILD_DONE
+[15:23:25.067][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:25.070][Structure][BibTeX] Parsed 7 AST items.
+[15:23:26.026][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:26.030][Structure][BibTeX] Parsed 7 AST items.
+[15:23:26.705][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:26.709][Structure][BibTeX] Parsed 7 AST items.
+[15:23:27.231][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:23:27.234][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:23:27.236][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:23:27.237][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:23:27.238][Build] The languageId of the document: bibtex
+[15:23:27.239][Build] Building root file: %WS1%/thesis.tex
+[15:23:27.239][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:23:27.243][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:23:27.244][Build][Recipe] Prepared 1 tools.
+[15:23:27.247][Build][Recipe] outDir: %WS1%/_temp .
+[15:23:27.250][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:23:27.250][Build] env: undefined
+[15:23:27.251][Build] root: %WS1%/thesis.tex
+[15:23:27.251][Build] cwd: %WS1%
+[15:23:27.275][Build] LaTeX build process spawned with PID 18759.
+[15:23:27.278][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:23:27.280][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:23:27.282][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:23:27.283][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:23:27.290][Intelli][Citation] Parsed 7 bib entries from %WS1%/bibliography.bib .
+[15:23:27.292][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:23:27.293][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:23:27.299][Structure][BibTeX] Parsed 7 AST items.
+[15:23:27.300][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:23:27.301][Event] STRUCTURE_UPDATED
+[15:23:27.631][Build] Finished a step in recipe with PID 18759.
+[15:23:27.632][Build] Successfully built %WS1%/thesis.tex .
+[15:23:27.633][Event] BUILD_DONE
+[15:23:37.735][Format][Bib] Start bibtex formatting on user request.
+[15:23:37.737][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[15:23:37.738][Format][Bib] Parse active BibTeX document for AST.
+[15:23:37.742][Format][Bib] Parsed 7 AST items.
+[15:23:37.745][Format][Bib] Formatted %WS1%/bibliography.bib
+[15:23:37.759][Format][Bib] BibTeX action successful. Took 23.534843999892473 ms.
+[15:24:29.892][Event] STRUCTURE_UPDATED
+[15:24:34.865][Extension] onDidSaveTextDocument triggered: file://%WS1%/sources/chap03.tex
+[15:24:34.871][Build] Auto build startedon saving file: %WS1%/sources/chap03.tex .
+[15:24:34.872][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/sources/chap03.tex"}
+[15:24:34.875][Build] The document of the active editor: file://%WS1%/sources/chap03.tex
+[15:24:34.876][Build] The languageId of the document: latex
+[15:24:34.878][Build] Building root file: %WS1%/thesis.tex
+[15:24:34.879][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:24:34.885][Cacher][Watcher] "change" emitted on %WS1%/sources/chap03.tex.
+[15:24:34.895][Cacher] Caching %WS1%/sources/chap03.tex .
+[15:24:34.897][Cacher] Updated inputs of %WS1%/sources/chap03.tex .
+[15:24:34.898][Cacher] Parse LaTeX AST: %WS1%/sources/chap03.tex .
+[15:24:34.899][Event] FILE_CHANGED: "%WS1%/sources/chap03.tex"
+[15:24:34.902][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:24:34.903][Build][Recipe] Prepared 1 tools.
+[15:24:34.907][Build][Recipe] outDir: %WS1%/_temp .
+[15:24:34.913][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:24:34.914][Build] env: undefined
+[15:24:34.914][Build] root: %WS1%/thesis.tex
+[15:24:34.916][Build] cwd: %WS1%
+[15:24:34.951][Build] LaTeX build process spawned with PID 19143.
+[15:24:35.097][Cacher] Parsed LaTeX AST: %WS1%/sources/chap03.tex .
+[15:24:35.135][Cacher] Updated elements in 32.14 ms: %WS1%/sources/chap03.tex .
+[15:24:35.146][Event] FILE_PARSED: "%WS1%/sources/chap03.tex"
+[15:24:35.170][Structure] Structure force updated with 1 root sections for %WS1%/thesis.tex .
+[15:24:35.172][Event] STRUCTURE_UPDATED
+[15:24:46.136][Parser][TexLog] Logged 4 messages.
+[15:24:46.140][Build] Finished a step in recipe with PID 19143.
+[15:24:46.141][Build] Successfully built %WS1%/thesis.tex .
+[15:24:46.141][Event] BUILD_DONE
+[15:24:46.143][Viewer] Call refreshExistingViewer: "%WS1%/_temp/thesis.pdf" .
+[15:24:46.143][Viewer] Not found PDF viewers to refresh: %WS1%/_temp/thesis.pdf
+[15:24:46.146][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[15:24:46.255][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[15:24:46.257][Cacher] Parsed .aux %WS1%/thesis.tex .
+[15:24:46.257][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[15:26:27.112][Event] STRUCTURE_UPDATED
+[15:26:39.749][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:26:39.757][Structure][BibTeX] Parsed 7 AST items.
+[15:26:40.316][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:26:40.319][Structure][BibTeX] Parsed 8 AST items.
+[15:26:40.857][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:26:40.858][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:26:40.859][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:26:40.860][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:26:40.861][Build] The languageId of the document: bibtex
+[15:26:40.862][Build] Building root file: %WS1%/thesis.tex
+[15:26:40.862][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:26:40.869][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:26:40.870][Build][Recipe] Prepared 1 tools.
+[15:26:40.873][Build][Recipe] outDir: %WS1%/_temp .
+[15:26:40.875][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:26:40.876][Build] env: undefined
+[15:26:40.876][Build] root: %WS1%/thesis.tex
+[15:26:40.877][Build] cwd: %WS1%
+[15:26:40.904][Build] LaTeX build process spawned with PID 19830.
+[15:26:40.912][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:26:40.912][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:26:40.914][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:26:40.915][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:26:40.920][Intelli][Citation] Parsed 8 bib entries from %WS1%/bibliography.bib .
+[15:26:40.921][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:26:40.922][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:26:40.927][Structure][BibTeX] Parsed 8 AST items.
+[15:26:40.928][Structure] Structure force updated with 7 entries for %WS1%/bibliography.bib .
+[15:26:40.929][Event] STRUCTURE_UPDATED
+[15:26:41.269][Build] Finished a step in recipe with PID 19830.
+[15:26:41.270][Build] Successfully built %WS1%/thesis.tex .
+[15:26:41.272][Event] BUILD_DONE
+[15:26:48.256][Format][Bib] Start bibtex formatting on user request.
+[15:26:48.257][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[15:26:48.258][Format][Bib] Parse active BibTeX document for AST.
+[15:26:48.261][Format][Bib] Parsed 8 AST items.
+[15:26:48.263][Format][Bib] Formatted %WS1%/bibliography.bib
+[15:26:48.378][Format][Bib] BibTeX action successful. Took 122.71969800023362 ms.
+[15:26:48.893][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:26:48.896][Structure][BibTeX] Parsed 8 AST items.
+[15:26:49.414][Extension] onDidSaveTextDocument triggered: file://%WS1%/bibliography.bib
+[15:26:49.418][Build] Auto build startedon saving file: %WS1%/bibliography.bib .
+[15:26:49.419][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/bibliography.bib"}
+[15:26:49.421][Build] The document of the active editor: file://%WS1%/bibliography.bib
+[15:26:49.422][Build] The languageId of the document: bibtex
+[15:26:49.423][Build] Building root file: %WS1%/thesis.tex
+[15:26:49.424][Build][Recipe] Build root file %WS1%/thesis.tex
+[15:26:49.429][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[15:26:49.430][Build][Recipe] Prepared 1 tools.
+[15:26:49.432][Build][Recipe] outDir: %WS1%/_temp .
+[15:26:49.434][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[15:26:49.435][Build] env: undefined
+[15:26:49.435][Build] root: %WS1%/thesis.tex
+[15:26:49.436][Build] cwd: %WS1%
+[15:26:49.460][Build] LaTeX build process spawned with PID 19899.
+[15:26:49.465][Cacher][Watcher] "change" emitted on %WS1%/bibliography.bib.
+[15:26:49.466][Intelli][Citation] Parsing .bib entries from %WS1%/bibliography.bib
+[15:26:49.467][Intelli][Citation] Parse BibTeX AST from %WS1%/bibliography.bib .
+[15:26:49.468][Event] FILE_CHANGED: "%WS1%/bibliography.bib"
+[15:26:49.474][Intelli][Citation] Parsed 8 bib entries from %WS1%/bibliography.bib .
+[15:26:49.475][Structure][BibTeX] Parse active BibTeX document for AST.
+[15:26:49.476][Event] FILE_PARSED: "%WS1%/bibliography.bib"
+[15:26:49.485][Structure][BibTeX] Parsed 8 AST items.
+[15:26:49.486][Structure] Structure force updated with 8 entries for %WS1%/bibliography.bib .
+[15:26:49.487][Event] STRUCTURE_UPDATED
+[15:26:49.810][Build] Finished a step in recipe with PID 19899.
+[15:26:49.811][Build] Successfully built %WS1%/thesis.tex .
+[15:26:49.812][Event] BUILD_DONE
+[16:11:38.651][Root] Current workspace folders: ["file://%WS1%"]
+[16:11:38.654][Root] Found root file from active editor: %WS1%/thesis.tex
+[16:11:38.654][Root] Keep using the same root file: %WS1%/thesis.tex
+[16:11:38.655][Event] ROOT_FILE_SEARCHED
+[16:11:38.655][Event] STRUCTURE_UPDATED
+[16:11:38.656][Event] STRUCTURE_UPDATED
+[16:11:39.736][Root] Current workspace folders: ["file://%WS1%"]
+[16:11:39.738][Root] Keep using the same root file: %WS1%/thesis.tex
+[16:11:39.738][Event] ROOT_FILE_SEARCHED
+[16:11:39.738][Event] STRUCTURE_UPDATED
+[16:11:39.739][Event] STRUCTURE_UPDATED
+[16:11:41.550][Root] Current workspace folders: ["file://%WS1%"]
+[16:11:41.558][Root] Current workspaceRootDir: file://%WS1% .
+[16:11:41.825][Root] Found files that might be root including the current root: %WS1%/thesis.tex .
+[16:11:41.826][Root] Keep using the same root file: %WS1%/thesis.tex
+[16:11:41.826][Event] ROOT_FILE_SEARCHED
+[16:11:41.827][Event] STRUCTURE_UPDATED
+[16:11:41.828][Event] STRUCTURE_UPDATED
+[16:11:43.646][Cacher] Error loading cache: %WS1%/sources/chap02.tex . Forcing.
+[16:11:43.647][Cacher] Caching %WS1%/sources/chap02.tex .
+[16:11:43.649][Cacher] Updated inputs of %WS1%/sources/chap02.tex .
+[16:11:43.649][Cacher] Parse LaTeX AST: %WS1%/sources/chap02.tex .
+[16:11:44.196][Cacher] Parsed LaTeX AST: %WS1%/sources/chap02.tex .
+[16:11:44.245][Cacher] Updated elements in 48.59 ms: %WS1%/sources/chap02.tex .
+[16:11:44.247][Event] FILE_PARSED: "%WS1%/sources/chap02.tex"
+[16:11:44.255][Structure] Structure force updated with 1 root sections for %WS1%/thesis.tex .
+[16:11:44.255][Event] STRUCTURE_UPDATED
+[16:50:19.612][Root] Current workspace folders: ["file://%WS1%"]
+[16:50:19.614][Root] Found root file from active editor: %WS1%/thesis.tex
+[16:50:19.615][Root] Keep using the same root file: %WS1%/thesis.tex
+[16:50:19.615][Event] ROOT_FILE_SEARCHED
+[16:50:19.616][Event] STRUCTURE_UPDATED
+[16:50:19.617][Event] STRUCTURE_UPDATED
+[16:50:23.686][Extension] onDidSaveTextDocument triggered: file://%WS1%/thesis.tex
+[16:50:23.688][Build] Auto build startedon saving file: %WS1%/thesis.tex .
+[16:50:23.688][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/thesis.tex"}
+[16:50:23.689][Build] The document of the active editor: file://%WS1%/thesis.tex
+[16:50:23.689][Build] The languageId of the document: latex
+[16:50:23.690][Build] Building root file: %WS1%/thesis.tex
+[16:50:23.690][Build][Recipe] Build root file %WS1%/thesis.tex
+[16:50:23.693][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[16:50:23.693][Build][Recipe] Prepared 1 tools.
+[16:50:23.694][Build][Recipe] outDir: %WS1%/_temp .
+[16:50:23.695][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[16:50:23.695][Build] env: undefined
+[16:50:23.695][Build] root: %WS1%/thesis.tex
+[16:50:23.696][Build] cwd: %WS1%
+[16:50:23.708][Build] LaTeX build process spawned with PID 43719.
+[16:50:23.722][Cacher][Watcher] "change" emitted on %WS1%/thesis.tex.
+[16:50:23.724][Cacher] Caching %WS1%/thesis.tex .
+[16:50:23.725][Cacher] Input %WS1%/preamble.tex from %WS1%/thesis.tex .
+[16:50:23.725][Cacher] Input %WS1%/frontmatter.tex from %WS1%/thesis.tex .
+[16:50:23.726][Cacher] Input %WS1%/sources/chap02.tex from %WS1%/thesis.tex .
+[16:50:23.727][Cacher] Adding %WS1%/sources/chap02.tex .
+[16:50:23.727][Cacher][Watcher] Watched %WS1%/sources/chap02.tex .
+[16:50:23.727][Event] FILE_WATCHED: "%WS1%/sources/chap02.tex"
+[16:50:23.728][Cacher] Caching %WS1%/sources/chap02.tex .
+[16:50:23.729][Cacher] Updated inputs of %WS1%/sources/chap02.tex .
+[16:50:23.729][Cacher] Parse LaTeX AST: %WS1%/sources/chap02.tex .
+[16:50:23.730][Cacher] Input %WS1%/sources/chap03.tex from %WS1%/thesis.tex .
+[16:50:23.731][Cacher] Updated inputs of %WS1%/thesis.tex .
+[16:50:23.731][Cacher] Parse LaTeX AST: %WS1%/thesis.tex .
+[16:50:23.732][Event] FILE_CHANGED: "%WS1%/thesis.tex"
+[16:50:24.211][Cacher] Parsed LaTeX AST: %WS1%/sources/chap02.tex .
+[16:50:24.224][Cacher] Updated elements in 13.03 ms: %WS1%/sources/chap02.tex .
+[16:50:24.225][Event] FILE_PARSED: "%WS1%/sources/chap02.tex"
+[16:50:24.226][Cacher] Parsed LaTeX AST: %WS1%/thesis.tex .
+[16:50:24.227][File] Calling kpsewhich to resolve memoir.cls .
+[16:50:24.543][Cacher] Updated elements in 316.05 ms: %WS1%/thesis.tex .
+[16:50:24.544][Event] FILE_PARSED: "%WS1%/thesis.tex"
+[16:50:24.548][Structure] Structure force updated with 1 root sections for %WS1%/thesis.tex .
+[16:50:24.549][Event] STRUCTURE_UPDATED
+[16:50:39.960][Parser][TexLog] Logged 9 messages.
+[16:50:39.965][Build] Finished a step in recipe with PID 43719.
+[16:50:39.966][Build] Successfully built %WS1%/thesis.tex .
+[16:50:39.967][Event] BUILD_DONE
+[16:50:39.968][Viewer] Call refreshExistingViewer: "%WS1%/_temp/thesis.pdf" .
+[16:50:39.969][Viewer] Not found PDF viewers to refresh: %WS1%/_temp/thesis.pdf
+[16:50:39.974][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[16:50:40.042][Cacher] Adding %WS1%/images/1.pdf .
+[16:50:40.044][Cacher][Watcher] Watched %WS1%/images/1.pdf with a new watcher on %WS1%/images .
+[16:50:40.045][Event] FILE_WATCHED: "%WS1%/images/1.pdf"
+[16:50:40.051][Cacher] Adding %WS1%/images/2.pdf .
+[16:50:40.052][Cacher][Watcher] Watched %WS1%/images/2.pdf .
+[16:50:40.055][Event] FILE_WATCHED: "%WS1%/images/2.pdf"
+[16:50:40.061][Cacher] Adding %WS1%/images/2-arrows.pdf .
+[16:50:40.065][Cacher][Watcher] Watched %WS1%/images/2-arrows.pdf .
+[16:50:40.067][Event] FILE_WATCHED: "%WS1%/images/2-arrows.pdf"
+[16:50:40.073][Cacher] Adding %WS1%/images/3.pdf .
+[16:50:40.076][Cacher][Watcher] Watched %WS1%/images/3.pdf .
+[16:50:40.079][Event] FILE_WATCHED: "%WS1%/images/3.pdf"
+[16:50:40.081][Cacher] Adding %WS1%/images/group-as-category.pdf .
+[16:50:40.082][Cacher][Watcher] Watched %WS1%/images/group-as-category.pdf .
+[16:50:40.084][Event] FILE_WATCHED: "%WS1%/images/group-as-category.pdf"
+[16:50:40.090][Cacher] Adding %WS1%/figures/2024-02-04-21-44-10.png .
+[16:50:40.093][Cacher][Watcher] Watched %WS1%/figures/2024-02-04-21-44-10.png with a new watcher on %WS1%/figures .
+[16:50:40.094][Event] FILE_WATCHED: "%WS1%/figures/2024-02-04-21-44-10.png"
+[16:50:40.101][Cacher] Adding %WS1%/figures/2024-02-04-20-52-59.png .
+[16:50:40.103][Cacher][Watcher] Watched %WS1%/figures/2024-02-04-20-52-59.png .
+[16:50:40.104][Event] FILE_WATCHED: "%WS1%/figures/2024-02-04-20-52-59.png"
+[16:50:40.106][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[16:50:40.108][Cacher] Parsed .aux %WS1%/thesis.tex .
+[16:50:40.109][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[16:53:04.729][Extension] onDidSaveTextDocument triggered: file://%WS1%/thesis.tex
+[16:53:04.734][Build] Auto build startedon saving file: %WS1%/thesis.tex .
+[16:53:04.735][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/thesis.tex"}
+[16:53:04.735][Build] The document of the active editor: file://%WS1%/thesis.tex
+[16:53:04.736][Build] The languageId of the document: latex
+[16:53:04.737][Build] Building root file: %WS1%/thesis.tex
+[16:53:04.738][Build][Recipe] Build root file %WS1%/thesis.tex
+[16:53:04.744][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[16:53:04.745][Build][Recipe] Prepared 1 tools.
+[16:53:04.748][Build][Recipe] outDir: %WS1%/_temp .
+[16:53:04.751][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[16:53:04.752][Build] env: undefined
+[16:53:04.752][Build] root: %WS1%/thesis.tex
+[16:53:04.753][Build] cwd: %WS1%
+[16:53:04.780][Build] LaTeX build process spawned with PID 44465.
+[16:53:04.783][Cacher][Watcher] "change" emitted on %WS1%/thesis.tex.
+[16:53:04.786][Cacher] Caching %WS1%/thesis.tex .
+[16:53:04.787][Cacher] Input %WS1%/preamble.tex from %WS1%/thesis.tex .
+[16:53:04.788][Cacher] Input %WS1%/frontmatter.tex from %WS1%/thesis.tex .
+[16:53:04.789][Cacher] Input %WS1%/sources/chap02.tex from %WS1%/thesis.tex .
+[16:53:04.790][Cacher] Input %WS1%/sources/chap03.tex from %WS1%/thesis.tex .
+[16:53:04.791][Cacher] Updated inputs of %WS1%/thesis.tex .
+[16:53:04.791][Cacher] Parse LaTeX AST: %WS1%/thesis.tex .
+[16:53:04.792][Event] FILE_CHANGED: "%WS1%/thesis.tex"
+[16:53:04.809][Cacher] Parsed LaTeX AST: %WS1%/thesis.tex .
+[16:53:04.813][File] Calling kpsewhich to resolve memoir.cls .
+[16:53:05.124][Cacher] Updated elements in 311.15 ms: %WS1%/thesis.tex .
+[16:53:05.127][Event] FILE_PARSED: "%WS1%/thesis.tex"
+[16:53:05.136][Structure] Structure force updated with 2 root sections for %WS1%/thesis.tex .
+[16:53:05.137][Event] STRUCTURE_UPDATED
+[16:53:21.710][Parser][TexLog] Logged 8 messages.
+[16:53:21.714][Build] Finished a step in recipe with PID 44465.
+[16:53:21.715][Build] Successfully built %WS1%/thesis.tex .
+[16:53:21.716][Event] BUILD_DONE
+[16:53:21.717][Viewer] Call refreshExistingViewer: "%WS1%/_temp/thesis.pdf" .
+[16:53:21.718][Viewer] Not found PDF viewers to refresh: %WS1%/_temp/thesis.pdf
+[16:53:21.720][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[16:53:21.775][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[16:53:21.776][Cacher] Parsed .aux %WS1%/thesis.tex .
+[16:53:21.777][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[16:54:17.459][Root] Current workspace folders: ["file://%WS1%"]
+[16:54:17.462][Root] Keep using the same root file: %WS1%/thesis.tex
+[16:54:17.463][Event] ROOT_FILE_SEARCHED
+[16:54:17.464][Event] STRUCTURE_UPDATED
+[16:54:17.465][Event] STRUCTURE_UPDATED
+[16:54:25.491][Extension] onDidSaveTextDocument triggered: file://%WS1%/sources/chap03.tex
+[16:54:25.493][Build] Auto build startedon saving file: %WS1%/sources/chap03.tex .
+[16:54:25.494][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/sources/chap03.tex"}
+[16:54:25.495][Build] The document of the active editor: file://%WS1%/sources/chap03.tex
+[16:54:25.496][Build] The languageId of the document: latex
+[16:54:25.497][Build] Building root file: %WS1%/thesis.tex
+[16:54:25.497][Build][Recipe] Build root file %WS1%/thesis.tex
+[16:54:25.502][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[16:54:25.502][Build][Recipe] Prepared 1 tools.
+[16:54:25.505][Build][Recipe] outDir: %WS1%/_temp .
+[16:54:25.507][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[16:54:25.507][Build] env: undefined
+[16:54:25.508][Build] root: %WS1%/thesis.tex
+[16:54:25.508][Build] cwd: %WS1%
+[16:54:25.535][Build] LaTeX build process spawned with PID 44940.
+[16:54:25.538][Cacher][Watcher] "change" emitted on %WS1%/sources/chap03.tex.
+[16:54:25.540][Cacher] Caching %WS1%/sources/chap03.tex .
+[16:54:25.541][Cacher] Updated inputs of %WS1%/sources/chap03.tex .
+[16:54:25.542][Cacher] Parse LaTeX AST: %WS1%/sources/chap03.tex .
+[16:54:25.544][Event] FILE_CHANGED: "%WS1%/sources/chap03.tex"
+[16:54:25.653][Cacher] Parsed LaTeX AST: %WS1%/sources/chap03.tex .
+[16:54:25.657][Cacher] Updated elements in 3.00 ms: %WS1%/sources/chap03.tex .
+[16:54:25.659][Event] FILE_PARSED: "%WS1%/sources/chap03.tex"
+[16:54:25.671][Structure] Structure force updated with 2 root sections for %WS1%/thesis.tex .
+[16:54:25.672][Event] STRUCTURE_UPDATED
+[16:54:34.089][Parser][TexLog] Logged 8 messages.
+[16:54:34.095][Build] Finished a step in recipe with PID 44940.
+[16:54:34.096][Build] Successfully built %WS1%/thesis.tex .
+[16:54:34.097][Event] BUILD_DONE
+[16:54:34.099][Viewer] Call refreshExistingViewer: "%WS1%/_temp/thesis.pdf" .
+[16:54:34.100][Viewer] Not found PDF viewers to refresh: %WS1%/_temp/thesis.pdf
+[16:54:34.105][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[16:54:34.199][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[16:54:34.200][Cacher] Parsed .aux %WS1%/thesis.tex .
+[16:54:34.201][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[16:54:46.212][Extension] onDidSaveTextDocument triggered: file://%WS1%/sources/chap03.tex
+[16:54:46.213][Build] Auto build startedon saving file: %WS1%/sources/chap03.tex .
+[16:54:46.214][Event] AUTO_BUILD_INITIATED: {"type":"onSave","file":"%WS1%/sources/chap03.tex"}
+[16:54:46.215][Build] The document of the active editor: file://%WS1%/sources/chap03.tex
+[16:54:46.216][Build] The languageId of the document: latex
+[16:54:46.216][Build] Building root file: %WS1%/thesis.tex
+[16:54:46.217][Build][Recipe] Build root file %WS1%/thesis.tex
+[16:54:46.222][Build][Recipe] Preparing to run recipe: LaTeXMk.
+[16:54:46.223][Build][Recipe] Prepared 1 tools.
+[16:54:46.225][Build][Recipe] outDir: %WS1%/_temp .
+[16:54:46.227][Build] Recipe step 1 The command is latexmk:["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%WS1%/_temp","%WS1%/thesis.tex"].
+[16:54:46.228][Build] env: undefined
+[16:54:46.228][Build] root: %WS1%/thesis.tex
+[16:54:46.229][Build] cwd: %WS1%
+[16:54:46.255][Build] LaTeX build process spawned with PID 45045.
+[16:54:46.257][Cacher][Watcher] "change" emitted on %WS1%/sources/chap03.tex.
+[16:54:46.259][Cacher] Caching %WS1%/sources/chap03.tex .
+[16:54:46.261][Cacher] Updated inputs of %WS1%/sources/chap03.tex .
+[16:54:46.262][Cacher] Parse LaTeX AST: %WS1%/sources/chap03.tex .
+[16:54:46.263][Event] FILE_CHANGED: "%WS1%/sources/chap03.tex"
+[16:54:46.396][Cacher] Parsed LaTeX AST: %WS1%/sources/chap03.tex .
+[16:54:46.405][Cacher] Updated elements in 7.40 ms: %WS1%/sources/chap03.tex .
+[16:54:46.406][Event] FILE_PARSED: "%WS1%/sources/chap03.tex"
+[16:54:46.420][Structure] Structure force updated with 2 root sections for %WS1%/thesis.tex .
+[16:54:46.421][Event] STRUCTURE_UPDATED
+[16:54:54.473][Parser][TexLog] Logged 9 messages.
+[16:54:54.480][Build] Finished a step in recipe with PID 45045.
+[16:54:54.481][Build] Successfully built %WS1%/thesis.tex .
+[16:54:54.482][Event] BUILD_DONE
+[16:54:54.485][Viewer] Call refreshExistingViewer: "%WS1%/_temp/thesis.pdf" .
+[16:54:54.486][Viewer] Not found PDF viewers to refresh: %WS1%/_temp/thesis.pdf
+[16:54:54.489][Cacher] Parsing .fls %WS1%/_temp/thesis.fls .
+[16:54:54.556][Cacher] Found .aux %WS1%/thesis.tex from .fls %WS1%/_temp/thesis.fls , parsing.
+[16:54:54.557][Cacher] Parsed .aux %WS1%/thesis.tex .
+[16:54:54.558][Cacher] Parsed .fls %WS1%/_temp/thesis.fls .
+[18:44:25.536][Cacher][Watcher] Reset.
+[18:44:25.783][Cacher][Watcher] Reset.
+[18:44:25.784][Cacher][Watcher] Reset.

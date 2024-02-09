@@ -1,0 +1,203 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com), 2020-2022 moderncv maintainers (github.com/moderncv).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{anyfontsize}
+\definecolor{mycolor}{HTML}{255A96}
+% moderncv themes
+\moderncvstyle{fancy}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{black}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\setlength{\footskip}{136.00005pt}                 % depending on the amount of information in the footer, you need to change this value. comment this line out and set it to the size given in the warning
+\setlength{\hintscolumnwidth}{5cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}  % FIXME: using spanish breaks moderncv
+
+% personal data
+\name{Kevin Christian}{Chávez Cadena}
+\title{\textcolor{black!50}{Curriculum Vitae}}                               % optional, remove / comment the line if not wanted
+% \born{November 28, 2001}                                 % optional, remove / comment the line if not wanted
+\address{Ibarra, Imbabura, Ecuador}{kevin.chavez@yachaytech.edu.ec}{christian.chr.chavez@gmail.com\\ Cédula de Identidad: 1005215361}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+
+\phone[mobile]{+593 994 819 015}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+% \phone[fixed]{+2~(345)~678~901}
+% \phone[fax]{+3~(456)~789~012}
+\social[github]{christian-chavez} 
+% \email{} 
+% \extrainfo{\emailsymbol\emaillink{christian.chr.chavez@gmail.com}}
+% \address{ \\ address2 }
+
+% optional, remove / comment the line if not wanted
+% 
+
+
+% \homepage{christian.chr.chavez@gmail.com}                         % optional, remove / comment the line if not wanted
+
+% Social icons
+% \social[linkedin]{john.doe}                        % optional, remove / comment the line if not wanted
+% \social[xing]{john\_doe}                           % optional, remove / comment the line if not wanted
+% \social[twitter]{ji\_doe}                             % optional, remove / comment the line if not wanted
+                             % optional, remove / comment the line if not wanted
+% \social[gitlab]{jdoe}                              % optional, remove / comment the line if not wanted
+% \social[stackoverflow]{0000000/johndoe}            % optional, remove / comment the line if not wanted
+% \social[bitbucket]{jdoe}                           % optional, remove / comment the line if not wanted
+% \social[skype]{jdoe}                               % optional, remove / comment the line if not wanted
+% \social[orcid]{0000-0000-000-000}                  % optional, remove / comment the line if not wanted
+% \social[researchgate]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[researcherid]{jdoe}                        % optional, remove / comment the line if not wanted
+% \social[telegram]{jdoe}                            % optional, remove / comment the line if not wanted
+% \social[whatsapp]{12345678901}                     % optional, remove / comment the line if not wanted
+% \social[signal]{12345678901}                       % optional, remove / comment the line if not wanted
+% \social[matrix]{@johndoe:matrix.org}               % optional, remove / comment the line if not wanted
+% \social[]{christian.chr.chavez2gmail.com}            % optional, remove / comment the line if not wanted
+
+ 
+% \photo[3cm][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+\definecolor{chris}{HTML}{1034A6}
+\definecolor{chriss}{HTML}{b10500}
+% \quote{\textcolor{black}{Decir lo que piensas y pensar lo que dices \dots}}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustments (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{\textcolor{chris}{Educación}}
+\cventry{2019 -- Actualidad}{Matemático}{Universidad Yachay Tech}{Urcuquí}{Imbabura, Ecuador}{}  % arguments 3 to 6 can be left empty
+\cventry{2016-2019}{Bachiller en Ciencias}{Unidad Educativa "28 de Septiembre"}{Ibarra, Ecuador. Distinción: mejor egresado}{}{}
+
+
+
+% \section{\textcolor{chris}{Experiencia}}
+
+
+
+
+\section{\textcolor{chris}{Participación en eventos y proyectos académicos}}
+\cventry{2024}{Asistente}{Tertulia Matemática}{Universidad Yachay Tech}{Becado}{}
+\cventry{2023 -- Actualidad}{Ayudante de Investigación}{Examinando la Desigualdad en Ecuador: una
+aplicación del análisis topológico de datos}{Universidad Yachay Tech}{}{}
+\cventry{2023}{Miembro del comité organizador}{Jornadas Ecuatorianas de Matemáticas}{Universidad Yachay Tech}{}{}
+\cventry{2023}{Ayudante de Cátedra}{Topología general}{Universidad Yachay Tech}{}{}
+\cventry{2023}{Ponente}{Criptografía: el arte de ocultar mensajes}{Seminario de Introducción a la Teoría de Números}{Club de Matemáticas}{Universidad Yachay Tech}
+\cventry{2023}{Ayudante de Cátedra}{Álgebra lineal}{Universidad Yachay Tech}{}{}
+\cventry{2023}{Preparador de las XVIII Olimpiadas de Matemáticas SEDEM}{Sede Universidad Yachay Tech}{Proyecto de vinculación con la sociedad Hamilton Tech}{}{}
+\cventry{2022--2023}{Proyecto de Vinculación con la Sociedad Matemática Recreativa}{Convenio Universidad Yachay Tech y  Unidad Educativa Teodoro Gomés de la Torre}{Ibarra, Ecuador}{}{}
+\cventry{2023}{Presentación de Póster Científico}{"La Cicloide: Un Poco de Historia  y Algunas de sus Particularidades"}{Casa Abierta ``Todos Nos Sumamos''}{Universidad Yachay Tech}{}
+\cventry{2022}{Primer Congreso Ecuatoriano de Jóvenes Investigadores-CEJI22}{Vicecancillería de Investigación e Innovación y IEEE EMBS Yachay Tech}{}{Asistente}{}
+\cventry{2021}{Tutor de la Comunidad Clavemat}{Prácticas profesionalizantes}{Escuela Politécnica Nacional}{Quito, Ecuador}{}
+\cventry{2021}{International Youth Math Challenge 2021}{International mathematics competition}{Honored participation certificate}{}{}
+
+\section{\textcolor{chris}{Cursos}}
+\cventry{2023}{Data Scientist with Python}{}{DataCamp}{Statement of accomplishment}{}
+\cventry{2021}{Matlab Onramp}{Self-pace training course}{Mathworks}{Course Completion Certificate}{}
+\cventry{2021}{Data Analysis}{Importancia del análisis de datos, herramientas, formatos y generalidades para el uso adecuado de la información}{AIESEC}{Ecuador}{}{}
+
+
+
+
+
+\section{\textcolor{chris}{Idiomas}}
+\cvitemwithcomment{}{Español (Nativo), Inglés (Intermedio, B2+), Francés (Básico)}{}
+
+\section{\textcolor{chris}{Habilidades informáticas}}
+\cvitemwithcomment{}{(La/Xe)TeX, Linux, Git(Hub), Vim, Matlab, Python, C, R, Inkscape}{}
+\cvitemwithcomment{}{HTML \& CSS, Office}{}
+
+ 
+ 
+ 
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): 
+\renewcommand{\refname}{\textcolor{chris}{Publicaciones}}
+ 
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+%-----       letter       --------------------------------------------------------
+% \fontsize{10}{20}\selectfont
+\newgeometry{margin=1in}
+\recipient{Decanato de la Escuela de Ciencias Matemáticas y Computacionales}{Universidad Yachay Tech}
+\date{Urcuquí, 30 de agosto de 2023}
+\opening{Presente:}
+\closing{Cordialmente,}
+\enclosure[Adjunto]{Curriculum Vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\makelettertitle
+
+
+Me dirijo a usted en condición de estudiante de noveno semestre de la Carrera de Matemáticas, con el propósito de expresar mi interés por ser ayudante de cátedra del curso de Álgebra Abstracta, dictado por el profesor Pablo Rosero.
+
+% Durante mi trayectoria como estudiante, he considerado el Álgebra Lineal como una materia fundamental para el desarrollo de cursos más avanzados, lo que me ha permitido adquirir una sólida comprensión de los conceptos fundamentales y una habilidad destacada en la resolución de problemas. Esta es justamente la razón que me motivó a escribir el libro ``Álgebra Lineal y Problemas Resueltos'', en donde expongo mi entusiasmo por la materia.
+
+Mi formación académica  me ha brindado una base sólida para abordar los contenidos del curso de Álgebra Abstracta. He tenido la oportunidad de cursar materias avanzadas subsecuentes a tal curso, lo cual me ha permitido desarrollar un profundo entendimiento de los conceptos fundamentales.
+
+
+
+Me gustaría enfatizar que mi interés por esta oportunidad no se limita solamente a mi deseo de enseñar, sino también a ser parte de la formación integral de los futuros matemáticos del país. Mi experiencia previa como tutor de estudiantes universitarios me ha permitido desarrollar habilidades de  enseñanza que estoy seguro me permitiran ser un ayudante de cátedra efectivo.
+
+
+Estoy convencido de que esta experiencia me permitirá crecer tanto como estudiante como miembro de la comunidad universitaria.
+Agradezco de antemano su tiempo y consideración.
+
+
+~
+
+
+\makeletterclosing
+
+ 
+\end{document}

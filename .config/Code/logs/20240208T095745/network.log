@@ -1,0 +1,8 @@
+2024-02-08 10:15:34.916 [error] electron #9: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_TIMED_OUT
+2024-02-08 10:15:34.918 [error] electron #10: https://mobile.events.data.microsoft.com/OneCollector/1.0?cors=true&content-type=application/x-json-stream - error POST net::ERR_TIMED_OUT
+2024-02-08 10:15:34.918 [error] electron #8: https://vscode-sync.trafficmanager.net/v1/resource/keybindings/4a82dfa4-3a5f-4f2e-8f4c-6a497e19ec14 - error GET net::ERR_TIMED_OUT
+2024-02-08 10:15:48.570 [error] electron #12: https://vscode-sync.trafficmanager.net/v1/resource/globalState/a27701e6-3190-471a-abd6-d56bc60fb5ad - error GET net::ERR_TIMED_OUT
+2024-02-08 10:36:03.716 [error] electron #34: https://vscode-sync.trafficmanager.net/v1/manifest - error GET net::ERR_TIMED_OUT
+2024-02-08 11:37:30.117 [error] electron #357: https://vscode-sync.trafficmanager.net/v1/manifest - error GET net::ERR_TIMED_OUT
+2024-02-08 13:05:20.301 [error] electron #445: https://vscode-sync.trafficmanager.net/v1/manifest - error GET net::ERR_TIMED_OUT
+2024-02-08 13:30:08.514 [error] electron #502: https://vscode-sync.trafficmanager.net/v1/manifest - error GET net::ERR_TIMED_OUT

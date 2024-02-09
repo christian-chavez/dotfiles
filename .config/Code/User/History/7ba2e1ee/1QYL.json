@@ -1,0 +1,51 @@
+{
+  "title": "Christian's blog",
+  "url": "christian-chavez.github.io",
+  "subtitle": "here goes the subtitle",
+  "copyright": "© All rights reserved.",
+  "googleAnalyticsId": "what the hail is this",
+  "disqusShortname": "",
+  "postsLimit": 4,
+  "pathPrefix": "/",
+  "menu": [
+    {
+      "label": "Articles",
+      "path": "/"
+    },
+    {
+      "label": "About me",
+      "path": "/pages/about"
+    },
+    {
+        "label": "Talks",
+        "path": "/pages/talks"
+    }, 
+    {
+      "label": "Contact me",
+      "path": "/pages/contacts"
+    }
+  ],
+  "author": {
+    "name": "John Doe",
+    "photo": "/photo.jpg",
+    "bio": "Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.",
+    "contacts": {
+      "rss": "",
+      "email": "",
+      "github": "#",
+      "facebook": "#",
+      "telegram": "#",
+      "twitter": "#",
+      "linkedin": "#",
+      "instagram": "#",
+      "mastodon": "#",
+      "line": "",
+      "weibo": "",
+      "gitlab": "",
+      "medium": "",
+      "youtube": "",
+      "codepen": "",
+      "soundcloud": ""
+    }
+  }
+}
