@@ -1,0 +1,7 @@
+2024-03-23 14:35:13.470 [info] update#setState idle
+2024-03-23 14:35:43.476 [info] update#setState checking for updates
+2024-03-23 14:35:43.487 [info] update#setState available for download
+2024-03-23 15:42:00.677 [info] Extension host with pid 18049 exited with code: 0, signal: unknown.
+2024-03-24 10:59:03.408 [info] Extension host with pid 19078 exited with code: 0, signal: unknown.
+2024-03-24 10:59:07.778 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 2445]: crashed with code 15 and reason 'killed'
+2024-03-24 10:59:07.809 [info] Extension host with pid 2467 exited with code: 0, signal: unknown.

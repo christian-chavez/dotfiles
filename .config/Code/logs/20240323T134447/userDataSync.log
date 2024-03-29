@@ -1,0 +1,9 @@
+2024-03-23 13:44:51.504 [info] Using settings sync service https://vscode-sync.trafficmanager.net/
+2024-03-23 13:44:51.504 [info] Auto Sync is enabled.
+2024-03-23 13:44:51.504 [info] Auto Sync: Suspended until auth token is available.
+2024-03-23 13:44:54.882 [info] Deleting non existing profile from backup /home/christian/.config/Code/User/sync/extensions
+2024-03-23 13:44:55.189 [info] Auto Sync: Triggered by Interval
+2024-03-23 13:44:55.191 [info] Sync started.
+2024-03-23 13:44:55.582 [info] Deleting non existing profile from backup /home/christian/.config/Code/User/sync/globalState
+2024-03-23 13:44:55.958 [info] Deleting non existing profile from backup /home/christian/.config/Code/User/sync/keybindings
+2024-03-23 13:44:56.770 [info] Deleting non existing profile from backup /home/christian/.config/Code/User/sync/profiles

@@ -1,0 +1,110 @@
+[19:15:34.396][Logger] New log placeholder %WS1% registered for /mnt/Mis archivos/Google Drive/8 Octavo Semestre/Decidability and Computability/Final project .
+[19:15:34.396][Extension] Initializing LaTeX Workshop.
+[19:15:35.710][Build][Recipe] Set $LATEXWORKSHOP_DOCKER_LATEX: ""
+[19:15:36.131][Server] Creating LaTeX Workshop http and websocket server.
+[19:15:36.962][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[19:15:37.476][Server] Server successfully started: {"address":"127.0.0.1","family":"IPv4","port":35073} .
+[19:15:37.732][Extension] Extension root: /home/christian/.vscode/extensions/james-yu.latex-workshop-9.19.1
+[19:15:37.732][Extension] $PATH: /usr/local/texlive/2023/bin/x86_64-linux:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+[19:15:37.739][Extension] $SHELL: /usr/bin/bash
+[19:15:37.745][Extension] $LANG: en_US.UTF-8
+[19:15:37.748][Extension] $LC_ALL: undefined
+[19:15:37.753][Extension] process.platform: linux
+[19:15:37.754][Extension] process.arch: x64
+[19:15:37.760][Extension] vscode.env.appName: Visual Studio Code
+[19:15:37.772][Extension] vscode.env.remoteName: undefined
+[19:15:37.776][Extension] vscode.env.uiKind: 1
+[19:15:37.818][Config] latex-workshop.latex.recipes: [{"name":"LaTeXMk","tools":["LaTeXMk"]},{"name":"PdfLaTeX","tools":["PdfLaTeX"]},{"name":"PdfLaTeX + Biber + PdfLaTeX (2)","tools":["PdfLaTeX","biber","PdfLaTeX","PdfLaTeX"]},{"name":"Xelatex latexmk","tools":["Xelatex latexmk"]},{"name":"LuaLaTeXMk","tools":["LuaLaTeXMk"]}] .
+[19:15:37.829][Config] latex-workshop.latex.recipe.default: "LaTeXMk" .
+[19:15:37.846][Config] latex-workshop.latex.tools: [{"name":"LaTeXMk","command":"latexmk","args":["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"Xelatex latexmk","command":"latexmk","args":["-xelatex","-synctex=1","-interaction=nonstopmode","-file-line-error","-pdf","-pdflatex=xelatex -shell-escape %O %S","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"PdfLaTeX","command":"pdflatex","args":["-shell-escape","-synctex=1","-interaction=nonstopmode","-file-line-error","%DOC%"]},{"name":"bibtex","command":"bibtex","args":["%DOCFILE%"]},{"name":"biber","command":"biber","args":["%DOCFILE%"]},{"name":"LuaLaTeXMk","command":"latexmk","args":["-synctex=1","-interaction=nonstopmode","-file-line-error","-pdflatex=lualatex","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]}] .
+[19:15:37.894][Config] latex-workshop.latex.outDir: "%DIR%/_temp" .
+[19:15:37.933][Config] latex-workshop.latex.autoBuild.run: "onSave" .
+[19:15:38.007][Config] latex-workshop.latex.clean.fileTypes: ["*.aux"] .
+[19:15:38.043][Config] latex-workshop.view.pdf.viewer: "external" .
+[19:15:38.062][Config] latex-workshop.view.pdf.external.viewer.command: "zathura" .
+[19:15:38.078][Config] latex-workshop.view.pdf.external.viewer.args: ["--synctex-editor-command","code -r -g \"%{input}:%{line}\"","%PDF%"] .
+[19:15:38.080][Config] latex-workshop.view.pdf.external.synctex.command: "zathura" .
+[19:15:38.083][Config] latex-workshop.view.pdf.external.synctex.args: ["--synctex-forward=%LINE%:0:%TEX%","%PDF%"] .
+[19:15:38.225][Config] latex-workshop.message.warning.show: false .
+[19:15:38.228][Config] latex-workshop.message.error.show: false .
+[19:15:38.236][Config] latex-workshop.showContextMenu: true .
+[19:15:38.446][Extension] Trigger characters for intellisense of LaTeX documents: ["\\",",","{"]
+[19:15:38.480][Root] Current workspace folders: ["file://%WS1%"]
+[19:15:38.483][Extension] LaTeX Workshop initialized.
+[19:15:38.490][Root] Current workspaceRootDir: file://%WS1% .
+[19:15:38.585][Server] valdOrigin is http://127.0.0.1:35073
+[19:15:43.102][Root] Found root file from '.fls': %WS1%/presentation.tex
+[19:15:43.104][Root] Root file changed: from %WS1%/presentation.tex to %WS1%/presentation.tex, langID latex . Refresh dependencies
+[19:15:43.114][Event] ROOT_FILE_CHANGED: "%WS1%/presentation.tex"
+[19:15:43.124][Cacher][Watcher] Reset.
+[19:15:43.125][Cacher][Watcher] Reset.
+[19:15:43.179][Cacher] Adding %WS1%/presentation.tex .
+[19:15:43.200][Cacher][Watcher] Watched %WS1%/presentation.tex with a new .* watcher on %WS1% .
+[19:15:43.215][Event] FILE_WATCHED: "%WS1%/presentation.tex"
+[19:15:43.236][Cacher] Caching %WS1%/presentation.tex .
+[19:15:43.278][Cacher] Input %WS1%/preamble.tex from %WS1%/presentation.tex .
+[19:15:43.284][Cacher] Adding %WS1%/preamble.tex .
+[19:15:43.285][Cacher][Watcher] Watched %WS1%/preamble.tex by the .* watcher.
+[19:15:43.297][Event] FILE_WATCHED: "%WS1%/preamble.tex"
+[19:15:43.300][Cacher] Caching %WS1%/preamble.tex .
+[19:15:43.329][Cacher] Updated inputs of %WS1%/preamble.tex .
+[19:15:43.336][Cacher] Parse LaTeX AST: %WS1%/preamble.tex .
+[19:15:43.341][Cacher] Input %WS1%/sources/avance01.tex from %WS1%/presentation.tex .
+[19:15:43.358][Cacher] Adding %WS1%/sources/avance01.tex .
+[19:15:43.360][Cacher][Watcher] Watched %WS1%/sources/avance01.tex with a new .* watcher on %WS1%/sources .
+[19:15:43.371][Event] FILE_WATCHED: "%WS1%/sources/avance01.tex"
+[19:15:43.390][Cacher] Caching %WS1%/sources/avance01.tex .
+[19:15:43.416][Cacher] Updated inputs of %WS1%/sources/avance01.tex .
+[19:15:43.417][Cacher] Parse LaTeX AST: %WS1%/sources/avance01.tex .
+[19:15:43.423][Cacher] Updated inputs of %WS1%/presentation.tex .
+[19:15:43.427][Cacher] Parse LaTeX AST: %WS1%/presentation.tex .
+[19:15:43.428][Event] ROOT_FILE_SEARCHED
+[19:15:44.400][Cacher] Parsed LaTeX AST: %WS1%/preamble.tex .
+[19:15:44.470][Cacher] Bib %WS1%/references.bib from %WS1%/preamble.tex .
+[19:15:44.478][Intelli][Citation] Parsing .bib entries from %WS1%/references.bib
+[19:15:44.508][Intelli][Citation] Parse BibTeX AST from %WS1%/references.bib .
+[19:15:44.509][Cacher][Watcher] Watched %WS1%/references.bib with a new .bib watcher on %WS1% .
+[19:15:44.509][Event] FILE_WATCHED: "%WS1%/references.bib"
+[19:15:44.510][Cacher] Updated elements in 104.32 ms: %WS1%/preamble.tex .
+[19:15:44.515][Event] FILE_PARSED: "%WS1%/preamble.tex"
+[19:15:45.565][Cacher] Parsed LaTeX AST: %WS1%/sources/avance01.tex .
+[19:15:45.625][Cacher] Updated elements in 58.60 ms: %WS1%/sources/avance01.tex .
+[19:15:45.627][Event] FILE_PARSED: "%WS1%/sources/avance01.tex"
+[19:15:45.656][Cacher] Parsed LaTeX AST: %WS1%/presentation.tex .
+[19:15:45.662][File] Calling kpsewhich to resolve beamer.cls .
+[19:15:46.430][File] kpsewhich returned with '/usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamer.cls'.
+[19:15:46.443][Cacher] Updated elements in 785.81 ms: %WS1%/presentation.tex .
+[19:15:46.454][Event] FILE_PARSED: "%WS1%/presentation.tex"
+[19:15:46.467][Cacher] Parsing .fls %WS1%/_temp/presentation.fls .
+[19:15:47.243][Cacher] Adding %WS1%/images/logoECMC.png .
+[19:15:47.257][Cacher][Watcher] Watched %WS1%/images/logoECMC.png with a new .* watcher on %WS1%/images .
+[19:15:47.258][Event] FILE_WATCHED: "%WS1%/images/logoECMC.png"
+[19:15:47.283][Cacher] Adding %WS1%/images/two_heads.png .
+[19:15:47.284][Cacher][Watcher] Watched %WS1%/images/two_heads.png by the .* watcher.
+[19:15:47.290][Event] FILE_WATCHED: "%WS1%/images/two_heads.png"
+[19:15:47.371][Cacher] Adding %WS1%/images/diagram_tm.png .
+[19:15:47.372][Cacher][Watcher] Watched %WS1%/images/diagram_tm.png by the .* watcher.
+[19:15:47.373][Event] FILE_WATCHED: "%WS1%/images/diagram_tm.png"
+[19:15:47.389][Cacher] Adding %WS1%/images/tounary.png .
+[19:15:47.390][Cacher][Watcher] Watched %WS1%/images/tounary.png by the .* watcher.
+[19:15:47.393][Event] FILE_WATCHED: "%WS1%/images/tounary.png"
+[19:15:47.406][Cacher] Adding %WS1%/images/penrose_alg.png .
+[19:15:47.407][Cacher][Watcher] Watched %WS1%/images/penrose_alg.png by the .* watcher.
+[19:15:47.412][Event] FILE_WATCHED: "%WS1%/images/penrose_alg.png"
+[19:15:47.421][Cacher] Adding %WS1%/images/simulator.png .
+[19:15:47.422][Cacher][Watcher] Watched %WS1%/images/simulator.png by the .* watcher.
+[19:15:47.422][Event] FILE_WATCHED: "%WS1%/images/simulator.png"
+[19:15:47.463][Cacher] Adding %WS1%/images/exec_Cond.png .
+[19:15:47.469][Cacher][Watcher] Watched %WS1%/images/exec_Cond.png by the .* watcher.
+[19:15:47.470][Event] FILE_WATCHED: "%WS1%/images/exec_Cond.png"
+[19:15:47.525][Cacher] Found .aux %WS1%/presentation.tex from .fls %WS1%/_temp/presentation.fls , parsing.
+[19:15:47.547][Cacher] Parsed .aux %WS1%/presentation.tex .
+[19:15:47.554][Cacher] Parsed .fls %WS1%/_temp/presentation.fls .
+[19:15:47.611][Structure] Structure force updated with 0 root sections for %WS1%/presentation.tex .
+[19:15:47.612][Event] STRUCTURE_UPDATED
+[19:15:47.622][Intelli][Citation] Parsed 2 bib entries from %WS1%/references.bib .
+[19:15:47.623][Event] FILE_PARSED: "%WS1%/references.bib"
+[19:15:47.646][Structure] Structure force updated with 7 root sections for %WS1%/presentation.tex .
+[19:15:47.651][Event] STRUCTURE_UPDATED
+[19:15:52.239][Cacher][Watcher] Reset.
+[19:15:52.243][Cacher][Watcher] Reset.

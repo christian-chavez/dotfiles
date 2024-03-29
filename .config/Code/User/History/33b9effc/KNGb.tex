@@ -1,0 +1,7 @@
+\documentclass[landscape]{article}
+\usepackage{pdfpages}
+\usepackage{tikz}
+
+\begin{document}
+\includepdf[pagecommand={\begin{tikzpicture}[remember picture, overlay]\node at (current page.center) {overlayed text};\end{tikzpicture}}]{certificado-vacio.pdf}
+\end{document}

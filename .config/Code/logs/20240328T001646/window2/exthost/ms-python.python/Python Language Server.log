@@ -1,0 +1,45 @@
+2024-03-28 00:20:45.927 [info] (Client) Pylance async client (2024.3.2) started with python extension (2024.2.1)
+2024-03-28 00:20:47.839 [info] [Info  - 12:20:47 AM] (89619) Pylance language server 2024.3.2 (pyright version 1.1.351, commit 87171fbf) starting
+2024-03-28 00:20:47.840 [info] [Info  - 12:20:47 AM] (89619) Server root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist
+2024-03-28 00:20:47.840 [info] [Info  - 12:20:47 AM] (89619) Starting service instance "quiz1"
+2024-03-28 00:20:48.019 [info] [Info  - 12:20:48 AM] (89619) Setting pythonPath for service "quiz1": "/bin/python"
+2024-03-28 00:20:48.020 [info] [Info  - 12:20:48 AM] (89619) Setting environmentName for service "quiz1": "3.11.8 (global)"
+2024-03-28 00:20:48.148 [info] [Info  - 12:20:48 AM] (89619) Assuming Python version 3.11
+2024-03-28 00:20:48.398 [info] [Info  - 12:20:48 AM] (89619) No source files found.
+2024-03-28 00:20:48.433 [info] [Info  - 12:20:48 AM] (89619) Starting service instance "quiz1"
+2024-03-28 00:20:48.654 [info] [Info  - 12:20:48 AM] (89619) Setting pythonPath for service "quiz1": "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Neural networks/quiz1"
+2024-03-28 00:20:48.657 [info] [Info  - 12:20:48 AM] (89619) Setting environmentName for service "quiz1": "3.11.8 (global)"
+2024-03-28 00:20:48.925 [info] [Info  - 12:20:48 AM] (89619) No source files found.
+2024-03-28 00:20:51.810 [info] [Info  - 12:20:51 AM] (89619) Background analysis(1) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist
+2024-03-28 00:20:51.815 [info] [Info  - 12:20:51 AM] (89619) Background analysis(1) started
+2024-03-28 00:20:52.421 [info] [Info  - 12:20:52 AM] (89619) Background analysis(2) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist
+2024-03-28 00:20:52.434 [info] [Info  - 12:20:52 AM] (89619) Background analysis(2) started
+2024-03-28 00:20:52.731 [info] [Info  - 12:20:52 AM] (89619) Indexer background runner(3) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist (index)
+2024-03-28 00:20:52.732 [info] [Info  - 12:20:52 AM] (89619) Indexing(3) started
+2024-03-28 00:20:54.822 [info] [Info  - 12:20:54 AM] (89619) [IDX(3)] Long operation: scan packages file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1 (2071ms)
+2024-03-28 00:20:54.823 [info] [Info  - 12:20:54 AM] (89619) scanned(3) 1 files over 1 exec env
+2024-03-28 00:20:54.975 [info] [Info  - 12:20:54 AM] (89619) [BG(2)] Long operation: SemanticTokens range 0:0 - 13:69 at file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1/sample.ipynb.py#W0sZmlsZQ%3D%3D (2248ms)
+2024-03-28 00:20:58.937 [info] [Info  - 12:20:58 AM] (89619) indexed(3) 1 files over 1 exec env
+2024-03-28 00:20:59.131 [info] [Info  - 12:20:59 AM] (89619) Indexing finished(3).
+2024-03-28 00:21:33.270 [info] [Info  - 12:21:33 AM] (89619) Indexer background runner(4) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist (index)
+2024-03-28 00:21:33.270 [info] [Info  - 12:21:33 AM] (89619) Indexing(4) started
+2024-03-28 00:21:34.727 [info] [Info  - 12:21:34 AM] (89619) [BG(1)] Long operation: checking: file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1/sample.ipynb.py#W0sZmlsZQ%3D%3D (2290ms)
+2024-03-28 00:21:34.728 [info] [Info  - 12:21:34 AM] (89619) [BG(1)] Long operation: analyzing: file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1/sample.ipynb.py#W0sZmlsZQ%3D%3D (4082ms)
+2024-03-28 00:21:34.764 [info] [Info  - 12:21:34 AM] (89619) [BG(1)] Long operation: analyzing: file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1/sample.ipynb.py#pylancePrefixCell (4125ms)
+2024-03-28 00:21:35.858 [info] [Info  - 12:21:35 AM] (89619) [IDX(4)] Long operation: scan packages file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1 (2087ms)
+2024-03-28 00:21:35.858 [info] [Info  - 12:21:35 AM] (89619) scanned(4) 143 files over 1 exec env
+2024-03-28 00:21:43.584 [info] [Info  - 12:21:43 AM] (89619) [IDX(4)] Long operation: index execution environment file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1 (4934ms)
+2024-03-28 00:21:43.584 [info] [Info  - 12:21:43 AM] (89619) [IDX(4)] Long operation: index packages file:///mnt/Mis%20archivos/Google%20Drive/9%20Noveno%20Semestre/Neural%20networks/quiz1 (5088ms)
+2024-03-28 00:21:43.584 [info] [Info  - 12:21:43 AM] (89619) indexed(4) 106 files over 1 exec env
+2024-03-28 00:21:43.898 [info] [Info  - 12:21:43 AM] (89619) Indexing finished(4).
+2024-03-28 00:59:39.978 [info] [Info  - 12:59:39 AM] (89619) Starting service instance "quiz1"
+2024-03-28 00:59:40.094 [info] [Info  - 12:59:40 AM] (89619) Setting pythonPath for service "quiz1": "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Neural networks/quiz1"
+2024-03-28 00:59:40.099 [info] [Info  - 12:59:40 AM] (89619) Setting environmentName for service "quiz1": "3.11.8 (global)"
+2024-03-28 00:59:40.283 [info] [Info  - 12:59:40 AM] (89619) No source files found.
+2024-03-28 00:59:41.841 [info] [Info  - 12:59:41 AM] (89619) Background analysis(5) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist
+2024-03-28 00:59:41.849 [info] [Info  - 12:59:41 AM] (89619) Background analysis(5) started
+2024-03-28 00:59:42.073 [info] [Info  - 12:59:42 AM] (89619) Indexer background runner(6) root directory: file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2/dist (index)
+2024-03-28 00:59:42.074 [info] [Info  - 12:59:42 AM] (89619) Indexing(6) started
+2024-03-28 00:59:42.715 [info] [Info  - 12:59:42 AM] (89619) scanned(6) 1 files over 1 exec env
+2024-03-28 00:59:43.995 [info] [Info  - 12:59:43 AM] (89619) indexed(6) 1 files over 1 exec env
+2024-03-28 00:59:44.071 [info] [Info  - 12:59:44 AM] (89619) Indexing finished(6).

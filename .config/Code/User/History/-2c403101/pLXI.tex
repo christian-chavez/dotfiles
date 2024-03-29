@@ -1,0 +1,94 @@
+% Preambulo
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noindentfirst,es-tabla]{babel}
+\usepackage{
+    microtype,
+    geometry,
+    lmodern,
+    lipsum,
+    enumitem,
+    amsmath,
+    amsfonts,
+    amssymb,
+    amsthm,
+    graphicx,
+    float,
+    booktabs,
+    listings, % Para insertar código
+    xcolor,
+}
+
+% Ambientes propios, teoremas, etc
+
+\newtheoremstyle{uptheorem}{\topsep}{\topsep minus 2\topsep}{\slshape}{}{\bfseries}{.}{ }{} % nuevo estilo de teorema
+% \newtheoremstyle{<name>}{<spaceabove>}{<spacebelow>}{<bodyfont>}{<indent>}{<headfont>}{<headpunct>}{<headspace>}{<headspec>}
+
+\theoremstyle{uptheorem}    % activamos el estilo
+\newtheorem{theorem}{Teorema}[section]  % creamos un tipo de teorema
+\newtheorem{definition}[theorem]{Definición}
+
+\newtheoremstyle{sltheorem}{\baselineskip}{0.1\baselineskip}{\upshape}{}{\bfseries}{.}{ }{} % nuevo estilo de teorema (Problemas)
+\theoremstyle{sltheorem}    % activamos el estilo
+\newtheorem{example}[theorem]{Teorema}  % creamos un tipo de teorema
+\newtheorem{problem}{Problema}[section]
+
+% Estilo del código insertado
+\renewcommand\lstlistingname{Listing}
+\lstset{
+    backgroundcolor=\color{gray!05},,
+    basicstyle=\small\ttfamily,
+    numbers=left,
+    frame=tblr, 
+    framerule=0.5pt, 
+    breaklines=true,
+    captionpos=t,
+    showstringspaces=false,
+    commentstyle=\color{gray},
+    stringstyle=\color{orange},
+    numberstyle=\color{gray}\small\ttfamily, 
+    keywordstyle = \color{green!70!black}, % personalizar
+    identifierstyle=\color{blue},   % mayoría de comandos
+    numbersep=10pt, 
+    emph={print,in,pop,push,not,set,list},
+    emphstyle=\color{purple},
+    tabsize=4,
+    rulecolor=\color{black!30},
+    escapeinside={\%*}{*)},
+    extendedchars=true,
+    xleftmargin=2.35em, 
+    xrightmargin=0.32em,
+    aboveskip=1em,
+    belowskip=1em,
+    lineskip=-0.05em,
+    columns=fullflexible,
+    framexleftmargin=2em, 
+    framextopmargin=0.5ex, 
+}
+
+\usepackage{hyperref} % siempre va al final de los otros paquetes
+\hypersetup{
+    bookmarksnumbered,
+    hidelinks,
+    colorlinks,
+    allcolors=blue,
+    pdfproducer={Christian Chávez}
+}
+
+
+% Configuraciones
+\setlength{\parskip}{\baselineskip}
+% \setlength{\parindent}{5cm}
+\raggedbottom
+\geometry{
+    margin=1in,
+    % top=1cm,
+    % left=2cm,
+    % right=0.5cm,
+    % bottom=8cm
+}
+
+% Datos
+\title{Aprendiendo \LaTeX{} con Christian}
+\author{Christian Chávez}
+\date{2024-03-20}

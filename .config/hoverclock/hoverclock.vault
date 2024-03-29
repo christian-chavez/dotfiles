@@ -1,0 +1,17 @@
+window_vertical_margin=30
+window_horizontal_margin=40
+window_location_name=top left
+window_background_color=0x00000000
+time_label_visible=1
+time_label_format=%H:%M
+time_label_font_name=Roboto:bold
+time_label_font_size=13
+time_label_text_color=0xffffffff
+time_label_shadow_color=0xff000000
+date_label_visible=1
+date_label_format=%a %d %b
+date_label_font_name=Roboto:regular
+date_label_font_size=11
+date_label_text_color=0xffffffff
+date_label_shadow_color=0xff000000
+vertical_spacing_between_labels=5

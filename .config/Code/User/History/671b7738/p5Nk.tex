@@ -1,0 +1,87 @@
+\documentclass[border=0.8in]{standalone}
+\usepackage{helvet}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+\usepackage{
+	schedule,
+	xcolor,
+	microtype,
+	tikz,
+}
+
+
+
+% \definecolor{Blue1}{HTML}{390b2f}
+\definecolor{Blue2}{HTML}{143882}
+\definecolor{Blue3}{HTML}{CA1311}
+\definecolor{Blue4}{HTML}{003D4E}
+\definecolor{Blue5}{HTML}{00269c}
+
+\definecolor{col1}{HTML}{390b2f}
+\definecolor{col2}{HTML}{003D4E}
+\definecolor{col3}{HTML}{193882}
+\definecolor{col4}{HTML}{CA1311}
+\definecolor{col5}{HTML}{2E2D2B}
+\definecolor{col6}{HTML}{4E4D4B}
+
+% 2024-01-30 ----------------------
+\definecolor{col7}{HTML}{BF616A}
+\definecolor{col8}{HTML}{A3BE8C}
+\definecolor{col9}{HTML}{EBCB8B}
+\definecolor{col10}{HTML}{5E81AC}
+
+\color{black!80}
+\def\BackColor{Blue1}
+\def\FontColor{white}
+
+\NewAppointment{CLASS}{\BackColor}{\FontColor}
+\newcommand{\temp}[4]{\CLASS{\textbf{#1}}{\footnotesize #2}{#3}{#4}}
+\newcommand{\subject}[4]{
+	\def\SubjectName{#1}
+	\def\Professor{#2}
+	\def\BackColor{#3}
+	\def\FontColor{#4}
+}
+\renewcommand{\class}[3]{\temp{\SubjectName}{\Professor \\ #3}{#1}{#2}}
+
+
+\begin{document}
+
+\CellHeight{.65in}
+\CellWidth{1.25in}
+\TimeRange{9:00 - 19:00}
+\SubUnits{60}
+\BeginOn{Monday}
+\TextSize{\small}
+\FiveDay
+
+\begin{schedule}[9th Semester, 2024-I]
+	\subject{Algebraic\\ Geometry}{Francesc Anton}{col7}{white}
+        \class{M}{09:00 - 11:00}{Lab E2-E3 PB-09}
+        \class{T}{11:00 - 13:00}{PA-A14}
+        \class{F}{11:00 - 12:00}{Lab E2-E3 SS02}
+        \class{W}{15:00 - 17:00}{Tutorials}
+
+	\subject{PDEs}{Eusebio Ariza}{col8}{black!70}
+		\class{M}{14:00 - 15:00}{Lab E2-E3 PB-09}
+        \class{Th}{13:00 - 15:00}{PA-A14}
+        \class{W}{09:00 - 11:00}{PA-A03}
+
+	\subject{Neural Networks}{Maria Cajamarca}{col9}{black!70}
+        \class{T}{13:00 - 15:00}{PA-A14}
+	\class{W}{11:00 - 13:00}{PA-A03}
+	\class{Th}{16:00 - 17:00}{Zoom}
+
+	\subject{Differential\\ Geometry}{Bladismir Ruiz}{col10}{white}
+        \class{T}{15:00 - 17:00}{PA-A14}
+		\class{M}{11:00 - 13:00}{PA-A10}
+        \class{F}{10:00 - 11:00}{PA-A07}
+
+	\subject{Titulación I}{Pablo Rosero}{gray}{white}
+	\class{W}{13:00 - 15:00}{~}
+
+    \subject{Math Club}{~ }{col5}{white}
+    \class{Th}{17:00 - 19:00}{I202}
+\end{schedule}
+
+\end{document}

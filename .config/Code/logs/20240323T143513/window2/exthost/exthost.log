@@ -1,0 +1,25 @@
+2024-03-23 15:38:53.713 [info] Extension host with pid 18049 started
+2024-03-23 15:38:53.738 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-03-23 15:38:53.790 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-03-23 15:38:53.893 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-03-23 15:38:53.940 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-03-23 15:38:53.953 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-03-23 15:38:54.128 [info] Eager extensions activated
+2024-03-23 15:38:54.168 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-03-23 15:38:54.173 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-03-23 15:42:00.652 [info] Extension host terminating: renderer closed the MessagePort
+2024-03-23 15:42:00.675 [info] Extension host with pid 18049 exiting with code 0
+2024-03-23 15:42:02.383 [info] Extension host with pid 19078 started
+2024-03-23 15:42:02.383 [info] Skipping acquiring lock for /home/christian/.config/Code/User/workspaceStorage/b9f98cc5579fe54b3523b3cc7cc1004c.
+2024-03-23 15:42:02.420 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-03-23 15:42:02.501 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-03-23 15:42:02.510 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-03-23 15:42:02.533 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-03-23 15:42:02.612 [info] Eager extensions activated
+2024-03-23 15:42:02.660 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-03-23 15:42:02.663 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-03-23 15:42:19.026 [info] ExtensionService#_doActivateExtension James-Yu.latex-workshop, startup: false, activationEvent: 'onLanguage:latex'
+2024-03-23 15:42:19.541 [warning] DiagnosticCollection with name 'BibTeX' does already exist.
+2024-03-23 15:42:19.583 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-03-24 10:59:03.295 [info] Extension host terminating: renderer closed the MessagePort
+2024-03-24 10:59:03.396 [info] Extension host with pid 19078 exiting with code 0

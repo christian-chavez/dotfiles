@@ -1,0 +1,127 @@
+2024-03-28 00:17:06.895 [error] [uncaught exception in sharedProcess]: Event not found: onDidChange: CodeExpectedError: Event not found: onDidChange
+    at Object.listen (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:45:4959)
+    at E.t (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:44:251)
+    at E.q (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:43:4371)
+    at w.value (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:43:3602)
+    at d.y (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:1902)
+    at d.z (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:1972)
+    at d.fire (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:2188)
+    at MessagePortMain.de (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:36:30422)
+    at MessagePortMain.emit (node:events:514:28)
+    at Object.emit (node:electron/js2c/utility_init:2:2285)
+2024-03-28 00:17:38.891 [error] [uncaught exception in sharedProcess]: Event not found: onDidChange: CodeExpectedError: Event not found: onDidChange
+    at Object.listen (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:45:4959)
+    at E.t (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:44:251)
+    at E.q (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:43:4371)
+    at w.value (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:43:3602)
+    at d.y (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:1902)
+    at d.z (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:1972)
+    at d.fire (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:38:2188)
+    at MessagePortMain.de (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:36:30422)
+    at MessagePortMain.emit (node:events:514:28)
+    at Object.emit (node:electron/js2c/utility_init:2:2285)
+2024-03-28 00:19:51.881 [info] Getting Manifest... ms-toolsai.jupyter
+2024-03-28 00:19:52.076 [info] Installing extension: ms-toolsai.jupyter
+2024-03-28 00:19:52.538 [info] Getting Manifest... ms-toolsai.jupyter-keymap
+2024-03-28 00:19:52.632 [info] Getting Manifest... ms-toolsai.jupyter-renderers
+2024-03-28 00:19:52.732 [info] Getting Manifest... ms-toolsai.vscode-jupyter-cell-tags
+2024-03-28 00:19:52.830 [info] Getting Manifest... ms-toolsai.vscode-jupyter-slideshow
+2024-03-28 00:19:53.173 [info] Installing extension: ms-toolsai.jupyter-keymap ms-toolsai.jupyter
+2024-03-28 00:19:53.175 [info] Installing extension: ms-toolsai.jupyter-renderers ms-toolsai.jupyter
+2024-03-28 00:19:53.177 [info] Installing extension: ms-toolsai.vscode-jupyter-cell-tags ms-toolsai.jupyter
+2024-03-28 00:19:53.178 [info] Installing extension: ms-toolsai.vscode-jupyter-slideshow ms-toolsai.jupyter
+2024-03-28 00:19:53.303 [info] Getting Manifest... ms-python.python
+2024-03-28 00:19:53.551 [info] Installing extension: ms-python.python
+2024-03-28 00:19:54.801 [info] Getting Manifest... ms-python.vscode-pylance
+2024-03-28 00:19:55.176 [info] Getting Manifest... ms-python.debugpy
+2024-03-28 00:19:55.387 [warning] Extension signature verification failed with error 'UnknownError': ms-toolsai.vscode-jupyter-slideshow
+2024-03-28 00:19:55.465 [warning] Extension signature verification failed with error 'UnknownError': ms-toolsai.vscode-jupyter-cell-tags
+2024-03-28 00:19:55.576 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5: ms-toolsai.vscode-jupyter-slideshow
+2024-03-28 00:19:55.585 [info] Renamed to /home/christian/.vscode/extensions/ms-toolsai.vscode-jupyter-slideshow-0.1.5
+2024-03-28 00:19:55.592 [info] Extracting extension completed. ms-toolsai.vscode-jupyter-slideshow
+2024-03-28 00:19:55.649 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:19:55.655 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.8: ms-toolsai.vscode-jupyter-cell-tags
+2024-03-28 00:19:55.664 [info] Renamed to /home/christian/.vscode/extensions/ms-toolsai.vscode-jupyter-cell-tags-0.1.8
+2024-03-28 00:19:55.672 [info] Extracting extension completed. ms-toolsai.vscode-jupyter-cell-tags
+2024-03-28 00:19:56.542 [warning] Extension signature verification failed with error 'UnknownError': ms-toolsai.jupyter-keymap
+2024-03-28 00:19:56.653 [info] Installing extension: ms-python.vscode-pylance ms-python.python
+2024-03-28 00:19:56.657 [info] Installing extension: ms-python.debugpy ms-python.python
+2024-03-28 00:19:57.400 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-toolsai.jupyter-keymap-1.1.2: ms-toolsai.jupyter-keymap
+2024-03-28 00:19:57.417 [info] Renamed to /home/christian/.vscode/extensions/ms-toolsai.jupyter-keymap-1.1.2
+2024-03-28 00:19:57.419 [info] Extracting extension completed. ms-toolsai.jupyter-keymap
+2024-03-28 00:19:57.528 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:19:57.587 [warning] Extension signature verification failed with error 'UnknownError': ms-toolsai.jupyter-renderers
+2024-03-28 00:19:58.681 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-toolsai.jupyter-renderers-1.0.17: ms-toolsai.jupyter-renderers
+2024-03-28 00:19:58.692 [info] Renamed to /home/christian/.vscode/extensions/ms-toolsai.jupyter-renderers-1.0.17
+2024-03-28 00:19:58.696 [info] Extracting extension completed. ms-toolsai.jupyter-renderers
+2024-03-28 00:19:58.864 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:20:03.166 [warning] Extension signature verification failed with error 'UnknownError': ms-python.debugpy
+2024-03-28 00:20:05.434 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-python.debugpy-2024.2.0-linux-x64: ms-python.debugpy
+2024-03-28 00:20:05.490 [info] Renamed to /home/christian/.vscode/extensions/ms-python.debugpy-2024.2.0-linux-x64
+2024-03-28 00:20:05.496 [warning] Extension signature verification failed with error 'UnknownError': ms-python.python
+2024-03-28 00:20:05.513 [info] Extracting extension completed. ms-python.debugpy
+2024-03-28 00:20:05.674 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:20:05.680 [warning] Extension signature verification failed with error 'UnknownError': ms-toolsai.jupyter
+2024-03-28 00:20:07.810 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-toolsai.jupyter-2024.1.1-linux-x64: ms-toolsai.jupyter
+2024-03-28 00:20:07.822 [info] Renamed to /home/christian/.vscode/extensions/ms-toolsai.jupyter-2024.1.1-linux-x64
+2024-03-28 00:20:07.842 [info] Extracting extension completed. ms-toolsai.jupyter
+2024-03-28 00:20:07.873 [info] Extension installed successfully: ms-toolsai.vscode-jupyter-slideshow
+2024-03-28 00:20:07.874 [info] Extension installed successfully: ms-toolsai.vscode-jupyter-cell-tags
+2024-03-28 00:20:07.875 [info] Extension installed successfully: ms-toolsai.jupyter-keymap
+2024-03-28 00:20:07.875 [info] Extension installed successfully: ms-toolsai.jupyter-renderers
+2024-03-28 00:20:07.875 [info] Extension installed successfully: ms-toolsai.jupyter
+2024-03-28 00:20:08.011 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:20:16.518 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-python.python-2024.2.1: ms-python.python
+2024-03-28 00:20:16.534 [info] Renamed to /home/christian/.vscode/extensions/ms-python.python-2024.2.1
+2024-03-28 00:20:16.552 [info] Extracting extension completed. ms-python.python
+2024-03-28 00:20:16.745 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)
+2024-03-28 00:20:22.896 [warning] Extension signature verification failed with error 'UnknownError': ms-python.vscode-pylance
+2024-03-28 00:20:37.523 [info] Extracted extension to file:///home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2: ms-python.vscode-pylance
+2024-03-28 00:20:37.541 [info] Renamed to /home/christian/.vscode/extensions/ms-python.vscode-pylance-2024.3.2
+2024-03-28 00:20:37.550 [info] Extracting extension completed. ms-python.vscode-pylance
+2024-03-28 00:20:37.575 [info] Extension installed successfully: ms-python.debugpy
+2024-03-28 00:20:37.575 [info] Extension installed successfully: ms-python.python
+2024-03-28 00:20:37.576 [info] Extension installed successfully: ms-python.vscode-pylance
+2024-03-28 00:20:37.704 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/christian/.vscode/extensions/extensions.json.vsctmp'
+    at r.create (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30119)
+    at a (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:30234)
+    at i.fb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:36631)
+    at i.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:29077)
+    at async v.stat (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:16223)
+    at async Y.tb (/opt/visual-studio-code/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:102:108626)

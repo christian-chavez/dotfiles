@@ -1,0 +1,65 @@
+[00:16:52.865][Logger] New log placeholder %WS1% registered for /mnt/Mis archivos/Google Drive/Math-club/Curso de LaTeX .
+[00:16:52.865][Extension] Initializing LaTeX Workshop.
+[00:16:53.775][Build][Recipe] Set $LATEXWORKSHOP_DOCKER_LATEX: ""
+[00:16:54.249][Server] Creating LaTeX Workshop http and websocket server.
+[00:16:55.405][Format][Bib] Bibtex format config: {"tab":"  ","case":"lowercase","left":"{","right":"}","trailingComma":false,"sort":["key"],"alignOnEqual":true,"sortFields":false,"fieldsOrder":[],"firstEntries":["string","xdata"]}
+[00:16:55.790][Server] Server successfully started: {"address":"127.0.0.1","family":"IPv4","port":33753} .
+[00:16:55.962][Extension] Extension root: /home/christian/.vscode/extensions/james-yu.latex-workshop-9.19.1
+[00:16:55.962][Extension] $PATH: /usr/local/texlive/2023/bin/x86_64-linux:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+[00:16:55.963][Extension] $SHELL: /usr/bin/bash
+[00:16:55.963][Extension] $LANG: en_US.UTF-8
+[00:16:55.974][Extension] $LC_ALL: undefined
+[00:16:55.975][Extension] process.platform: linux
+[00:16:55.975][Extension] process.arch: x64
+[00:16:55.985][Extension] vscode.env.appName: Visual Studio Code
+[00:16:55.985][Extension] vscode.env.remoteName: undefined
+[00:16:55.986][Extension] vscode.env.uiKind: 1
+[00:16:56.056][Config] latex-workshop.latex.recipes: [{"name":"LaTeXMk","tools":["LaTeXMk"]},{"name":"PdfLaTeX","tools":["PdfLaTeX"]},{"name":"PdfLaTeX + Biber + PdfLaTeX (2)","tools":["PdfLaTeX","biber","PdfLaTeX","PdfLaTeX"]},{"name":"Xelatex latexmk","tools":["Xelatex latexmk"]},{"name":"LuaLaTeXMk","tools":["LuaLaTeXMk"]}] .
+[00:16:56.063][Config] latex-workshop.latex.recipe.default: "LaTeXMk" .
+[00:16:56.068][Config] latex-workshop.latex.tools: [{"name":"LaTeXMk","command":"latexmk","args":["-synctex=1","-shell-escape","-interaction=nonstopmode","-file-line-error","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"Xelatex latexmk","command":"latexmk","args":["-xelatex","-synctex=1","-interaction=nonstopmode","-file-line-error","-pdf","-pdflatex=xelatex -shell-escape %O %S","-outdir=%OUTDIR%","%DOC%.tex"]},{"name":"PdfLaTeX","command":"pdflatex","args":["-shell-escape","-synctex=1","-interaction=nonstopmode","-file-line-error","%DOC%"]},{"name":"bibtex","command":"bibtex","args":["%DOCFILE%"]},{"name":"biber","command":"biber","args":["%DOCFILE%"]},{"name":"LuaLaTeXMk","command":"latexmk","args":["-synctex=1","-interaction=nonstopmode","-file-line-error","-pdflatex=lualatex","-pdf","-outdir=%OUTDIR%","%DOC%.tex"]}] .
+[00:16:56.086][Config] latex-workshop.latex.outDir: "%DIR%/_temp" .
+[00:16:56.119][Config] latex-workshop.latex.autoBuild.run: "onSave" .
+[00:16:56.123][Config] latex-workshop.latex.clean.fileTypes: ["*.aux"] .
+[00:16:56.139][Config] latex-workshop.view.pdf.viewer: "external" .
+[00:16:56.146][Config] latex-workshop.view.pdf.external.viewer.command: "zathura" .
+[00:16:56.152][Config] latex-workshop.view.pdf.external.viewer.args: ["--synctex-editor-command","code -r -g \"%{input}:%{line}\"","%PDF%"] .
+[00:16:56.153][Config] latex-workshop.view.pdf.external.synctex.command: "zathura" .
+[00:16:56.156][Config] latex-workshop.view.pdf.external.synctex.args: ["--synctex-forward=%LINE%:0:%TEX%","%PDF%"] .
+[00:16:56.276][Config] latex-workshop.message.warning.show: false .
+[00:16:56.277][Config] latex-workshop.message.error.show: false .
+[00:16:56.280][Config] latex-workshop.showContextMenu: true .
+[00:16:56.390][Extension] Trigger characters for intellisense of LaTeX documents: ["\\",",","{"]
+[00:16:56.403][Root] Current workspace folders: ["file://%WS1%"]
+[00:16:56.404][Extension] LaTeX Workshop initialized.
+[00:16:56.406][Root] Found root file from active editor: %WS1%/MathClubYT-LaTeX-Certificate.tex
+[00:16:56.407][Root] Root file changed: from %WS1%/MathClubYT-LaTeX-Certificate.tex to %WS1%/MathClubYT-LaTeX-Certificate.tex, langID latex . Refresh dependencies
+[00:16:56.414][Event] ROOT_FILE_CHANGED: "%WS1%/MathClubYT-LaTeX-Certificate.tex"
+[00:16:56.416][Cacher][Watcher] Reset.
+[00:16:56.416][Cacher][Watcher] Reset.
+[00:16:56.441][Cacher] Adding %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:56.449][Cacher][Watcher] Watched %WS1%/MathClubYT-LaTeX-Certificate.tex with a new .* watcher on %WS1% .
+[00:16:56.454][Event] FILE_WATCHED: "%WS1%/MathClubYT-LaTeX-Certificate.tex"
+[00:16:56.466][Cacher] Caching %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:56.475][Cacher] Updated inputs of %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:56.476][Cacher] Parse LaTeX AST: %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:56.477][Event] ROOT_FILE_SEARCHED
+[00:16:56.901][Cacher] Parsed LaTeX AST: %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:56.902][File] Calling kpsewhich to resolve article.cls .
+[00:16:57.848][File] kpsewhich returned with '/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls'.
+[00:16:57.870][Cacher] Updated elements in 968.03 ms: %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:57.883][Event] FILE_PARSED: "%WS1%/MathClubYT-LaTeX-Certificate.tex"
+[00:16:57.924][Cacher] Parsing .fls %WS1%/_temp/MathClubYT-LaTeX-Certificate.fls .
+[00:16:58.182][Cacher] Adding %WS1%/participantes.txt .
+[00:16:58.183][Cacher][Watcher] Watched %WS1%/participantes.txt by the .* watcher.
+[00:16:58.183][Event] FILE_WATCHED: "%WS1%/participantes.txt"
+[00:16:58.195][Cacher] Adding %WS1%/certificado-vacio.pdf .
+[00:16:58.196][Cacher][Watcher] Watched %WS1%/certificado-vacio.pdf by the .* watcher.
+[00:16:58.196][Event] FILE_WATCHED: "%WS1%/certificado-vacio.pdf"
+[00:16:58.234][Cacher] Found .aux %WS1%/MathClubYT-LaTeX-Certificate.tex from .fls %WS1%/_temp/MathClubYT-LaTeX-Certificate.fls , parsing.
+[00:16:58.254][Cacher] Parsed .aux %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:58.255][Cacher] Parsed .fls %WS1%/_temp/MathClubYT-LaTeX-Certificate.fls .
+[00:16:58.264][Structure] Structure force updated with 0 root sections for %WS1%/MathClubYT-LaTeX-Certificate.tex .
+[00:16:58.266][Event] STRUCTURE_UPDATED
+[00:16:58.624][Server] valdOrigin is http://127.0.0.1:33753
+[00:17:02.238][Cacher][Watcher] Reset.
+[00:17:02.239][Cacher][Watcher] Reset.

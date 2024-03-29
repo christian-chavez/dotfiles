@@ -1,0 +1,110 @@
+{
+   "extensionDescription": {
+      "description": "Beschreibung der Erweiterung",
+      "message": "Blendet die YouTube™-Vollbild-Steuerelemente aus, wenn der Mauszeiger an den Bildschirmrand bewegt wird."
+   },
+   "extensionName": {
+      "description": "Name der Erweiterung",
+      "message": "YouTube™-Vollbild-Steuerelemente ausblenden"
+   },
+   "generalSectionTitle": {
+      "description": "Title of the general section",
+      "message": "Allgemeines"
+   },
+   "hidePlayPauseAnimationPreferenceDescription": {
+      "description": "Description of the hide play pause animation option",
+      "message": "Verstecke den animierten Knopf, der angezeigt wird, wenn man das Video pausiert oder wieder abspielt."
+   },
+   "hidePlayPauseAnimationPreferenceTitle": {
+      "description": "Title of the hide play pause animation option",
+      "message": "Verstecke die Wiedergabe- und Pauseanimation"
+   },
+   "hideVideoOverlaysPreferenceDescription": {
+      "description": "Description of the hide video overlays option",
+      "message": "Verstecke die meisten Overlays (unter anderem Sponsorhinweise und Videovorschlagskärtchen am Ende von Videos). Untertitel werden nicht versteckt."
+   },
+   "hideVideoOverlaysPreferenceTitle": {
+      "description": "Title of the hide video overlays option",
+      "message": "Verstecke Video Overlays"
+   },
+   "hotkeyPreferenceDescription": {
+      "description": "Beschreibung der der Hotkeyoption",
+      "message": "Beim Drücken des Hotkeys wird die Sichtbarkeit der Steuerelemente umgeschaltet.\u003Cbr>Beachte, dass die Steuerelemente sofort wieder angezeigt werden, wenn die Maus bewegt wird. Sollte dies stören, kann die Mausinteraktion ausgeschaltet werden."
+   },
+   "hotkeyPreferencePlaceholder": {
+      "description": "Hotkey-Eingabe-Platzhalter-Text",
+      "message": "Nicht Definiert"
+   },
+   "hotkeyPreferenceTitle": {
+      "description": "Titel der Hotkeyoption",
+      "message": "Hotkey"
+   },
+   "injectOptionButtonPreferenceDescription": {
+      "description": "Description of the inject option button option",
+      "message": "Zeige einen Knopf im oberen rechten YouTube™-Menü an, welcher ein Pop-up mit den Add-on-Optionen öffnet. Die Optionen können immer über den Eintrag in der Liste der installierten Add-ons des Browsers geändert werden."
+   },
+   "injectOptionButtonPreferenceTitle": {
+      "description": "Title of the inject option button option",
+      "message": "Knopf für Add-on Option auf YouTube™"
+   },
+   "invertTriggerPreferenceDescription": {
+      "description": "Description of the invert trigger option",
+      "message": "Blendet die Vollbild-Steuerelemente standardmäßig aus. Bei Bedarf können die Steuerelemente mit dem Hotkey, oder der Maus wieder eingeblendet werden."
+   },
+   "invertTriggerPreferenceTitle": {
+      "description": "Title of the invert trigger option",
+      "message": "Invertiere Funktion"
+   },
+   "onlyFullscreenPreferenceDescription": {
+      "description": "Description of the only fullscreen option",
+      "message": "Blende die Steuerelemente nur aus, wenn das YouTube™ Video sich im Vollbildmodus befindet."
+   },
+   "onlyFullscreenPreferenceTitle": {
+      "description": "Titel der only fullscreen option",
+      "message": "Nur Vollbild"
+   },
+   "presetDropdownCustomTitle": {
+      "description": "Title of the 'custom' entry in the preset dropdown",
+      "message": "Benutzerdefiniert"
+   },
+   "presetDropdownHideDescription": {
+      "description": "Description of the 'hide' entry in the preset dropdown",
+      "message": "Verstecke die Steuerelemente, wenn die Maus an den Bildschirmrand geschoben wird."
+   },
+   "presetDropdownHideTitle": {
+      "description": "Title of the 'hide' entry in the preset dropdown",
+      "message": "Verstecke, wenn am Bildschirmrand"
+   },
+   "presetDropdownShowDescription": {
+      "description": "Description of the 'show' entry in the preset dropdown",
+      "message": "Zeige die Steuerelemente nur an, wenn die Maus über die untere oder obere die Leiste bewegt wird."
+   },
+   "presetDropdownShowTitle": {
+      "description": "Title of the 'show' entry in the preset dropdown",
+      "message": "Zeige an, wenn über Steuerelement"
+   },
+   "presetPreferenceDescription": {
+      "description": "Description of the preset option",
+      "message": "Wähle eine Voreinstellung für die Mausinteraktion."
+   },
+   "presetPreferenceTitle": {
+      "description": "Title of the preset option",
+      "message": "Voreinstellungen"
+   },
+   "triggerDistancePreferenceDescription": {
+      "description": "Beschreibung der Auslöseentfernungsoption",
+      "message": "Legt die Entfernungen von jeder Seite fest, ab der die Bedienungselemente ausgeblendet werden. Alle Werte in Pixel. Benutze 0 Pixel um eine Seite zu deaktivieren."
+   },
+   "triggerDistancePreferenceTitle": {
+      "description": "Titel der Auslöseentfernungsoption",
+      "message": "Auslöseentfernung"
+   },
+   "useHotkeySectionTitle": {
+      "description": "Title of the hotkey usage section",
+      "message": "Hotkey"
+   },
+   "useMouseSectionTitle": {
+      "description": "Title of the mouse interaction section",
+      "message": "Mausinteraktion"
+   }
+}

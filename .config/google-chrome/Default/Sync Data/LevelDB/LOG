@@ -1,0 +1,6 @@
+2024/03/27-08:50:51.687 293a Reusing MANIFEST /home/christian/.config/google-chrome/Default/Sync Data/LevelDB/MANIFEST-000001
+2024/03/27-08:50:51.720 293a Recovering log #31
+2024/03/27-08:50:51.730 293a Reusing old log /home/christian/.config/google-chrome/Default/Sync Data/LevelDB/000031.log 
+2024/03/27-08:51:51.296 293a Level-0 table #35: started
+2024/03/27-08:51:51.313 293a Level-0 table #35: 103486 bytes OK
+2024/03/27-08:51:51.319 293a Delete type=0 #31

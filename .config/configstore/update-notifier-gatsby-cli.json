@@ -1,0 +1,10 @@
+{
+	"optOut": false,
+	"lastUpdateCheck": 1708887393137,
+	"update": {
+		"latest": "5.13.2",
+		"current": "4.25.0",
+		"type": "major",
+		"name": "gatsby-cli"
+	}
+}
