@@ -124,6 +124,10 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# change orientation (vertical -> horizontal)
+super + shift + e
+	bspc node '@parent' -R 90
+
 # Screnshot tool
 Print
 	flameshot gui 
@@ -138,7 +142,7 @@ super + Print
 
 # thunar file manager
 super + e
-	thunar
+	Thunar
 
 # Volumen control
 XF86AudioRaiseVolume
@@ -150,7 +154,15 @@ XF86AudioMute
 
 # brightness control
 XF86MonBrightness{Up,Down}  
-	brightnessctl s 5{+,-} 
+	brightnessctl s 10{+,-} 
+
+# set max brightness
+super + alt + m
+	brightnessctl s 255 
+
+# set max brightness
+super + alt + n
+	brightnessctl s 0
 
 # play/pause
 XF86AudioPlay
@@ -182,7 +194,15 @@ super + shift + m
 
 # Wacom support
 super + shift + x
-	/home/christian/Documents/xsetwacom.sh
+	/home/christian/Documents/xsetwacom-new.sh
+
+super + shift + alt + x
+	/home/christian/Documents/xsetwacom-new-laptop.sh
+
+
+# start redshift
+super + shift + r
+	redshift
 
 # Schedule
 super + shift + s
@@ -201,9 +221,13 @@ super + @b
 	librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,f,n,s,u,M,k,d,U}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay"}
+super + u ; {i,c,m,f,n,s,u,y,M,k,d,U,p}
+	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"}
 
 # Suspend
 super + @l
-	systemctl suspend
+	systemctl suspend-then-hibernate
+#	systemctl suspend
+
+super + shift + @l
+	dm-tool lock && systemctl suspend
