@@ -1,0 +1,7887 @@
+﻿# For documentation, see https://www.sumatrapdfreader.org/settings/settings3-5-1.html
+Theme = Light
+FixedPageUI [
+	TextColor = #000000
+	BackgroundColor = #ffffff
+	SelectionColor = #0a8af2
+	WindowMargin = 2 4 2 4
+	PageSpacing = 4 4
+	InvertColors = false
+	HideScrollbars = true
+]
+ComicBookUI [
+	WindowMargin = 0 0 0 0
+	PageSpacing = 4 4
+	CbxMangaMode = false
+]
+ChmUI [
+	UseFixedPageUI = false
+]
+
+SelectionHandlers [
+]
+ExternalViewers [
+]
+
+ZoomLevels = 8.33 12.5 18 25 33.33 50 66.67 75 100 125 150 200 300 400 600 800 1000 1200 1600 2000 2400 3200 4800 6400
+ZoomIncrement = 0
+
+PrinterDefaults [
+	PrintScale = shrink
+]
+ForwardSearch [
+	HighlightOffset = 0
+	HighlightWidth = 15
+	HighlightColor = #6581ff
+	HighlightPermanent = false
+]
+Annotations [
+	HighlightColor = #ffff00
+	UnderlineColor = #00ff00
+	SquigglyColor = #ff00ff
+	StrikeOutColor = #ff0000
+	FreeTextColor = 
+	FreeTextSize = 10
+	FreeTextBorderWidth = 1
+	TextIconColor = 
+	TextIconType = 
+	DefaultAuthor = Christian
+]
+
+RememberOpenedFiles = true
+RememberStatePerDocument = true
+RestoreSession = true
+UiLanguage = en
+InverseSearchCmdLine = cmd /c /usr/bin/code --ms-enable-electron-run-as-node -r -g "%f:%l"
+EnableTeXEnhancements = true
+DefaultDisplayMode = automatic
+DefaultZoom = fit page
+Shortcuts [
+	[
+		Cmd = CmdTranslateSelectionWithGoogle
+		Key = t
+	]
+	[
+		Cmd = CmdSearchSelectionWithGoogle
+		Key = g
+	]
+	[
+		Cmd = CmdToggleBookmarks
+		Key = 1
+	]
+	[
+		Cmd = CmdBookView
+		Key = 2
+	]
+	[
+		Cmd = CmdSinglePageView
+		Key = 3
+	]
+]
+EscToExit = false
+ReuseInstance = false
+ReloadModifiedDocuments = true
+
+MainWindowBackground = #80fff200
+FullPathInTitle = false
+ShowMenubar = false
+ShowToolbar = true
+ShowFavorites = false
+ShowToc = true
+NoHomeTab = true
+TocDy = 506
+SidebarDx = 336
+ToolbarSize = 18
+TabWidth = 300
+TreeFontSize = 0
+TreeFontWeightOffset = 0
+TreeFontName = automatic
+SmoothScroll = false
+ShowStartPage = true
+CheckForUpdates = false
+WindowState = 2
+WindowPos = 2 28 1358 734
+UseTabs = true
+UseSysColors = false
+CustomScreenDPI = 96
+
+FileStates [
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Gelfand, S. V. Fomin - Calculus of Variations.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Trenoguin_ProblemasEjercicios_AnFuncional.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 38.9589
+		PageNo = 114
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Lebedev_CalculusVariations_FunctAn_Mechanics.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 440.438
+		PageNo = 31
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 4
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Krasnov_VariationalCalculus.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Dacorogna_Direct_Methods_CalculusVar.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 644.191
+		PageNo = 601
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 42 44 58
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Dacorogna_IntroCalculusVariations.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 236
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 4 8 14
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Gelfand_CalculusVariation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Hestenes (1980) - Calculus of variations and optimal control theory.djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 801.774
+		PageNo = 69
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Hansjörg Kielhöfer - Calculus of Variations_ An Introduction to the One-Dimensional Theory with Examples and Exercises.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 229.303
+		PageNo = 20
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\assem - groupes, anneaux, modules et corps.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 56.108
+		PageNo = 359
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\sroserorTFM0715.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\ram19.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\oit.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 425.251
+		PageNo = 1
+		Zoom = 50
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\cobena24.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\Segunda Versión Artículo TDA inglés\_temp\desigualdad.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 69.1879 411.188
+		PageNo = 5
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 3 4 8
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\Axler_MIRA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 13
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 299.595
+		PageNo = 108
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 7 8 10 12 13 19 25 29 34 54 55 60 65 66 71 76 83 87 95 100 116 117 121 126 132 133 138 146 151 157 161 165 166 172 176 183
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Coleman_Calculus_Normed_Spaces.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 14
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 341.077
+		PageNo = 54
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 15 23 28 38 43 48 54 61 67
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\bachelor-thesis\_temp\thesis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 12
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 343.501
+		PageNo = 12
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\supervisor-meetings\_temp\advance01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 7
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 2
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\talca\EIT-2024-07-15 [Lecture].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 6
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 5
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\A_YT_FunctAnalysis_Vol_1_146_JM_01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 15
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 17.7693
+		PageNo = 376
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 12 22 32 36 50 69 70 71 75 81 88 92 105 109 114 122 123
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Dummit and Foote - Abstract Algebra.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 7
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 466.801
+		PageNo = 20
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 9 10 18 24 30 37 43 48 55 59 67 73 79 83 84 91 101 102 108 112 117 118 122
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Tesis_Pablo_Rosero.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 9
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 69.947
+		PageNo = 114
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 13 32 34
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\StudyPlan_CalVar_01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 14
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 289.981
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\C Pinter - A book of abstract algebra-McGraw-Hill (1982).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 332.136
+		PageNo = 342
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 295
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Tesis_Carlos_Ajila.pdf
+		Favorites [
+			[
+				Name = Homotopía de categorías finitas
+				PageNo = 122
+			]
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = 544.75 479.75
+		PageNo = 12
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Representation theory\assem-AM.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 0.44294
+		PageNo = 211
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\[6] Groupes, anneaux, modules et corps (1).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 107.532
+		PageNo = 283
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\editados\logoECMC.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\editados\logoYachay.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\midterm\MT_CalVar_2024-I.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 225.749
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\_temp\boomarks.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Representation theory\Assem V2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous facing
+		ScrollPos = -1 227.251
+		PageNo = 7
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\midterm\CV-2024-08-02 [drfat-mt].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 248.052
+		PageNo = 14
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 336
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\logoYachay.png
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\logoYachay.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\talca\EIT-2024-07-18 [Lecture].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 139.373
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\talca\EIT-2024-07-19 [Lecture].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 593.286
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\talca\EIT-2024-07-16 [Lecture].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 668.943
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\5 Quinto Semestre\ALA\Final project\images\background_white.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\LOGOTIPO Universidad Yachay Tech.ai.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 66.67
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\logoECMC.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\path88.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\LOGOTIPOS UNIVERSIDAD ESCUELAS UITEY 2023 PDF EDITABLE.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 9
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\supervisor-meetings\_temp\presentation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\notas-pablo\CamScanner 28-07-2024 19.45.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 6
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 732.376
+		PageNo = 3
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\notas-pablo\abstract-algebra\_temp\problemSet01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous facing
+		ScrollPos = -1 174.391
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\notas-pablo\abstract-algebra\_temp\lesson01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 365.525
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\latex\compiled\AA-HW01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous facing
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 351
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Discrete math\Presentation (FTA)\_temp\Proof_FTA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 11
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Stromberg - Introduction to classical real analysis (1981).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 229.168
+		PageNo = 27
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 12
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Hungerford - Abstract Algebra An Introduction (2012).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 78.881
+		PageNo = 36
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Gallian [9ed] - Contemporary Abstract Algebra.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 18.7836
+		PageNo = 18
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 100 109 116 129 134
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\MT_CalVar_2024-I.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 193.922
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\Walter Rudin - Real and complex analysis-McGraw-Hill (1987).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 988.315
+		PageNo = 53
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Rudin (1976) - Principles of mathematical analysis-McGraw-Hill.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1071.51
+		PageNo = 260
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 81
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Schechter - Handbook of Analysis and Its Foundations (1996).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 83.6844
+		PageNo = 134
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Kreyszig - Introductory Functional Analysis with Applications-Wiley (1989).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 438
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Brezis_Functional_Analysis,_Sobolev_Spaces.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 626.506
+		PageNo = 598
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Multivariable calculus\C. H. Edwards - Advanced Calculus of Several Variables-Academic Press (2015).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 15.3893
+		PageNo = 394
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 7 27 33 40 50
+	]
+	[
+		FilePath = Z:\home\christian\Videos\calc-var-2024\CalVar_2024-07-22.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 4
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 1.62525 -1
+		PageNo = 1
+		Zoom = 300
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Abbott, Stephen - Understanding Analysis-Springer New York (2016_2015).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 5
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 564.803
+		PageNo = 243
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 21 36 42 59
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Topology\Munkres - Topology (2000).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 6
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 80.3171
+		PageNo = 128
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 9 22
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Number theory\Assem V2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 5
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 81.9379
+		PageNo = 11
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Enderton, Herbert B - Elements of set theory-Academic Press (2009).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 409.85
+		PageNo = 16
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Halmos R. - Introduction a la theorie des ensembles (1967).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Magnus Rudolph Hestenes - Calculus of variations and optimal control theory-R. E. Krieger Pub. Co (1980)(1).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\MIS_~H5K\GOOG~3GJ\Libros\MATE~FDC\FUNC~5NH\(Pure and Applied Mathematics_ A Wiley-Interscience Series of Texts, Monographs and Tracts) Gerald B. Folland - Real Analysis_ Modern Techniques and Their Applications-Wiley-Interscience (1999).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 235.652
+		PageNo = 149
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 278
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 37
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Tom M. Apostol - Análisis matemático (Spanish Edition)-Reverte Editorial (1976).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 586.306
+		PageNo = 464
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\_Tom M. Apostol - Análisis matemático (Spanish Edition)-Reverte Editorial (1976).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 4
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Tom M. Apostol - Mathematical Analysis, Second Edition-Addison Wesley (1974).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Tom M. Apostol - Mathematical Analysis_ A Modern Approach to Advanced Calculus-Pearson (1973).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 838.845
+		PageNo = 230
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\Terence Tao - An Introduction to Measure Theory-American Mathematical Soc. (2011).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 40.4026
+		PageNo = 61
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Tao - Analysis II-Springer (2016).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 137.503
+		PageNo = 83
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 237
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Tao - Analysis I-Springer (2016).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 633.281
+		PageNo = 337
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 8 12 19 24 31 39 45 51 62 79 87
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\(Oxford mathematics) Terence Tao - Solving mathematical problems _ a personal perspective-Oxford University Press (2009).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 158.467
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Set Theory\Charles C Pinter - A Book of Set Theory (2014, Dover Publications).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 12
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\W Rudin Sols - Kit-Wing Yu - A Complete Solution Guide to Real and Complex Analysis (Walter Rudin's) (2021).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 49
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Rudin  - Functional analysis-MGH (1991).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 518.444
+		PageNo = 107
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 429
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 7 75
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-15 [continuity].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 3
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 19.9797
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\resolicituddecertificados\CHAVEZ-signed-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\resolicituddecertificados\MERCHAN-signed-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\resolicituddecertificados\MARTINEZ-signed-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Spivak, Michael - Calculus-Publish or Perish (2008).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 431.386
+		PageNo = 111
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 12
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Michael Spivak - Calculus-Editorial Reverté, S.A. (2012).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 487.973
+		PageNo = 167
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Barett O neill - Elementos de la geometria diferencial.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 353.762
+		PageNo = 148
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\toronto\merged_tor.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 208.637
+		PageNo = 8
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Topology\O. Ya. Viro, O. A. Ivanov, N. Yu. Netsvetaev, and V. M. Kharlamov - Elementary Topology_ Problem Textbook-American Mathematical Society (2008).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1253.24
+		PageNo = 37
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 4 5 15 20 30
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Gelfand_CalculusVariation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 262.629
+		PageNo = 20
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Dacorogna_IntroCalculusVariations.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 36
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Brezis_Functional_Analysis,_Sobolev_Spaces.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 597.781
+		PageNo = 329
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 35
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\hw02-christian.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 368.388
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-26 [hw02].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Michael Spivak - Calculus.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 655.556
+		PageNo = 16
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Ventura (2016) - Geometria Diferencial.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 558.685
+		PageNo = 11
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Barrett O'Neill (2006) - Elementary Differential Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 177.554
+		PageNo = 343
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\bachelor-thesis\_temp\thesis (copy 1).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 343.126
+		PageNo = 15
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Topology\Fairchild_Topology_v2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 263.381
+		PageNo = 96
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 292
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\masterthesis-master\final-version.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 761.626
+		PageNo = 49
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\hw01-christian.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 824.25
+		PageNo = 12
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-20 [hw01---5-15-20-25].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 131.063
+		PageNo = 1
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Assem V2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 56.0629
+		PageNo = 3
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Ibrahim Assem, Flávio U. Coelho - Basic Representation Theory of Algebras (Graduate Texts in Mathematics (283)) (2020, Springer) - libgen.li.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 241.79
+		PageNo = 251
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 3 4 10 18 19 24 29 34 40 46 52 58 64 71 76 81 87 91 98 103 107 112
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Promislow_A_First_Course_FunctAnalysis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 127.313
+		PageNo = 292
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Complex Analysis\Krantz. A guide to complex variables.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 276.301
+		PageNo = 3
+		Zoom = 125
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\ESCUELA DE INVIERNO 2024 (Segundo anuncio).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 109.586
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 182
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic Topology\Lee - Introduction to Topological Manifolds (2011).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 594.733
+		PageNo = 38
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 13 15 26 86
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\Jul 20 12h49.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-19 [hw01].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-19 [prob-7-15].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 103.126
+		PageNo = 6
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 12h49.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 12h48.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 12h46.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 183.901
+		PageNo = 3
+		Zoom = 125
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 12h45.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 347.953 57.6095
+		PageNo = 1
+		Zoom = 800
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 12h44.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 753.115
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 11h32.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 701.15
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Jul 20 10h44.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-19 [prob-7-10].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 772.686
+		PageNo = 8
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\notes\CV-2024-07-08 [Lecture 01].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 971.915
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Hungerford - Algebra.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 57.3757
+		PageNo = 352
+		Zoom = 100
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\docs-respaldo\RUC-0401249297.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\docs-respaldo\isspol-1005215361.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\docs-respaldo\isspol-0401249297.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\Ficha_Socieconomica-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\Ficha_Socieconomica.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 91.1555
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Ficha socieoconómica\actual-Ficha_Socieconomica.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 75.1867
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic Topology\Czes Kosniowski - A First Course in Algebraic Topology-Cambridge University Press (1980).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 50
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic Topology\Allen Hatcher - Algebraic Topology (2022).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 512.831
+		PageNo = 467
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Dacorogna_Direct_Methods_CalculusVar.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\notes\TH-2024-06-26 [producto de subcaminos].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 53.1006
+		PageNo = 5
+		Zoom = 125
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Larose - Taylor operations on finite reflexive structures.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Poincare_1895.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\PABLO_CD 8641 TRABAJO DE TITULACIÓN.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 2
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Pablo\Notas_para_tesis__Kevin_Chávez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 1
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Brezis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Fonseca_CV_Lp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\docs-respaldo\certificadoAfiliacion1005215361.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Ficha socieoconómica\docs-respaldo\RCA1705522634452245.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 48.9926
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Ficha socieoconómica\docs-respaldo\RCA1705435555288362.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\ficha socioeconómica\docs-respaldo\certificadoAfiliacion0401249297.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\run\user\1000\gvfs\mtp:host=SAMSUNG_SAMSUNG_Android_5c9d901c\Phone\Documents\Office Lens\2024_07_06 17_39 Office Lens.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\run\user\1000\gvfs\mtp:host=SAMSUNG_SAMSUNG_Android_5c9d901c\Phone\Documents\Notebloc\Christian.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\run\user\1000\gvfs\mtp:host=SAMSUNG_SAMSUNG_Android_5c9d901c\Phone\Epson iPrint\20240117-204937.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Goldstine_AHistoryCalculusVariations17th19thCentury.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\Final\latex-final\_temp\main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 534.838
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Sheldon Axler - Supplement for Measure, Integration & Real Analysis (2021).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 77.3753
+		PageNo = 38
+		Zoom = 300
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Fonseca_CV_Lp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\A_YT_FunctAnalysis_Vol_1_146_JM_01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 350.438
+		PageNo = 282
+		Zoom = 200
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 50 69 70 75
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Algebraic_Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\PDE_2024S1-5.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 80.736
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Logicomix (Spanish, CRG).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 550.75
+		PageNo = 21
+		Zoom = 150
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Math-club\certificado-luis-arteaga-signed-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 400.804
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Math-club\certificado-luis-arteaga-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 217.149
+		PageNo = 1
+		Zoom = 33.33
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Math-club\certificado-luis-arteaga.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Trenoguin_ProblemasEjercicios_AnFuncional.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Calculus of variations\Coleman_Calculus_Normed_Spaces.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 228.825
+		PageNo = 11
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Questions and Answers.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\notes\TH-2024-07-02 [functor-homotopy-gral].pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Mayorga_CYT_FunctAnalysis_Vol_1_139_JM_01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 191.276
+		PageNo = 143
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 69 70 122
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\papers\larose-1-s2.0-S0001870803003682-main.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 150.512
+		PageNo = 12
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\notes\TH-2024-07-06.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 253.387
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\notes\TH-2024-07-05 [def-de-multiplicación].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 7.9677
+		PageNo = 7
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 2
+		WindowPos = -1364 28 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\certificado-daniela-signed-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\certificado-daniela-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 142.126
+		PageNo = 1
+		Zoom = 100
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\Calendario-II-PERIODO-2024-Carrera-Actualizado (1).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\certificado-daniela.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Functional Analysis\Brezis_Functional_Analysis_Sobolev_Spaces.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 307.989
+		PageNo = 121
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Otros\Calendario-Intersemestral-2024-Carrera-Actualizado.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic Topology\Croom - Basic concepts of algebraic topology-Springer (1978).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1439.12
+		PageNo = 33
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 16
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic Topology\Dieck - Algebraic Topology (2008).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 546.843
+		PageNo = 38
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1362 30 1358 734
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 18 35
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\Apuntes teóricos.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 290.411
+		PageNo = 88
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1914 1048
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Carter N.C. (2009) - Visual group theory-MAA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1914 1048
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\informes\firmados\4.-Evaluacion-de-desempeno-Ayudantias (1)-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 802.9
+		PageNo = 2
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1364 28 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Category Theory\Riehl - Category Theory in Context .pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 511.688
+		PageNo = 58
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1914 1048
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 7
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\informes\5.-Certificado-de-Ayudantias.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\informes\0.-Contrato-algebra-abstracta.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\frai-04-667963.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 26.791
+		PageNo = 24
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 11 17 19 23
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\papers\Larose2004.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1914 1048
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Category Theory\Leinster - Basic Category Theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Complex Analysis\Ahlfors - Complex Analysis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-Algebra\latex\_temp\TP-Catedra-Guide01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 330.379
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\4 Cuarto Semestre\Otros\Impuesto_pedrial_2021.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\Postulacion escuela verano Talca 2024\CI-Kevin Christian Chávez Cadena.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\7 Séptimo Semestre\Otros\Escuela invierno Talca\CI-Kevin_Christian_Chávez_Cadena.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Cdla_Mayor_Edad.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 28.5006
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\5 Quinto Semestre\Otros\Proceso de beca\Documentos\KEVIN CHRISTIAN CHAVEZ CADENA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\beca\CONTRATOS DE BECA POR EXCELENCIA FIRMA ELECTRONICA-4-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\residencia\2803202401176817682000120010020000187401005215311.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 295.496
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\residencia\1504202401176817682000120010020000192091005215311 .pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 353.622
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\residencia\1106202401176817682000120010020000208261005215314.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 356.279
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\calificaciones-CHAVEZ CADENA KEVIN CHRISTIAN_REC_ESP-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = true
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Calendario-II-PERIODO-2024-Carrera-Actualizado.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 173.401
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Math-club\Divulgación\Galois\latex\_temp\thesis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Galois theory\Harold M. Edwards - Galois theory  -Springer (1984).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 767.134
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Galois theory\galois without rings.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 320.231
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Galois theory\galois_theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Galois theory\Cox (2012) - Galois Theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 87.5622
+		PageNo = 10
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Tesis_Carlos_Alija.pdf
+		Favorites [
+			[
+				Name = III. Carcajes, álgebras de caminos y teoría de categorias
+				PageNo = 94
+			]
+			[
+				Name = 3.4 Homotopía de categorías finitas
+				PageNo = 122
+			]
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 122
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1363 29 1360 736
+		ShowToc = false
+		SidebarDx = 328
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Cox (2012) - Galois Theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 329.379
+		PageNo = 9
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 8 9 10 12 18 23 24 28 34 37 41 42 45 49 50 51 56 62 67 70 71 74 76 81 85 86 89 92 98 101 102 107 113 118 125 126 127 129 134 139 142 148 154 155 160 168 169 172 174 181 182 187 193 194 195 202 209 215 216 219 226 232 237 238 241 247 254 261 262 267 272 277 283 289 290 295 300 307
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\galois_theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Harold M. Edwards - Galois theory  -Springer (1984).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Solow, Daniel - How to read and do proofs_ an introduction to mathematical thought processes-Wiley (2013_2014).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 50.0629 554.813
+		PageNo = 34
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Velleman. - How to Prove It_ A Structured Approach-Cambridge University Press (2019).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 297.89
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\(Undergraduate texts in mathematics) Bak, Joseph_Newman, Donald J - Complex analysis-Springer (2010_2017).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 86.4303
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 335
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Solow, D. (1993). Cómo entender y hacer demostraciones matemáticas. México. Limusa.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 274.537
+		PageNo = 10
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\- Nivelación\- Fundamentos de Matemática\Otros\Libros\De Uzcátegui\Lógica y conjuntos - Carlos Uzcátegui..pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 755.626
+		PageNo = 12
+		Zoom = 100
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\[James Stewart] Precálculo -  Matemáticas para el cálculo.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 33.3848
+		PageNo = 31
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 93
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\resources\Pablo\quiz 3.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 283.005
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\resources\Pablo\quiz 2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\resources\Pablo\galois without rings.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 353.978
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\7 Séptimo Semestre\Abstract Algebra\Final\Cuestionario.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 413.101
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\apuntes\AA-2024-06-18 [some-problems].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 600.027
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\latex\compiled\AA-HW02.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 174.73
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\dummit_sols.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 183.145
+		PageNo = 169
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 20
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\latex\topics\tychonoff\_temp\tychonoff_theorem.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\toronto\17-tychonoff.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\final proyect\papers\Automated Geometric Theorem Proving Wus Method.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 143.228
+		PageNo = 23
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\ivasols.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 53.8129 143.813
+		PageNo = 240
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\(Mathematics and its applications) Shang-Ching Chou - Mechanical geometry theorem proving-D. Reidel Pub. Co._ Sold and distributed in the U.S.A. and Canada by Kluwer Academic Publishers (1988).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 2319.41
+		PageNo = 9
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\wu4.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\final proyect\papers\Formalization of Wu’s simple method in Coq.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 367.876
+		PageNo = 15
+		Zoom = 100
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Cox (4ed) - Ideals, Varieties, and Algorithms.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 629.881
+		PageNo = 340
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 993 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 26 37 54 61 67 72 108
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Decidability and Computability\Final project\_temp\presentation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 5
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2237 29 1046 1048
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\final proyect\_temp\presentation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 21
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 1369 29 1018 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\wu3.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 387.563
+		PageNo = 6
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\wu2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\wu1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic geometry\Cox (4ed) - Ideals, Varieties, and Algorithms.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 421.441
+		PageNo = 354
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 61 72
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Manfredo P. do Carmo - Differential Geometry of Curves and Surfaces (2016).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 66.1986
+		PageNo = 94
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\weiyi-zhang.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 29.075
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 17 29
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\poster-UPEC\_temp\TDA-Christian-Chavez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Needham (2021) - Visual Differential Geometry and Forms.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 207.719
+		PageNo = 156
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 3 10 15 16 26 34 42 49 53 60 66 71 75 80 90 92 99 105 108 114 119 123 131 133 137 140 145 151 155 161 162 166 170 173 178 188 192 196 210 211 214 222 228 231 240 249 257 261 267 268 272 275 280 287 297 299 303 306 311 318 324
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\sols-doCarmo-[unofficial].pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 837.501
+		PageNo = 260
+		Zoom = 75
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\tareas\tarea3-p2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous facing
+		ScrollPos = -1 220.767
+		PageNo = 5
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Jorge Picado - Apontamentos de Geometria Diferencial-Universidade de Coimbra (2006).pdf
+		Favorites [
+			[
+				Name = 2. qué es una superficie
+				PageNo = 81
+			]
+			[
+				Name = ejercicios
+				PageNo = 95
+			]
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = 455.75 641.25
+		PageNo = 158
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\John Oprea - Differential Geometry and its Applications.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 252.579
+		PageNo = 261
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Pressley (2010) - Elementary Differential Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 136.059
+		PageNo = 104
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = true
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 19 25 32 38 43 73
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\tareas\tarea3-p1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous facing
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 2 28 1360 736
+		ShowToc = false
+		SidebarDx = 346
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\Books_Category Theory\Riehl - Category Theory in Context .pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 166.305
+		PageNo = 235
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 43
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\PDE-2024-06-10 [draft-final].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1052.74
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\grabbed from internet\laplace-dirichlet-lecture_3_18_slides.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 7
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\solutionManual-pde-pinchover.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 46.7505
+		PageNo = 40
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\12.- The Energy method.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\11.- The method of separation of variables.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 526.403
+		PageNo = 14
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\10.- The homogeneous and non-homegeneous Cauchy Problem for the wave equation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 167.54
+		PageNo = 18
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\9.- Canonical form of second-order P.D.E..pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 252.865
+		PageNo = 10
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\8.- Classification of the second order linear PDE_s.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 219.091
+		PageNo = 2
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\7.- Classical second-order PDE_s.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 219.091
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\notes\Eusebio\13.- Elliptic Equations.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 149.764
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\books\Gallian [9ed] - Contemporary Abstract Algebra.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 307.522
+		PageNo = 278
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 116
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Pinchover b(2005) - An introduction to partial differential equations.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 79.7505
+		PageNo = 205
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 8 24 35 42 49 59 74 85 106 115 124 136
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Debnath - Linear PDE.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 653.357
+		PageNo = 20
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 84 99 129 177
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\Final\Final_exam__PDE__I_2024.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 397.413
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Pressley [solutions] - Elementary Differential Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 513.188
+		PageNo = 45
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Pressley (2010) - Elementary Differential Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 273.31
+		PageNo = 267
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 19 32 38
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Perrin.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Jammes-B-Carrell-AG.pdf
+		Favorites [
+			[
+				Name = 8. Projective varieties
+				PageNo = 28
+			]
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 343.112
+		PageNo = 55
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\HW1-AndreVera.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 209.217
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\homework\hw01\HW01.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 101.492
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\papers-final\PH-speach1608.07373v1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 638.37
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\unam\1-Calificaciones-CHAVEZ CADENA KEVIN CHRISTIAN_REC_ESP-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\unam\2-Carta_Recomendación_Christian_Chávez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 438.364
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\unam\4-Carta-compromiso-Kevin-Chávez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 123.751
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\postulacion_valpa\Kevin Christian Chávez - Carta de Motivación.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 40.7505
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\Postulacion escuela verano Talca 2024\Escuela-Verano-2024-PA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 662.853
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\Postulacion escuela verano Talca 2024\Carta aceptacion 2024_Kevin Christian.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 477.702
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Otros\Postulacion escuela verano Talca 2024\formulario-de-postulacion-2024_Christian_Chávez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 206.813
+		PageNo = 2
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Ficha socieoconómica\Cdla_Mayor_Edad.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\grabbed from internet\(tube)-GeometryExercises.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\2012.11814v2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Firma electronica\nueva (2024-2026)\1005215361Contrato.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 330.238
+		PageNo = 4
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Transferencias directas-signed.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 12.5157 578.953
+		PageNo = 1
+		Zoom = 800
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\7 Séptimo Semestre\Measure Theory\Prof-Wilman-integral-actualizado.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 418.25
+		PageNo = 397
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\integral2222cambio.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 93.7505
+		PageNo = 11
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\Sheldon Axler - Measure, Integration & Real Analysis-Springer (2022).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\curso2022\AbstractAlgebra_StudyGuide_51_2022.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 692.268
+		PageNo = 116
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 46 52
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\curso2022\SYL-IS2023-AlgebraAbstracta.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\books\[6] Groupes, anneaux, modules et corps (1).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 474.71
+		PageNo = 327
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\resources\Pablo\Quiz 4.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Study resources\Topology\notes-assignments-exercises\Tychonoff_theorem.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Copy of FINAL POSTER-1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\Millman (1977) - Elements of differential geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 108
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Differential geometry\John Willard Milnor - Topology from the Differentiable Viewpoint (1988, University of Virginia Press) - libgen.li.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 8
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Analysis\Kenneth A. Ross - Elementary Analysis_ The Theory of Calculus (2013, Springer).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 34.3262
+		PageNo = 113
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\Quiz3\_temp\AGQ3v2024.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 89.4379 100.688
+		PageNo = 1
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\homework\hw01\_temp\AGHM2v2024a.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = 76.1253 11.3752
+		PageNo = 1
+		Zoom = 300
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\deber_de_geometria_algebraica.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 274.828
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\postulación\Carta-Christian-Chavez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\postulación\CV-Christian-Chavez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Firma electronica\new (2022-2024) p12 certificate\Contrato.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 218.438
+		PageNo = 1
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\frai-04-659037.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 283
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Transferencias directas.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 406
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Firma electronica\new (2022-2024) p12 certificate\Formulario.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 247.812
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 406
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Shafarevich (2013) - Basic Algebraic Geometry 1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 69.3329
+		PageNo = 66
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 4 10 11 19 24 27 30 36 42 48 49 56 61 65 72 78 84 85 93 98 105 106 112 118 124 133 134 140 148 155 161
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\taiwan-fphy-09-572216-1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 349.858
+		PageNo = 14
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1 17
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\ncomms15396.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 130.266
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 1
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\lump-insights-srep01236.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 186.512
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\draft-articulo_tda.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 216.979
+		PageNo = 20
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\1710.04019.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 440.718
+		PageNo = 2
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\DG-2024-06-04 [1st fundamental form].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 785.077
+		PageNo = 3
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Kreyszig (1991) - Differential geometry.djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1941.05
+		PageNo = 89
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\(Graduate texts in mathematics 56) William S. Massey - Algebraic topology, an introduction-Springer-Verlag (1977).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 2446.1
+		PageNo = 14
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\John Willard Milnor - Topology from the Differentiable Viewpoint (1988, University of Virginia Press) - libgen.li.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Manfredo P. do Carmo - Differential Geometry of Curves and Surfaces (2016).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 415.701
+		PageNo = 103
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\papers-final\anita-gabrielsson20a.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 392.122
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\Rúbrica Proyecto Final.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\notes\grabbed from internet\alggeom-2021-c5.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 109.622
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\notes\grabbed from internet\projection-closed-alggeom-2021-c7.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\[Mathematical expositions 0011] Kreyszig, Erwin - Differential geometry (1991, Dover Publications) - libgen.li.djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 2044.67
+		PageNo = 180
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Shafarevich (2013) - Basic Algebraic Geometry 2.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 89.7917
+		PageNo = 267
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Hartshorne (1977) - Algebraic geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 146.08
+		PageNo = 12
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\papers-final\Persistent-Homology-based Machine Learning 1811.00252v1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 703.17
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\papers-final\ML-with-TDA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 77.4012
+		PageNo = 40
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Introduction to partial differential equations. Gerald B. Folland.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 37.1116
+		PageNo = 82
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Barrett O'Neill (2006) - Elementary Differential Geometry.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 227.101
+		PageNo = 175
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Schreyer (2009) - Varieties, Gröbner Bases and Algebraic Curves.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 73.5406
+		PageNo = 115
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Algebraic geometry\books\Qing Liu (2006) - Algebraic geometry and arithmetic curves.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Lawrence C. Evans - Partial Differential Equations_ Second Edition -AMS (2010).djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 786.72
+		PageNo = 50
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 16 17 21 32 251 262
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Lawrence C Evans - Partial differential equations..pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 2.85267
+		PageNo = 3
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Strauss - Partial Differential Equations (2018).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 203
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 33 38
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Strauss [solutions] - Partial Differential Equations (2018).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Claudio Pita Ruiz - Calculo Vectorial-Prentice Hall (1996).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = 511.688 64.3129
+		PageNo = 368
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 369
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\nuevo-plan\Primera_Versión_Artículo_TDA_español (2).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 214.751
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\en pdf\logoYachay.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Otros\Logos\Línea Gráfica Yachay Tech 2023\LOGOTIPOS 2023\en pdf\logoECMC.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1918 28 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\papers que Pablo nos mando a buscar sobre TDA\Chazal2013-1305.6239.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 400.201
+		PageNo = 25
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\poster-UPEC\_temp\presentation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 34
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\ML-with-TDA.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 622.112
+		PageNo = 52
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 14 23
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\PH-speach1608.07373v1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 46.7505
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\Persistent-Homology-based Machine Learning 1811.00252v1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 384.838
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\poster-ICACM-Christian-Chavez.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Dynamical Systems\Notes\latex\_temp\Dynamical-Systems.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 43.8004
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Probability and Stochastics\Nota_Def_PE.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Pablo\Université_du_Québec_à_Montréal_Thesis.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 194.751
+		PageNo = 163
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\EDP\books\Partial differential equations in action_ From modelling to theory. Sandro Salsa.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 640.313
+		PageNo = 117
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Aseem - Groupes, anneaux, modules et corps.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\slides\UC 6. Autoencoders.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 15
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\DG-2024-05-26 [tarea3-some exercises].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 519.901
+		PageNo = 2
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\latex\_temp\DiffGeomNotes.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 76.5761
+		PageNo = 6
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 2 6
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\John M Lee (2013) - Introduction to smooth manifolds.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 255.236
+		PageNo = 40
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Barett O neill - Elementos de la geometria diferencial.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 141.678
+		PageNo = 14
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\books\Aseem - Groupes, anneaux, modules et corps.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = 74.8099 538.287
+		PageNo = 284
+		Zoom = 66.67
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\books\Manfredo Do Carmo - Differential geometry of curves and surfaces-Prentice-Hall (1976)-1.djvu
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 1591.16
+		PageNo = 100
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Álgebra Lineal\[12] Howard Anton, Chris Rorres, Anton Kaul - Elementary Linear Algebra Applications Version (2019, Wiley) - libgen.lc.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 65.6233
+		PageNo = 378
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Proofs From THE BOOK.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 532.381
+		PageNo = 64
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 5 8 9 14 16 18 20 22 24 26 29 30 33 36 38 43 45 48 50 53 55 56 59 61 63 66 69 71 73 75 77 78 86 88 90 92 94 96 98 100 102 103 106 108 110 112 114 116 119 121
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\Books_Algebraic Topology\Czes Kosniowski - A First Course in Algebraic Topology-Cambridge University Press (1980).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 155.094
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 75 209 1045 473
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\tda-net-covid.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\final\topology-net-biomolec.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\papers\MSZ.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 216.563
+		PageNo = 21
+		Zoom = 200
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\7 Séptimo Semestre\Abstract Algebra\AbstractAlgebra_StudyGuide_51_2022.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 86.4851
+		PageNo = 97
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 42 46
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\beamer-template\_temp\presentation.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 18
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2023-01-18 [Lecture 20].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2022-12-14 [Lecture 15].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 7
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2022-12-12 [Lecture 14].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2023-01-09 [Lecture 16].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 249.45
+		PageNo = 7
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2022-11-23 [Lecture 8].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\6 Sexto Semestre\Topology\notes\Lectures\TP-2022-11-18 [Lecture 6].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 4
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\5 Quinto Semestre\ALA\Slides\Class14-Source Problems in the Numerical Analysis of matrices-v1.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 15
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\5 Quinto Semestre\ALA\Slides\Class07-Exercise.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 7
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\DG-2024-05-08 [surfaces].xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 454.75
+		PageNo = 1
+		Zoom = 150
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\5 Quinto Semestre\ALA\Final project\Presentation_Christian_Chavez_G4.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = single page
+		ScrollPos = -1 -1
+		PageNo = 31
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\home\christian\Downloads\Lara Alcock - How to Study as a Mathematics Major-Oxford University Press, USA (2013).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 34.9767
+		PageNo = 245
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 82 101 111 114
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Laborales\ayudantía-cátedra-algebra-abstracta\resources\Pablo\2. Clase. Teorema de Isomorfismo 1, 2 y 3.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Cálculo\Multivariable calculus\William F. Trench - Introduction to Real Analysis (2016).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 336
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+		TocState = 25
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\Pago-poster-ICACM.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 105.351
+		PageNo = 1
+		Zoom = fit width
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Neural networks\midterm\papers\Swenson.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 125
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\resources\nuevo-plan\Proyecto_de_investigación_TDA (5).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\8 Octavo Semestre\Functional Analysis\Notes\Tareas_Funcional_until_23-10-2023.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous book view
+		ScrollPos = -1 668.626
+		PageNo = 84
+		Zoom = 100
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Differential geometry\notes\DG-2024-03-26 notas de picado.xopp.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Category Theory\Adamek - the-joy-of-cats.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Algebraic geometry\Schreyer (2009) - Varieties, Gröbner Bases and Algebraic Curves.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Exposición_Homotopía_Versión_Divulgativa.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\Books-Homotopy Theory\moore-algebraic-homotopy-theory.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\Books-Homotopy Theory\Richter - From Categories to Homotopy Theory (2020).pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = false
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = fit page
+		Rotation = 0
+		WindowState = 1
+		WindowPos = 3 29 1360 736
+		ShowToc = true
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+	[
+		FilePath = Z:\mnt\Mis archivos\Google Drive\9 Noveno Semestre\Otros\poster-ICACM-S.pdf
+		Favorites [
+		]
+		IsPinned = false
+		IsMissing = true
+		OpenCount = 0
+		UseDefaultState = false
+		DisplayMode = continuous
+		ScrollPos = -1 -1
+		PageNo = 1
+		Zoom = 25
+		Rotation = 0
+		WindowState = 1
+		WindowPos = -1917 29 1914 1048
+		ShowToc = false
+		SidebarDx = 274
+		DisplayR2L = false
+		ReparseIdx = 0
+	]
+]
+SessionData [
+	[
+		TabStates [
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\StudyPlan_CalVar_01.pdf
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 289.981
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\resources\Tesis_Pablo_Rosero.pdf
+				DisplayMode = continuous
+				PageNo = 114
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 69.947
+				ShowToc = true
+				TocState = 13 32 34
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\Dummit and Foote - Abstract Algebra.pdf
+				DisplayMode = continuous
+				PageNo = 20
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 466.801
+				ShowToc = true
+				TocState = 5 9 10 18 24 30 37 43 48 55 59 67 73 79 83 84 91 101 102 108 112 117 118 122
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\A_YT_FunctAnalysis_Vol_1_146_JM_01.pdf
+				DisplayMode = continuous
+				PageNo = 376
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 17.7693
+				ShowToc = true
+				TocState = 2 12 22 32 36 50 69 70 71 75 81 88 92 105 109 114 122 123
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\intersemestre\talca\EIT-2024-07-15 [Lecture].xopp.pdf
+				DisplayMode = continuous
+				PageNo = 5
+				Zoom = 100
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\supervisor-meetings\_temp\advance01.pdf
+				DisplayMode = single page
+				PageNo = 2
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = true
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Tesis pregrado\bachelor-thesis\_temp\thesis.pdf
+				DisplayMode = continuous book view
+				PageNo = 12
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 343.501
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Coleman_Calculus_Normed_Spaces.pdf
+				DisplayMode = continuous
+				PageNo = 54
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 341.077
+				ShowToc = true
+				TocState = 5 15 23 28 38 43 48 54 61 67
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Measure theory\Axler_MIRA.pdf
+				DisplayMode = continuous
+				PageNo = 108
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 299.595
+				ShowToc = true
+				TocState = 7 8 10 12 13 19 25 29 34 54 55 60 65 66 71 76 83 87 95 100 116 117 121 126 132 133 138 146 151 157 161 165 166 172 176 183
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\Segunda Versión Artículo TDA inglés\_temp\desigualdad.pdf
+				DisplayMode = continuous
+				PageNo = 5
+				Zoom = 200
+				Rotation = 0
+				ScrollPos = 69.1879 411.188
+				ShowToc = true
+				TocState = 1 3 4 8
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\cobena24.pdf
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\oit.pdf
+				DisplayMode = continuous book view
+				PageNo = 1
+				Zoom = 50
+				Rotation = 0
+				ScrollPos = -1 425.251
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\ram19.pdf
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Prácticas preprofesionales\Proyectos de investigación\TDA\segundo-avance\papers\sroserorTFM0715.pdf
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\Libros\Matemática\Abstract algebra\assem - groupes, anneaux, modules et corps.pdf
+				DisplayMode = continuous
+				PageNo = 359
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 56.108
+				ShowToc = false
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Hansjörg Kielhöfer - Calculus of Variations_ An Introduction to the One-Dimensional Theory with Examples and Exercises.pdf
+				DisplayMode = continuous
+				PageNo = 20
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 229.303
+				ShowToc = true
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Hestenes (1980) - Calculus of variations and optimal control theory.djvu
+				DisplayMode = continuous
+				PageNo = 69
+				Zoom = fit width
+				Rotation = 0
+				ScrollPos = -1 801.774
+				ShowToc = true
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Lebedev_CalculusVariations_FunctAn_Mechanics.pdf
+				DisplayMode = continuous
+				PageNo = 31
+				Zoom = 200
+				Rotation = 0
+				ScrollPos = -1 440.438
+				ShowToc = true
+				TocState = 4
+			]
+			[
+				FilePath = Z:\mnt\Mis archivos\Google Drive\10 Décimo Semestre\Calculus of variations\books\Gelfand, S. V. Fomin - Calculus of Variations.pdf
+				DisplayMode = continuous
+				PageNo = 1
+				Zoom = fit page
+				Rotation = 0
+				ScrollPos = -1 -1
+				ShowToc = true
+			]
+		]
+		TabIndex = 19
+		WindowState = 2
+		WindowPos = 2 28 1358 734
+		SidebarDx = 336
+	]
+]
+TimeOfLastUpdateCheck = 31118431 379314633
+OpenCountWeek = 710
+
+# Settings below are not recognized by the current version
+LazyLoading = true
+ShowLinks = false
+UIFontSize = 0
+CtrlTabLastViewed = true
+CtrlTabLastViewed = true
