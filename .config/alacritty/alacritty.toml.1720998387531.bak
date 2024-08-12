@@ -1,0 +1,7 @@
+import = [ "/usr/lib/node_modules/alacritty-themes/themes/Pop!-OS.toml" ]
+
+[font]
+size = 10
+
+  [font.normal]
+  family = "Iosevka"

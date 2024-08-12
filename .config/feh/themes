@@ -1,0 +1,4 @@
+feh --image-bg black --scale-down -F
+# feh does not behave well with tiling wm
+# thus i added the -F flag to avoid repeating 
+# the image until the window has been filled with copies

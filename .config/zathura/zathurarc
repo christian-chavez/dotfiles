@@ -1,0 +1,12 @@
+set selection-clipboard clipboard
+set guioptions ""
+map w adjust_window width
+set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
+selection-notification false
+set adjust-open width 
+
+# set recolor true
+# set default-bg "#C7EDCC"
+# set recolor-lightcolor "#2e3440"
+# set recolor-keephue true
+# set recolor-darkcolor "#000000"

@@ -1,0 +1,9 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/3024.light.toml"
+]
+
+[font]
+size = 10
+
+  [font.normal]
+  family = "Iosevka"

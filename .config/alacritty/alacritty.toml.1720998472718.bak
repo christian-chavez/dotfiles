@@ -1,0 +1,9 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/New-Moon.toml"
+]
+
+[font]
+size = 10
+
+  [font.normal]
+  family = "Iosevka"

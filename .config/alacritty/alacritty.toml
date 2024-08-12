@@ -1,0 +1,9 @@
+import = [
+  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+]
+
+[font]
+size = 10
+
+  [font.normal]
+  family = "Iosevka Nerd Font"

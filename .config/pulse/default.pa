@@ -1,0 +1,5 @@
+.include /etc/pulse/default.pa
+load-module module-virtual-surround-sink
+
+# .nofail
+# load-module module-echo-cancel aec_method=webrtc
