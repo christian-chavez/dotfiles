@@ -1,7 +1,0 @@
-2024-03-28 00:16:46.916 [info] update#setState idle
-2024-03-28 00:17:02.254 [error] Blocked vscode-file request vscode-file://vscode-app/opt/visual-studio-code/resources/app/node_modules.asar/vscode-textmate/release/main.js
-2024-03-28 00:17:02.299 [info] Extension host with pid 88100 exited with code: 0, signal: unknown.
-2024-03-28 00:17:16.921 [info] update#setState checking for updates
-2024-03-28 00:17:16.938 [info] update#setState available for download
-2024-03-28 00:17:35.204 [info] Extension host with pid 88290 exited with code: 0, signal: unknown.
-2024-03-28 02:20:13.232 [info] Extension host with pid 88510 exited with code: 0, signal: unknown.

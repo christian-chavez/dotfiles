@@ -1,6 +1,0 @@
-2024/02/26-15:39:23.353 719 Creating DB /home/christian/.config/google-chrome/Default/IndexedDB/https_pomofocus.io_0.indexeddb.leveldb since it was missing.
-2024/02/26-15:39:23.363 719 Reusing MANIFEST /home/christian/.config/google-chrome/Default/IndexedDB/https_pomofocus.io_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/26-16:45:50.725 71a Level-0 table #5: started
-2024/02/26-16:45:50.727 71a Level-0 table #5: 1876 bytes OK
-2024/02/26-16:45:50.729 71a Delete type=0 #3
-2024/02/26-16:45:50.729 71a Manual compaction at level-0 from (begin) .. (end); will stop at (end)
