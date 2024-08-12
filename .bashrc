@@ -60,7 +60,7 @@ alias unbl='sudo rfkill unblock bluetooth'
 alias blbl='sudo rfkill block bluetooth'
 
 function fr () { 
-	echo "$@" >> /home/christian/francais.md
+	echo "$@" >> /home/christian/Documents/obsidian-vaults/Test/Zettelkasten/notes/francais.md
 }
 
 alias cor='bspc node -v 500 500'
