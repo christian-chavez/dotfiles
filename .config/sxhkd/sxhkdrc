@@ -9,8 +9,8 @@ super + Return
 ## program launcher
 super + @space
 	rofi -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
-	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 	# ~/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
+	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 
 # Clipboard greenclip
 super + a

@@ -5,5 +5,9 @@ import = [
 [font]
 size = 10
 
-  [font.normal]
-  family = "Iosevka Nerd Font"
+[font.normal]
+family = "Iosevka Nerd Font"
+
+[window.dimensions]
+columns = 80
+lines = 20
