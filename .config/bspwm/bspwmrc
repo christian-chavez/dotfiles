@@ -13,13 +13,16 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # fi
 
 # if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --right-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc wm -O eDP HDMI-A-0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-
+# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc wm -O eDP HDMI-A-0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+# Para activar solo segundo monitor
+if xrandr --listmonitors | grep 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r ; fi
  
 bspc config border_width        1
-bspc config window_gap          1
+bspc config window_gap		4
 bspc config focused_border_color "#aec3f2"
-bspc config pointer_motion_interval 5
+bspc config pointer_motion_interval 25
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -27,7 +30,7 @@ bspc config gapless_monocle      true
 bspc config click_to_focus any
 
 sxhkd &
-redshift &
+# redshift &
 greenclip daemon &
 polybar -r example &
 polybar -r external &
@@ -36,19 +39,37 @@ picom --experimental-backends &
 # picom -b &
 numlockx &
 #light-locker &
+feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
 # feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper.png &
-feh --bg-fill /home/christian/Pictures/wallpapers/ubuntu-wallpaper.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
+# feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper0.jpg &
+# feh --bg-max /home/christian/Pictures/wallpapers/grothendieck.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/mont.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/kali.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallhaven.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-aulas-b.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/road2.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/nevada.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/kurz3.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/Galaxies.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/drawn-landscape-2.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/ubuntu-wallpaper.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/joli-arch.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/black-arch.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/blue-arch.png &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-arch-blue.jpg &
 
-# bspc rule -a feh state=floating 
-bspc rule -a zoom state=floating center=on
+bspc rule -a feh state=floating 
+# bspc rule -a zoom state=floating center=on
 bspc rule -a Catfish state=floating center=on 
 bspc rule -a Alacritty state=floating center=on 
+bspc rule -a Zathura state=floating center=on 
 # bspc rule -a Evince state=fullscreen 
 bspc rule -a "Mathpix Snipping Tool - Snip View"  state=floating center=on 
 bspc rule -a "pavucontrol"  state=floating center=on 
+bspc rule -a "Engrampa"  state=floating center=on 
 bspc rule -a "Yad"  state=floating center=on 
 bspc rule -a "Display"  state=floating center=on 
+bspc rule -a "mpv"  state=floating center=on 
 bspc rule -a "sumatrapdf.exe" desktop=^2
 bspc rule -a "obsidian" desktop=^8
 bspc rule -a "Code" desktop=^7
@@ -60,6 +81,6 @@ bspc config bottom_padding 0
 # 2024-08-12
 # Set shadow for floating windows
 ~/shadow-script.sh
-# bspc query -N -n focused | while read -r win_id; do
-#   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
-# done
+bspc query -N -n focused | while read -r win_id; do
+  xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
+done

@@ -1,4 +1,4 @@
-import = [
+general.import = [
   "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
 ]
 
@@ -6,8 +6,8 @@ import = [
 size = 10
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "Iosevka"
 
 [window.dimensions]
-columns = 80
-lines = 20
+columns = 85
+lines = 23

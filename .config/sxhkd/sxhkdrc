@@ -2,13 +2,13 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
+ terminal emulator
 super + Return
 	alacritty
 
 ## program launcher
 super + @space
-	rofi -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
+	rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 	# ~/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
 	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 
@@ -149,23 +149,34 @@ super + e
 
 # Volumen control
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%; pactl set-sink-mute 0 false
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1
+	# pactl set-sink-volume 0 +2%; pactl set-sink-mute 0 false
+	
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%; pactl set-sink-mute 0 false
+	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+	# pactl set-sink-volume 0 -2%; pactl set-sink-mute 0 false
+	
 XF86AudioMute
-    	pactl set-sink-mute 0 toggle
+	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+    	# pactl set-sink-mute 0 toggle
 
-# brightness control
-XF86MonBrightness{Up,Down}  
-	brightnessctl s 10{+,-} 
+# brightness control down
+XF86MonBrightnessDown
+	brillo -u 150000 -q -U 2
+	# brightnessctl s 10{+,-} 
+
+XF86MonBrightnessUp
+	brillo -u 150000 -q -A 2
 
 # set max brightness
 super + alt + m
-	brightnessctl s 255 
+	brillo -u 150000 -S 100
+	# brightnessctl s 255 
 
-# set max brightness
+# set min brightness
 super + alt + n
-	brightnessctl s 0
+	brillo -u 150000 -S 0
+	# brightnessctl s 0
 
 # play/pause
 XF86AudioPlay
@@ -185,7 +196,8 @@ super + d
 
 # Catfish
 super + shift + @space
-	catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
+	catfish --start /mnt/Mis\ archivos/Google\ Drive
+	# catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
 
 # Open obsidian
 super + shift + o
@@ -209,7 +221,7 @@ super + shift + r
 
 # Schedule
 super + shift + s
-	feh "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Otros/Schedule/_temp/schedule.png"
+	feh "/mnt/Mis archivos/Google Drive/10 Décimo Semestre/Otros/Schedule/_temp/schedule.png"
 
 # Calendario académico
 super + shift + d
@@ -221,7 +233,8 @@ super + shift + f
 
 # Launch browser
 super + @b
-	librewolf
+	firefox
+	# librewolf
 
 # Multi shorcuts
 super + u ; {i,c,m,f,n,s,u,y,M,k,d,U,p}
@@ -239,3 +252,9 @@ alt + Tab
 	bspc node -f last
 # super + Tab
 # 	rofi -show window
+
+super + shift + a
+	~/rofi-files.sh
+
+super + shift + @c
+	mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &

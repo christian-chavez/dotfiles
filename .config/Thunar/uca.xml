@@ -64,18 +64,18 @@
 	<video-files/>
 </action>
 <action>
-	<icon>cm_extractfiles</icon>
+	<icon>application-x-arc</icon>
 	<name>Extract here</name>
 	<submenu></submenu>
 	<unique-id>1703654295628872-2</unique-id>
 	<command>engrampa -h %f</command>
 	<description></description>
 	<range>*</range>
-	<patterns>*</patterns>
+	<patterns>*.zip;*.tar;*.tar.gz;*.tgz;*.rar;*.7z;*.tar.bz2;*.gz</patterns>
 	<other-files/>
 </action>
 <action>
-	<icon></icon>
+	<icon>image-x-generic</icon>
 	<name>open with magick</name>
 	<submenu></submenu>
 	<unique-id>1703710748208454-1</unique-id>
@@ -86,23 +86,7 @@
 	<image-files/>
 </action>
 <action>
-	<icon>list-remove-all</icon>
-	<name>Delete forever</name>
-	<submenu></submenu>
-	<unique-id>1703800001090552-1</unique-id>
-	<command>rm -r %F</command>
-	<description></description>
-	<range>*</range>
-	<patterns>*</patterns>
-	<directories/>
-	<audio-files/>
-	<image-files/>
-	<other-files/>
-	<text-files/>
-	<video-files/>
-</action>
-<action>
-	<icon></icon>
+	<icon>application-pdf</icon>
 	<name>Open with evince</name>
 	<submenu></submenu>
 	<unique-id>1705296388373919-2</unique-id>
@@ -113,25 +97,31 @@
 	<other-files/>
 </action>
 <action>
-	<icon></icon>
+	<icon>document-preview-archive</icon>
 	<name>Open with Zathura</name>
 	<submenu></submenu>
 	<unique-id>1706643071342505-1</unique-id>
 	<command>zathura %F</command>
 	<description></description>
 	<range>*</range>
-	<patterns>*.pdf</patterns>
+	<patterns>*.pdf;*.djvu</patterns>
+	<image-files/>
 	<other-files/>
 </action>
 <action>
-	<icon>phototonic</icon>
-	<name>Magick</name>
+	<icon>edit-copy-path</icon>
+	<name>Copy path</name>
 	<submenu></submenu>
-	<unique-id>1722835275455516-1</unique-id>
-	<command>display %f</command>
+	<unique-id>1735273191410614-1</unique-id>
+	<command>echo -n %f | xclip -selection clipboard</command>
 	<description></description>
 	<range>*</range>
-	<patterns>*.jpg;*.jpeg;*.png;*.gif;*.bmp</patterns>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
 	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 </actions>

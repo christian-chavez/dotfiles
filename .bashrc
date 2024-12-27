@@ -64,3 +64,5 @@ function fr () {
 }
 
 alias cor='bspc node -v 500 500'
+eval "$(starship init bash)"
+export WINEPREFIX="/home/christian/.wine"

@@ -4,8 +4,10 @@ idsstylus=($(xsetwacom --list devices | grep "Wacom Intuos BT S Pen stylus" | aw
 for i in "${idspad[@]}"
 do
         xsetwacom set $i MapToOutput eDP
-        xsetwacom set $i Button 1 key +CTRL z
-        xsetwacom set $i Button 2 key +CTRL v
+        # xsetwacom set $i Button 1 key +CTRL z
+        xsetwacom set $i Button 1 key 0xFF56
+        # xsetwacom set $i Button 2 key +CTRL v
+        xsetwacom set $i Button 2 key 0xFF55
         xsetwacom set $i Button 3 key 0xFF61
 done
 

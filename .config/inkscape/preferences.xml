@@ -118,8 +118,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="168.906490295888"
-         height="101.225468192512" />
+         width="164.595308078555"
+         height="349.637268546997" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -155,8 +155,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="45.8480630709433"
-         ry="44.4042584276581" />
+         rx="66.9626935823696"
+         ry="66.9626935823696" />
       <eventcontext
          id="star"
          magnitude="3"
@@ -180,14 +180,15 @@
          style="stroke-width:1px;"
          usecurrent="1"
          average_all_sketches="1"
-         pressure="0" />
+         pressure="0"
+         freehand-mode="1" />
       <eventcontext
          id="pen"
          mode="drag"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="1"
-         freehand-mode="3" />
+         freehand-mode="2" />
     </group>
     <eventcontext
        id="calligraphic"
@@ -320,8 +321,12 @@
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
        use_svg2="1"
-       style="line-height:1.25;font-family:'Calvert MT Std';font-size:37.33333333px;-inkscape-font-specification:'Calvert MT Std'"
-       selcue="1" />
+       style="line-height:1.25;font-family:'Calvert MT Std';font-size:37.33333333px;-inkscape-font-specification:'Calvert MT Std';text-orientation:auto"
+       selcue="1"
+       align_mode="0"
+       writing_mode="0"
+       orientation_mode="0"
+       direction_mode="0" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -337,10 +342,10 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="475.219231780007"
-       y="640.439448605636"
        edit_clipping_paths="0"
-       edit_masks="0" />
+       edit_masks="0"
+       x="475.219231780007"
+       y="640.439448605636" />
     <eventcontext
        id="marker"
        selcue="1"
@@ -359,7 +364,8 @@
        doh="1"
        dos="1"
        dol="1"
-       doo="1" />
+       doo="1"
+       mode="0" />
     <eventcontext
        id="spray"
        selcue="1"
@@ -374,7 +380,9 @@
        mean="0" />
     <eventcontext
        id="gradient"
-       selcue="1" />
+       selcue="1"
+       newgradient="1"
+       newfillorstroke="1" />
     <eventcontext
        id="mesh"
        selcue="1" />
@@ -391,7 +399,10 @@
     <eventcontext
        id="select"
        selcue="1"
-       gradientdrag="0" />
+       gradientdrag="0"
+       changelayer="1"
+       changepage="1"
+       lock_aspect_ratio="1" />
     <eventcontext
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
@@ -577,7 +588,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="0" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -623,7 +634,7 @@
          id="defaultxdpi" />
       <group
          id="batchexportarea"
-         value="page" />
+         value="layer" />
       <group
          id="defaultdpi"
          value="300" />
@@ -633,18 +644,20 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/mnt/Mis archivos/Google Drive/Otros/Logos/Línea Gráfica Yachay Tech 2023/LOGOTIPOS 2023/editados"
-       use_current_dir="1" />
+       path="/mnt/Mis archivos/Google Drive/Prácticas preprofesionales/Proyectos de investigación/TDA/segundo-avance/drawings"
+       use_current_dir="1"
+       enable_svgexport="0" />
     <group
        id="save_copy"
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/mnt/Mis archivos/Google Drive/Math-club" />
+       path="/mnt/Mis archivos/Google Drive/Prácticas preprofesionales/Proyectos de investigación/TDA/segundo-avance/drawings"
+       enable_svgexport="0" />
     <group
        id="open"
        enable_preview="1"
-       path="" />
+       path="/mnt/Mis archivos/Google Drive/10 Décimo Semestre/Otros/VIJEM/presentation/_temp" />
     <group
        id="import"
        enable_preview="1"
@@ -707,6 +720,12 @@
        addLayerPosition="0" />
     <group
        id="livepatheffect" />
+    <group
+       id="object-properties">
+      <group
+         id="path-panel"
+         precision="2" />
+    </group>
   </group>
   <group
      id="printing">
@@ -719,7 +738,7 @@
   <group
      id="options"
      rotationlock="1"
-     displaymode="3"
+     displaymode="0"
      onungroup="0"
      onimport="0">
     <group
@@ -754,7 +773,7 @@
        value="12" />
     <group
        id="cursortolerance"
-       value="8.0" />
+       value="8" />
     <group
        id="dragtolerance"
        value="4.0" />
@@ -970,11 +989,22 @@
          angle_x="30.0"
          angle_z="30.0"
          empspacing="5" />
+      <group
+         id="modular"
+         units="mm"
+         origin_x="0.0"
+         origin_y="0.0"
+         spacing_x="40.0"
+         spacing_y="40.0"
+         gapx="10"
+         gapy="10"
+         marginx="0"
+         marginy="0" />
     </group>
     <group
        id="workarounds"
-       colorsontop="0"
-       partialdynamic="0" />
+       partialdynamic="0"
+       colorsontop="0" />
     <group
        id="font"
        unitType="2"
@@ -985,7 +1015,8 @@
        canvas="dark">
       <group
          id="shown"
-         ver1.3.2="1" />
+         ver1.3.2="1"
+         ver1.4="1" />
     </group>
     <group
        id="rendering" />
@@ -1036,10 +1067,10 @@
      org.inkscape.generate.pdf_latex.preamble="\usepackage{amsmath,mathptmx}\usepackage{amssymb}\usepackage{amsfonts}" />
   <group
      id="desktop"
-     style="fill:none;-inkscape-font-specification:'Calvert MT Std Light';font-family:'Calvert MT Std';font-size:29.33333333px;line-height:0.8;letter-spacing:2px;stroke-width:3.40156724;font-weight:300;stroke-opacity:0.998785;fill-opacity:0.5;-inkscape-stroke:none;stop-color:#000000;stroke:#1a1a1a">
+     style="fill:none;-inkscape-font-specification:Iosevka;font-family:Iosevka;font-size:9.33333333px;line-height:0.8;letter-spacing:2px;stop-color:#000000;text-orientation:auto;stroke-width:2.26771654;fill-opacity:0.83067846;stroke:#333333">
     <group
-       width="1362"
-       height="738"
+       width="1916"
+       height="1050"
        x="1"
        y="27"
        maximized="1"
@@ -1071,7 +1102,7 @@
        icononly="1"
        small="1"
        iconsize="16"
-       width="26">
+       width="28">
       <group
          id="buttons" />
     </group>
@@ -1165,15 +1196,15 @@
      symbolicIcons="1"
      symbolicDefaultBaseColors="1"
      symbolicDefaultHighColors="1"
+     syntax-color-theme="inkscape-dark"
      gtkTheme="Minwaita-Inkscape"
-     iconTheme="hicolor"
-     syntax-color-theme="inkscape-dark">
+     iconTheme="hicolor">
     <group
        id="multicolor"
-       symbolicBaseColor="3857049087"
-       symbolicSuccessColor="3435973887"
-       symbolicWarningColor="2155905279"
-       symbolicErrorColor="2155905279" />
+       symbolicBaseColor="3958107135"
+       symbolicSuccessColor="10029823"
+       symbolicWarningColor="4279865599"
+       symbolicErrorColor="10086143" />
     <group
        id="hicolor"
        symbolicBaseColor="4008635647"

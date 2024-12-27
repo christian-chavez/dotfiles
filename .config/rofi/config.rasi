@@ -1,6 +1,6 @@
 configuration {
  modi: "drun"; // window,ssh,combi
- font: "iosevka 14";
+ font: "iosevka 11";
  combi-modi: "drun";
  icon-theme: "Papirus";
  show-icons:      true;
@@ -9,7 +9,7 @@ configuration {
  }
 
 * {
-    font: "iosevka 14";
+    font: "iosevka 11";
     foreground: #f8f8f2;
     background-color: #2e3440;
     active-background: #5e81ac;
@@ -24,11 +24,11 @@ configuration {
 
 #window {
     background-color: @background-color;
-    border:           2;
+    border:           1;
     border-radius:    0;
     border-color:     @bordercolor;
-    padding:          15;
-    width:	      35%;
+    padding:          10;
+    width:	      45%;
 }
 #mainbox {
     border:  0;

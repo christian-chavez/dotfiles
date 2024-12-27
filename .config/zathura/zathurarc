@@ -1,9 +1,18 @@
 set selection-clipboard clipboard
-set guioptions ""
+# set guioptions ""
+set statusbar-basename  "true"
+set statusbar-home-tilde "true"
+set window-title-home-tilde "true"
 map w adjust_window width
+set synctex "true"
 set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
-selection-notification false
-set adjust-open width 
+# set adjust-open width 
+set adjust-open best-fit
+set font "iosevka"
+
+set statusbar-fg                "#D8DEE9"
+set statusbar-bg                "#2E3440"
+
 
 # set recolor true
 # set default-bg "#C7EDCC"
