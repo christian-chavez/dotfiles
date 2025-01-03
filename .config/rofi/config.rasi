@@ -5,13 +5,14 @@ configuration {
  icon-theme: "Papirus";
  show-icons:      true;
  display-drun:    "";
+ display-combi:    "Launcher";
  disable-history: false;
  }
 
 * {
-    font: "iosevka 11";
+    font: "Iosevka Light 11";
     foreground: #f8f8f2;
-    background-color: #2e3440;
+    background-color: #2b303b;
     active-background: #5e81ac;
     urgent-background: #ff5555;
     urgent-foreground: #282a36;
@@ -28,7 +29,7 @@ configuration {
     border-radius:    0;
     border-color:     @bordercolor;
     padding:          10;
-    width:	      45%;
+    width:	      35%;
 }
 #mainbox {
     border:  0;
@@ -45,7 +46,7 @@ configuration {
 }
 #listview {
     fixed-height: 0;
-    lines:	  6;
+    lines:	  7;
     border:       0px;
     border-color: @bordercolor;
     spacing:      5px ;

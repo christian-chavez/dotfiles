@@ -162,11 +162,11 @@ XF86AudioMute
 
 # brightness control down
 XF86MonBrightnessDown
-	brillo -u 150000 -q -U 2
+	brillo -u 100000 -U 2
 	# brightnessctl s 10{+,-} 
 
 XF86MonBrightnessUp
-	brillo -u 150000 -q -A 2
+	brillo -u 100000 -A 2
 
 # set max brightness
 super + alt + m
