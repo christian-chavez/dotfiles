@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="0.61"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/Prácticas preprofesionales/Proyectos de investigación/TDA/tercer avance/2024-12-17"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/Math-club/curso topo"/>
   <property name="lastOpenPath" value="/home/christian"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,12 +14,12 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="102"/>
-  <property name="mainWndWidth" value="376"/>
-  <property name="mainWndHeight" value="524"/>
+  <property name="mainWndWidth" value="1910"/>
+  <property name="mainWndHeight" value="1044"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="138"/>
+  <property name="sidebarWidth" value="164"/>
   <property name="sidebarNumberingStyle" value="3"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
@@ -81,7 +81,7 @@
   <property name="touchDrawing" value="false"/>
   <property name="gtkTouchInertialScrolling" value="true"/>
   <property name="pressureGuessing" value="false"/>
-  <property name="selectionBorderColor" value="4278190080"/>
+  <property name="selectionBorderColor" value="4289010989"/>
   <property name="backgroundColor" value="4281218112"/>
   <property name="selectionMarkerColor" value="4285702095"/>
   <property name="touchZoomStartThreshold" value="0"/>
@@ -92,7 +92,7 @@
   <property name="preloadPagesAfter" value="2"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=m1=35,f1=#d3d3d3,lw=0.15&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=m1=35,f1=#d3d3d3,lw=0.15&#10;backgroundColor=#ffffff&#10;"/>
   <property name="sizeUnit" value="in"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -134,7 +134,7 @@
   <property name="latexSettings.sourceViewAutoIndent" value="true"/>
   <property name="latexSettings.sourceViewSyntaxHighlight" value="true"/>
   <property name="latexSettings.sourceViewShowLineNumbers" value="false"/>
-  <property name="font" font="Roboto Light" size="12"/>
+  <property name="font" font="SF UI  Text" size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff00a1eb"/>
@@ -245,13 +245,13 @@
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="MEDIUM"/>
-      <attribute name="type" type="string" value="default"/>
+      <attribute name="type" type="string" value="whiteout"/>
     </data>
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="06d268"/>
+      <attribute name="color" type="hex" value="ffe200"/>
       <attribute name="drawingType" type="string" value="rectangle"/>
       <attribute name="fill" type="int" value="1"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -298,7 +298,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="00ac48"/>
+      <attribute name="color" type="hex" value="1c71d8"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">
