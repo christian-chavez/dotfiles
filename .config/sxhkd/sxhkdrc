@@ -142,10 +142,14 @@ shift + Print
 super + Print
 	flameshot screen -p /home/christian/Pictures/Screenshots
 
-# thunar file manager
+# lf file manager
 super + e
+	alacritty -e 'lf'
+	# alacritty -e lf
+
+# thunar file manager
+super + r
 	Thunar
-	# alacritty -e ranger
 
 # Volumen control
 XF86AudioRaiseVolume
@@ -237,8 +241,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,f,n,s,u,y,M,k,d,U,p}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"}
+super + u ; {i,c,b,m,f,n,s,u,y,M,k,d,U,p}
+	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "2205453259", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"}
 
 # Suspend
 super + @l
@@ -258,3 +262,17 @@ super + shift + a
 
 super + shift + @c
 	mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &
+
+super + shift + i
+	~/.config/bspwm/scripts/winhide
+
+super + ctrl + shift + i
+	w=$(bspc query -N -n .hidden | while read i; \ 
+	do echo $(xprop -id $i | grep WM_CLASS | sed -n 's/.*"\(.*\)",.*/\1/p'); done | rofi -dmenu);
+	# if [ -n "$w" ]; then \
+	# 	w=$(echo $w | cut -d ' ' -s -f 1); \
+	# 	bspc node "$w" -g hidden=off; \
+	# 	bspc node $w.fullscreen -t tiled; \
+	# 	bspc node $w -l normal; \
+	# 	bspc node -f $w; \
+	# fi

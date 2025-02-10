@@ -1,21 +1,46 @@
 set selection-clipboard clipboard
+set guioptions s
+
 # set guioptions ""
 set statusbar-basename  "true"
 set statusbar-home-tilde "true"
 set window-title-home-tilde "true"
 map w adjust_window width
+map i toggle_inputbar
 set synctex "true"
 set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
 # set adjust-open width 
 set adjust-open best-fit
-set font "iosevka"
+# set font "Iosevka 10"
+set font "Iosevka Medium 11"
 
-set statusbar-fg                "#D8DEE9"
-set statusbar-bg                "#2E3440"
+set statusbar-fg                "#3b4252"
+set statusbar-bg                "#d8dee9"
+set default-bg "#f2f2f2"
+set inputbar-bg "#151515" #00 currently not used
+set inputbar-fg "#FFFFFF" #02
+# set statusbar-fg                "#D8DEE9"
+# set statusbar-bg                "#2E3440"
+set scroll-step 30
+set scroll-page-aware true
+# set smooth-scroll "true"
+set highlight-active-color rgba(136,192,208,0.5)
+set highlight-color rgba(136,192,208,0.5)
+# set highlight-fg rgba(136,192,208,0.5)
+set completion-highlight-bg "#88c0d0"
+set index-active-bg "#88c0d0"
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set page-cache-size 20
+set selection-notification false
+# set highlight-active-color "rgba(10,188,0,0.0)"
 
-
+# # para cambiar colores del programa
 # set recolor true
 # set default-bg "#C7EDCC"
 # set recolor-lightcolor "#2e3440"
-# set recolor-keephue true
-# set recolor-darkcolor "#000000"
+set recolor-keephue true
+set recolor-reverse-video true
+# set recolor-ssdarkcolor "#e3e2e1"
+# # set recolor-darkcolor "#000000"

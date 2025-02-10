@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="0.61"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/Math-club/curso topo"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/Math-club/curso topo/calificaciones"/>
   <property name="lastOpenPath" value="/home/christian"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -19,7 +19,7 @@
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="164"/>
+  <property name="sidebarWidth" value="369"/>
   <property name="sidebarNumberingStyle" value="3"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
@@ -92,7 +92,7 @@
   <property name="preloadPagesAfter" value="2"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=m1=35,f1=#d3d3d3,lw=0.15&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=lw=0.15,r1=25,m1=40,f1=d0d2d3,f2=ff0000,af1=4c566a,af2=5e81ac&#10;backgroundColor=#ffffff&#10;"/>
   <property name="sizeUnit" value="in"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -134,7 +134,7 @@
   <property name="latexSettings.sourceViewAutoIndent" value="true"/>
   <property name="latexSettings.sourceViewSyntaxHighlight" value="true"/>
   <property name="latexSettings.sourceViewShowLineNumbers" value="false"/>
-  <property name="font" font="SF UI  Text" size="12"/>
+  <property name="font" font="Iosevka Light" size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff00a1eb"/>
@@ -211,14 +211,14 @@
     </data>
   </data>
   <data name="lastUsedPageBgColor">
-    <attribute name="color00" type="hex" value="ff333333"/>
-    <attribute name="color01" type="hex" value="ffbf3f3f"/>
-    <attribute name="color02" type="hex" value="ffe6d8e4"/>
-    <attribute name="color03" type="hex" value="ffdadcda"/>
-    <attribute name="color04" type="hex" value="fffafaf9"/>
-    <attribute name="color05" type="hex" value="ff000000"/>
-    <attribute name="color06" type="hex" value="ffffffff"/>
-    <attribute name="color07" type="hex" value="ffffffff"/>
+    <attribute name="color00" type="hex" value="ff282a36"/>
+    <attribute name="color01" type="hex" value="ff2e3440"/>
+    <attribute name="color02" type="hex" value="ff333333"/>
+    <attribute name="color03" type="hex" value="ffbf3f3f"/>
+    <attribute name="color04" type="hex" value="ffe6d8e4"/>
+    <attribute name="color05" type="hex" value="ffdadcda"/>
+    <attribute name="color06" type="hex" value="fffafaf9"/>
+    <attribute name="color07" type="hex" value="ff000000"/>
     <attribute name="color08" type="hex" value="ffffffff"/>
     <attribute name="count" type="int" value="9"/>
   </data>
@@ -251,21 +251,21 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="ffe200"/>
+      <attribute name="color" type="hex" value="241f31"/>
       <attribute name="drawingType" type="string" value="rectangle"/>
       <attribute name="fill" type="int" value="1"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="image">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="1c71d8"/>
+      <attribute name="color" type="hex" value="fc2626"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="VERY_BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
@@ -298,7 +298,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="1c71d8"/>
+      <attribute name="color" type="hex" value="fc2626"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">

@@ -75,6 +75,7 @@ bspc rule -a "mpv"  state=floating center=on
 bspc rule -a "sumatrapdf.exe" desktop=^2
 bspc rule -a "obsidian" desktop=^8
 bspc rule -a "Code" desktop=^7
+bspc rule -a "zoom" state=floating
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
@@ -86,3 +87,5 @@ bspc config bottom_padding 0
 bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
+
+noblank
