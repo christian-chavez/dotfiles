@@ -143,12 +143,12 @@ super + Print
 	flameshot screen -p /home/christian/Pictures/Screenshots
 
 # lf file manager
-super + e
-	alacritty -e 'lf'
+# super + e
+	# alacritty -e 'lf'
 	# alacritty -e lf
 
 # thunar file manager
-super + r
+super + e
 	Thunar
 
 # Volumen control
@@ -166,11 +166,11 @@ XF86AudioMute
 
 # brightness control down
 XF86MonBrightnessDown
-	brillo -u 100000 -U 2
+	brillo -u 100000 -U 4
 	# brightnessctl s 10{+,-} 
 
 XF86MonBrightnessUp
-	brillo -u 100000 -A 2
+	brillo -u 100000 -A 4
 
 # set max brightness
 super + alt + m
@@ -242,7 +242,7 @@ super + @b
 
 # Multi shorcuts
 super + u ; {i,c,b,m,f,n,s,u,y,M,k,d,U,p}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "2205453259", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"}
+	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "2205453259", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
 
 # Suspend
 super + @l
@@ -260,8 +260,9 @@ alt + Tab
 super + shift + a
 	~/rofi-files.sh
 
-super + shift + @c
-	mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &
+# super + alt + @c
+# 	xdotool type ç
+	# mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &
 
 super + shift + i
 	~/.config/bspwm/scripts/winhide

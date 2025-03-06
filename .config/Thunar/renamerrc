@@ -1,6 +1,6 @@
 [Configuration]
 LastActiveMode=THUNAR_RENAMER_MODE_NAME
-LastActiveRenamer=ThunarSbrInsertRenamer
+LastActiveRenamer=ThunarSbrCaseRenamer
 
 [ThunarSbrReplaceRenamer]
 CaseSensitive=FALSE
@@ -13,4 +13,7 @@ Offset=6
 Text=-
 Mode=THUNAR_SBR_INSERT_MODE_INSERT
 OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+
+[ThunarSbrCaseRenamer]
+Mode=THUNAR_SBR_CASE_RENAMER_MODE_LOWER
 

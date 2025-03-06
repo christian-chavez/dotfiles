@@ -37,9 +37,10 @@ greenclip daemon &
 polybar -r example &
 polybar -r external &
 dunst &
-picom --experimental-backends &
-# picom -b &
+# picom --experimental-backends &
+picom -b &
 numlockx &
+
 #light-locker &
 feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
 # feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper.png &
@@ -76,6 +77,9 @@ bspc rule -a "sumatrapdf.exe" desktop=^2
 bspc rule -a "obsidian" desktop=^8
 bspc rule -a "Code" desktop=^7
 bspc rule -a "zoom" state=floating
+bspc rule -a "webex" state=floating
+bspc rule -a "Webex" state=floating
+bspc rule -a "Peek" state=floating
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
@@ -88,4 +92,6 @@ bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
 
-noblank
+xset s off -dpms &
+# setxkbmap latam 
+xmodmap ~/.Xmodmap 

@@ -314,7 +314,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="cm"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -590,7 +590,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="0" />
     <group
        id="filtereffects" />
     <group
@@ -1199,7 +1199,7 @@
      id="theme"
      defaultPreferDarkTheme="0"
      defaultIconTheme="WhiteSur-dark"
-     defaultGtkTheme="WhiteSur-Dark-solid-nord"
+     defaultGtkTheme="WhiteSur-Dark"
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"
