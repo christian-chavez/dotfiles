@@ -277,3 +277,5 @@ super + ctrl + shift + i
 	# 	bspc node $w -l normal; \
 	# 	bspc node -f $w; \
 	# fi
+
+

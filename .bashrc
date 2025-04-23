@@ -53,9 +53,6 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-# for open with sumatrapdf
-alias sumatra='env WINEPREFIX="/home/christian/.wine" wine "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe"'
-
 alias unbl='sudo rfkill unblock bluetooth'
 alias blbl='sudo rfkill block bluetooth'
 
@@ -65,4 +62,11 @@ function fr () {
 
 alias cor='bspc node -v 500 500'
 eval "$(starship init bash)"
-export WINEPREFIX="/home/christian/.wine"
+# export WINEPREFIX="/home/christian/.wine"
+
+# for open with sumatrapdf
+# alias sumatra='env WINEPREFIX="/home/christian/.wine" wine "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe"'
+alias sumatra='env WINEPREFIX="/home/christian/wine-32" wine "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe"'
+export WINEPREFIX=~/wine-32
+export WINEARCH=win32
+

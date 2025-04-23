@@ -6,6 +6,7 @@ export WINEPREFIX="$HOME/.wine"
 alias blank='xset s on -dpms'
 alias noblank='xset s off -dpms'
 alias bsprc='nvim ~/.config/bspwm/bspwmrc'
+alias cl='calc'
 alias sxhrc='nvim ~/.config/sxhkd/sxhkdrc'
 alias lf='.lf-gadgets/lf-ueberzug/lf-ueberzug ~'
 alias camera='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &'

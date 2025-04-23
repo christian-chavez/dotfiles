@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="0.61"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/Math-club/curso topo/calificaciones"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/Google Drive/stuff i do after graduation/mishel/algebra/2025-04-22"/>
   <property name="lastOpenPath" value="/home/christian"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,12 +14,12 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="102"/>
-  <property name="mainWndWidth" value="1356"/>
-  <property name="mainWndHeight" value="732"/>
+  <property name="mainWndWidth" value="1910"/>
+  <property name="mainWndHeight" value="1044"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
-  <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="175"/>
+  <property name="showSidebar" value="false"/>
+  <property name="sidebarWidth" value="50"/>
   <property name="sidebarNumberingStyle" value="3"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
@@ -92,7 +92,7 @@
   <property name="preloadPagesAfter" value="2"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=false&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=lw=0.15,r1=25,m1=40,f1=d0d2d3,f2=ff0000,af1=4c566a,af2=5e81ac&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=lw=0.15,r1=25,m1=40,f1=d0d2d3,f2=ff0000,af1=4c566a,af2=5e81ac&#10;backgroundColor=#ffffff&#10;"/>
   <property name="sizeUnit" value="in"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -134,7 +134,7 @@
   <property name="latexSettings.sourceViewAutoIndent" value="true"/>
   <property name="latexSettings.sourceViewSyntaxHighlight" value="true"/>
   <property name="latexSettings.sourceViewShowLineNumbers" value="false"/>
-  <property name="font" font="Futurama Bold Font Bold" size="12"/>
+  <property name="font" font="Iosevka" size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff00a1eb"/>
@@ -223,7 +223,7 @@
     <attribute name="count" type="int" value="9"/>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="text"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -261,11 +261,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="fc2626"/>
+      <attribute name="color" type="hex" value="1c71d8"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="VERY_BIG"/>
+      <attribute name="size" type="string" value="BIG"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">

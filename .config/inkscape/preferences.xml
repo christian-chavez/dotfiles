@@ -118,8 +118,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="188.0580444523"
-         height="108.611066382905" />
+         width="644.6283103162"
+         height="771.978423351342" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -155,8 +155,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="2.75554170402502"
-         ry="2.75554170402502" />
+         rx="33.4786578801673"
+         ry="33.4786578801673" />
       <eventcontext
          id="star"
          magnitude="3"
@@ -190,7 +190,8 @@
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="1"
-         freehand-mode="2" />
+         freehand-mode="0"
+         shape="0" />
     </group>
     <eventcontext
        id="calligraphic"
@@ -590,7 +591,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="0" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -714,7 +715,8 @@
        id="undo-history" />
     <group
        id="objects"
-       expand_to_layer="1" />
+       expand_to_layer="1"
+       layers_only="0" />
     <group
        id="symbols"
        current-set="{?cur-doc?}" />
@@ -1058,7 +1060,7 @@
      org.inkscape.output.png.inkscape.png_antialias="0"
      org.inkscape.generate.pdf_latex.font_size="12"
      org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
-     org.inkscape.output.pdf.cairorenderer.textToPath="LaTeX"
+     org.inkscape.output.pdf.cairorenderer.textToPath="paths"
      org.inkscape.output.pdf.cairorenderer.resolution="100"
      org.inkscape.generate.pdf_latex.page="basic"
      org.inkscape.input.svg.scale="auto"
@@ -1070,7 +1072,7 @@
      org.inkscape.generate.pdf_latex.formule="$p$" />
   <group
      id="desktop"
-     style="fill:#999999;-inkscape-font-specification:'Triumvirate Cond Light, ';font-family:'Triumvirate Cond Light';font-size:9.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:1.05826772;fill-opacity:0.17854242;stroke:#999999">
+     style="fill:none;-inkscape-font-specification:'Triumvirate Cond Light, ';font-family:'Triumvirate Cond Light';font-size:9.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:3.77952756;stroke-linecap:round;stroke:#00aa00">
     <group
        width="1916"
        height="1050"
@@ -1228,4 +1230,8 @@
   <group
      id="color_scales"
      wheel_vis_hsl="0" />
+  <group
+     id="pattern-edit"
+     currentSet="0"
+     handlePos="44" />
 </inkscape>
