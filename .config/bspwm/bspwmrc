@@ -21,9 +21,11 @@ pgrep -x sxhkd > /dev/null || sxhkd &
  
 if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 
-bspc config border_width        1
+bspc config border_width        2
 bspc config window_gap		4
-bspc config focused_border_color "#aec3f2"
+# bspc config focused_border_color "#00FF00"
+bspc config focused_border_color "#ffffff"
+# bspc config focused_border_color "#268bd2"
 bspc config pointer_motion_interval 25
 
 bspc config split_ratio          0.50
@@ -42,7 +44,10 @@ picom -b &
 numlockx &
 
 #light-locker &
-feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/bttf.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/monument-valley.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/arnold.jpg &
 # feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper.png &
 # feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper0.jpg &
 # feh --bg-max /home/christian/Pictures/wallpapers/grothendieck.png &
@@ -56,6 +61,8 @@ feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/Galaxies.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/drawn-landscape-2.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/ubuntu-wallpaper.jpg &
+feh --bg-fill --randomize /home/christian/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/beau.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/joli-arch.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/black-arch.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/blue-arch.png &
@@ -80,6 +87,7 @@ bspc rule -a "zoom" state=floating
 bspc rule -a "webex" state=floating
 bspc rule -a "Webex" state=floating
 bspc rule -a "Peek" state=floating
+# bspc rule -a "Flameshot" state=floating sticky=on focus=off
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
@@ -93,5 +101,6 @@ bspc query -N -n focused | while read -r win_id; do
 done
 
 xset s off -dpms &
-# setxkbmap latam 
+setxkbmap latam 
 xmodmap ~/.Xmodmap 
+noblank

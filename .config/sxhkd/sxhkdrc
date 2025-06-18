@@ -132,7 +132,8 @@ super + shift + e
 
 # Screnshot tool
 Print
-	flameshot gui 
+	/home/christian/myscripts/flameshot-focus.sh
+	# flameshot gui 
 
 # Capture selection and save inmediately
 shift + Print
