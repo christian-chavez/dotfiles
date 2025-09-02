@@ -10,13 +10,13 @@ configuration {
  }
 
 * {
-    font: "Iosevka Light 11";
+    font: "Iosevka 11";
     foreground: #f8f8f2;
     background-color: #2b303b;
     active-background: #5e81ac;
     urgent-background: #ff5555;
     urgent-foreground: #282a36;
-    selected-background: @active-background;
+    selected-background: #81a1c1;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
@@ -26,9 +26,9 @@ configuration {
 #window {
     background-color: @background-color;
     border:           1;
-    border-radius:    0;
+    border-radius:    4;
     border-color:     @bordercolor;
-    padding:          10;
+    padding:          7;
     width:	      35%;
 }
 #mainbox {
@@ -46,12 +46,12 @@ configuration {
 }
 #listview {
     fixed-height: 0;
-    lines:	  7;
+    lines:	  6;
     border:       0px;
     border-color: @bordercolor;
-    spacing:      5px ;
+    spacing:      0px ;
     scrollbar:    false;
-    padding:      5px 0px 0px ;
+    padding:      3px 0px 0px ;
 }
 #element {
     border:  0;
@@ -71,7 +71,8 @@ configuration {
 }
 #element.selected.normal {
     background-color: @selected-background;
-    text-color:       @foreground;
+    text-color:       #2b303b;
+    font: "Iosevka 11";
 }
 #element.selected.urgent {
     background-color: @selected-urgent-background;
@@ -123,6 +124,7 @@ configuration {
 #prompt {
     spacing:    0;
     text-color: @foreground;
+    font:	"Iosevka Bold 11";
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];

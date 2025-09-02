@@ -1,6 +1,6 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+
 
 # if [[ $(xrandr -q | grep 'HDMI-A-0 connected')]]
 # then
@@ -13,13 +13,15 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # fi
 
 # if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --right-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 # if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc wm -O eDP HDMI-A-0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 # if [[ $(xrandr -q | grep -e 'HDMI-A-0 connected' -e 'eDP') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 # # Para activar solo segundo monitor -- no funciona muy bien
 # if xrandr --listmonitors | grep 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r ; fi
  
-if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+# if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc config border_width        2
 bspc config window_gap		4
@@ -61,18 +63,18 @@ numlockx &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/Galaxies.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/drawn-landscape-2.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/ubuntu-wallpaper.jpg &
-feh --bg-fill --randomize /home/christian/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
+# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/beau.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/joli-arch.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/black-arch.png &
 # feh --bg-fill --randomize /home/christian/Pictures/wallpapers/blue-arch.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-arch-blue.jpg &
+feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-arch-blue.jpg &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
 bspc rule -a Catfish state=floating center=on 
 bspc rule -a Alacritty state=floating center=on 
-bspc rule -a Zathura state=floating center=on 
+# bspc rule -a Zathura state=floating center=on 
 # bspc rule -a Evince state=fullscreen 
 bspc rule -a "Mathpix Snipping Tool - Snip View"  state=floating center=on 
 bspc rule -a "pavucontrol"  state=floating center=on 
@@ -87,7 +89,6 @@ bspc rule -a "zoom" state=floating
 bspc rule -a "webex" state=floating
 bspc rule -a "Webex" state=floating
 bspc rule -a "Peek" state=floating
-# bspc rule -a "Flameshot" state=floating sticky=on focus=off
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
@@ -100,7 +101,7 @@ bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
 
-xset s off -dpms &
+# xset s off -dpms &
 setxkbmap latam 
 xmodmap ~/.Xmodmap 
-noblank
+# noblank

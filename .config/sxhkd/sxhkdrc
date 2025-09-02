@@ -1,4 +1,4 @@
-#
+
 # wm independent hotkeys
 #
 
@@ -8,13 +8,24 @@ super + Return
 
 ## program launcher
 super + @space
-	rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
+	rofi -no-lazy-grab -show combi -combi-modi drun
+	# rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
+        # dmenu_run -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3' 
+	# dmenu_run
 	# ~/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
 	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 
 # Clipboard greenclip
 super + a
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# google search from rofi
+super + d
+	/home/christian/Documents/scripts/rofi-google.sh
+	# rofi -dmenu | xargs -I{} xdg-open https://www.google.de/search?q={}
+    # bash -c 'q=$(rofi -dmenu -p "Google" -lines 1 -theme-str "listview { lines: 0; fixed-height: 0; }" </dev/null); [ -n "$q" ] && firefox "https://www.google.com/search?q=$(printf %s "$q" | sed "s/[[:space:]]\+/+/g")"'
+
+
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -110,6 +121,7 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
+
 #
 # move/resize
 #
@@ -129,6 +141,11 @@ super + {Left,Down,Up,Right}
 # change orientation (vertical -> horizontal)
 super + shift + e
 	bspc node '@parent' -R 90
+
+# Swap focused window with neighbor
+super + x
+	bspc node -s last.local; \
+	bspc node -f last.local
 
 # Screnshot tool
 Print
@@ -167,11 +184,12 @@ XF86AudioMute
 
 # brightness control down
 XF86MonBrightnessDown
-	brillo -u 100000 -U 4
+	brillo -u 100000 -U 5
+	# brillo -U 5
 	# brightnessctl s 10{+,-} 
 
 XF86MonBrightnessUp
-	brillo -u 100000 -A 4
+	brillo -u 100000 -A 5
 
 # set max brightness
 super + alt + m
@@ -196,8 +214,8 @@ XF86AudioPrev
 	playerctl previous
 
 # Shortcut for date
-super + d
-	sleep 0.30 && setxkbmap latam && xdotool type --delay=10 "$(date "+%Y-%m-%d %a %H:%M:%S")"
+# super + d
+	# sleep 0.30 && setxkbmap latam && xdotool type --delay=10 "$(date "+%Y-%m-%d %a %H:%M:%S")"
 
 # Catfish
 super + shift + @space
@@ -225,12 +243,12 @@ super + shift + r
 	redshift
 
 # Schedule
-super + shift + s
-	feh "/mnt/Mis archivos/Google Drive/10 Décimo Semestre/Otros/Schedule/_temp/schedule.png"
+# super + shift + s
+	# feh "/mnt/Mis archivos/Google Drive/10 Décimo Semestre/Otros/Schedule/_temp/schedule.png"
 
 # Calendario académico
-super + shift + d
-	zathura --mode fullscreen "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Otros/Calendario-Iy-II-PERIODO-2024-Carrera.pdf"
+# super + shift + d
+	# zathura --mode fullscreen "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Otros/Calendario-Iy-II-PERIODO-2024-Carrera.pdf"
 
 # Launch LibreWolf profile
 super + shift + f
@@ -242,8 +260,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,b,m,f,n,s,u,y,M,k,d,U,p}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "0994819015", "2205453259", "kevin.chavez@yachaytech.edu.ec", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Yachay Tech University", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
+super + u ; {i,c,m,e,f,n,s,u,y,M,k,d,U,p}
+	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "+18733396633", "25118952", "kevin.chavez@usherbrooke.ca", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Université de Sherbrooke", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
 
 # Suspend
 super + @l
@@ -255,6 +273,7 @@ super + shift + @l
 
 alt + Tab
 	bspc node -f last
+	# bspc node -f next.local
 # super + Tab
 # 	rofi -show window
 

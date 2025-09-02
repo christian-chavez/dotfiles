@@ -25,7 +25,7 @@ function rnote {
 }
 
 # 2024-01-27 Sat 23:01:40, for commits with git
-function git-commit () { 
+function gitcommit () { 
     git add -A && git commit -m "$@" 
 }
 
@@ -67,6 +67,9 @@ eval "$(starship init bash)"
 # for open with sumatrapdf
 # alias sumatra='env WINEPREFIX="/home/christian/.wine" wine "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe"'
 alias sumatra='env WINEPREFIX="/home/christian/wine-32" wine "C:\\Program Files\\SumatraPDF\\SumatraPDF.exe"'
-export WINEPREFIX=~/wine-32
-export WINEARCH=win32
+# export WINEPREFIX=~/wine-32
+# export WINEARCH=win32
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
