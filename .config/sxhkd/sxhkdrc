@@ -298,4 +298,6 @@ super + ctrl + shift + i
 	# 	bspc node -f $w; \
 	# fi
 
-
+# recent list of pdfs with rofi
+super + shift + @p
+    ~/Documents/scripts/zathura-recent-files-rofi list

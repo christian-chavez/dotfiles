@@ -6,16 +6,16 @@
   <property name="pressureMultiplier" value="0.61"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/théorie quantique/exercises"/>
-  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/algèbre commutative et geometrique algebrique/notes"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/these/notes"/>
+  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/notes"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="102"/>
-  <property name="mainWndWidth" value="702"/>
-  <property name="mainWndHeight" value="538"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -252,7 +252,7 @@
     </data>
     <data name="highlighter">
       <attribute name="color" type="hex" value="eeb402"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="MEDIUM"/>
@@ -261,7 +261,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="0634f5"/>
+      <attribute name="color" type="hex" value="fc2626"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -298,7 +298,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="000000"/>
+      <attribute name="color" type="hex" value="0634f5"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">

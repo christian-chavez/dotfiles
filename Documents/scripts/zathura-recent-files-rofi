@@ -1,0 +1,21 @@
+#!/bin/bash
+BOOKMARKS=~/.config/zathura/filemarks
+mkdir -p "$(dirname "$BOOKMARKS")"
+
+if [ "$1" = "list" ]; then
+    # Creamos un menú con solo nombres de archivo pero guardamos la ruta completa
+    CHOICE=$(tac "$BOOKMARKS" | awk -F/ '{print $NF}' | rofi -dmenu -i -p "PDFs:")
+    if [ -n "$CHOICE" ]; then
+        FILE=$(grep "/$CHOICE$" "$BOOKMARKS" | tail -n 1)
+        [ -n "$FILE" ] && zathura "$FILE"
+    fi
+else
+    # Guardar automáticamente todos los PDFs que abras
+    for FILE in "$@"; do
+        REAL=$(realpath "$FILE")
+        grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$BOOKMARKS.tmp"
+        echo "$REAL" >> "$BOOKMARKS.tmp"
+        mv "$BOOKMARKS.tmp" "$BOOKMARKS"
+    done
+    exec zathura "$@"
+fi
