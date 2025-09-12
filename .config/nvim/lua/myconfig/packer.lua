@@ -48,5 +48,7 @@ return require('packer').startup(function(use)
   }
   -- Snippet collections
   use 'honza/vim-snippets'
+  -- 2025-09-12 colorscheme
+  use { "catppuccin/nvim", as = "catppuccin" }
 end)
 

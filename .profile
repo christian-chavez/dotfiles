@@ -12,3 +12,5 @@ alias lf='.lf-gadgets/lf-ueberzug/lf-ueberzug ~'
 alias camera='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &'
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.3.0"
 export PATH="$GEM_HOME/bin:$PATH"
+# 2025-09-08 zathura recent list of pdfs with rofi integration
+export PATH="$HOME/Documents/scripts:$PATH"

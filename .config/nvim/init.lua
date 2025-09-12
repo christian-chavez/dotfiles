@@ -1,8 +1,13 @@
 require("myconfig")
 vim.o.number = true
 vim.o.relativenumber = true
+
+-- Colorscheme
+vim.o.background = "dark"
+vim.cmd.colorscheme("catppuccin-macchiato")  
+-- vim.cmd("colorscheme onenord")
 -- vim.cmd("colorscheme nordfox")
-vim.cmd("colorscheme onenord")
+
 vim.cmd('syntax enable')
 vim.opt.clipboard = "unnamedplus"
 vim.opt.ignorecase = true
