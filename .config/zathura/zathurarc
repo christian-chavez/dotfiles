@@ -49,3 +49,4 @@ set recolor-reverse-video true
 # abrir parent folder
 map <C-t> exec sh -c 'xdg-open "$(dirname "$FILE")"'
 # map <C-1> set first-page-column 1
+

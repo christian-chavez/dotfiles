@@ -7,15 +7,23 @@ if [ "$1" = "list" ]; then
     CHOICE=$(tac "$BOOKMARKS" | awk -F/ '{print $NF}' | rofi -dmenu -i -p "PDFs:")
     if [ -n "$CHOICE" ]; then
         FILE=$(grep "/$CHOICE$" "$BOOKMARKS" | tail -n 1)
-        [ -n "$FILE" ] && zathura "$FILE"
+        [ -n "$FILE" ] && zathura-recent-files-rofi "$FILE"
+        # [ -n "$FILE" ] && zathura "$FILE"
     fi
 else
     # Guardar automáticamente todos los PDFs que abras
     for FILE in "$@"; do
         REAL=$(realpath "$FILE")
-        grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$BOOKMARKS.tmp"
-        echo "$REAL" >> "$BOOKMARKS.tmp"
-        mv "$BOOKMARKS.tmp" "$BOOKMARKS"
+
+        # (6) Guardar solo PDFs
+        if [[ "$REAL" == *.pdf ]]; then
+            grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$BOOKMARKS.tmp"
+            echo "$REAL" >> "$BOOKMARKS.tmp"
+
+            # (7) Limitar historial a 1000
+            tail -n 1000 "$BOOKMARKS.tmp" > "$BOOKMARKS"
+            rm -f "$BOOKMARKS.tmp"
+        fi
     done
     exec zathura "$@"
 fi

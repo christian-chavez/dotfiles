@@ -19,7 +19,7 @@ StartOffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
 
 [ThunarSbrReplaceRenamer]
 CaseSensitive=TRUE
-Replacement=r1
-Pattern=rn
+Replacement=-
+Pattern=--
 Regexp=TRUE
 

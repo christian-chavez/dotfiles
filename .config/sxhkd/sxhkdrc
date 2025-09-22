@@ -8,7 +8,7 @@ super + Return
 
 ## program launcher
 super + @space
-	rofi -no-lazy-grab -show combi -combi-modi drun
+	rofi -no-lazy-grab -show combi -combi-modi drun,menu:rofi-power-menu
 	# rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
         # dmenu_run -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3' 
 	# dmenu_run

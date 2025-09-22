@@ -29,6 +29,11 @@ return require('packer').startup(function(use)
           '-interaction=nonstopmode',
         }
       }
+	  -- 2025-09-15 next 3 taken from Gilles
+	  -- vim.g.vimtex_quickfix_mode=0
+	  -- vim.o.conceallevel=1
+	  -- vim.g.tex_conceal='abdmg'
+	  --
       -- vim.g.vimtex_quickfix_open_on_warning = 0
       --
       -- Configure inverse search
@@ -50,5 +55,10 @@ return require('packer').startup(function(use)
   use 'honza/vim-snippets'
   -- 2025-09-12 colorscheme
   use { "catppuccin/nvim", as = "catppuccin" }
+  use {
+		  'nvim-lualine/lualine.nvim',
+		  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 end)
 

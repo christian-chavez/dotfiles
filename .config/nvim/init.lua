@@ -17,3 +17,13 @@ vim.cmd(":command Wq wq")
 vim.cmd(":command WQ wq")
 
 vim.opt.tabstop = 4
+require('lualine').setup {
+		options = {
+				theme = "catppuccin"
+		}
+}
+
+require'nvim-treesitter.configs'.setup {
+		ensure_installed = { "latex", "lua", "vim", "bash", "python" }, -- add what you use
+		highlight = { enable = true },
+}
