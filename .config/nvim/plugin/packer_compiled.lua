@@ -116,6 +116,11 @@ _G.packer_plugins = {
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
   },
+  ["vim-be-good"] = {
+    loaded = true,
+    path = "/home/christian/.local/share/nvim/site/pack/packer/start/vim-be-good",
+    url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/vim-snippets",

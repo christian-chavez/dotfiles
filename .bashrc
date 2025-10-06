@@ -28,6 +28,7 @@ function rnote {
 function gitcommit () { 
     git add -A && git commit -m "$@" 
 }
+alias gits="git status"
 
 alias dotup='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -75,3 +76,8 @@ eval "$(rbenv init -)"
 
 # 2025-09-08 zathura recent list of pdfs with rofi integration
 export PATH="$HOME/Documents/scripts:$PATH"
+
+
+# 2025-09-26 Autopairs para Bash
+source ~/.bash-autopairs/autopairs.sh
+

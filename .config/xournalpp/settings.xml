@@ -6,8 +6,8 @@
   <property name="pressureMultiplier" value="0.61"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/exercises"/>
-  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/notes"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/these/notes"/>
+  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/exercises"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
@@ -92,7 +92,7 @@
   <property name="preloadPagesAfter" value="2"/>
   <property name="eagerPageCleanup" value="true"/>
   <!--Config for new pages-->
-  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=lw=0.15,r1=25,m1=40,f1=d0d2d3,f2=ff0000,af1=4c566a,af2=5e81ac&#10;backgroundColor=#ffffff&#10;"/>
+  <property name="pageTemplate" value="xoj/template&#10;copyLastPageSize=false&#10;copyLastPageSettings=true&#10;size=595.275591x841.889764&#10;backgroundType=lined&#10;backgroundTypeConfig=lw=0.09,r1=27,m1=40,f1=4c566a,f2=2e3440,af1=4c566a,af2=5e81ac&#10;backgroundColor=#ffffff&#10;"/>
   <property name="sizeUnit" value="in"/>
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
@@ -251,11 +251,11 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="eeb402"/>
+      <attribute name="color" type="hex" value="38e7a0"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="BIG"/>
     </data>
     <data name="image">
       <attribute name="drawingType" type="string" value="default"/>
@@ -298,7 +298,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="0634f5"/>
+      <attribute name="color" type="hex" value="241f31"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">

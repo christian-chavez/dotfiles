@@ -22,7 +22,7 @@ set inputbar-bg "#151515" #00 currently not used
 set inputbar-fg "#FFFFFF" #02
 # set statusbar-fg                "#D8DEE9"
 # set statusbar-bg                "#2E3440"
-set scroll-step 30
+set scroll-step 100
 set scroll-page-aware true
 # set smooth-scroll "true"
 set highlight-active-color rgba(60,179,113,0.5)

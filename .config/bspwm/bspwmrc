@@ -1,8 +1,8 @@
 #! /bin/sh
 
-for d in $(bspc query -D); do
-    bspc desktop $d -l monocle
-done
+
+(sleep 0.5; for d in $(bspc query -D); do bspc desktop "$d" -l monocle; done) &
+
 
 
 # if [[ $(xrandr -q | grep 'HDMI-A-0 connected')]]
