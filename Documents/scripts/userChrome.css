@@ -1,0 +1,107 @@
+.titlebar-buttonbox-container {
+    display: none !important;
+}
+
+.titlebar-spacer,
+.titlebar-buttonbox,
+.titlebar-buttonbox-container,
+#window-controls {
+  display: none !important;
+}
+
+#titlebar .titlebar-spacer[type="post-tabs"] {
+  display: none !important;
+}
+
+#titlebar #PanelUI-button {
+  display: none !important;
+}
+
+#alltabs-button,
+#alltabs-button > .toolbarbutton-icon,
+#alltabs-button > .toolbarbutton-badge-stack {
+  display: none !important;
+}
+
+/* Wallpaper as chrome background */
+#main-window, #browser, #appcontent, #tabbrowser-tabpanels {
+  background-image: url('file:///home/christian/Pictures/wallpapers/wallpaper-arch-blue.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Keep the 'floating' gap and make toolbars transparent so the wallpaper shows */
+#navigator-toolbox {
+  /* padding: 8px 8px 0 !important; */
+  background: transparent !important;
+  border: none !important;
+}
+#TabsToolbar, #nav-bar, #PersonalToolbar {
+  background: transparent !important;
+  -moz-appearance: none !important;
+  box-shadow: none !important;
+}
+
+/* /* Readable floating nav bar (slightly opaque) */ */
+/* #nav-bar { */
+/*   border-radius: 12px !important; */
+/*   background-color: rgba(30,30,30,0.92) !important; /* tweak 0.88–0.97 to taste */ */
+/*   box-shadow: 0 6px 20px rgba(0,0,0,0.35) !important; */
+/* } */
+
+/* 🔧 Slim down the nav bar */
+#nav-bar {
+  min-height: 30px !important;      /* default ~40-42px — lower this */
+  padding-block: 0px !important;    /* reduce vertical padding */
+}
+
+#urlbar {
+  min-height: 28px !important;      /* shrink the URL field */
+  padding-block: 0px !important;
+}
+
+#urlbar-input-container {
+  padding-block: 0px !important;    /* make input text align properly */
+}
+
+
+/* 🔧 Slim down the tabs bar */
+#TabsToolbar {
+  min-height: 20px !important;       /* default ~40px */
+  padding-block: 0px !important;
+}
+
+.tabbrowser-tab {
+  min-height: 20px !important;       /* shrink individual tabs */
+  padding-block: 0px !important;
+}
+
+.tabbrowser-tab .tab-content {
+  padding-block: 0px !important;     /* align tab labels nicely */
+}
+
+*|*:root {
+ --tab-min-height:      30px !important; /* adjust */
+ --tab-min-width:       50px !important; /* adjust */
+}
+
+/*ttesttttt Hide the tab bar completely*/
+/* #TabsToolbar { */
+/*   visibility: collapse !important; */
+/* } */
+
+/* #navigator-toolbox { */
+/*   display: flex !important; */
+/*   flex-direction: column-reverse !important; */
+/* } */
+/**/
+
+/* #TabsToolbar { */
+/*   opacity: 0; */
+/*   transition: opacity 0.2s ease-in-out; */
+/* } */
+/* #TabsToolbar:hover { */
+/*   opacity: 1; */
+/* } */

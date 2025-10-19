@@ -219,7 +219,8 @@ XF86AudioPrev
 
 # Catfish
 super + shift + @space
-	catfish --start /mnt/Mis\ archivos/Google\ Drive
+	~/rofi-files-google-drive.sh
+	# catfish --start /mnt/Mis\ archivos/Google\ Drive
 	# catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
 
 # Open obsidian
@@ -272,7 +273,9 @@ super + shift + @l
 	dm-tool lock && systemctl suspend
 
 alt + Tab
-	bspc node -f last
+	rofi -show window
+	# bspc node -f last
+    # /home/christian/Documents/scripts/rofi-alt-tab
 	# bspc node -f next.local
 # super + Tab
 # 	rofi -show window
