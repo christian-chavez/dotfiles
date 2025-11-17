@@ -14,3 +14,4 @@ export GEM_HOME="$HOME/.local/share/gem/ruby/3.3.0"
 export PATH="$GEM_HOME/bin:$PATH"
 # 2025-09-08 zathura recent list of pdfs with rofi integration
 export PATH="$HOME/Documents/scripts:$PATH"
+alias morning="mpv /home/christian/Videos/morning-exercise.mp4"

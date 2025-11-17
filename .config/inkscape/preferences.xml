@@ -118,8 +118,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="269.470458984375"
-         height="138.181564331055" />
+         width="112.720656507597"
+         height="127.397821381336" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -315,7 +315,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -388,7 +388,9 @@
        newfillorstroke="1" />
     <eventcontext
        id="mesh"
-       selcue="1" />
+       selcue="1"
+       edit_fill="1"
+       edit_stroke="0" />
     <eventcontext
        id="zoom"
        selcue="1"
@@ -540,7 +542,7 @@
   </group>
   <group
      id="colorselector"
-     page="HSV"
+     page="RGB"
      switcher="1">
     <group
        id="RGB"
@@ -593,7 +595,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="0" />
     <group
        id="filtereffects" />
     <group
@@ -647,7 +649,7 @@
     </group>
     <group
        id="save_as"
-       default="org.inkscape.output.pdf.cairorenderer"
+       default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
        path="/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/images"
@@ -1018,12 +1020,13 @@
        scaleLineHeightFromFontSIze="1" />
     <group
        id="boot"
-       theme="compacted"
+       theme="system"
        canvas="dark">
       <group
          id="shown"
          ver1.3.2="1"
-         ver1.4="1" />
+         ver1.4="1"
+         ver1.4.2="1" />
     </group>
     <group
        id="rendering" />
@@ -1033,7 +1036,7 @@
        id="ruler" />
     <group
        id="snapping"
-       snap-global-toggle="0"
+       snap-global-toggle="1"
        snap-alignment="1"
        snap-alignment-self="0"
        snap-distribution="1"
@@ -1060,7 +1063,7 @@
      org.inkscape.output.png.inkscape.png_bitdepth="100"
      org.inkscape.output.png.inkscape.png_compression="6"
      org.inkscape.output.png.inkscape.png_antialias="0"
-     org.inkscape.generate.pdf_latex.font_size="12"
+     org.inkscape.generate.pdf_latex.font_size="30"
      org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
      org.inkscape.output.pdf.cairorenderer.textToPath="paths"
      org.inkscape.output.pdf.cairorenderer.resolution="100"
@@ -1071,10 +1074,10 @@
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
      org.inkscape.output.png.inkscape.png_interlacing="1"
      org.inkscape.generate.pdf_latex.preamble="\usepackage{amsmath,mathptmx}\usepackage{amssymb}\usepackage{amsfonts}"
-     org.inkscape.generate.pdf_latex.formule="$p$" />
+     org.inkscape.generate.pdf_latex.formule="$\mathbf w$" />
   <group
      id="desktop"
-     style="fill:#0000ff;-inkscape-font-specification:'Triumvirate Cond Light, ';font-family:'Triumvirate Cond Light';font-size:9.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:3.77952756;stroke-linecap:round">
+     style="fill:#375f99;-inkscape-font-specification:'Triumvirate Cond Light, ';font-family:'Triumvirate Cond Light';font-size:9.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:1.88976378;stroke-linecap:round;stroke-linejoin:round;fill-opacity:0.6150831;stroke:#333333">
     <group
        width="1916"
        height="1050"
@@ -1107,7 +1110,7 @@
     <group
        id="tools"
        icononly="1"
-       small="1"
+       small="0"
        iconsize="16"
        width="28">
       <group
@@ -1207,18 +1210,16 @@
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"
-     symbolicIcons="1"
+     symbolicIcons="0"
      symbolicDefaultBaseColors="1"
      symbolicDefaultHighColors="1"
-     syntax-color-theme="inkscape-dark"
-     gtkTheme="Minwaita-Inkscape"
-     iconTheme="hicolor">
+     syntax-color-theme="inkscape-dark">
     <group
        id="multicolor"
-       symbolicBaseColor="3958107135"
-       symbolicSuccessColor="10029823"
-       symbolicWarningColor="4279865599"
-       symbolicErrorColor="10086143" />
+       symbolicBaseColor="3857049087"
+       symbolicSuccessColor="3435973887"
+       symbolicWarningColor="2155905279"
+       symbolicErrorColor="2155905279" />
     <group
        id="hicolor"
        symbolicBaseColor="4008635647"

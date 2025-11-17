@@ -124,4 +124,15 @@
 	<text-files/>
 	<video-files/>
 </action>
+<action>
+	<icon></icon>
+	<name>tabbed</name>
+	<submenu></submenu>
+	<unique-id>1762610491989793-1</unique-id>
+	<command>/home/christian/Documents/scripts/zathura-tabs %N</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+</action>
 </actions>
