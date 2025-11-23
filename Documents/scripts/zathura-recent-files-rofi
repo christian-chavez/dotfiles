@@ -1,29 +1,58 @@
 #!/bin/bash
-BOOKMARKS=~/.config/zathura/filemarks
+
+BOOKMARKS="$HOME/.config/zathura/filemarks"
+LOCKFILE="$BOOKMARKS.lock"
+
 mkdir -p "$(dirname "$BOOKMARKS")"
 
+update_history() {
+    local REAL="$1"
+
+    # Solo PDFs
+    [[ "$REAL" == *.pdf ]] || return
+
+    # Asegurar que exista el archivo
+    touch "$BOOKMARKS"
+
+    # Temp único por proceso
+    local TMP
+    TMP=$(mktemp)
+
+    # Seccion critica: solo aqui usamos flock
+    {
+        flock -x 9
+
+        # Quitar duplicados del mismo archivo
+        grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$TMP"
+        echo "$REAL" >> "$TMP"
+
+        # Limitar historial
+        tail -n 1000 "$TMP" > "$BOOKMARKS"
+    } 9>"$LOCKFILE"
+
+    rm -f "$TMP"
+}
+
 if [ "$1" = "list" ]; then
-    # Creamos un menú con solo nombres de archivo pero guardamos la ruta completa
-    CHOICE=$(tac "$BOOKMARKS" | awk -F/ '{print $NF}' | rofi -dmenu -i -p "PDFs:")
+    # Mostrar solo nombres de archivo, pero conservar rutas completas
+    CHOICE=$(
+        tac "$BOOKMARKS" 2>/dev/null \
+        | awk -F/ '{print $NF}' \
+        | rofi -dmenu -i -p "PDFs:"
+    )
+
     if [ -n "$CHOICE" ]; then
-        FILE=$(grep "/$CHOICE$" "$BOOKMARKS" | tail -n 1)
+        FILE=$(grep "/$CHOICE$" "$BOOKMARKS" 2>/dev/null | tail -n 1)
         [ -n "$FILE" ] && zathura-recent-files-rofi "$FILE"
-        # [ -n "$FILE" ] && zathura "$FILE"
+        # o: [ -n "$FILE" ] && zathura "$FILE"
     fi
 else
-    # Guardar automáticamente todos los PDFs que abras
+    # Actualizar historial para cada PDF (con lock corto por cada uno)
     for FILE in "$@"; do
         REAL=$(realpath "$FILE")
-
-        # (6) Guardar solo PDFs
-        if [[ "$REAL" == *.pdf ]]; then
-            grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$BOOKMARKS.tmp"
-            echo "$REAL" >> "$BOOKMARKS.tmp"
-
-            # (7) Limitar historial a 1000
-            tail -n 1000 "$BOOKMARKS.tmp" > "$BOOKMARKS"
-            rm -f "$BOOKMARKS.tmp"
-        fi
+        update_history "$REAL"
     done
+
+    # Aqui ya no hay ningun lock: zathura puede abrir todos los PDFs
     exec zathura "$@"
 fi

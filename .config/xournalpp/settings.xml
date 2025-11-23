@@ -3,19 +3,19 @@
 <settings>
   <property name="pressureSensitivity" value="true"/>
   <property name="minimumPressure" value="1"/>
-  <property name="pressureMultiplier" value="1.15"/>
+  <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
   <property name="lastSavePath" value="/home/christian/Documents/JuanCarlos/figuras-a-produire"/>
-  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT458-theorie-quantique/exercises"/>
+  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/lectures"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="102"/>
-  <property name="mainWndWidth" value="885"/>
-  <property name="mainWndHeight" value="730"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -251,18 +251,18 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="538ffc"/>
+      <attribute name="color" type="hex" value="38e7a0"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="BIG"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
     </data>
     <data name="image">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="fc2626"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="color" type="hex" value="241f31"/>
+      <attribute name="drawingType" type="string" value="rectangle"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="THIN"/>
@@ -292,14 +292,14 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="selectRegion">
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
     </data>
     <data name="showFloatingToolbox">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
       <attribute name="color" type="hex" value="00ac48"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="drawingType" type="string" value="rectangle"/>
     </data>
     <data name="verticalSpace">
       <attribute name="drawingType" type="string" value="default"/>
