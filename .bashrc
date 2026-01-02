@@ -90,3 +90,5 @@ export PATH="$HOME/Documents/scripts:$PATH"
 # 2025-09-26 Autopairs para Bash
 source ~/.bash-autopairs/autopairs.sh
 
+# 2026-01-02
+alias rm='safe-rm'
