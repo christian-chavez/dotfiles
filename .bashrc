@@ -28,9 +28,18 @@ function rnote {
 function gitcommit () { 
     git add -A && git commit -m "$@" 
 }
-alias gits="git status"
 
-alias dotup='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# alias dotup='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# Dotfiles repo helper (bare repo)
+dotup() {
+  /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
+}
+
+dotupcommit() {
+  dotup add -u && dotup commit -m "$*"
+}
+
+alias gits="git status"
 
 # 2024-02-17 Sat 10:05:55 ~/.profile didnt work
 export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
