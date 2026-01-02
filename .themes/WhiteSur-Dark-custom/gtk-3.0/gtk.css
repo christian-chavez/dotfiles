@@ -1,0 +1,152 @@
+@import url("resource:///org/gnome/theme/gtk.css");
+
+/* =========================
+   Global palette (Finder-ish dark)
+   ========================= */
+
+/* Main surfaces */
+@define-color window_bg_color      #1a1a1a;
+@define-color view_bg_color        #1d1d1d;  /* main content (lists, icon views, etc.) */
+@define-color headerbar_bg_color   #202020;
+@define-color popover_bg_color     #1f1f1f;
+
+/* Sidebar surfaces */
+@define-color sidebar_bg_color     #2b2b2b;  /* left panes */
+
+/* Text */
+@define-color window_fg_color      #e6e6e6;
+@define-color view_fg_color        #e6e6e6;
+
+/* Selection / accent */
+@define-color accent_bg_color      #1f66ff;
+@define-color accent_fg_color      #ffffff;
+@define-color selected_bg_color    @accent_bg_color;
+@define-color selected_fg_color    @accent_fg_color;
+
+/* Borders */
+@define-color borders              #2d2d2d;
+
+/* =========================
+   Apply globally for consistency
+   ========================= */
+
+window,
+dialog,
+.background {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+headerbar {
+  background-color: @headerbar_bg_color;
+  color: @window_fg_color;
+}
+
+popover,
+.popover,
+menu,
+.menubar {
+  background-color: @popover_bg_color;
+  color: @window_fg_color;
+}
+
+/* Main content areas */
+scrolledwindow,
+viewport,
+.view,
+iconview,
+treeview.view {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  background-image: none;
+}
+
+/* Sidebars */
+.sidebar,
+placessidebar,
+treeview.sidebar {
+  background-color: @sidebar_bg_color;
+  color: @window_fg_color;
+  background-image: none;
+}
+
+/* =========================
+   Thunar: force it to respect palette
+   (Thunar paints some areas via inner .view/viewport)
+   ========================= */
+
+/* Sidebar separator */
+.thunar .sidebar,
+.thunar placessidebar.sidebar {
+  border-right: 1px solid @borders;
+}
+
+/* Sidebar painted area */
+.thunar .sidebar .view,
+.thunar placessidebar.sidebar .view,
+.thunar .sidebar scrolledwindow > viewport,
+.thunar placessidebar.sidebar scrolledwindow > viewport {
+  background-color: @sidebar_bg_color;
+  background-image: none;
+  color: @window_fg_color;
+}
+
+/* Main file list / icon view painted area */
+.thunar treeview.view,
+.thunar scrolledwindow .view,
+.thunar scrolledwindow > viewport,
+.thunar .standard-view,
+.thunar iconview {
+  background-color: @view_bg_color;
+  background-image: none;
+  color: @view_fg_color;
+}
+
+/* Selection */
+.thunar .sidebar .view *:selected,
+.thunar treeview.view *:selected,
+.thunar iconview *:selected {
+  background-color: @selected_bg_color;
+  color: @selected_fg_color;
+}
+
+/* Hover in main list */
+.thunar treeview.view row:hover {
+  background-color: #262626;
+}
+
+/* =========================
+   Thunar sidebar spacing
+   ========================= */
+
+.thunar .sidebar .view,
+.thunar placessidebar.sidebar .view {
+  -GtkTreeView-vertical-separator: 5;
+  -GtkTreeView-horizontal-separator: 3;
+}
+
+.thunar .sidebar .view row,
+.thunar placessidebar.sidebar .view row {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+
+/***** Thunar: add breathing space from sidebar *****/
+
+/* Main file view: push content away from sidebar */
+.thunar scrolledwindow > viewport,
+.thunar .standard-view,
+.thunar treeview.view,
+.thunar iconview {
+  padding-left: 5px;   /* try 10px subtler, 16px Finder-like */
+  /* padding-right: 6px;   /* optional, keeps balance */ */
+}
+
+
+/***** Thunar: hover makes the file list area “active” *****/
+.thunar treeview.view:hover,
+.thunar iconview:hover {
+  background-color: #303030;
+  background-image: none;
+}
