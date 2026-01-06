@@ -1,0 +1,74 @@
+#!/bin/bash
+set -e
+
+TEMPLATE="template.tex"
+REMISE="1"         # default is première remise
+HWNUM=""
+
+# Parse args in any order
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    -r|--remise)
+      if [[ -n "${2:-}" ]]; then REMISE="$2"; shift 2; else
+        echo "Error: -r|--remise requires a value (1 or 2)"; exit 1; fi ;;
+    -r=*|--remise=*)
+      REMISE="${1#*=}"; shift ;;
+    -*)
+      echo "Unknown option: $1"
+      echo "Usage: $0 <homework-number> [-r <1|2>]"
+      exit 1 ;;
+    *)
+      if [[ -z "$HWNUM" ]]; then
+        HWNUM="$1"; shift
+      else
+        echo "Unexpected extra argument: $1"; exit 1
+      fi ;;
+  esac
+done
+
+# Require homework number
+if [[ -z "$HWNUM" ]]; then
+  echo "Usage: $0 <homework-number> [-r <1|2>]"
+  exit 1
+fi
+
+# Validate remise
+if [[ ! "$REMISE" =~ ^[12]$ ]]; then
+  echo "Remise must be 1 or 2 (got '$REMISE')"
+  exit 1
+fi
+
+# Zero-pad HW number if numeric
+if [[ "$HWNUM" =~ ^[0-9]+$ ]]; then
+  HWNUM=$(printf "%02d" "$HWNUM")
+fi
+
+# Map remise number to French wording
+if [[ "$REMISE" == "1" ]]; then
+  REMISE_TEXT="Première Remise"
+elif [[ "$REMISE" == "2" ]]; then
+  REMISE_TEXT="Deuxième Remise"
+fi
+
+BASENAME="mat729-devoir${HWNUM}-r${REMISE}-christian-chavez"
+DEFCONTENT="${HWNUM} -- ${REMISE_TEXT}"
+
+# Ensure template exists
+if [[ ! -f "$TEMPLATE" ]]; then
+  echo "Template '$TEMPLATE' not found"; exit 1
+fi
+
+# Copy template
+cp "$TEMPLATE" "${BASENAME}.tex"
+
+# Replace existing \def\devoirno{...} or insert after \begin{document}
+if grep -q '\\def\\devoirno{' "${BASENAME}.tex"; then
+  sed "s/\\\\def\\\\devoirno{.*}/\\\\def\\\\devoirno{${DEFCONTENT}}/" \
+    "${BASENAME}.tex" > "${BASENAME}.tmp" && mv "${BASENAME}.tmp" "${BASENAME}.tex"
+else
+  awk -v ins="\\def\\devoirno{${DEFCONTENT}}" '
+    { print; if ($0 ~ /\\begin{document}/) { print ins } }
+  ' "${BASENAME}.tex" > "${BASENAME}.tmp" && mv "${BASENAME}.tmp" "${BASENAME}.tex"
+fi
+
+echo "OK. Created ${BASENAME}.tex from ${TEMPLATE}"

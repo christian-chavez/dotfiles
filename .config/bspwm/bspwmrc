@@ -1,5 +1,7 @@
 #! /bin/sh
 
+exec > /tmp/bspwmrc.log 2>&1
+set -x
 
 (sleep 0.5; for d in $(bspc query -D); do bspc desktop "$d" -l monocle; done) &
 
@@ -46,14 +48,16 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config click_to_focus any
 
-sxhkd &
+# sxhkd &
 # redshift &
 greenclip daemon &
+
+pkill -x polybar 2>/dev/null || true
 polybar -r example &
 polybar -r external &
-dunst &
+pgrep -x dunst >/dev/null || dunst &
 # picom --experimental-backends &
-picom -b &
+pgrep -x picom >/dev/null || picom -b &
 numlockx &
 
 #light-locker &
@@ -104,10 +108,13 @@ bspc rule -a "Peek" state=floating
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
 bspc config bottom_padding 0
-
+# 2026-01-03
+# Mouse settings
+/home/christian/Documents/scripts/mouse-sensitivity.sh &
+/home/christian/Documents/scripts/unclutter-mouse.sh &
 # 2024-08-12
 # Set shadow for floating windows
-~/shadow-script.sh
+/home/christian/shadow-script.sh &
 bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
@@ -116,3 +123,7 @@ done
 setxkbmap latam 
 xmodmap ~/.Xmodmap 
 # noblank
+#
+
+
+

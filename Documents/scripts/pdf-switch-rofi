@@ -1,0 +1,31 @@
+#!/bin/sh
+
+# Find all zathura windows and extract their titles
+wins=$(xdotool search --class zathura 2>/dev/null) || exit 0
+
+# Build list: "basename | window-id"
+list=$(
+  for win in $wins; do
+    title=$(xprop -id "$win" WM_NAME | sed 's/.*= "\(.*\)".*/\1/')
+    base=$(basename "$title")
+    # Skip non-PDF windows (this effectively ignores the unwanted org.pwmt.zathura instances)
+    case "$base" in
+      *.pdf) printf '%s | %s\n' "$base" "$win" ;;
+    esac
+  done | sort
+)
+
+[ -z "$list" ] && exit 0
+
+# Show basenames only
+chosen=$(printf '%s\n' "$list" \
+  | awk -F ' \\| ' '{print $1}' \
+  | rofi -dmenu -p "Opened PDFs:")
+
+[ -z "$chosen" ] && exit 0
+
+# Focus the correct window matching the chosen basename
+win=$(printf '%s\n' "$list" | grep "^$chosen |" | awk -F ' \\| ' '{print $2}')
+
+wmctrl -i -a "$win"
+

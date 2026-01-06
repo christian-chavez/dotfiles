@@ -1,0 +1,7 @@
+/* TEST: if this loads, Thunar sidebar should turn bright red */
+thunar-window * { background-image: none; }
+thunar-window .sidebar,
+thunar-window placessidebar,
+thunar-window treeview.sidebar {
+  background-color: #ff0000;
+}

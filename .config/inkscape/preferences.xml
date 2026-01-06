@@ -315,7 +315,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="cm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -334,6 +334,8 @@
        id="nodes"
        selcue="1"
        gradientdrag="1"
+       changelayer="0"
+       changepage="0"
        pathflash_enabled="1"
        pathflash_unselected="0"
        pathflash_timeout="500"
@@ -645,7 +647,7 @@
          value="layer" />
       <group
          id="defaultdpi"
-         value="500" />
+         value="400" />
     </group>
     <group
        id="save_as"
@@ -1062,7 +1064,7 @@
      id="extensions"
      org.inkscape.output.png.inkscape.png_bitdepth="100"
      org.inkscape.output.png.inkscape.png_compression="6"
-     org.inkscape.output.png.inkscape.png_antialias="0"
+     org.inkscape.output.png.inkscape.png_antialias="2"
      org.inkscape.generate.pdf_latex.font_size="30"
      org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
      org.inkscape.output.pdf.cairorenderer.textToPath="paths"
@@ -1072,7 +1074,7 @@
      org.inkscape.raster.jpg_output.tab="options"
      org.inkscape.raster.jpg_output.quality="100"
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
-     org.inkscape.output.png.inkscape.png_interlacing="1"
+     org.inkscape.output.png.inkscape.png_interlacing="0"
      org.inkscape.generate.pdf_latex.preamble="\usepackage{amsmath,mathptmx}\usepackage{amssymb}\usepackage{amsfonts}"
      org.inkscape.generate.pdf_latex.formule="$\mathbf w$" />
   <group
@@ -1114,7 +1116,8 @@
        iconsize="16"
        width="28">
       <group
-         id="buttons" />
+         id="buttons"
+         showLPETool="0" />
     </group>
     <group
        id="controlbars"
@@ -1205,8 +1208,8 @@
   <group
      id="theme"
      defaultPreferDarkTheme="0"
-     defaultIconTheme="WhiteSur-dark"
-     defaultGtkTheme="WhiteSur-Dark"
+     defaultIconTheme="WhiteSur-yellow-dark"
+     defaultGtkTheme="WhiteSur-Dark-custom"
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rofi -modi window \
+     -show window \
+     -kb-accept-entry '!Alt_L,!Alt_R,Return' \
+     -kb-cancel 'Alt_L,Alt_R,Escape' \
+

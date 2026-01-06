@@ -219,7 +219,7 @@ XF86AudioPrev
 
 # Catfish
 super + shift + @space
-	~/rofi-files-google-drive.sh
+	/home/christian/Documents/scripts/rofi-files-google-drive.sh
 	# catfish --start /mnt/Mis\ archivos/Google\ Drive
 	# catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
 
@@ -263,7 +263,7 @@ super + @b
 
 # Multi shorcuts
 super + u ; {i,c,m,e,f,n,s,u,y,M,k,d,U,p}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "+18733396633", "25118952", "kevin.chavez@usherbrooke.ca", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Université de Sherbrooke", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
+	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "+18733396633", "25118952", "christian.chavez@usherbrooke.ca", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Université de Sherbrooke", "Universidad Yachay Tech", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "Universidad de Investigación de Tecnología Experimental Yachay","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
 
 # Suspend
 super + @l
@@ -284,7 +284,7 @@ alt + Tab
 # 	rofi -show window
 
 super + shift + a
-	~/rofi-files.sh
+	/home/christian/Documents/scripts/rofi-files.sh
 
 # super + alt + @c
 # 	xdotool type ç
