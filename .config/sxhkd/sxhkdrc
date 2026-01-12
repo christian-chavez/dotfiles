@@ -5,10 +5,10 @@
 # terminal emulator
 super + Return
 	alacritty
-fef
+
 ## program launcher
 super + @space
-	rofi -no-lazy-grab -show combi -combi-modi drun,menu:rofi-power-menu
+	rofi -no-lazy-grab -show combi -combi-modi drun,menu:rofi-power-menu -normal-window
 	# rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
         # dmenu_run -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3' 
 	# dmenu_run
@@ -263,7 +263,7 @@ super + @b
 
 # Multi shorcuts
 super + u ; {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
-	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "+18733396633", "25118952", "christian.chavez@usherbrooke.ca", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Université de Sherbrooke", "102-515 Wellington Sud", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "J1H 5E2","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
+	~/Documents/scripts/type_info.sh {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
 
 # Suspend
 super + @l
