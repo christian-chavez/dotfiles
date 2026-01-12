@@ -1,4 +1,6 @@
 #! /bin/sh
+setxkbmap latam 
+xmodmap ~/.Xmodmap 
 
 exec > /tmp/bspwmrc.log 2>&1
 set -x
@@ -61,29 +63,29 @@ pgrep -x picom >/dev/null || picom -b &
 numlockx &
 
 #light-locker &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/* &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/bttf.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/monument-valley.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/arnold.jpg &
-# feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper.png &
-# feh --bg-fill /home/christian/Pictures/wallpapers/wallpaper0.jpg &
-# feh --bg-max /home/christian/Pictures/wallpapers/grothendieck.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/mont.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/kali.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallhaven.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-aulas-b.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/road2.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/nevada.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/kurz3.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/Galaxies.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/drawn-landscape-2.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/ubuntu-wallpaper.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/beau.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/joli-arch.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/black-arch.png &
-# feh --bg-fill --randomize /home/christian/Pictures/wallpapers/blue-arch.png &
-feh --bg-fill --randomize /home/christian/Pictures/wallpapers/wallpaper-arch-blue.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/bttf.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/monument-valley.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/arnold.jpg &
+# feh --bg-fill $HOME/Pictures/wallpapers/wallpaper.png &
+# feh --bg-fill $HOME/Pictures/wallpapers/wallpaper0.jpg &
+# feh --bg-max $HOME/Pictures/wallpapers/grothendieck.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/mont.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/kali.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallhaven.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-aulas-b.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/road2.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/nevada.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/kurz3.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/Galaxies.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/drawn-landscape-2.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/ubuntu-wallpaper.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/beau.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/joli-arch.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/black-arch.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/blue-arch.png &
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
@@ -113,19 +115,18 @@ bspc config bottom_padding 0
 
 # 2026-01-03
 # Mouse settings
-/home/christian/Documents/scripts/mouse-sensitivity.sh &
-/home/christian/Documents/scripts/unclutter-mouse.sh &
+$HOME/Documents/scripts/mouse-sensitivity.sh &
+$HOME/Documents/scripts/unclutter-mouse.sh &
 
 # 2024-08-12
 # Set shadow for floating windows
-/home/christian/shadow-script.sh &
+$HOME/shadow-script.sh &
 bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
 
+
 # xset s off -dpms &
-setxkbmap latam 
-xmodmap ~/.Xmodmap 
 # noblank
 #
 
