@@ -12,7 +12,7 @@ super + @space
 	# rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
         # dmenu_run -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3' 
 	# dmenu_run
-	# ~/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
+	# $HOME/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
 	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
 
 # Clipboard greenclip
@@ -21,7 +21,7 @@ super + a
 
 # google search from rofi
 super + d
-	/home/christian/Documents/scripts/rofi-google.sh
+	$HOME/Documents/scripts/rofi-google.sh
 	# rofi -dmenu | xargs -I{} xdg-open https://www.google.de/search?q={}
     # bash -c 'q=$(rofi -dmenu -p "Google" -lines 1 -theme-str "listview { lines: 0; fixed-height: 0; }" </dev/null); [ -n "$q" ] && firefox "https://www.google.com/search?q=$(printf %s "$q" | sed "s/[[:space:]]\+/+/g")"'
 
@@ -149,16 +149,16 @@ super + x
 
 # Screnshot tool
 Print
-	/home/christian/myscripts/flameshot-focus.sh
+	$HOME/myscripts/flameshot-focus.sh
 	# flameshot gui 
 
 # Capture selection and save inmediately
 shift + Print
-	flameshot gui -p /home/christian/Pictures/Screenshots
+	flameshot gui -p $HOME/Pictures/Screenshots
 
 # Capture entire screen and save inmediately
 super + Print
-	flameshot screen -p /home/christian/Pictures/Screenshots
+	flameshot screen -p $HOME/Pictures/Screenshots
 
 # lf file manager
 # super + e
@@ -219,25 +219,25 @@ XF86AudioPrev
 
 # Catfish
 super + shift + @space
-	/home/christian/Documents/scripts/rofi-files-google-drive.sh
+	$HOME/Documents/scripts/rofi-files-google-drive.sh
 	# catfish --start /mnt/Mis\ archivos/Google\ Drive
 	# catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
 
 # Open obsidian
 super + shift + o
-	/home/christian/Documents/Obsidian-1.9.14.AppImage --no-sandbox
-	# /home/christian/Documents/Obsidian-1.5.3.AppImage
+	$HOME/Documents/Obsidian-1.9.14.AppImage --no-sandbox
+	# $HOME/Documents/Obsidian-1.5.3.AppImage
 
 # Open obsidian
 super + shift + m
-	/home/christian/Documents/Mathpix.AppImage
+	$HOME/Documents/Mathpix.AppImage
 
 # Wacom support
 super + shift + x
-	/home/christian/Documents/xsetwacom-new.sh
+	$HOME/Documents/xsetwacom-new.sh
 
 super + shift + alt + x
-	/home/christian/Documents/xsetwacom-new-laptop.sh
+	$HOME/Documents/xsetwacom-new-laptop.sh
 
 
 # start redshift
@@ -263,7 +263,7 @@ super + @b
 
 # Multi shorcuts
 super + u ; {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
-	~/Documents/scripts/type_info.sh {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
 
 # Suspend
 super + @l
@@ -278,20 +278,20 @@ alt + Tab
 	bspc node -f last.local
 	# bspc node -f last
 	# rofi -show window
-    # /home/christian/Documents/scripts/rofi-alt-tab
+    # $HOME/Documents/scripts/rofi-alt-tab
 	# bspc node -f next.local
 # super + Tab
 # 	rofi -show window
 
 super + shift + a
-	/home/christian/Documents/scripts/rofi-files.sh
+	$HOME/Documents/scripts/rofi-files.sh
 
 # super + alt + @c
 # 	xdotool type ç
 	# mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &
 
 super + shift + i
-	~/.config/bspwm/scripts/winhide
+	$HOME/.config/bspwm/scripts/winhide
 
 # super + ctrl + shift + i
 # 	w=$(bspc query -N -n .hidden | while read i; \ 
@@ -306,8 +306,8 @@ super + shift + i
 
 # recent list of pdfs with rofi, all time history
 super + shift + @p
-    ~/Documents/scripts/zathura-recent-files-rofi list
+    $HOME/Documents/scripts/zathura-recent-files-rofi list
 
 # # currently opened pdfs
 # super + @r
-#     /home/christian/Documents/scripts/pdf-switch-rofi
+#     $HOME/Documents/scripts/pdf-switch-rofi
