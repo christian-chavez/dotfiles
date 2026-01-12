@@ -17,7 +17,7 @@ super + @space
 
 # Clipboard greenclip
 super + a
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -no-click-to-exit
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -normal-window 
 
 # google search from rofi
 super + d
@@ -253,8 +253,8 @@ super + shift + r
 	# zathura --mode fullscreen "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Otros/Calendario-Iy-II-PERIODO-2024-Carrera.pdf"
 
 # Launch LibreWolf profile
-super + shift + f
-	librewolf -p MathClub
+# super + shift + f
+# 	librewolf -p MathClub
 
 # Launch browser
 super + @b
@@ -262,7 +262,7 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,e,f,n,s,u,w,M,k,d,j,p}
+super + u ; {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
 	sleep 0.10 && setxkbmap latam && xdotool type --delay=70 {"1005215361", "+18733396633", "25118952", "christian.chavez@usherbrooke.ca", "Kevin Christian Chávez Cadena", "Christian Chávez", "Kevin Chávez", "Université de Sherbrooke", "102-515 Wellington Sud", "christian.chr.chavez@gmail.com", "cristian78cadena123@gmail.com", "$(date "+%Y-%m-%d")", "J1H 5E2","A9346765"} && sleep 0.10 && xmodmap /home/christian/.Xmodmap
 
 # Suspend
@@ -308,6 +308,6 @@ super + shift + i
 super + shift + @p
     ~/Documents/scripts/zathura-recent-files-rofi list
 
-# currently opened pdfs
-super + @r
-    /home/christian/Documents/scripts/pdf-switch-rofi
+# # currently opened pdfs
+# super + @r
+#     /home/christian/Documents/scripts/pdf-switch-rofi

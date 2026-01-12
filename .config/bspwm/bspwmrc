@@ -105,6 +105,7 @@ bspc rule -a "webex" state=floating
 bspc rule -a "Webex" state=floating
 bspc rule -a "Peek" state=floating
 bspc rule -a "Geogebra" state=floating
+bspc rule -a "Rofi" state=floating border=off sticky=on layer=above
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0
