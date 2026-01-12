@@ -140,7 +140,6 @@ treeview.sidebar {
 .thunar treeview.view,
 .thunar iconview {
   padding-left: 5px;   /* try 10px subtler, 16px Finder-like */
-  /* padding-right: 6px;   /* optional, keeps balance */ */
 }
 
 

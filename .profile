@@ -14,6 +14,6 @@ export GEM_HOME="$HOME/.local/share/gem/ruby/3.3.0"
 export PATH="$GEM_HOME/bin:$PATH"
 # 2025-09-08 zathura recent list of pdfs with rofi integration
 export PATH="$HOME/Documents/scripts:$PATH"
-alias morning="mpv /home/christian/Videos/morning-exercise.mp4"
+alias morning="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/morning-exercise.mp4"
 alias meditacion="mpv --no-video --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/meditacion-mañana.mp4"
 

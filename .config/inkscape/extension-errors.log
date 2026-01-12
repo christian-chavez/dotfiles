@@ -13,6 +13,11 @@ Extension "Formula (typst)" failed to load because a dependency was not met. Dep
 	location: path
 	string: typst
 
+Extension "Formula (pdflatex)" failed to load because a dependency was not met. Dependency:
+	type: executable
+	location: path
+	string: pdflatex
+
 Extension "Optimized PNG" failed to load because a dependency was not met. Dependency:
 	type: executable
 	location: path
