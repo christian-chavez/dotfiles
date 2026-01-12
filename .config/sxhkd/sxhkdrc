@@ -158,7 +158,7 @@ shift + Print
 
 # Capture entire screen and save inmediately
 super + Print
-	flameshot screen -p $HOME/Pictures/Screenshots
+	flameshot full --region all -p $HOME/Pictures/Screenshots
 
 # lf file manager
 # super + e
@@ -273,9 +273,9 @@ super + @l
 super + shift + @l
 	dm-tool lock && systemctl suspend
 
-alt + Tab
-	bspc node -s last.local; \
-	bspc node -f last.local
+# alt + Tab
+# 	bspc node -s last.local; \
+# 	bspc node -f last.local
 	# bspc node -f last
 	# rofi -show window
     # $HOME/Documents/scripts/rofi-alt-tab
