@@ -1,3 +1,4 @@
+# set selection-clipboard none
 set selection-clipboard clipboard
 set guioptions s
 
@@ -48,5 +49,6 @@ set recolor-reverse-video true
 
 # abrir parent folder
 map <C-t> exec sh -c 'xdg-open "$(dirname "$FILE")"'
+map q abort
 # map <C-1> set first-page-column 1
 

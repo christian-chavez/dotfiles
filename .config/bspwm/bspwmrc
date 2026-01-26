@@ -31,9 +31,9 @@ set -x
 # on top
 # if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --above eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 # vertical with laptop on the left
-if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --pos 0x832 --output HDMI-A-0 --primary --auto --rotate left --pos 1366x0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+# if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --pos 0x832 --output HDMI-A-0 --primary --auto --rotate left --pos 1366x0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 
-# if [[ $(xrandr -q | grep '^HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
+if [[ $(xrandr -q | grep '^HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
 
 wmname LG3D # this is for java to not missbehave
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -85,7 +85,9 @@ numlockx &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/joli-arch.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/black-arch.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/blue-arch.png &
-feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/fuji.png &
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/peace.png &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
@@ -108,6 +110,9 @@ bspc rule -a "Webex" state=floating
 bspc rule -a "Peek" state=floating
 bspc rule -a "Geogebra" state=floating
 bspc rule -a "Rofi" state=floating border=off sticky=on layer=above
+bspc rule -a "MEGAsync" state=floating center=on 
+bspc rule -a "megasync" state=floating center=on
+bspc rule -a "Inkscape" state=floating
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0

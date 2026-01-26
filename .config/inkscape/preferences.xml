@@ -2,13 +2,14 @@
 <inkscape
    version="1">
   <group
-     id="window">
+     id="window"
+     interface_mode="0">
     <group
        id="menu"
        state="1" />
     <group
        id="commands"
-       state="1" />
+       state="0" />
     <group
        id="snaptoolbox"
        state="1" />
@@ -20,7 +21,7 @@
        state="1" />
     <group
        id="statusbar"
-       state="1" />
+       state="0" />
     <group
        id="panels"
        state="1" />
@@ -118,8 +119,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="112.720656507597"
-         height="127.397821381336" />
+         width="256.938207431103"
+         height="72.0761733167755" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -155,14 +156,14 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="33.4786578801673"
-         ry="33.4786578801673" />
+         rx="2.9121775596187"
+         ry="2.9121775596187" />
       <eventcontext
          id="star"
          magnitude="3"
          style="fill:yellow;"
          usecurrent="1"
-         proportion="0.80901694770272"
+         proportion="0.584981923214621"
          isflatsided="1" />
       <eventcontext
          id="spiral"
@@ -175,13 +176,13 @@
        style="fill:none;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
       <eventcontext
          id="pencil"
-         tolerance="30"
+         tolerance="50"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="1"
          average_all_sketches="1"
          pressure="0"
-         freehand-mode="1"
+         freehand-mode="0"
          simplify="0"
          shape="0" />
       <eventcontext
@@ -190,7 +191,7 @@
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="1"
-         freehand-mode="0"
+         freehand-mode="4"
          shape="0" />
     </group>
     <eventcontext
@@ -324,7 +325,7 @@
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
        use_svg2="1"
-       style="line-height:1.25;font-family:'Triumvirate Cond Light';font-size:37.33333333px;-inkscape-font-specification:'Triumvirate Cond Light, ';text-orientation:auto"
+       style="line-height:1.25;font-family:Iosevka;font-size:17.33333333px;-inkscape-font-specification:Iosevka;text-orientation:auto"
        selcue="1"
        align_mode="0"
        writing_mode="0"
@@ -597,7 +598,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="0" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -647,14 +648,14 @@
          value="layer" />
       <group
          id="defaultdpi"
-         value="400" />
+         value="300" />
     </group>
     <group
        id="save_as"
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/mnt/Mis archivos/Google Drive/Tesis pregrado/bachelor-thesis/images"
+       path="/home/christian/.config/inkscape/templates"
        use_current_dir="1"
        enable_svgexport="0" />
     <group
@@ -793,7 +794,7 @@
        value="4" />
     <group
        id="displayprofile"
-       enable="0"
+       enable="1"
        from_display="0"
        intent="0"
        uri="" />
@@ -1028,7 +1029,8 @@
          id="shown"
          ver1.3.2="1"
          ver1.4="1"
-         ver1.4.2="1" />
+         ver1.4.2="1"
+         ver1.4.3="1" />
     </group>
     <group
        id="rendering" />
@@ -1038,7 +1040,7 @@
        id="ruler" />
     <group
        id="snapping"
-       snap-global-toggle="1"
+       snap-global-toggle="0"
        snap-alignment="1"
        snap-alignment-self="0"
        snap-distribution="1"
@@ -1065,7 +1067,7 @@
      org.inkscape.output.png.inkscape.png_bitdepth="100"
      org.inkscape.output.png.inkscape.png_compression="6"
      org.inkscape.output.png.inkscape.png_antialias="2"
-     org.inkscape.generate.pdf_latex.font_size="30"
+     org.inkscape.generate.pdf_latex.font_size="12"
      org.inkscape.output.pdf.cairorenderer.PDFversion="PDF-1.5"
      org.inkscape.output.pdf.cairorenderer.textToPath="paths"
      org.inkscape.output.pdf.cairorenderer.resolution="100"
@@ -1075,16 +1077,16 @@
      org.inkscape.raster.jpg_output.quality="100"
      org.inkscape.input.gdkpixbuf.png.scale="optimizeQuality"
      org.inkscape.output.png.inkscape.png_interlacing="0"
-     org.inkscape.generate.pdf_latex.preamble="\usepackage{amsmath,mathptmx}\usepackage{amssymb}\usepackage{amsfonts}"
-     org.inkscape.generate.pdf_latex.formule="$\mathbf w$" />
+     org.inkscape.generate.pdf_latex.preamble="\usepackage{amsmath,mathptmx}\usepackage{amssymb}\usepackage{amsfonts}\usepackage{lmodern}\usepackage{xcolor}"
+     org.inkscape.generate.pdf_latex.formule="$\mathbf{p}_0$" />
   <group
      id="desktop"
-     style="fill:#375f99;-inkscape-font-specification:'Triumvirate Cond Light, ';font-family:'Triumvirate Cond Light';font-size:9.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:1.88976378;stroke-linecap:round;stroke-linejoin:round;fill-opacity:0.6150831;stroke:#333333">
+     style="fill:#0000e6;-inkscape-font-specification:Iosevka;font-family:Iosevka;font-size:17.33333333px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:2.26771654;stroke-linejoin:round;stroke-linecap:square">
     <group
-       width="1916"
-       height="1050"
-       x="1"
-       y="27"
+       width="1366"
+       height="619"
+       x="40"
+       y="110"
        maximized="1"
        fullscreen="0"
        id="geometry" />
@@ -1200,7 +1202,8 @@
      flattening="0">
     <group
        id="powerstroke"
-       width="4.99213824991434" />
+       width="4.99213824991434"
+       powerpencil="0" />
     <group
        id="skeletal"
        width="1" />
