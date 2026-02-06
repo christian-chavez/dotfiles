@@ -311,3 +311,8 @@ super + shift + @p
 # # currently opened pdfs
 # super + @r
 #     $HOME/Documents/scripts/pdf-switch-rofi
+
+
+super + y
+    $HOME/Documents/scripts/toggle-polytabs.sh
+

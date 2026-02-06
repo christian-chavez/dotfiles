@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/home/christian/Documents/JuanCarlos/figuras-a-produire"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/autre/burse thomas hiver 2026"/>
   <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/lectures"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,8 +14,8 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="102"/>
-  <property name="mainWndWidth" value="1600"/>
-  <property name="mainWndHeight" value="874"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -248,7 +248,7 @@
     <attribute name="count" type="int" value="9"/>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="text"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -296,8 +296,8 @@
       <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="0634f5"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="color" type="hex" value="ff241f31"/>
+      <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="THIN"/>
@@ -333,7 +333,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="0634f5"/>
+      <attribute name="color" type="hex" value="241f31"/>
       <attribute name="drawingType" type="string" value="rectangle"/>
     </data>
     <data name="verticalSpace">
