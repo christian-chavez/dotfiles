@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-LOG_FILE="reading_log.md"
+LOG_FILE="/home/christian/Documents/obsidian-vaults/Test/Zettelkasten/messure of reading wander.md"
 
 # 1. Ask when to start
 echo "Ready to track your reading session?"
