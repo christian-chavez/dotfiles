@@ -17,3 +17,5 @@ export PATH="$HOME/Documents/scripts:$PATH"
 alias morning="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/morning-exercise.mp4"
 alias meditacion="mpv --no-video --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/meditacion-mañana.mp4"
 alias mwander="/home/christian/Documents/scripts/wander.sh"
+alias qsc="Documents/scripts/quick-capture.sh"
+alias zim='/home/christian/Documents/scripts/zettelkasten-vim.sh'
