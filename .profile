@@ -19,3 +19,4 @@ alias meditacion="mpv --no-video --loop-playlist=no --loop-file=no --start=0 --n
 alias mwander="/home/christian/Documents/scripts/wander.sh"
 alias qsc="Documents/scripts/quick-capture.sh"
 alias zim='/home/christian/Documents/scripts/zettelkasten-vim.sh'
+alias xp="xclip -selection c"

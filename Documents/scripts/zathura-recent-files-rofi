@@ -22,8 +22,9 @@ update_history() {
     {
         flock -x 9
 
-        # Quitar duplicados del mismo archivo
-        grep -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$TMP"
+        # Quitar duplicados del mismo archivo (usando ripgrep)
+        # -N / --no-line-number y --no-heading aseguran que el output sea limpio
+        rg -N --no-heading -Fxv "$REAL" "$BOOKMARKS" 2>/dev/null > "$TMP"
         echo "$REAL" >> "$TMP"
 
         # Limitar historial
@@ -42,7 +43,8 @@ if [ "$1" = "list" ]; then
     )
 
     if [ -n "$CHOICE" ]; then
-        FILE=$(grep "/$CHOICE$" "$BOOKMARKS" 2>/dev/null | tail -n 1)
+        # Buscar la ruta completa usando ripgrep
+        FILE=$(rg -N --no-heading "/$CHOICE$" "$BOOKMARKS" 2>/dev/null | tail -n 1)
         [ -n "$FILE" ] && zathura-recent-files-rofi "$FILE"
         # o: [ -n "$FILE" ] && zathura "$FILE"
     fi

@@ -4,12 +4,15 @@ set -euo pipefail
 
 VAULT_DIR='/home/christian/Documents/obsidian-vaults/Test/Zettelkasten'
 
-if [ $# -lt 1 ]; then
-  echo 'Usage: zvim <note name>'
-  exit 1
+if [ $# -eq 0 ]; then
+  read -r -p 'Title: ' note_name
+else
+  note_name="$*"
 fi
 
-note_name="$*"
+while [ -z "${note_name// }" ]; do
+  read -r -p 'Title cannot be empty. Title: ' note_name
+done
 
 case "$note_name" in
   *.md) filename="$note_name" ;;
@@ -26,7 +29,8 @@ if [ ! -e "$filepath" ]; then
   cat > "$filepath" <<EOF
 ---
 date: $timestamp
-tags:
+tags: 
+  - 
 ---
 
 

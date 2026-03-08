@@ -74,6 +74,14 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["autolist.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rautolist\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/christian/.local/share/nvim/site/pack/packer/opt/autolist.nvim",
+    url = "https://github.com/gaoDean/autolist.nvim"
+  },
   catppuccin = {
     loaded = true,
     path = "/home/christian/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -118,6 +126,20 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Setup for: autolist.nvim
+time([[Setup for autolist.nvim]], true)
+try_loadstring("\27LJ\2\n»\2\0\1\b\0\16\0$5\1\1\0009\2\0\0=\2\2\0016\2\3\0009\2\4\0029\2\5\2'\4\6\0'\5\a\0'\6\b\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\t\0'\5\n\0'\6\v\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\t\0'\5\f\0'\6\r\0\18\a\1\0B\2\5\0016\2\3\0009\2\4\0029\2\5\2'\4\t\0'\5\14\0'\6\15\0\18\a\1\0B\2\5\1K\0\1\0#dd<cmd>AutolistRecalculate<cr>\add&O<cmd>AutolistNewBulletBefore<cr>\6O o<cmd>AutolistNewBullet<cr>\6o\6n#<CR><cmd>AutolistNewBullet<cr>\t<CR>\6i\bset\vkeymap\bvim\vbuffer\1\0\1\vbuffer\0\bbufü\1\1\0\5\0\t\0\v6\0\0\0009\0\1\0009\0\2\0'\2\3\0005\3\5\0005\4\4\0=\4\6\0033\4\a\0=\4\b\3B\0\3\1K\0\1\0\rcallback\0\fpattern\1\0\2\fpattern\0\rcallback\0\1\5\0\0\rmarkdown\ttext\btex\rplaintex\rFileType\24nvim_create_autocmd\bapi\bvim\0", "setup", "autolist.nvim")
+time([[Setup for autolist.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType text ++once lua require("packer.load")({'autolist.nvim'}, { ft = "text" }, _G.packer_plugins)]]
+vim.cmd [[au FileType plaintex ++once lua require("packer.load")({'autolist.nvim'}, { ft = "plaintex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType tex ++once lua require("packer.load")({'autolist.nvim'}, { ft = "tex" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'autolist.nvim'}, { ft = "markdown" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

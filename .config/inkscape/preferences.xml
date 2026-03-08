@@ -750,7 +750,7 @@
   <group
      id="options"
      rotationlock="1"
-     displaymode="0"
+     displaymode="2"
      onungroup="0"
      onimport="0">
     <group
@@ -1087,7 +1087,7 @@
        height="768"
        x="-669"
        y="-55"
-       maximized="0"
+       maximized="1"
        fullscreen="0"
        id="geometry" />
     <group

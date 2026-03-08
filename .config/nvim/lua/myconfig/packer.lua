@@ -61,5 +61,29 @@ return require('packer').startup(function(use)
   }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'ThePrimeagen/vim-be-good'
+
+-- Autolist plugin for automatic list numbering
+  use {
+    "gaoDean/autolist.nvim",
+    ft = { "markdown", "text", "tex", "plaintex" },
+    setup = function()
+      -- 'setup' runs on startup, preparing the keymaps safely
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "markdown", "text", "tex", "plaintex" },
+        callback = function(args)
+          local opts = { buffer = args.buf } -- Locks the keymap to this specific buffer
+
+          vim.keymap.set("i", "<CR>", "<CR><cmd>AutolistNewBullet<cr>", opts)
+          vim.keymap.set("n", "o", "o<cmd>AutolistNewBullet<cr>", opts)
+          vim.keymap.set("n", "O", "O<cmd>AutolistNewBulletBefore<cr>", opts)
+          vim.keymap.set("n", "dd", "dd<cmd>AutolistRecalculate<cr>", opts)
+        end,
+      })
+    end,
+    config = function()
+      -- 'config' only runs when a markdown/tex file is actually opened
+      require("autolist").setup()
+    end
+  }
 end)
 

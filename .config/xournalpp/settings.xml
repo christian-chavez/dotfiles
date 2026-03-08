@@ -6,20 +6,20 @@
   <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/autre/burse thomas hiver 2026"/>
-  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT729-algebre-commutative-et-geometrique-algebrique/lectures"/>
+  <property name="lastSavePath" value="/home/christian/Downloads"/>
+  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT745-analyse-fonctionnelle/Devoirs"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
-  <property name="displayDpi" value="102"/>
+  <property name="displayDpi" value="-1"/>
   <property name="mainWndWidth" value="1366"/>
   <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
-  <property name="sidebarWidth" value="141"/>
+  <property name="sidebarWidth" value="152"/>
   <property name="sidebarNumberingStyle" value="3"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
@@ -35,16 +35,16 @@
   <property name="layoutBottomToTop" value="false"/>
   <property name="numPairsOffset" value="1"/>
   <!--The icon theme, allowed values are "disabled", "onDrawOfLastPage", and "onScrollOfLastPage"-->
-  <property name="emptyLastPageAppend" value="disabled"/>
+  <property name="emptyLastPageAppend" value="onScrollOfLastPage"/>
   <property name="presentationMode" value="false"/>
   <!--Which GUI elements are shown in default view mode, separated by a colon (,)-->
   <property name="defaultViewModeAttributes" value="showMenubar,showToolbar,showSidebar"/>
   <!--Which GUI elements are shown in fullscreen view mode, separated by a colon (,)-->
-  <property name="fullscreenViewModeAttributes" value="goFullscren,showMenubar,showToolbar,showSidebar"/>
+  <property name="fullscreenViewModeAttributes" value="goFullscren,showToolbar,showSidebar"/>
   <!--Which GUI elements are shown in presentation view mode, separated by a colon (,)-->
   <property name="presentationViewModeAttributes" value="goFullscren"/>
   <!--The cursor icon used with a stylus, allowed values are "none", "dot", "big", "arrow"-->
-  <property name="stylusCursorType" value="dot"/>
+  <property name="stylusCursorType" value="big"/>
   <!--The eraser cursor visibility used with a stylus, allowed values are "never", "always", "hover", "touch"-->
   <property name="eraserVisibility" value="always"/>
   <!--The icon theme, allowed values are "iconsColor", "iconsLucide"-->
@@ -52,27 +52,27 @@
   <!--Dark/light mode, allowed values are "useSystem", "forceLight", "forceDark"-->
   <property name="themeVariant" value="forceDark"/>
   <property name="highlightPosition" value="true"/>
-  <property name="cursorHighlightColor" value="2499805184"/>
-  <property name="cursorHighlightBorderColor" value="2348810239"/>
-  <property name="cursorHighlightRadius" value="2"/>
-  <property name="cursorHighlightBorderWidth" value="2"/>
+  <property name="cursorHighlightColor" value="889192448"/>
+  <property name="cursorHighlightBorderColor" value="1308622848"/>
+  <property name="cursorHighlightRadius" value="3"/>
+  <property name="cursorHighlightBorderWidth" value="3"/>
   <property name="useStockIcons" value="true"/>
   <property name="disableScrollbarFadeout" value="true"/>
-  <property name="disableAudio" value="false"/>
+  <property name="disableAudio" value="true"/>
   <!--Hides scroolbars in the main window, allowed values: "none", "horizontal", "vertical", "both"-->
   <property name="scrollbarHideType" value="both"/>
   <property name="autoloadMostRecent" value="false"/>
-  <property name="autoloadPdfXoj" value="true"/>
+  <property name="autoloadPdfXoj" value="false"/>
   <property name="defaultSaveName" value="-%F-"/>
   <property name="defaultPdfExportName" value="%{name}_annotated"/>
   <property name="autosaveEnabled" value="true"/>
   <property name="autosaveTimeout" value="1"/>
-  <property name="addHorizontalSpace" value="false"/>
-  <property name="addHorizontalSpaceAmountRight" value="150"/>
-  <property name="addHorizontalSpaceAmountLeft" value="150"/>
+  <property name="addHorizontalSpace" value="true"/>
+  <property name="addHorizontalSpaceAmountRight" value="300"/>
+  <property name="addHorizontalSpaceAmountLeft" value="300"/>
   <property name="addVerticalSpace" value="true"/>
   <property name="addVerticalSpaceAmountAbove" value="150"/>
-  <property name="addVerticalSpaceAmountBelow" value="150"/>
+  <property name="addVerticalSpaceAmountBelow" value="600"/>
   <property name="unlimitedScrolling" value="false"/>
   <property name="drawDirModsEnabled" value="false"/>
   <property name="drawDirModsRadius" value="50"/>
@@ -81,7 +81,7 @@
   <property name="snapGrid" value="false"/>
   <property name="snapGridTolerance" value="0.5"/>
   <property name="snapGridSize" value="14.17"/>
-  <property name="strokeRecognizerMinSize" value="40"/>
+  <property name="strokeRecognizerMinSize" value="20"/>
   <property name="touchDrawing" value="false"/>
   <property name="gtkTouchInertialScrolling" value="true"/>
   <property name="pressureGuessing" value="false"/>
@@ -89,8 +89,8 @@
   <property name="recolor.sidebar" value="false"/>
   <property name="recolor.dark" value="4281349190"/>
   <property name="recolor.light" value="4291219701"/>
-  <property name="selectionBorderColor" value="4280722025"/>
-  <property name="backgroundColor" value="4281218112"/>
+  <property name="selectionBorderColor" value="4281697508"/>
+  <property name="backgroundColor" value="4279769112"/>
   <property name="selectionMarkerColor" value="4285702095"/>
   <property name="activeSelectionColor" value="4286381056"/>
   <property name="touchZoomStartThreshold" value="0"/>
@@ -106,16 +106,16 @@
   <property name="audioFolder" value=""/>
   <property name="audioInputDevice" value="-1"/>
   <property name="audioOutputDevice" value="-1"/>
-  <property name="audioSampleRate" value="44100"/>
+  <property name="audioSampleRate" value="16000"/>
   <property name="audioGain" value="1"/>
-  <property name="defaultSeekTime" value="5"/>
+  <property name="defaultSeekTime" value="1"/>
   <property name="pluginEnabled" value="/usr/share/xournalpp/plugins/HighlightPosition"/>
   <property name="pluginDisabled" value=""/>
   <property name="strokeFilterIgnoreTime" value="150"/>
   <property name="strokeFilterIgnoreLength" value="1"/>
   <property name="strokeFilterSuccessiveTime" value="500"/>
   <property name="strokeFilterEnabled" value="true"/>
-  <property name="doActionOnStrokeFiltered" value="true"/>
+  <property name="doActionOnStrokeFiltered" value="false"/>
   <property name="trySelectOnStrokeFiltered" value="true"/>
   <property name="snapRecognizedShapesEnabled" value="false"/>
   <property name="restoreLineWidthEnabled" value="true"/>
@@ -123,24 +123,24 @@
   <property name="inputSystemTPCButton" value="false"/>
   <property name="inputSystemDrawOutsideWindow" value="true"/>
   <property name="preferredLocale" value=""/>
-  <property name="useSpacesForTab" value="false"/>
-  <property name="numberOfSpacesForTab" value="4"/>
+  <property name="useSpacesForTab" value="true"/>
+  <property name="numberOfSpacesForTab" value="2"/>
   <property name="laserPointerFadeOutTime" value="500"/>
-  <property name="stabilizerAveragingMethod" value="1"/>
-  <property name="stabilizerPreprocessor" value="1"/>
-  <property name="stabilizerBuffersize" value="8"/>
+  <property name="stabilizerAveragingMethod" value="0"/>
+  <property name="stabilizerPreprocessor" value="0"/>
+  <property name="stabilizerBuffersize" value="20"/>
   <property name="stabilizerSigma" value="0.5"/>
-  <property name="stabilizerDeadzoneRadius" value="0.3"/>
-  <property name="stabilizerDrag" value="0.75"/>
-  <property name="stabilizerMass" value="7.2"/>
+  <property name="stabilizerDeadzoneRadius" value="1.3"/>
+  <property name="stabilizerDrag" value="0.4"/>
+  <property name="stabilizerMass" value="5"/>
   <property name="stabilizerCuspDetection" value="true"/>
   <property name="stabilizerFinalizeStroke" value="true"/>
-  <property name="colorPalette" value="/home/christian/.config/xournalpp/palettes/palette.gpl"/>
+  <property name="colorPalette" value="/usr/share/xournalpp/palettes/xournal.gpl"/>
   <property name="latexSettings.autoCheckDependencies" value="true"/>
   <property name="latexSettings.defaultText" value="x^2"/>
-  <property name="latexSettings.globalTemplatePath" value="/home/christian/.config/xournalpp/Chr-template.tex"/>
+  <property name="latexSettings.globalTemplatePath" value=""/>
   <property name="latexSettings.genCmd" value="pdflatex -halt-on-error -interaction=nonstopmode '{}'"/>
-  <property name="latexSettings.sourceViewThemeId" value="classic"/>
+  <property name="latexSettings.sourceViewThemeId" value=""/>
   <property name="latexSettings.editorFont" value="Monospace 12"/>
   <property name="latexSettings.useCustomEditorFont" value="false"/>
   <property name="latexSettings.editorWordWrap" value="true"/>
@@ -151,37 +151,34 @@
   <property name="latexSettings.externalEditorAutoConfirm" value="false"/>
   <property name="latexSettings.externalEditorCmd" value=""/>
   <property name="latexSettings.temporaryFileExt" value="tex"/>
-  <property name="font" font="MLMRoman10" size="12"/>
+  <property name="font" font="Sans" size="12"/>
   <data name="buttonConfig">
     <data name="default">
-      <attribute name="color" type="hex" value="ff00a1eb"/>
+      <attribute name="color" type="hex" value="ff000000"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="thin"/>
       <attribute name="strokeType" type="string" value="none"/>
       <attribute name="tool" type="string" value="pen"/>
     </data>
     <data name="eraser">
-      <attribute name="color" type="hex" value="ff000000"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="eraserMode" type="string" value="none"/>
       <attribute name="size" type="string" value="none"/>
-      <attribute name="tool" type="string" value="highlighter"/>
+      <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="left">
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="middle">
-      <attribute name="tool" type="string" value="verticalSpace"/>
-    </data>
-    <data name="right">
-      <attribute name="tool" type="string" value="selectRect"/>
-    </data>
-    <data name="stylus">
       <attribute name="tool" type="string" value="hand"/>
     </data>
+    <data name="right">
+      <attribute name="tool" type="string" value="none"/>
+    </data>
+    <data name="stylus">
+      <attribute name="tool" type="string" value="none"/>
+    </data>
     <data name="stylus2">
-      <attribute name="eraserMode" type="string" value="deleteStroke"/>
-      <attribute name="size" type="string" value="none"/>
-      <attribute name="tool" type="string" value="eraser"/>
+      <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value=""/>
@@ -189,162 +186,5 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
   </data>
-  <data name="deviceClasses">
-    <data name="">
-      <attribute name="deviceClass" type="int" value="0"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Compx 2.4G Receiver Consumer Control">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Compx 2.4G Receiver Mouse">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="PixArt HP USB Optical Mouse">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="SynPS/2 Synaptics TouchPad">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Telink Wireless Receiver Consumer Control">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Telink Wireless Receiver Mouse">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Virtual core XTEST pointer">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="0"/>
-    </data>
-    <data name="Wacom Intuos BT S Pad pad">
-      <attribute name="deviceClass" type="int" value="1"/>
-      <attribute name="deviceSource" type="int" value="8"/>
-    </data>
-    <data name="Wacom Intuos BT S Pen Pen (0x882f118)">
-      <attribute name="deviceClass" type="int" value="2"/>
-      <attribute name="deviceSource" type="int" value="1"/>
-    </data>
-    <data name="Wacom Intuos BT S Pen stylus">
-      <attribute name="deviceClass" type="int" value="2"/>
-      <attribute name="deviceSource" type="int" value="1"/>
-    </data>
-  </data>
-  <data name="lastUsedPageBgColor">
-    <attribute name="color00" type="hex" value="ff282a36"/>
-    <attribute name="color01" type="hex" value="ff2e3440"/>
-    <attribute name="color02" type="hex" value="ff333333"/>
-    <attribute name="color03" type="hex" value="ffbf3f3f"/>
-    <attribute name="color04" type="hex" value="ffe6d8e4"/>
-    <attribute name="color05" type="hex" value="ffdadcda"/>
-    <attribute name="color06" type="hex" value="fffafaf9"/>
-    <attribute name="color07" type="hex" value="ff000000"/>
-    <attribute name="color08" type="hex" value="ffffffff"/>
-    <attribute name="count" type="int" value="9"/>
-  </data>
-  <data name="tools">
-    <attribute name="current" type="string" value="text"/>
-    <data name="drawArrow">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="drawCoordinateSystem">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="drawDoubleArrow">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="drawEllipse">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="drawRect">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="drawSpline">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="eraser">
-      <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
-      <attribute name="type" type="string" value="default"/>
-    </data>
-    <data name="hand">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="highlighter">
-      <attribute name="color" type="hex" value="eeb402"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
-      <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
-    </data>
-    <data name="image">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="laserPointerHighlighter">
-      <attribute name="color" type="hex" value="ffff0000"/>
-      <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
-    </data>
-    <data name="laserPointerPen">
-      <attribute name="color" type="hex" value="ffff0000"/>
-      <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="size" type="string" value="THIN"/>
-    </data>
-    <data name="pen">
-      <attribute name="color" type="hex" value="ff241f31"/>
-      <attribute name="drawingType" type="string" value="default"/>
-      <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
-      <attribute name="style" type="string" value="plain"/>
-    </data>
-    <data name="playObject">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectMultiLayerRect">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectMultiLayerRegion">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectObject">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectPdfTextLinear">
-      <attribute name="color" type="hex" value="ff000000"/>
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectPdfTextRect">
-      <attribute name="color" type="hex" value="ff000000"/>
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectRect">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="selectRegion">
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
-    </data>
-    <data name="showFloatingToolbox">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-    <data name="text">
-      <attribute name="color" type="hex" value="241f31"/>
-      <attribute name="drawingType" type="string" value="rectangle"/>
-    </data>
-    <data name="verticalSpace">
-      <attribute name="drawingType" type="string" value="default"/>
-    </data>
-  </data>
-  <data name="touch">
-    <attribute name="cmdDisable" type="string" value=""/>
-    <attribute name="cmdEnable" type="string" value=""/>
-    <attribute name="disableTouch" type="boolean" value="false"/>
-    <attribute name="method" type="string" value="auto"/>
-    <attribute name="timeout" type="int" value="1000"/>
-  </data>
+  <data name="deviceClasses"/>
 </settings>
