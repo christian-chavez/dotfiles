@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/home/christian/Downloads"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/these/notes"/>
   <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT745-analyse-fonctionnelle/Devoirs"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,8 +14,8 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="1366"/>
-  <property name="mainWndHeight" value="742"/>
+  <property name="mainWndWidth" value="1600"/>
+  <property name="mainWndHeight" value="874"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -135,12 +135,12 @@
   <property name="stabilizerMass" value="5"/>
   <property name="stabilizerCuspDetection" value="true"/>
   <property name="stabilizerFinalizeStroke" value="true"/>
-  <property name="colorPalette" value="/usr/share/xournalpp/palettes/xournal.gpl"/>
+  <property name="colorPalette" value="/home/christian/.config/xournalpp/palettes/palette.gpl"/>
   <property name="latexSettings.autoCheckDependencies" value="true"/>
   <property name="latexSettings.defaultText" value="x^2"/>
-  <property name="latexSettings.globalTemplatePath" value=""/>
+  <property name="latexSettings.globalTemplatePath" value="/usr/share/xournalpp/resources/default_template.tex"/>
   <property name="latexSettings.genCmd" value="pdflatex -halt-on-error -interaction=nonstopmode '{}'"/>
-  <property name="latexSettings.sourceViewThemeId" value=""/>
+  <property name="latexSettings.sourceViewThemeId" value="classic"/>
   <property name="latexSettings.editorFont" value="Monospace 12"/>
   <property name="latexSettings.useCustomEditorFont" value="false"/>
   <property name="latexSettings.editorWordWrap" value="true"/>
@@ -151,7 +151,7 @@
   <property name="latexSettings.externalEditorAutoConfirm" value="false"/>
   <property name="latexSettings.externalEditorCmd" value=""/>
   <property name="latexSettings.temporaryFileExt" value="tex"/>
-  <property name="font" font="Sans" size="12"/>
+  <property name="font" font="MLMRoman12" size="12"/>
   <data name="buttonConfig">
     <data name="default">
       <attribute name="color" type="hex" value="ff000000"/>
@@ -169,10 +169,10 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
     <data name="middle">
-      <attribute name="tool" type="string" value="hand"/>
+      <attribute name="tool" type="string" value="verticalSpace"/>
     </data>
     <data name="right">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="tool" type="string" value="selectRect"/>
     </data>
     <data name="stylus">
       <attribute name="tool" type="string" value="none"/>
@@ -186,5 +186,114 @@
       <attribute name="tool" type="string" value="none"/>
     </data>
   </data>
-  <data name="deviceClasses"/>
+  <data name="deviceClasses">
+    <data name="">
+      <attribute name="deviceClass" type="int" value="0"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
+    <data name="Telink Wireless Receiver Mouse">
+      <attribute name="deviceClass" type="int" value="1"/>
+      <attribute name="deviceSource" type="int" value="0"/>
+    </data>
+  </data>
+  <data name="tools">
+    <attribute name="current" type="string" value="text"/>
+    <data name="drawArrow">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="drawCoordinateSystem">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="drawDoubleArrow">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="drawEllipse">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="drawRect">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="drawSpline">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="eraser">
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="type" type="string" value="default"/>
+    </data>
+    <data name="hand">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="highlighter">
+      <attribute name="color" type="hex" value="ffffe200"/>
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="fill" type="int" value="0"/>
+      <attribute name="fillAlpha" type="int" value="128"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
+    </data>
+    <data name="image">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="laserPointerHighlighter">
+      <attribute name="color" type="hex" value="ffff0000"/>
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
+    </data>
+    <data name="laserPointerPen">
+      <attribute name="color" type="hex" value="ffff0000"/>
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
+    </data>
+    <data name="pen">
+      <attribute name="color" type="hex" value="ff3333cc"/>
+      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="fill" type="int" value="0"/>
+      <attribute name="fillAlpha" type="int" value="128"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="style" type="string" value="plain"/>
+    </data>
+    <data name="playObject">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectMultiLayerRect">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectMultiLayerRegion">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectObject">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectPdfTextLinear">
+      <attribute name="color" type="hex" value="ff000000"/>
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectPdfTextRect">
+      <attribute name="color" type="hex" value="ff000000"/>
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectRect">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="selectRegion">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="showFloatingToolbox">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="text">
+      <attribute name="color" type="hex" value="ff0634f5"/>
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+    <data name="verticalSpace">
+      <attribute name="drawingType" type="string" value="default"/>
+    </data>
+  </data>
+  <data name="touch">
+    <attribute name="cmdDisable" type="string" value=""/>
+    <attribute name="cmdEnable" type="string" value=""/>
+    <attribute name="disableTouch" type="boolean" value="false"/>
+    <attribute name="method" type="string" value="auto"/>
+    <attribute name="timeout" type="int" value="1000"/>
+  </data>
 </settings>
