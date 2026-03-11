@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/these/notes"/>
+  <property name="lastSavePath" value="/home/christian/.config/xournalpp/autosave"/>
   <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/MAT745-analyse-fonctionnelle/Devoirs"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,8 +14,8 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="1600"/>
-  <property name="mainWndHeight" value="874"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -126,13 +126,13 @@
   <property name="useSpacesForTab" value="true"/>
   <property name="numberOfSpacesForTab" value="2"/>
   <property name="laserPointerFadeOutTime" value="500"/>
-  <property name="stabilizerAveragingMethod" value="0"/>
-  <property name="stabilizerPreprocessor" value="0"/>
-  <property name="stabilizerBuffersize" value="20"/>
+  <property name="stabilizerAveragingMethod" value="1"/>
+  <property name="stabilizerPreprocessor" value="1"/>
+  <property name="stabilizerBuffersize" value="8"/>
   <property name="stabilizerSigma" value="0.5"/>
-  <property name="stabilizerDeadzoneRadius" value="1.3"/>
-  <property name="stabilizerDrag" value="0.4"/>
-  <property name="stabilizerMass" value="5"/>
+  <property name="stabilizerDeadzoneRadius" value="0.3"/>
+  <property name="stabilizerDrag" value="0.75"/>
+  <property name="stabilizerMass" value="7.2"/>
   <property name="stabilizerCuspDetection" value="true"/>
   <property name="stabilizerFinalizeStroke" value="true"/>
   <property name="colorPalette" value="/home/christian/.config/xournalpp/palettes/palette.gpl"/>
@@ -175,10 +175,12 @@
       <attribute name="tool" type="string" value="selectRect"/>
     </data>
     <data name="stylus">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="tool" type="string" value="hand"/>
     </data>
     <data name="stylus2">
-      <attribute name="tool" type="string" value="none"/>
+      <attribute name="eraserMode" type="string" value="none"/>
+      <attribute name="size" type="string" value="none"/>
+      <attribute name="tool" type="string" value="eraser"/>
     </data>
     <data name="touch">
       <attribute name="device" type="string" value=""/>
@@ -195,9 +197,13 @@
       <attribute name="deviceClass" type="int" value="1"/>
       <attribute name="deviceSource" type="int" value="0"/>
     </data>
+    <data name="Wacom Intuos BT S Pen stylus">
+      <attribute name="deviceClass" type="int" value="2"/>
+      <attribute name="deviceSource" type="int" value="1"/>
+    </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="text"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -219,7 +225,7 @@
     <data name="eraser">
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="size" type="string" value="MEDIUM"/>
-      <attribute name="type" type="string" value="default"/>
+      <attribute name="type" type="string" value="deleteStroke"/>
     </data>
     <data name="hand">
       <attribute name="drawingType" type="string" value="default"/>
@@ -245,11 +251,11 @@
       <attribute name="size" type="string" value="MEDIUM"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff3333cc"/>
+      <attribute name="color" type="hex" value="ff0634f5"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="MEDIUM"/>
+      <attribute name="size" type="string" value="THIN"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject">
