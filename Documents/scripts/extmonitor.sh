@@ -15,7 +15,8 @@ if xrandr -q | grep -q '^HDMI-A-0 connected'; then
 
     bspc wm -O HDMI-A-0 eDP
     bspc monitor eDP -d 6 7 8 9 10
-    bspc monitor HDMI-A-0 -d 1 2 3 4 5
+    bspc monitor HDMI-A-0 -d 1 2 3 4 5 
+    # bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10
 else
     xrandr --output HDMI-A-0 --off 2>/dev/null
     bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10

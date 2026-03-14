@@ -7,7 +7,8 @@ do
         xsetwacom set $i Button 1 key +CTRL z
         xsetwacom set $i Button 2 key +CTRL v
         xsetwacom set $i Button 3 key 0xFF61
-        xsetwacom set $i Button 8 key +Alt +Tab -Tab -Alt
+        xsetwacom set $i Button 8 key +CTRL s
+        # xsetwacom set $i Button 8 key +Alt +Tab -Tab -Alt
 done
 
 for i in "${idsstylus[@]}"
