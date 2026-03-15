@@ -21,3 +21,4 @@ alias qsc="Documents/scripts/quick-capture.sh"
 alias zim='/home/christian/Documents/scripts/zettelkasten-vim.sh'
 alias xp="xclip -selection c"
 alias clk="tty-clock -sc"
+alias calentamiento="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/calentamiento.mp4"

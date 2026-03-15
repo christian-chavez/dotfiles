@@ -92,3 +92,12 @@ source ~/.bash-autopairs/autopairs.sh
 
 # 2026-01-02
 alias rm='safe-rm'
+
+# 2026-03-14
+# function to download from youtube
+ytdl() {
+    yt-dlp -f "bestvideo[height<=1080][vcodec^=av01]+bestaudio/bestvideo[height<=1080][vcodec^=vp9]+bestaudio/bestvideo[height<=1080]+bestaudio/best" \
+           --merge-output-format mp4 \
+           -N 4 \
+           "$1"
+}
