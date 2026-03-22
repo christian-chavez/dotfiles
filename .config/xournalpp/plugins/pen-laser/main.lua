@@ -56,11 +56,17 @@ function useLaser()
 end
 
 function useRectangle()
-    app.uiAction({ action = 'ACTION_TOOL_DRAW_RECT' })
+    app.uiAction({ action = 'ACTION_TOOL_PEN' })
+    app.uiAction({ action = 'ACTION_TOOL_DRAW_ARROW', enabled = false })
+    app.uiAction({ action = 'ACTION_TOOL_DRAW_RECT', enabled = true })
+    app.uiAction({ action = 'ACTION_SHAPE_RECOGNIZER', enabled = true })
 end
 
 function useArrow()
-    app.uiAction({ action = 'ACTION_TOOL_DRAW_ARROW' })
+    app.uiAction({ action = 'ACTION_TOOL_PEN' })
+    app.uiAction({ action = 'ACTION_TOOL_DRAW_RECT', enabled = false })
+    app.uiAction({ action = 'ACTION_TOOL_DRAW_ARROW', enabled = true })
+    app.uiAction({ action = 'ACTION_SHAPE_RECOGNIZER', enabled = true })
 end
 
 function useHighlighter()

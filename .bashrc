@@ -101,3 +101,33 @@ ytdl() {
            -N 4 \
            "$1"
 }
+
+#2026-03-16
+
+zks() {
+    local vault="/home/christian/Documents/obsidian-vaults/Test/Zettelkasten"
+    
+    local result=$(
+        cd "$vault" || return
+        
+        (
+            # 1. Inject filenames (Strictly .md, sorted by newest first)
+            rg --files --glob "*.md" --sortr modified | awk -F/ '{print $0":1:\033[36m[FILE]\033[0m " $NF}'
+            
+            # 2. Add contents (Strictly .md, sorted by newest first)
+            rg --glob "*.md" --sortr modified --line-number --no-heading --color=always ""
+        ) | fzf --ansi \
+            --delimiter : \
+            --nth 3.. \
+            --no-sort \
+            --preview "bat --color=always --style=numbers --highlight-line {2} {1} 2>/dev/null || cat {1}" \
+            --preview-window "right:60%:+{2}-/3"
+    )
+    
+    if [ -n "$result" ]; then
+        local file=$(echo "$result" | cut -d: -f1)
+        local line=$(echo "$result" | cut -d: -f2)
+        
+        nvim "+$line" "$vault/$file"
+    fi
+}

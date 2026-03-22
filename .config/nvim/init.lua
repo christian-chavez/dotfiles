@@ -31,7 +31,7 @@ vim.opt.linebreak = true
 
 require('lualine').setup {
 		options = {
-				theme = "catppuccin"
+				theme = "auto"
 		}
 }
 
