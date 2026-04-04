@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.16"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/cours/MAT745-analyse-fonctionnelle/Devoirs"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/cours/reading-group-rt"/>
   <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/cours/reading-group-rt"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -15,7 +15,7 @@
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
   <property name="mainWndWidth" value="1366"/>
-  <property name="mainWndHeight" value="768"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
@@ -23,7 +23,7 @@
   <property name="sidebarNumberingStyle" value="3"/>
   <property name="sidebarOnRight" value="false"/>
   <property name="scrollbarOnLeft" value="false"/>
-  <property name="menubarVisible" value="false"/>
+  <property name="menubarVisible" value="true"/>
   <property name="filepathShownInTitlebar" value="false"/>
   <property name="pageNumberShownInTitlebar" value="false"/>
   <property name="numColumns" value="1"/>
@@ -40,7 +40,7 @@
   <!--Which GUI elements are shown in default view mode, separated by a colon (,)-->
   <property name="defaultViewModeAttributes" value="showMenubar,showToolbar,showSidebar"/>
   <!--Which GUI elements are shown in fullscreen view mode, separated by a colon (,)-->
-  <property name="fullscreenViewModeAttributes" value="goFullscren,showToolbar,showSidebar"/>
+  <property name="fullscreenViewModeAttributes" value="goFullscren,showMenubar,showToolbar,showSidebar"/>
   <!--Which GUI elements are shown in presentation view mode, separated by a colon (,)-->
   <property name="presentationViewModeAttributes" value="goFullscren"/>
   <!--The cursor icon used with a stylus, allowed values are "none", "dot", "big", "arrow"-->
@@ -68,11 +68,11 @@
   <property name="autosaveEnabled" value="true"/>
   <property name="autosaveTimeout" value="1"/>
   <property name="addHorizontalSpace" value="true"/>
-  <property name="addHorizontalSpaceAmountRight" value="300"/>
-  <property name="addHorizontalSpaceAmountLeft" value="300"/>
+  <property name="addHorizontalSpaceAmountRight" value="600"/>
+  <property name="addHorizontalSpaceAmountLeft" value="600"/>
   <property name="addVerticalSpace" value="true"/>
   <property name="addVerticalSpaceAmountAbove" value="150"/>
-  <property name="addVerticalSpaceAmountBelow" value="600"/>
+  <property name="addVerticalSpaceAmountBelow" value="500"/>
   <property name="unlimitedScrolling" value="false"/>
   <property name="drawDirModsEnabled" value="false"/>
   <property name="drawDirModsRadius" value="50"/>
@@ -128,7 +128,7 @@
   <property name="laserPointerFadeOutTime" value="1500"/>
   <property name="stabilizerAveragingMethod" value="1"/>
   <property name="stabilizerPreprocessor" value="1"/>
-  <property name="stabilizerBuffersize" value="8"/>
+  <property name="stabilizerBuffersize" value="6"/>
   <property name="stabilizerSigma" value="0.5"/>
   <property name="stabilizerDeadzoneRadius" value="0.3"/>
   <property name="stabilizerDrag" value="0.75"/>
@@ -219,7 +219,7 @@
     </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="highlighter"/>
+    <attribute name="current" type="string" value="pen"/>
     <data name="drawArrow">
       <attribute name="drawingType" type="string" value="default"/>
     </data>
@@ -248,7 +248,7 @@
     </data>
     <data name="highlighter">
       <attribute name="color" type="hex" value="ffffe200"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="BIG"/>
@@ -267,8 +267,8 @@
       <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff241f31"/>
-      <attribute name="drawingType" type="string" value="default"/>
+      <attribute name="color" type="hex" value="ff0634f5"/>
+      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
       <attribute name="size" type="string" value="THIN"/>
@@ -304,7 +304,7 @@
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="text">
-      <attribute name="color" type="hex" value="ff0634f5"/>
+      <attribute name="color" type="hex" value="ff241f31"/>
       <attribute name="drawingType" type="string" value="default"/>
     </data>
     <data name="verticalSpace">
