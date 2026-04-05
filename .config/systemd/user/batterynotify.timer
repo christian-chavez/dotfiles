@@ -1,0 +1,11 @@
+[Unit]
+Description=Run battery notification check every 10 seconds
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=10s
+AccuracySec=1s
+Unit=batterynotify.service
+
+[Install]
+WantedBy=timers.target
