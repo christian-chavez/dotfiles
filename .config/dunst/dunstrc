@@ -460,9 +460,9 @@
 #
 # vim: ft=cfg
 
-# [play_sound]
-#     summary = "Low Battery"
-#     script = /home/christian/.local/bin/alertsound.sh
+[play_sound]
+    summary = "Low Battery"
+    script = /home/christian/.local/bin/alertsound.sh
 
 [skip-rule] 
 appname=Spotify

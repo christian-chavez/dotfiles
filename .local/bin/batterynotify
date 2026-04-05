@@ -1,0 +1,115 @@
+#!/bin/sh
+
+# Send a notification if the laptop battery is either low 
+# or is fully charged.
+
+export DISPLAY=:0
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/1000/bus"
+
+LOW_BATTERY_INTERVAL=30   # 30 seconds
+LOW_BATTERY_FILE=/tmp/batteryempty
+LOW_BATTERY_LAST=/tmp/batteryempty-last
+FULL_FILE=/tmp/batteryfull
+
+# Battery percentage at which to notify
+WARNING_LEVEL=12
+
+# --- Replaced the two acpi lines with this sysfs-based block ---
+
+# Collect internal (system) batteries from /sys/class/power_supply
+BAT_DIRS=
+for d in /sys/class/power_supply/*; do
+  [ -d "$d" ] || continue
+  [ -f "$d/type" ] || continue
+  if grep -qx 'Battery' "$d/type"; then
+    # Skip peripherals (usually have scope 'Device')
+    if [ -f "$d/scope" ] && grep -qx 'Device' "$d/scope"; then
+      continue
+    fi
+    BAT_DIRS="$BAT_DIRS $d"
+  fi
+done
+
+# If nothing matched, bail out quietly
+[ -n "$BAT_DIRS" ] || exit 0
+
+# Aggregate percentage across internal batteries.
+# Prefer energy_now/energy_full if available; otherwise fall back to capacity (%).
+total_now=0
+total_full=0
+level_fallbacks=
+BATTERY_DISCHARGING=0
+
+for d in $BAT_DIRS; do
+  # Track discharging if any pack is discharging
+  if [ -f "$d/status" ] && grep -qi 'discharging' "$d/status"; then
+    BATTERY_DISCHARGING=1
+  fi
+
+  if [ -f "$d/energy_now" ] && [ -f "$d/energy_full" ]; then
+    now=$(cat "$d/energy_now" 2>/dev/null || echo 0)
+    full=$(cat "$d/energy_full" 2>/dev/null || echo 0)
+  elif [ -f "$d/charge_now" ] && [ -f "$d/charge_full" ]; then
+    now=$(cat "$d/charge_now" 2>/dev/null || echo 0)
+    full=$(cat "$d/charge_full" 2>/dev/null || echo 0)
+  else
+    now=
+    full=
+  fi
+
+  if [ -n "$now" ] && [ -n "$full" ] && [ "$full" -gt 0 ] 2>/dev/null; then
+    total_now=$(( total_now + now ))
+    total_full=$(( total_full + full ))
+  elif [ -f "$d/capacity" ]; then
+    # Keep fallback % to combine by taking the minimum (conservative)
+    cap=$(cat "$d/capacity" 2>/dev/null || echo 0)
+    level_fallbacks="$level_fallbacks $cap"
+  fi
+done
+
+if [ "$total_full" -gt 0 ] 2>/dev/null; then
+  # Weighted percentage across packs
+  BATTERY_LEVEL=$(( (100 * total_now) / total_full ))
+else
+  # Fall back to the minimum percent among packs (conservative)
+  min=101
+  for cap in $level_fallbacks; do
+    [ "$cap" -lt "$min" ] 2>/dev/null && min=$cap
+  done
+  # If still nothing, give up silently
+  [ "$min" -le 100 ] 2>/dev/null || exit 0
+  BATTERY_LEVEL=$min
+fi
+# --- End sysfs block ---
+
+
+# Reset state when charging again
+if [ "$BATTERY_DISCHARGING" -eq 1 ] && [ -f "$FULL_FILE" ]; then
+    rm -f "$FULL_FILE"
+elif [ "$BATTERY_DISCHARGING" -eq 0 ]; then
+    rm -f "$LOW_BATTERY_FILE" "$LOW_BATTERY_LAST"
+fi
+
+# Fully charged: notify once
+if [ "$BATTERY_LEVEL" -gt 90 ] && [ "$BATTERY_DISCHARGING" -eq 0 ] && [ ! -f "$FULL_FILE" ]; then
+    notify-send "Battery Charged" "Battery is fully charged." -i "battery" -r 9991
+    touch "$FULL_FILE"
+
+# Low battery: notify immediately, then again every LOW_BATTERY_INTERVAL seconds
+elif [ "$BATTERY_LEVEL" -le "$WARNING_LEVEL" ] && [ "$BATTERY_DISCHARGING" -eq 1 ]; then
+    now=$(date +%s)
+
+    if [ ! -f "$LOW_BATTERY_FILE" ]; then
+        notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i "battery-alert" -r 9991
+        touch "$LOW_BATTERY_FILE"
+        echo "$now" > "$LOW_BATTERY_LAST"
+    else
+        last=0
+        [ -f "$LOW_BATTERY_LAST" ] && last=$(cat "$LOW_BATTERY_LAST" 2>/dev/null || echo 0)
+
+        if [ $((now - last)) -ge "$LOW_BATTERY_INTERVAL" ]; then
+            notify-send "Low Battery" "${BATTERY_LEVEL}% of battery remaining." -u critical -i "battery-alert" -r 9991
+            echo "$now" > "$LOW_BATTERY_LAST"
+        fi
+    fi
+fi
