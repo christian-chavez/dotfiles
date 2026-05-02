@@ -262,8 +262,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,n,s,u,U,M,k,d,j,p}
+super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p}
 
 # Suspend
 super + @l

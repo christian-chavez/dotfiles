@@ -17,16 +17,16 @@ if hdmi_active; then
         if xrandr --verbose | rg -q 'HP E202'; then
             xrandr \
                 --output "$EDP" --primary --mode 1366x768 --rotate normal \
-                --output "$HDMI" --mode 1600x900 --rate 60 --rotate normal --left-of "$EDP"
+                --output "$HDMI" --mode 1600x900 --rate 60 --rotate normal --right-of "$EDP"
         else
             xrandr \
                 --output "$EDP" --primary --mode 1366x768 --rotate normal \
-                --output "$HDMI" --auto --rotate normal --left-of "$EDP"
+                --output "$HDMI" --auto --rotate normal --right-of "$EDP"
         fi
 
         bspc wm -O "$HDMI" "$EDP"
-        bspc monitor "$EDP"  -d 6 7 8 9 10
-        bspc monitor "$HDMI" -d 1 2 3 4 5
+        bspc monitor "$EDP" -d 1 2 3 4 5
+        bspc monitor "$HDMI"  -d 6 7 8 9 10
     else
         # External only
         if xrandr --verbose | rg -q 'HP E202'; then
