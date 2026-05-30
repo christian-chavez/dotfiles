@@ -166,8 +166,11 @@ super + Print
 	# alacritty -e lf
 
 # thunar file manager
+# super + e
+	# Thunar
+
 super + e
-	Thunar
+    alacritty --class yazi-fm,Alacritty -e sh -lc 'cd "$HOME" && yazi .'
 
 # Volumen control
 XF86AudioRaiseVolume
@@ -262,8 +265,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p}
+super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t}
 
 # Suspend
 super + @l
@@ -313,6 +316,6 @@ super + shift + @p
 #     $HOME/Documents/scripts/pdf-switch-rofi
 
 
-super + y
-    $HOME/Documents/scripts/toggle-polytabs.sh
+# super + y
+#     $HOME/Documents/scripts/toggle-polytabs.sh
 
