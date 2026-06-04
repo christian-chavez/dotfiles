@@ -60,8 +60,11 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {t,shift + t,s}
+    bspc node -t {tiled,pseudo_tiled,floating}
+
+super + f
+    bspc node -t '~fullscreen'
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -170,7 +173,7 @@ super + Print
 	# Thunar
 
 super + e
-    alacritty --class yazi-fm,Alacritty -e sh -lc 'cd "$HOME" && yazi .'
+    alacritty --class yazi-fm,Alacritty -e bash -ic 'cd "$HOME" && exec yazi .'
 
 # Volumen control
 XF86AudioRaiseVolume
@@ -319,3 +322,5 @@ super + shift + @p
 # super + y
 #     $HOME/Documents/scripts/toggle-polytabs.sh
 
+super + n
+    xournalpp "$HOME/Templates/lined-letter-template.pdf"

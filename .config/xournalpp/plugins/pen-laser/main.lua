@@ -79,5 +79,6 @@ function useText()
 end
 
 function zoomFit()
+    app.uiAction({ action = 'ACTION_ZOOM_OUT' })
     app.uiAction({ action = 'ACTION_ZOOM_FIT' })
 end

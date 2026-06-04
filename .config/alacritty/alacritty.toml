@@ -9,5 +9,5 @@ size = 10
 family = "Iosevka"
 
 [window.dimensions]
-columns = 78
-lines = 20
+columns = 80
+lines = 22

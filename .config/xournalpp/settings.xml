@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.2"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/autre/Pablo"/>
+  <property name="lastSavePath" value="/home/christian/Templates"/>
   <property name="lastOpenPath" value="/home/christian/Templates"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -27,10 +27,10 @@
   <property name="filepathShownInTitlebar" value="false"/>
   <property name="pageNumberShownInTitlebar" value="false"/>
   <property name="numColumns" value="1"/>
-  <property name="numRows" value="1"/>
+  <property name="numRows" value="2"/>
   <property name="viewFixedRows" value="false"/>
   <property name="showPairedPages" value="false"/>
-  <property name="layoutVertical" value="false"/>
+  <property name="layoutVertical" value="true"/>
   <property name="layoutRightToLeft" value="false"/>
   <property name="layoutBottomToTop" value="false"/>
   <property name="numPairsOffset" value="1"/>
@@ -248,7 +248,7 @@
       <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="fffc2626"/>
+      <attribute name="color" type="hex" value="ff241f31"/>
       <attribute name="drawingType" type="string" value="strokeRecognizer"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -269,7 +269,7 @@
     <data name="selectRegion"/>
     <data name="showFloatingToolbox"/>
     <data name="text">
-      <attribute name="color" type="hex" value="ff0634f5"/>
+      <attribute name="color" type="hex" value="ff241f31"/>
     </data>
     <data name="verticalSpace"/>
   </data>
