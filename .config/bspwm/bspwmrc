@@ -93,7 +93,8 @@ numlockx &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/blue-arch.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/fuji.png &
-feh --bg-fill --randomize $HOME/Pictures/wallpapers/peace.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/peace.png &
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/oriente.png &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
@@ -109,7 +110,7 @@ bspc rule -a "Display"  state=floating center=on
 bspc rule -a "mpv"  state=floating center=on 
 bspc rule -a "sumatrapdf.exe" desktop=^2
 bspc rule -a "obsidian" desktop=^8
-bspc rule -a "Code" desktop=^7
+bspc rule -a "Code" desktop=^5
 bspc rule -a "zoom" center=on 
 # bspc rule -a "zoom" state=floating center=on 
 bspc rule -a "webex" state=floating
@@ -144,4 +145,20 @@ done
 #
 
 
+sleep 10; zathura-recent-files-rofi clean
+
+
+# pdf tabs with zathura
+# ===================================================================
+# PDFTABS_LOG="$HOME/.cache/polybar-pdftabs.log"
+#
+# if ! pgrep -a polybar |
+#     grep -qE '(^|[[:space:]])pdftabs([[:space:]]|$)'; then
+#     mkdir -p "$HOME/.cache"
+#     polybar -r pdftabs >>"$PDFTABS_LOG" 2>&1 &
+# fi
+#
+# pkill -f '[w]atch-polytabs.sh' 2>/dev/null || true
+# "$HOME/Documents/scripts/watch-polytabs.sh" &
+# ===================================================================
 

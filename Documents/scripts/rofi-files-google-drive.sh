@@ -10,7 +10,7 @@ DIR="/mnt/Mis archivos/Google Drive/Libros"
 
 file=$(rg --files "$DIR" 2>/dev/null \
     | awk -F/ '{printf "%s                                                                                               :::%s\n", $NF, $0}' \
-    | rofi -threads 0 -dmenu -i -p "Files:" \
+    | rofi -normal-window -threads 0 -dmenu -i -p "Files:" \
     | awk -F ':::' '{print $2}')
 
 # Open the file if one was selected

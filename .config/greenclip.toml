@@ -6,6 +6,6 @@
   image_cache_directory = "/tmp/greenclip"
   max_history_length = 100
   max_selection_size_bytes = 0
-  static_history = ["J1H 5E2", "25118952", "christian.chavez.yt@gmail.com", "176", "Y0KW9P9L%SLhgW", "xclip -selection clipboard", "✓"]
+  static_history = ["J1H 5E2", "J1K1J1", "25118952", "christian.chavez.yt@gmail.com", "176", "Y0KW9P9L%SLhgW", "xclip -selection clipboard", "✓"]
   trim_space_from_selection = true
   use_primary_selection_as_input = false

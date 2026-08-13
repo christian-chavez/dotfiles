@@ -268,8 +268,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t}
+super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l}
 
 # Suspend
 super + @l
@@ -319,8 +319,11 @@ super + shift + @p
 #     $HOME/Documents/scripts/pdf-switch-rofi
 
 
-# super + y
+# super + @y
 #     $HOME/Documents/scripts/toggle-polytabs.sh
 
 super + n
     xournalpp "$HOME/Templates/lined-letter-template.pdf"
+
+super + @p
+    bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim +startinsert

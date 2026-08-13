@@ -11,7 +11,7 @@ DIR2="/mnt/Mis archivos/Google Drive/graduate applications/Sherbrooke"
 
 file=$(rg --files -g '*.pdf' "$DIR" "$DIR2" 2>/dev/null \
     | awk -F/ '{printf "%s                                                                                               :::%s\n", $NF, $0}' \
-    | rofi -normal-window -threads 0 -dmenu -i -p 'Files:' \
+    | rofi -normal-window -threads 0 -dmenu -i -normalize-match -p 'Files:' \
     | awk -F ':::' '{print $2}')
 
 [ -n "$file" ] && xdg-open "$file"

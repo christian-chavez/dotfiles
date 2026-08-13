@@ -24,3 +24,6 @@ alias clk="tty-clock -sc"
 alias calentamiento="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/calentamiento.mp4"
 alias bed="mpv --loop-playlist=no --loop-file=no --start=02:04 --no-resume-playback /home/christian/Videos/bedtime.mp4"
 alias schirata="vim /mnt/Mis\ archivos/maitrise/cours/reading-group-rt/typos/errata.md"
+alias xwp="$HOME/Documents/scripts/xopp-watch-pdf.sh"
+alias sbcl='rlwrap sbcl'
+alias code-off='firejail --noprofile --net=none code'

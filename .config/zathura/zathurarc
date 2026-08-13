@@ -49,7 +49,25 @@ set recolor-reverse-video true
 # # set recolor-darkcolor "#000000"
 
 # abrir parent folder
-map <C-t> exec sh -c 'xdg-open "$(dirname "$FILE")"'
-map q abort
+# map <C-t> exec sh -c 'xdg-open "$(dirname "$FILE")"'
+# map q abort
 # map <C-1> set first-page-column 1
 
+# map . feedkeys ":exec dragon-drop -x -i -T \"$FILE\"<Return>"
+map . exec "env GDK_SCALE=2 dragon-drop -x -i -T '$FILE'"
+
+# Copy the PDF path to the clipboard
+map [normal] xp exec "sh -c 'printf %s \"$1\" | xclip -selection clipboard' sh '$FILE'"
+
+# Open the PDF's directory in Yazi
+# map [normal] xy exec "sh -c 'cd -- \"$(dirname -- \"$1\")\" && exec alacritty -e yazi' sh '$FILE'"
+map [normal] xy exec "alacritty -e yazi '$FILE'"
+
+# Show pdfinfo in Alacritty
+map [normal] xi exec "alacritty --hold -e /home/christian/Documents/scripts/zathura-pdfinfo '$FILE'"
+
+# extract pages
+map [normal] xr exec "/home/christian/Documents/scripts/zathura-pages '$FILE' '$PAGE'"
+
+# rename file
+map [normal] xw exec "/home/christian/Documents/scripts/zathura-rename '$FILE' '$PAGE' '$DBUS'"

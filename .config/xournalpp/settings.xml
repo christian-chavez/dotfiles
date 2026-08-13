@@ -3,11 +3,11 @@
 <settings>
   <property name="pressureSensitivity" value="true"/>
   <property name="minimumPressure" value="1"/>
-  <property name="pressureMultiplier" value="1.2"/>
+  <property name="pressureMultiplier" value="1.23"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/home/christian/Templates"/>
-  <property name="lastOpenPath" value="/home/christian/Templates"/>
+  <property name="lastSavePath" value="/mnt/Mis archivos/maitrise/these/notes"/>
+  <property name="lastOpenPath" value="/mnt/Mis archivos/maitrise/autre/Esneider"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
@@ -219,7 +219,7 @@
     </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="text"/>
     <data name="drawArrow"/>
     <data name="drawCoordinateSystem"/>
     <data name="drawDoubleArrow"/>
@@ -232,7 +232,7 @@
     </data>
     <data name="hand"/>
     <data name="highlighter">
-      <attribute name="color" type="hex" value="ff49ddfe"/>
+      <attribute name="color" type="hex" value="ffeeb402"/>
       <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="128"/>
@@ -248,11 +248,11 @@
       <attribute name="size" type="string" value="THIN"/>
     </data>
     <data name="pen">
-      <attribute name="color" type="hex" value="ff241f31"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="color" type="hex" value="ff80879f"/>
+      <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
-      <attribute name="fillAlpha" type="int" value="128"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="fillAlpha" type="int" value="255"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject"/>
@@ -269,7 +269,7 @@
     <data name="selectRegion"/>
     <data name="showFloatingToolbox"/>
     <data name="text">
-      <attribute name="color" type="hex" value="ff241f31"/>
+      <attribute name="color" type="hex" value="ff80879f"/>
     </data>
     <data name="verticalSpace"/>
   </data>

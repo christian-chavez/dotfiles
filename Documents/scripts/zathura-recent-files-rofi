@@ -58,7 +58,7 @@ list_history() {
     CHOICE=$(
         tac "$BOOKMARKS" 2>/dev/null \
         | awk -F/ '{print $NF}' \
-        | rofi -dmenu -i -p "PDFs:"
+        | rofi -normal-window -dmenu -i -p "PDFs:"
     )
 
     if [ -n "$CHOICE" ]; then
@@ -69,7 +69,7 @@ list_history() {
 
 case "$1" in
     list)
-        clean_history
+        # clean_history
         list_history
         ;;
 
