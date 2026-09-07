@@ -4,3 +4,5 @@ Description=Battery notification check
 [Service]
 Type=oneshot
 ExecStart=%h/.local/bin/batterynotify
+# Suppress the per-run Starting/Finished lines that otherwise flood the journal
+LogLevelMax=warning
