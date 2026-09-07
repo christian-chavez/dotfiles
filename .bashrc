@@ -63,8 +63,9 @@ export HISTFILE=~/.bash_eternal_history
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-alias unbl='sudo rfkill unblock bluetooth'
-alias blbl='sudo rfkill block bluetooth'
+# no sudo needed: logind grants the active session an ACL on /dev/rfkill
+alias unbl='rfkill unblock bluetooth'
+alias blbl='rfkill block bluetooth'
 
 function fr () { 
 	echo "$@" >> /home/christian/Documents/obsidian-vaults/Test/Zettelkasten/notes/francais.md
@@ -131,3 +132,4 @@ zks() {
         nvim "+$line" "$vault/$file"
     fi
 }
+export PATH="$HOME/.local/bin:$PATH"

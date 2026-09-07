@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bluetooth
+GenericName=Bluetooth audio devices
+Comment=Connect or disconnect Bluetooth audio devices
+Icon=bluetooth
+Exec=/home/christian/.local/bin/bt-menu
+Terminal=false
+Categories=Utility;AudioVideo;
+Keywords=bluetooth;bt;headphones;headset;audio;pair;connect;

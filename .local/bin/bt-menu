@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+#
+# bt-menu - rofi Bluetooth device menu (bspwm).
+#
+#   * If Bluetooth is rf-blocked, unblock it and power the adapter on first.
+#   * Lists paired devices; "@" marks the connected ones:
+#       - pick a disconnected device -> connect it
+#       - pick a connected device    -> disconnect it
+#   * "Turn Bluetooth off" powers the adapter down and rf-blocks it (saves battery).
+#
+# No sudo needed:
+#   - logind grants the active user an ACL on /dev/rfkill, so `rfkill` works.
+#   - the default D-Bus policy for org.bluez lets any user call connect/disconnect.
+
+set -uo pipefail
+
+notify() { command -v notify-send >/dev/null 2>&1 && notify-send -a Bluetooth "$@"; return 0; }
+# -normal-window makes it a WM-managed window like the other rofi menus,
+# so the compositor draws the same shadow (and the bspwm "Rofi" rule applies).
+menu()   { rofi -dmenu -i -no-custom -normal-window -p "Bluetooth"; }
+
+blocked() { rfkill list bluetooth 2>/dev/null | grep -q "Soft blocked: yes"; }
+
+power_on() {
+  rfkill unblock bluetooth 2>/dev/null || true
+  local i
+  for i in $(seq 1 30); do
+    [ "$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')" = "yes" ] && return 0
+    bluetoothctl power on >/dev/null 2>&1 || true
+    sleep 0.2
+  done
+  return 0
+}
+
+power_off() {
+  bluetoothctl power off >/dev/null 2>&1 || true
+  rfkill block bluetooth 2>/dev/null || true
+  notify "Bluetooth turned off"
+}
+
+connected() { bluetoothctl info "$1" 2>/dev/null | grep -q "Connected: yes"; }
+
+if blocked; then
+  notify "Turning Bluetooth on..."
+  power_on
+fi
+
+OFF_LABEL="[x]  Turn Bluetooth off"
+
+declare -A MAC_OF NAME_OF
+options="$OFF_LABEL"
+while read -r _ mac name; do
+  [ -z "${mac:-}" ] && continue
+  if connected "$mac"; then
+    label="@    $name"
+  else
+    label="     $name"
+  fi
+  MAC_OF["$label"]="$mac"
+  NAME_OF["$label"]="$name"
+  options+=$'\n'"$label"
+done < <(bluetoothctl devices Paired 2>/dev/null | sort -k3)
+
+choice="$(printf '%s' "$options" | menu)" || exit 0
+[ -z "${choice:-}" ] && exit 0
+
+if [ "$choice" = "$OFF_LABEL" ]; then
+  power_off
+  exit 0
+fi
+
+mac="${MAC_OF[$choice]:-}"
+name="${NAME_OF[$choice]:-$mac}"
+[ -z "$mac" ] && exit 0
+
+if connected "$mac"; then
+  notify "Disconnecting $name"
+  bluetoothctl disconnect "$mac" >/dev/null 2>&1 &
+else
+  notify "Connecting $name..."
+  {
+    if bluetoothctl connect "$mac" >/dev/null 2>&1; then
+      notify "Connected $name"
+    else
+      notify "Failed to connect $name"
+    fi
+  } &
+fi
+exit 0
