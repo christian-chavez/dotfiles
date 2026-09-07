@@ -1092,7 +1092,7 @@
      org.inkscape.generate.pdf_latex.formule="$\frac{3\pi}{2}$" />
   <group
      id="desktop"
-     style="fill:none;-inkscape-font-specification:'Iosevka, Normal';font-family:Iosevka;font-size:6.66666667px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:2.44913386;stroke-linejoin:round;stroke-linecap:square;stroke:#fac22b">
+     style="fill:#0000ff;-inkscape-font-specification:'Iosevka, Normal';font-family:Iosevka;font-size:6.66666667px;line-height:0.8;letter-spacing:0px;stop-color:#000000;text-orientation:auto;stroke-width:2.44913386;stroke-linejoin:round;stroke-linecap:square;stroke:#fac22b">
     <group
        width="1366"
        height="742"

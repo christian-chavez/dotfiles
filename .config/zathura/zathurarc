@@ -18,8 +18,8 @@ set font "Iosevka Medium 11"
 
 set statusbar-fg                "#3b4252"
 set statusbar-bg                "#d8dee9"
-set default-bg "#333333"
-# set default-bg "#f2f2f2"
+# set default-bg "#333333"
+set default-bg "#f2f2f2"
 set inputbar-bg "#151515" #00 currently not used
 set inputbar-fg "#FFFFFF" #02
 # set statusbar-fg                "#D8DEE9"
@@ -41,8 +41,8 @@ set selection-notification false
 
 # # para cambiar colores del programa
 # set recolor true
-# set default-bg "#C7EDCC"
-# set recolor-lightcolor "#2e3440"
+set default-bg "#C7EDCC"
+set recolor-lightcolor "#2e3440"
 set recolor-keephue true
 set recolor-reverse-video true
 # set recolor-ssdarkcolor "#e3e2e1"

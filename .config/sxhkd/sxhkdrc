@@ -48,8 +48,8 @@ super + m
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+# super + y
+# 	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
 super + g
@@ -268,8 +268,8 @@ super + @b
 	# librewolf
 
 # Multi shorcuts
-super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l}
+super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
 
 # Suspend
 super + @l
@@ -326,4 +326,8 @@ super + n
     xournalpp "$HOME/Templates/lined-letter-template.pdf"
 
 super + @p
-    bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim +startinsert
+    bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim
+    # bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim +startinsert
+
+super + y
+    bspc rule -a ScratchCalc -o state=floating rectangle=360x225+970+500; alacritty --class ScratchCalc,ScratchCalc -o font.size=14 -e calc -d

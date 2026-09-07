@@ -27,3 +27,5 @@ alias schirata="vim /mnt/Mis\ archivos/maitrise/cours/reading-group-rt/typos/err
 alias xwp="$HOME/Documents/scripts/xopp-watch-pdf.sh"
 alias sbcl='rlwrap sbcl'
 alias code-off='firejail --noprofile --net=none code'
+
+export PATH="$HOME/.elan/bin:$PATH"

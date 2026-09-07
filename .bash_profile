@@ -10,3 +10,5 @@ export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$PATH"
 
 # 2024-02-25 Sun 20:50:24
 export XTERM='alacritty'
+
+export PATH="$HOME/.elan/bin:$PATH"
