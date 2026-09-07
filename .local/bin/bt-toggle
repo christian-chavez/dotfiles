@@ -1,0 +1,30 @@
+#!/bin/sh
+# Toggle the Bluetooth adapter. Bound to left-click on the polybar module.
+# Mirrors bt-menu's on/off behaviour: rfkill unblock + power on, or power off
+# + rfkill block (the rf-block is what actually saves battery).
+#
+# No sudo needed: logind grants the active user an ACL on /dev/rfkill, and the
+# default org.bluez D-Bus policy allows power on/off.
+
+notify() { command -v notify-send >/dev/null 2>&1 && notify-send -a Bluetooth "$1"; }
+
+powered() { [ "$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')" = yes ]; }
+
+if rfkill list bluetooth 2>/dev/null | grep -q 'Soft blocked: yes'; then
+  rfkill unblock bluetooth 2>/dev/null
+  i=0
+  while [ "$i" -lt 30 ]; do
+    powered && break
+    bluetoothctl power on >/dev/null 2>&1
+    sleep 0.2
+    i=$((i + 1))
+  done
+  notify "Bluetooth on"
+elif powered; then
+  bluetoothctl power off >/dev/null 2>&1
+  rfkill block bluetooth 2>/dev/null
+  notify "Bluetooth off"
+else
+  bluetoothctl power on >/dev/null 2>&1
+  notify "Bluetooth on"
+fi

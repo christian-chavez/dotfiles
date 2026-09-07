@@ -1,0 +1,25 @@
+#!/bin/sh
+# Polybar Bluetooth indicator.
+#   blocked / powered off : 󰂲  (dim grey)
+#   powered on, idle      : 󰂯  (foreground)
+#   device(s) connected   : 󰂱  (blue); shows a count when more than one
+#
+# Left-click  -> bt-toggle  (adapter on/off)
+# Right-click -> bt-menu     (rofi device menu)
+
+DIM='#707880'
+PRIMARY='#63b1ff'
+
+off() { printf '%%{F%s}󰂲%%{F-}\n' "$DIM"; exit 0; }
+
+rfkill list bluetooth 2>/dev/null | grep -q 'Soft blocked: yes' && off
+[ "$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')" = yes ] || off
+
+n=$(bluetoothctl devices Connected 2>/dev/null | grep -c '^Device ')
+if [ "${n:-0}" -gt 1 ] 2>/dev/null; then
+  printf '%%{F%s}󰂱%%{O4}%s%%{F-}\n' "$PRIMARY" "$n"
+elif [ "${n:-0}" -eq 1 ] 2>/dev/null; then
+  printf '%%{F%s}󰂱%%{F-}\n' "$PRIMARY"
+else
+  printf '󰂯\n'
+fi

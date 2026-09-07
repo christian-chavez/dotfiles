@@ -3,16 +3,27 @@
 # bt-menu - rofi Bluetooth device menu (bspwm).
 #
 #   * If Bluetooth is rf-blocked, unblock it and power the adapter on first.
-#   * Lists paired devices; "@" marks the connected ones:
+#   * Lists paired devices most-recently-connected first; "@" marks the
+#     connected ones:
 #       - pick a disconnected device -> connect it
 #       - pick a connected device    -> disconnect it
 #   * "Turn Bluetooth off" powers the adapter down and rf-blocks it (saves battery).
+#
+# Recency order is tracked in $STATE_DIR/recent (MACs, newest first). It is
+# updated whenever this menu connects a device and whenever it observes one
+# already connected (so auto-reconnects also float to the top). Devices never
+# seen connected sort last, alphabetically.
 #
 # No sudo needed:
 #   - logind grants the active user an ACL on /dev/rfkill, so `rfkill` works.
 #   - the default D-Bus policy for org.bluez lets any user call connect/disconnect.
 
 set -uo pipefail
+
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/bt-menu"
+RECENT_FILE="$STATE_DIR/recent"
+mkdir -p "$STATE_DIR"
+touch "$RECENT_FILE"
 
 notify() { command -v notify-send >/dev/null 2>&1 && notify-send -a Bluetooth "$@"; return 0; }
 # -normal-window makes it a WM-managed window like the other rofi menus,
@@ -40,6 +51,14 @@ power_off() {
 
 connected() { bluetoothctl info "$1" 2>/dev/null | grep -q "Connected: yes"; }
 
+# Move $1 to the top of the recency file, keeping the rest of the order.
+bump_recent() {
+  local mac="$1" tmp
+  tmp="$(mktemp "$STATE_DIR/recent.XXXXXX")" || return 0
+  { printf '%s\n' "$mac"; grep -vFx "$mac" "$RECENT_FILE" 2>/dev/null; } >"$tmp"
+  mv "$tmp" "$RECENT_FILE"
+}
+
 if blocked; then
   notify "Turning Bluetooth on..."
   power_on
@@ -47,11 +66,45 @@ fi
 
 OFF_LABEL="[x]  Turn Bluetooth off"
 
-declare -A MAC_OF NAME_OF
-options="$OFF_LABEL"
+# Load paired devices.
+macs=() names=()
 while read -r _ mac name; do
   [ -z "${mac:-}" ] && continue
-  if connected "$mac"; then
+  macs+=("$mac")
+  names+=("$name")
+done < <(bluetoothctl devices Paired 2>/dev/null)
+
+# Note which are connected right now, and float them to the top of the
+# recency list (covers reconnects made outside this menu).
+declare -A IS_CONN
+for i in "${!macs[@]}"; do
+  if connected "${macs[$i]}"; then
+    IS_CONN["${macs[$i]}"]=1
+    bump_recent "${macs[$i]}"
+  fi
+done
+
+# Rank each MAC by its line in the recency file (1 = newest); unseen -> large.
+declare -A RANK
+rank=0
+while read -r rmac; do
+  [ -z "$rmac" ] && continue
+  rank=$((rank + 1))
+  [ -z "${RANK[$rmac]:-}" ] && RANK["$rmac"]=$rank
+done <"$RECENT_FILE"
+
+# Build "<rank>\t<name>\t<mac>" lines and sort by rank, then name.
+rows=""
+for i in "${!macs[@]}"; do
+  r="${RANK[${macs[$i]}]:-999999}"
+  rows+="$(printf '%06d\t%s\t%s' "$r" "${names[$i]}" "${macs[$i]}")"$'\n'
+done
+
+declare -A MAC_OF NAME_OF
+options="$OFF_LABEL"
+while IFS=$'\t' read -r _ name mac; do
+  [ -z "${mac:-}" ] && continue
+  if [ -n "${IS_CONN[$mac]:-}" ]; then
     label="@    $name"
   else
     label="     $name"
@@ -59,7 +112,7 @@ while read -r _ mac name; do
   MAC_OF["$label"]="$mac"
   NAME_OF["$label"]="$name"
   options+=$'\n'"$label"
-done < <(bluetoothctl devices Paired 2>/dev/null | sort -k3)
+done < <(printf '%s' "$rows" | sort -t$'\t' -k1,1n -k2,2)
 
 choice="$(printf '%s' "$options" | menu)" || exit 0
 [ -z "${choice:-}" ] && exit 0
@@ -80,6 +133,7 @@ else
   notify "Connecting $name..."
   {
     if bluetoothctl connect "$mac" >/dev/null 2>&1; then
+      bump_recent "$mac"
       notify "Connected $name"
     else
       notify "Failed to connect $name"
