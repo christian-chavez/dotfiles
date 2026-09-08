@@ -1,139 +1,118 @@
-
-# wm independent hotkeys
+#
+# sxhkd - bspwm keybindings
+#
+# reload after editing:  super + Escape
+#
+# Note: a few scripts below still live under ~/Documents/scripts, ~/Documents
+# and ~/myscripts. Migrating them to ~/.local/bin is a separate task.
 #
 
-# terminal emulator
-super + Return
-	alacritty
-
-## program launcher
-super + @space
-	rofi -no-lazy-grab -show combi -combi-modi drun,menu:rofi-power-menu -normal-window
-	# rofi -no-lazy-grab -drun-reload-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
-        # dmenu_run -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3' 
-	# dmenu_run
-	# $HOME/.dmenu_run_history -f -b -fn 'Iosevka-10.5' -nb '#252a34' -sf '#1e1e1e' -sb '#88c0d0' -nf '#D3D3D3'
-	# rofi -drun-use-desktop-cache -combi-modi drun,menu:rofi-power-menu -show combi
-
-# Clipboard greenclip
-super + a
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -normal-window 
-
-# google search from rofi
-super + d
-	$HOME/Documents/scripts/rofi-google.sh
-	# rofi -dmenu | xargs -I{} xdg-open https://www.google.de/search?q={}
-    # bash -c 'q=$(rofi -dmenu -p "Google" -lines 1 -theme-str "listview { lines: 0; fixed-height: 0; }" </dev/null); [ -n "$q" ] && firefox "https://www.google.com/search?q=$(printf %s "$q" | sed "s/[[:space:]]\+/+/g")"'
-
-
-
-# make sxhkd reload its configuration files:
+# ============================================================ sxhkd / bspwm
+# reload sxhkd
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
-
-# quit/restart bspwm
+# quit / restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
-# close and kill
+# close / kill window
 super + {_,shift + }w
 	bspc node -{c,k}
 
-# alternate between the tiled and monocle layout
+# ==================================================================== layout
+# toggle tiled / monocle on the desktop
 super + m
 	bspc desktop -l next
 
-# send the newest marked node to the newest preselected node
-# super + y
-# 	bspc node newest.marked.local -n newest.!automatic.local
-
-# swap the current node and the biggest window
-super + g
-	bspc node -s biggest.window
-
-#
-# state/flags
-#
-
-# set the window state
+# window state: tiled / pseudo-tiled / floating
 super + {t,shift + t,s}
-    bspc node -t {tiled,pseudo_tiled,floating}
+	bspc node -t {tiled,pseudo_tiled,floating}
 
+# toggle fullscreen
 super + f
-    bspc node -t '~fullscreen'
+	bspc node -t '~fullscreen'
 
-# set the node flags
+# node flags: marked / locked / sticky / private
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-#
-# focus/swap
-#
+# swap current with the biggest window
+super + g
+	bspc node -s biggest.window
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+# swap current with the last window, follow focus
+super + x
+	bspc node -s last.local; \
+	bspc node -f last.local
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# rotate the parent split 90 degrees
+super + shift + e
+	bspc node '@parent' -R 90
 
-# focus the next/previous window in the current desktop
+# balance: reset every split ratio on the desktop so windows share space evenly
+super + shift + b
+	bspc node @/ -B
+
+# ===================================================================== focus
+# focus / swap in a direction
+# (east removed - plain "super + l" collided with "super + @l" = suspend)
+super + {_,shift + }{h,j,k}
+	bspc node -{f,s} {west,south,north}
+
+# focus the first / second child of the parent
+# (parent/brother removed - "super + p/b" collided with "super + @p / @b")
+super + {comma,period}
+	bspc node -f @{first,second}
+
+# focus next / previous window on the desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
-# focus the next/previous desktop in the current monitor
+# focus previous / next desktop on this monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
+# focus the last desktop
+# (the "grave" half was dropped: on the latam layout that key is dead_grave,
+#  so sxhkd could never bind it. Rebind "focus last node" elsewhere if wanted:
+#  super + shift + Tab  ->  bspc node -f last.local)
+super + Tab
+	bspc desktop -f last
 
-# focus the older or newer node in the focus history
+# focus older / newer in the focus history
 super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# focus or send to the given desktop
+# focus / send to desktop 1-10
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}' --follow
 
-#
-# preselect
-#
-
-# preselect the direction
+# ================================================================= preselect
+# preselect a direction
 super + ctrl + {h,j,k,l}
 	bspc node -p {west,south,north,east}
 
-# preselect the ratio
+# preselect the split ratio
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-# cancel the preselection for the focused node
+# cancel preselection on the focused node
 super + ctrl + space
 	bspc node -p cancel
 
-# cancel the preselection for the focused desktop
+# cancel preselection on every node of the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
+# =============================================================== move / resize
+# expand a window (push a side outward)
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
-# contract a window by moving one of its side inward
+# contract a window (pull a side inward)
 super + alt + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
@@ -141,197 +120,140 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-# change orientation (vertical -> horizontal)
-super + shift + e
-	bspc node '@parent' -R 90
+# ==================================================================== displays
+# monitor layout menu (autorandr profiles + auto-detect + mirror)
+super + alt + p
+	$HOME/.config/bspwm/scripts/display-menu
 
-# Swap focused window with neighbor
-super + x
-	bspc node -s last.local; \
-	bspc node -f last.local
+# ================================================================== launchers
+# terminal
+super + Return
+	alacritty
 
-# Screnshot tool
-Print
-	$HOME/myscripts/flameshot-focus.sh
-	# flameshot gui 
+# app launcher / power menu
+super + @space
+	rofi -no-lazy-grab -show combi -combi-modi drun,menu:rofi-power-menu -normal-window
 
-# Capture selection and save inmediately
-shift + Print
-	flameshot gui -p $HOME/Pictures/Screenshots
+# browser
+super + @b
+	firefox
 
-# Capture entire screen and save inmediately
-super + Print
-	flameshot full --region all -p $HOME/Pictures/Screenshots
-
-# lf file manager
-# super + e
-	# alacritty -e 'lf'
-	# alacritty -e lf
-
-# thunar file manager
-# super + e
-	# Thunar
-
+# file manager (yazi)
 super + e
-    alacritty --class yazi-fm,Alacritty -e bash -ic 'cd "$HOME" && exec yazi .'
+	alacritty --class yazi-fm,Alacritty -e bash -ic 'cd "$HOME" && exec yazi .'
 
-# Volumen control
+# clipboard history (greenclip)
+super + a
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -normal-window
+
+# google search
+super + d
+	$HOME/Documents/scripts/rofi-google.sh
+
+# file search (rofi)
+super + shift + a
+	$HOME/Documents/scripts/rofi-files.sh
+
+# file search - google drive
+super + shift + @space
+	$HOME/Documents/scripts/rofi-files-google-drive.sh
+
+# recent pdfs (full history)
+super + shift + @p
+	$HOME/Documents/scripts/zathura-recent-files-rofi list
+
+# obsidian
+super + shift + o
+	$HOME/Documents/Obsidian-1.9.14.AppImage --no-sandbox
+
+# mathpix
+super + shift + m
+	$HOME/Documents/Mathpix.AppImage
+
+# xournalpp - lined letter template
+super + n
+	xournalpp "$HOME/Templates/lined-letter-template.pdf"
+
+# typed info snippets  (chain: super + u, then a letter)
+super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
+	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
+
+# ================================================================ scratchpads
+# scratch nvim
+super + @p
+	bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim
+
+# scratch calc
+super + y
+	bspc rule -a ScratchCalc -o state=floating rectangle=360x225+970+500; alacritty --class ScratchCalc,ScratchCalc -o font.size=14 -e calc -d
+
+# ================================================================ window mgmt
+# hide the focused window
+super + shift + i
+	$HOME/.config/bspwm/scripts/winhide
+
+# ===================================================================== media
 XF86AudioRaiseVolume
 	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1
-	# pactl set-sink-volume 0 +2%; pactl set-sink-mute 0 false
-	
+
 XF86AudioLowerVolume
 	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
-	# pactl set-sink-volume 0 -2%; pactl set-sink-mute 0 false
-	
+
 XF86AudioMute
 	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    	# pactl set-sink-mute 0 toggle
 
-# brightness control down
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioNext
+	playerctl next
+
+XF86AudioPrev
+	playerctl previous
+
+# ================================================================ brightness
 XF86MonBrightnessDown
 	brillo -u 100000 -U 5
-	# brillo -U 5
-	# brightnessctl s 10{+,-} 
 
 XF86MonBrightnessUp
 	brillo -u 100000 -A 5
 
-# set max brightness
+# max / min brightness
 super + alt + m
 	brillo -u 150000 -S 100
-	# brightnessctl s 255 
 
-# set min brightness
 super + alt + n
 	brillo -u 150000 -S 0
-	# brightnessctl s 0
 
-# play/pause
-XF86AudioPlay
-	playerctl play-pause
+# =============================================================== screenshots
+# region select -> edit
+Print
+	$HOME/myscripts/flameshot-focus.sh
 
-# Skip to the next track
-XF86AudioNext
-	playerctl next
+# region select -> save immediately
+shift + Print
+	flameshot gui -p $HOME/Pictures/Screenshots
 
-# Skip to the previous track
-XF86AudioPrev
-	playerctl previous
+# full screen -> save immediately
+super + Print
+	flameshot full --region all -p $HOME/Pictures/Screenshots
 
-# Shortcut for date
-# super + d
-	# sleep 0.30 && setxkbmap latam && xdotool type --delay=10 "$(date "+%Y-%m-%d %a %H:%M:%S")"
+# =================================================================== session
+# redshift warm
+super + shift + r
+	redshift -O 4000
 
-# Catfish
-super + shift + @space
-	$HOME/Documents/scripts/rofi-files-google-drive.sh
-	# catfish --start /mnt/Mis\ archivos/Google\ Drive
-	# catfish --start /mnt/Mis\ archivos/Google\ Drive/Libros
-
-# Open obsidian
-super + shift + o
-	$HOME/Documents/Obsidian-1.9.14.AppImage --no-sandbox
-	# $HOME/Documents/Obsidian-1.5.3.AppImage
-
-# Open obsidian
-super + shift + m
-	$HOME/Documents/Mathpix.AppImage
-
-# Wacom support
+# wacom tablet (external / laptop)
 super + shift + x
 	$HOME/Documents/xsetwacom-new.sh
 
 super + shift + alt + x
 	$HOME/Documents/xsetwacom-new-laptop.sh
 
-
-# start redshift
-super + shift + r
-	redshift -O 4000
-
-# Schedule
-# super + shift + s
-	# feh "/mnt/Mis archivos/Google Drive/10 Décimo Semestre/Otros/Schedule/_temp/schedule.png"
-
-# Calendario académico
-# super + shift + d
-	# zathura --mode fullscreen "/mnt/Mis archivos/Google Drive/9 Noveno Semestre/Otros/Calendario-Iy-II-PERIODO-2024-Carrera.pdf"
-
-# Launch LibreWolf profile
-# super + shift + f
-# 	librewolf -p MathClub
-
-# Launch browser
-super + @b
-	firefox
-	# librewolf
-
-# Multi shorcuts
-super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
-
-# Suspend
+# suspend (on key release)
 super + @l
 	systemctl suspend-then-hibernate
-#	systemctl suspend
 
+# lock via display manager, then suspend (on key release)
 super + shift + @l
 	dm-tool lock && systemctl suspend
-
-# alt + Tab
-# 	bspc node -s last.local; \
-# 	bspc node -f last.local
-	# bspc node -f last
-	# rofi -show window
-    # $HOME/Documents/scripts/rofi-alt-tab
-	# bspc node -f next.local
-# super + Tab
-# 	rofi -show window
-
-super + shift + a
-	$HOME/Documents/scripts/rofi-files.sh
-
-# super + alt + @c
-# 	xdotool type ç
-	# mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &
-
-super + shift + i
-	$HOME/.config/bspwm/scripts/winhide
-
-# super + ctrl + shift + i
-# 	w=$(bspc query -N -n .hidden | while read i; \ 
-# 	do echo $(xprop -id $i | grep WM_CLASS | sed -n 's/.*"\(.*\)",.*/\1/p'); done | rofi -dmenu);
-	# if [ -n "$w" ]; then \
-	# 	w=$(echo $w | cut -d ' ' -s -f 1); \
-	# 	bspc node "$w" -g hidden=off; \
-	# 	bspc node $w.fullscreen -t tiled; \
-	# 	bspc node $w -l normal; \
-	# 	bspc node -f $w; \
-	# fi
-
-# recent list of pdfs with rofi, all time history
-super + shift + @p
-    $HOME/Documents/scripts/zathura-recent-files-rofi list
-
-# # currently opened pdfs
-# super + @r
-#     $HOME/Documents/scripts/pdf-switch-rofi
-
-
-# super + @y
-#     $HOME/Documents/scripts/toggle-polytabs.sh
-
-super + n
-    xournalpp "$HOME/Templates/lined-letter-template.pdf"
-
-super + @p
-    bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim
-    # bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim +startinsert
-
-super + y
-    bspc rule -a ScratchCalc -o state=floating rectangle=360x225+970+500; alacritty --class ScratchCalc,ScratchCalc -o font.size=14 -e calc -d
-
-# monitor layout menu (autorandr profiles + auto-detect + mirror)
-super + alt + p
-    $HOME/.config/bspwm/scripts/display-menu
