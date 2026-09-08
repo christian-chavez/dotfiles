@@ -2,9 +2,7 @@
 # sxhkd - bspwm keybindings
 #
 # reload after editing:  super + Escape
-#
-# Note: a few scripts below still live under ~/Documents/scripts, ~/Documents
-# and ~/myscripts. Migrating them to ~/.local/bin is a separate task.
+# all referenced scripts live in ~/.local/bin
 #
 
 # ============================================================ sxhkd / bspwm
@@ -123,7 +121,7 @@ super + {Left,Down,Up,Right}
 # ==================================================================== displays
 # monitor layout menu (autorandr profiles + auto-detect + mirror)
 super + alt + p
-	$HOME/.config/bspwm/scripts/display-menu
+	$HOME/.local/bin/display-menu
 
 # ================================================================== launchers
 # terminal
@@ -148,19 +146,19 @@ super + a
 
 # google search
 super + d
-	$HOME/Documents/scripts/rofi-google.sh
+	$HOME/.local/bin/rofi-google.sh
 
 # file search (rofi)
 super + shift + a
-	$HOME/Documents/scripts/rofi-files.sh
+	$HOME/.local/bin/rofi-files.sh
 
 # file search - google drive
 super + shift + @space
-	$HOME/Documents/scripts/rofi-files-google-drive.sh
+	$HOME/.local/bin/rofi-files-google-drive.sh
 
 # recent pdfs (full history)
 super + shift + @p
-	$HOME/Documents/scripts/zathura-recent-files-rofi list
+	$HOME/.local/bin/zathura-recent-files-rofi list
 
 # obsidian
 super + shift + o
@@ -176,7 +174,7 @@ super + n
 
 # typed info snippets  (chain: super + u, then a letter)
 super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
-	$HOME/Documents/scripts/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
+	$HOME/.local/bin/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
 
 # ================================================================ scratchpads
 # scratch nvim
@@ -190,7 +188,7 @@ super + y
 # ================================================================ window mgmt
 # hide the focused window
 super + shift + i
-	$HOME/.config/bspwm/scripts/winhide
+	$HOME/.local/bin/winhide
 
 # ===================================================================== media
 XF86AudioRaiseVolume
@@ -228,7 +226,7 @@ super + alt + n
 # =============================================================== screenshots
 # region select -> edit
 Print
-	$HOME/myscripts/flameshot-focus.sh
+	$HOME/.local/bin/flameshot-focus.sh
 
 # region select -> save immediately
 shift + Print
@@ -245,10 +243,10 @@ super + shift + r
 
 # wacom tablet (external / laptop)
 super + shift + x
-	$HOME/Documents/xsetwacom-new.sh
+	$HOME/.local/bin/xsetwacom-new.sh
 
 super + shift + alt + x
-	$HOME/Documents/xsetwacom-new-laptop.sh
+	$HOME/.local/bin/xsetwacom-new-laptop.sh
 
 # suspend (on key release)
 super + @l

@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+file=${1:?Missing PDF path}
+current_page=${2:-1}
+
+dir=$(dirname -- "$file")
+base=$(basename -- "$file")
+stem=${base%.*}
+total=$(qpdf --show-npages "$file")
+dpi=200
+
+notify() {
+    command -v notify-send >/dev/null &&
+        notify-send "Zathura" "$1"
+}
+
+range=$(
+    printf '%s\n' "$current_page" |
+        rofi -normal-window -dmenu \
+            -p "Pages (1-$total)" \
+            -mesg "Enter one page or a range, for example 5 or 3-7"
+) || exit 0
+
+range=${range//[[:space:]]/}
+[[ -n "$range" ]] || exit 0
+
+if [[ "$range" =~ ^([0-9]+)(-([0-9]+))?$ ]]; then
+    start=$((10#${BASH_REMATCH[1]}))
+    end=$((10#${BASH_REMATCH[3]:-${BASH_REMATCH[1]}}))
+else
+    notify "Invalid page range: $range"
+    exit 1
+fi
+
+if (( start < 1 || end < start || end > total )); then
+    notify "Pages must satisfy 1 <= start <= end <= $total"
+    exit 1
+fi
+
+if (( start == end )); then
+    tag="$start"
+else
+    tag="$start-$end"
+fi
+
+action=$(
+    printf '%s\n' \
+        "Extract as PDF" \
+        "Convert to PNG" |
+        rofi -dmenu -p "Output format"
+) || exit 0
+
+case "$action" in
+    "Extract as PDF")
+        output="$dir/${stem}-pages-${tag}.pdf"
+
+        qpdf "$file" \
+            --pages . "$start-$end" \
+            -- "$output"
+
+        notify "Created $(basename -- "$output")"
+        ;;
+
+    "Convert to PNG")
+        output_dir="$dir/${stem}-pages-${tag}-png"
+        mkdir -p "$output_dir"
+
+        pdftocairo \
+            -png \
+            -r "$dpi" \
+            -f "$start" \
+            -l "$end" \
+            "$file" \
+            "$output_dir/page"
+
+        notify "PNG pages saved in $(basename -- "$output_dir")"
+        ;;
+
+    *)
+        exit 0
+        ;;
+esac

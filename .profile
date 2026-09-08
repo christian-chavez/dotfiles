@@ -13,18 +13,18 @@ alias camera='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-cor
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.3.0"
 export PATH="$GEM_HOME/bin:$PATH"
 # 2025-09-08 zathura recent list of pdfs with rofi integration
-export PATH="$HOME/Documents/scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 alias morning="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/morning-exercise.mp4"
 alias meditacion="mpv --no-video --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/meditacion-mañana.mp4"
-alias mwander="/home/christian/Documents/scripts/wander.sh"
-alias qsc="Documents/scripts/quick-capture.sh"
-alias zim='/home/christian/Documents/scripts/zettelkasten-vim.sh'
+alias mwander="$HOME/.local/bin/wander.sh"
+alias qsc="$HOME/.local/bin/quick-capture.sh"
+alias zim='$HOME/.local/bin/zettelkasten-vim.sh'
 alias xp="xclip -selection c"
 alias clk="tty-clock -sc"
 alias calentamiento="mpv --loop-playlist=no --loop-file=no --start=0 --no-resume-playback /home/christian/Videos/calentamiento.mp4"
 alias bed="mpv --loop-playlist=no --loop-file=no --start=02:04 --no-resume-playback /home/christian/Videos/bedtime.mp4"
 alias schirata="vim /mnt/Mis\ archivos/maitrise/cours/reading-group-rt/typos/errata.md"
-alias xwp="$HOME/Documents/scripts/xopp-watch-pdf.sh"
+alias xwp="$HOME/.local/bin/xopp-watch-pdf.sh"
 alias sbcl='rlwrap sbcl'
 alias code-off='firejail --noprofile --net=none code'
 

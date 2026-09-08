@@ -3,4 +3,4 @@
 # reorder redistributes bspwm desktops across the active monitors and ends
 # with `bspc wm -r`, which re-runs bspwmrc (relaunching polybar, wallpaper,
 # rules). So this hook only needs to call reorder.
-"$HOME/.config/bspwm/scripts/reorder"
+"$HOME/.local/bin/reorder"

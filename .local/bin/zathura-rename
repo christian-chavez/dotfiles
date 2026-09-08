@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+file=${1:?Missing PDF path}
+page=${2:?Missing page number}
+dbus=${3:?Missing Zathura D-Bus name}
+
+dir=$(dirname -- "$file")
+base=$(basename -- "$file")
+
+if [[ "$base" == *.* ]]; then
+    stem=${base%.*}
+    extension=".${base##*.}"
+else
+    stem=$base
+    extension=""
+fi
+
+notify() {
+    command -v notify-send >/dev/null 2>&1 &&
+        notify-send "Zathura" "$1"
+}
+
+# Rofi starts with the current filename selected for editing.
+new_stem=$(
+    printf '%s\n' "$stem" |
+        rofi -normal-window -dmenu \
+            -p "Rename PDF" \
+            -filter "$stem" \
+            -format f \
+            -mesg "Extension preserved: ${extension:-none}"
+) || exit 0
+
+[[ -n "$new_stem" ]] || exit 0
+
+# Keep the file in its current directory.
+if [[ "$new_stem" == */* ]]; then
+    notify "The filename cannot contain /"
+    exit 1
+fi
+
+new_base="${new_stem}${extension}"
+target="$dir/$new_base"
+
+# Nothing changed.
+[[ "$target" != "$file" ]] || exit 0
+
+if [[ -e "$target" ]]; then
+    notify "A file named '$new_base' already exists"
+    exit 1
+fi
+
+mv -- "$file" "$target"
+
+# $PAGE is one-based, while OpenDocument expects zero-based numbering.
+zero_page=$((page - 1))
+
+if gdbus call \
+    --session \
+    --dest "$dbus" \
+    --object-path /org/pwmt/zathura \
+    --method org.pwmt.zathura.OpenDocument \
+    "$target" \
+    "" \
+    "$zero_page" \
+    >/dev/null
+then
+    notify "Renamed to $new_base"
+else
+    # Fallback: open the renamed file in another Zathura window.
+    zathura --fork --page="$page" "$target"
+    notify "Renamed, but reopened in a new window"
+fi

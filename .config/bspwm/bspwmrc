@@ -120,12 +120,12 @@ bspc config bottom_padding 0
 
 # 2026-01-03
 # Mouse settings
-$HOME/Documents/scripts/mouse-sensitivity.sh &
-$HOME/Documents/scripts/unclutter-mouse.sh &
+$HOME/.local/bin/mouse-sensitivity.sh &
+$HOME/.local/bin/unclutter-mouse.sh &
 
 # 2024-08-12
 # Set shadow for floating windows
-$HOME/shadow-script.sh &
+$HOME/.local/bin/shadow-script.sh &
 bspc query -N -n focused | while read -r win_id; do
   xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
 done
@@ -150,6 +150,6 @@ sleep 10; zathura-recent-files-rofi clean
 # fi
 #
 # pkill -f '[w]atch-polytabs.sh' 2>/dev/null || true
-# "$HOME/Documents/scripts/watch-polytabs.sh" &
+# "$HOME/.local/bin/watch-polytabs.sh" &
 # ===================================================================
 

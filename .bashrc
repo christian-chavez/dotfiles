@@ -84,9 +84,6 @@ alias sumatra='env WINEPREFIX="/home/christian/wine-32" wine "C:\\Program Files\
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# 2025-09-08 zathura recent list of pdfs with rofi integration
-export PATH="$HOME/Documents/scripts:$PATH"
-
 
 # 2025-09-26 Autopairs para Bash
 source ~/.bash-autopairs/autopairs.sh

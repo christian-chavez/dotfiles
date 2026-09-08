@@ -64,10 +64,10 @@ map [normal] xp exec "sh -c 'printf %s \"$1\" | xclip -selection clipboard' sh '
 map [normal] xy exec "alacritty -e yazi '$FILE'"
 
 # Show pdfinfo in Alacritty
-map [normal] xi exec "alacritty --hold -e /home/christian/Documents/scripts/zathura-pdfinfo '$FILE'"
+map [normal] xi exec "alacritty --hold -e /home/christian/.local/bin/zathura-pdfinfo '$FILE'"
 
 # extract pages
-map [normal] xr exec "/home/christian/Documents/scripts/zathura-pages '$FILE' '$PAGE'"
+map [normal] xr exec "/home/christian/.local/bin/zathura-pages '$FILE' '$PAGE'"
 
 # rename file
-map [normal] xw exec "/home/christian/Documents/scripts/zathura-rename '$FILE' '$PAGE' '$DBUS'"
+map [normal] xw exec "/home/christian/.local/bin/zathura-rename '$FILE' '$PAGE' '$DBUS'"

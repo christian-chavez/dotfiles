@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+file=${1:?Missing PDF file}
+bytes=$(stat -c '%s' -- "$file")
+
+pdfinfo "$file" |
+    awk -v bytes="$bytes" -v file="$file" '
+        BEGIN {
+            printf "%-16s %s\n", "File path:", file
+        }
+
+        /^(Custom Metadata|Metadata Stream|Tagged|Suspects|Form|JavaScript|Page rot|Optimized):/ {
+            next
+        }
+
+        /^File size:/ {
+            printf "%-16s %.2f MB\n", "File size:", bytes / 1000000
+            next
+        }
+
+        {
+            print
+        }
+    '
