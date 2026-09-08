@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Toggles
+GenericName=Session toggles
+Comment=Toggle picom, syncthing and other session/system switches
+Icon=preferences-system
+Exec=/home/christian/.local/bin/rofi-toggles
+Terminal=false
+Categories=Settings;
+Keywords=toggle;toggles;picom;compositor;syncthing;session;switch;
