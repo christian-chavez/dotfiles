@@ -51,6 +51,14 @@ pgrep -x dunst >/dev/null || dunst &
 pgrep -x picom >/dev/null || picom -b &
 numlockx &
 
+# lock the screen before every suspend (super+l keybind, lid close, low
+# battery, `systemctl suspend`). --transfer-sleep-lock holds the sleep
+# inhibitor until i3lock has the screen, so there's no desktop flash on
+# resume.
+pgrep -x xss-lock >/dev/null || xss-lock --transfer-sleep-lock -- i3lock -n -c 0d0c0c &
+# also lock after 45 min idle (xss-lock catches the X screensaver event)
+xset s 2700 2700
+
 #light-locker &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/bttf.jpg &
