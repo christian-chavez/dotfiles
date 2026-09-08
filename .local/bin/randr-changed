@@ -1,0 +1,32 @@
+#!/bin/bash
+# Debounced RandR-change handler for srandrd.
+#
+# A monitor hotplug -- worse with a slow display -- emits a burst of RandR
+# events. Running `autorandr --change` on each one triggers a profile switch,
+# and every switch fires `reorder` + `bspc wm -r`: a visible storm of blinking
+# and desktop shuffling. This collapses a burst into a single
+# `autorandr --change`, run ~2 seconds after the last event.
+#
+# How it works: every event stamps a file and spawns a detached would-be
+# debouncer. The first one takes an exclusive lock and loops until the stamp
+# has been quiet for the delay; later ones fail the non-blocking lock and exit
+# at once. So only one `autorandr --change` runs, after the burst ends.
+#
+# bspwmrc starts it as:  srandrd "$HOME/.local/bin/randr-changed"
+
+DELAY_NS=2000000000   # 2 seconds
+STAMP=/tmp/randr-changed.stamp
+LOCK=/tmp/randr-changed.lock
+
+date +%s%N > "$STAMP"
+
+setsid bash -c '
+	exec 9>"'"$LOCK"'"
+	flock -n 9 || exit 0
+	while :; do
+		last=$(cat "'"$STAMP"'" 2>/dev/null || echo 0)
+		(( $(date +%s%N) - last >= '"$DELAY_NS"' )) && break
+		sleep 0.5
+	done
+	exec autorandr --change
+' &

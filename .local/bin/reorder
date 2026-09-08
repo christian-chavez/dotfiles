@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# A monitor hotplug can emit several RandR events in a row (worse with a slow
+# display). reorder ends in `bspc wm -r`, which re-runs bspwmrc -> autorandr ->
+# postswitch -> reorder, so runs can overlap and corrupt the desktop list
+# (duplicate names across monitors, leftover tmp* desktops). Serialize on a
+# lock, and let the outputs settle before reading the layout.
+if [[ -z "$_REORDER_LOCKED" ]]; then
+	export _REORDER_LOCKED=1
+	exec flock -x -w 30 /tmp/reorder.lock "$0" "$@"
+fi
+sleep 1.5
+
 function contains() {
 	local e
 	for e in "${@:2}"; do
@@ -13,7 +24,18 @@ if [[ -n $@ ]]; then
 	order=( "$@" )
 else
 	#mapfile -t order < <(bspc query -M)
-	mapfile -t order < <(xrandr | sed -n "s/^\([^ ]*\) connected.*/\1/p")
+	# order active monitors left-to-right by their xrandr X position, so
+	# desktop numbering follows the physical layout (leftmost screen gets 1..N)
+	mapfile -t order < <(xrandr --query | awk '
+		/^[^ ]+ connected/ {
+			name = $1
+			for (i = 1; i <= NF; i++)
+				if ($i ~ /^[0-9]+x[0-9]+\+[0-9]+\+[0-9]+$/) {
+					split($i, g, "+"); print g[2] "\t" name
+				}
+		}' | sort -n | cut -f2)
+	# fallback to plain xrandr listing order if nothing matched
+	[[ ${#order[@]} -eq 0 ]] && mapfile -t order < <(xrandr | sed -n "s/^\([^ ]*\) connected.*/\1/p")
 fi
 
 monitors=${#order[@]}
