@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+#
+# audio-sink-menu - rofi menu to pick the default audio output (bspwm).
+#
+#   * Lists every available sink under a short friendly name; "@" marks the
+#     one that is currently the default.
+#   * Picking a sink makes it the default output AND moves every currently
+#     playing stream (sink-input) over to it, so sound follows immediately.
+#
+# Names come from a few built-in heuristics on the sink id. To override one,
+# add a line "sink.name = Nice Name" to:
+#     ~/.config/audio-sink-menu/names
+# (get sink names with `pactl list short sinks`.)
+#
+# Bound to right-click on the polybar pulseaudio module.
+
+set -uo pipefail
+
+OVERRIDES="${XDG_CONFIG_HOME:-$HOME/.config}/audio-sink-menu/names"
+
+notify() { command -v notify-send >/dev/null 2>&1 && notify-send -a Audio "$@"; return 0; }
+# -normal-window + no-custom to match the other rofi menus (bt-menu, etc.).
+menu() { rofi -dmenu -i -no-custom -normal-window -p "Output"; }
+
+# Short label for a sink, given its id ($1) and pactl description ($2).
+nice_name() {
+  local name="$1" desc="$2" key
+
+  # 1. explicit override file wins.
+  if [ -f "$OVERRIDES" ]; then
+    key="$(sed -n "s/^[[:space:]]*${name//./\\.}[[:space:]]*=[[:space:]]*//p" "$OVERRIDES" | head -n1)"
+    [ -n "$key" ] && { printf '%s' "$key"; return; }
+  fi
+
+  # 2. heuristics on the sink id.
+  case "$name" in
+    bluez_output.*)                 printf '%s' "${desc:-Bluetooth}"; return ;;
+    *virtual-surround*|*hesuvi*)     printf 'Surround 7.1';           return ;;
+    *hdmi*|*.pro-output*|*iec958*)   printf 'HDMI';                   return ;;
+    *usb*)                          printf '%s' "${desc:-USB Audio}"; return ;;
+    *headphone*)                    printf 'Headphones';              return ;;
+    *analog-stereo*|*analog-*|*.analog*) printf 'Speakers';           return ;;
+  esac
+
+  # 3. fall back to the raw description.
+  printf '%s' "$desc"
+}
+
+default_sink="$(pactl get-default-sink 2>/dev/null)"
+
+# Build parallel arrays of sink id + pretty label by walking `pactl list sinks`.
+names=() labels=()
+cur_name=""
+while IFS= read -r line; do
+  case "$line" in
+    "Name: "*)        cur_name="${line#Name: }" ;;
+    "Description: "*)
+      [ -z "$cur_name" ] && continue
+      names+=("$cur_name")
+      labels+=("$(nice_name "$cur_name" "${line#Description: }")")
+      cur_name=""
+      ;;
+  esac
+done < <(pactl list sinks | sed 's/^[[:space:]]*//')
+
+[ "${#names[@]}" -eq 0 ] && { notify "No audio outputs found"; exit 0; }
+
+# Assemble the menu; remember which row maps to which sink id / label.
+declare -A NAME_OF LABEL_OF
+options=""
+for i in "${!names[@]}"; do
+  if [ "${names[$i]}" = "$default_sink" ]; then
+    row="@    ${labels[$i]}"
+  else
+    row="     ${labels[$i]}"
+  fi
+  NAME_OF["$row"]="${names[$i]}"
+  LABEL_OF["$row"]="${labels[$i]}"
+  options+="${options:+$'\n'}$row"
+done
+
+choice="$(printf '%s' "$options" | menu)" || exit 0
+[ -z "${choice:-}" ] && exit 0
+
+target="${NAME_OF[$choice]:-}"
+[ -z "$target" ] && exit 0
+[ "$target" = "$default_sink" ] && exit 0
+
+pactl set-default-sink "$target" || { notify "Failed to switch output"; exit 1; }
+
+# Move streams that are already playing so audio follows the switch.
+while read -r id _; do
+  [ -n "${id:-}" ] && pactl move-sink-input "$id" "$target" >/dev/null 2>&1
+done < <(pactl list short sink-inputs)
+
+notify "Output: ${LABEL_OF[$choice]:-$target}"
+exit 0

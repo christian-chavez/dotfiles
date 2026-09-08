@@ -1,0 +1,8 @@
+# audio-sink-menu label overrides.
+# Format:  <sink name> = <label to show in rofi>
+# List sink names with:  pactl list short sinks
+#
+# Examples:
+# alsa_output.pci-0000_04_00.6.analog-stereo = Speakers
+# alsa_output.pci-0000_04_00.1.pro-output-3  = TV (HDMI)
+# bluez_output.24_14_1F_E5_C4_B2.1           = Headphones
