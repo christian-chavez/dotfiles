@@ -1,0 +1,6 @@
+[icon]
+prepend_conds = [
+	{ if = "dir", text = "  " },
+	{ if = "link", text = "  " },
+	{ if = "!(dir | link)", text = "  " },
+]

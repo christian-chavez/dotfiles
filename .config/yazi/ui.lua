@@ -1,0 +1,2 @@
+-- ~/.config/yazi/ui.lua
+-- function Folder:icon(file) return ui.Span("  ueueu" .. file:icon() .. "  ") end

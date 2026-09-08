@@ -1,0 +1,23 @@
+# yazi.toml
+[mgr]
+show_hidden = false
+sort_by = "mtime"
+sort_reverse = true
+sort_sensitive = true
+sort_translit = true
+linemode = "mtime"
+
+[[opener.xournalpp]]
+run = 'xournalpp %s'
+desc = 'Open with Xournal++'
+orphan = true
+for = 'linux'
+
+[[open.prepend_rules]]
+url = '*.xopp'
+use = 'xournalpp'
+
+# [plugins]
+# preload = [
+#     "~/.config/yazi/ui.lua"
+# ]

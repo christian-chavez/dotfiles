@@ -1,0 +1,60 @@
+[[mgr.prepend_keymap]]
+on = [ "m" ]
+run = "plugin bookmarks save"
+desc = "Save current position as a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "'" ]
+run = "plugin bookmarks jump"
+desc = "Jump to a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "b", "d" ]
+run = "plugin bookmarks delete"
+desc = "Delete a bookmark"
+
+[[mgr.prepend_keymap]]
+on = [ "b", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Delete all bookmarks"
+
+[[mgr.prepend_keymap]]
+on   = [ "t", "t" ]
+run  = "plugin smart-tab"
+desc = "Create a tab and enter the hovered directory"
+
+[[mgr.prepend_keymap]]
+on   = "2"
+run  = "plugin smart-switch 1"
+desc = "Switch or create tab 2"
+
+[[mgr.prepend_keymap]]
+on = "<C-n>"
+run = "shell --orphan -- dragon-drop -x -i -T %h"
+desc = "Drag hovered file with dragon-drop"
+
+[[mgr.prepend_keymap]]
+on   = "<C-g>"
+run  = 'shell -- rofi -theme fullscreen-preview -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+desc = "Grid view"
+
+[[mgr.prepend_keymap]]
+on  = "q"
+run = "plugin confirm-quit"
+
+# This tip lets you preview thumbnails in the current directory using Rofi, selecting an item reveals it in Yazi:
+[[mgr.prepend_keymap]]
+on   = "<C-g>"
+run  = 'shell -- rofi -theme fullscreen-preview -show filebrowser -filebrowser-command "ya emit reveal" -filebrowser-directory "$(pwd)"'
+desc = "Grid view"
+
+
+[[mgr.prepend_keymap]]
+on   = "T"
+run  = 'shell --orphan -- alacritty --working-directory "$PWD"'
+desc = "Open Alacritty here"
+
+[[mgr.prepend_keymap]]
+on = "<C-p>"
+run = "shell -- xournalpp -p %h.pdf %h"
+desc = "Export Xournal++ to PDF"

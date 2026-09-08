@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Zathura with Recent Files
+Exec=/home/christian/.local/bin/zathura-recent-files-rofi %U
+Terminal=false
+Type=Application
+MimeType=application/pdf;
+
