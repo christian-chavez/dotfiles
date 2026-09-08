@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Polybar microphone indicator for the default PulseAudio/PipeWire source.
+#   live  : 󰍬  (foreground)
+#   muted : 󰍭  (dim grey)
+#
+#   mic-status           print once
+#   mic-status --watch   print now, then on every source change (used with
+#                        `tail = true`; instant, no polling)
+#
+# Left-click -> pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+DIM='#707880'
+
+emit() {
+  if [ "$(pactl get-source-mute @DEFAULT_SOURCE@ 2>/dev/null | awk '{print $2}')" = yes ]; then
+    printf '%%{F%s}󰍭%%{F-}\n' "$DIM"
+  else
+    printf '󰍬\n'
+  fi
+}
+
+if [ "${1:-}" != --watch ]; then
+  emit
+  exit 0
+fi
+
+emit
+pactl subscribe 2>/dev/null | while IFS= read -r line; do
+  case $line in *source*) emit ;; esac
+done

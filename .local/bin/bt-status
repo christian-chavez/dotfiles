@@ -1,8 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Polybar Bluetooth indicator.
 #   blocked / powered off : 󰂲  (dim grey)
 #   powered on, idle      : 󰂯  (foreground)
 #   device(s) connected   : 󰂱  (blue); shows a count when more than one
+#
+#   bt-status            print the icon once (for a plain custom/script poll)
+#   bt-status --watch    print now, then reprint on every BlueZ D-Bus signal
+#                        (used with `tail = true`, so the icon updates instantly
+#                        on connect/disconnect/toggle with no polling)
 #
 # Left-click  -> bt-toggle  (adapter on/off)
 # Right-click -> bt-menu     (rofi device menu)
@@ -10,16 +15,38 @@
 DIM='#707880'
 PRIMARY='#63b1ff'
 
-off() { printf '%%{F%s}󰂲%%{F-}\n' "$DIM"; exit 0; }
+emit() {
+  if rfkill list bluetooth 2>/dev/null | grep -q 'Soft blocked: yes' \
+     || [ "$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')" != yes ]; then
+    printf '%%{F%s}󰂲%%{F-}\n' "$DIM"
+    return
+  fi
+  n=$(bluetoothctl devices Connected 2>/dev/null | grep -c '^Device ')
+  if [ "${n:-0}" -gt 1 ] 2>/dev/null; then
+    printf '%%{F%s}󰂱%%{O4}%s%%{F-}\n' "$PRIMARY" "$n"
+  elif [ "${n:-0}" -eq 1 ] 2>/dev/null; then
+    printf '%%{F%s}󰂱%%{F-}\n' "$PRIMARY"
+  else
+    printf '󰂯\n'
+  fi
+}
 
-rfkill list bluetooth 2>/dev/null | grep -q 'Soft blocked: yes' && off
-[ "$(bluetoothctl show 2>/dev/null | awk -F': ' '/Powered:/{print $2; exit}')" = yes ] || off
-
-n=$(bluetoothctl devices Connected 2>/dev/null | grep -c '^Device ')
-if [ "${n:-0}" -gt 1 ] 2>/dev/null; then
-  printf '%%{F%s}󰂱%%{O4}%s%%{F-}\n' "$PRIMARY" "$n"
-elif [ "${n:-0}" -eq 1 ] 2>/dev/null; then
-  printf '%%{F%s}󰂱%%{F-}\n' "$PRIMARY"
-else
-  printf '󰂯\n'
+if [ "${1:-}" != --watch ]; then
+  emit
+  exit 0
 fi
+
+# --watch: reprint on every BlueZ D-Bus signal (power on/off, connect, disconnect
+# - which covers bt-toggle too, since it calls `bluetoothctl power`). Falls back
+# to a slow poll if dbus-monitor is unavailable. No temp files, no background
+# jobs: when polybar stops the module the pipe tears down and dbus-monitor exits.
+if ! command -v dbus-monitor >/dev/null 2>&1; then
+  while :; do emit; sleep 5; done
+fi
+
+emit
+dbus-monitor --system "type='signal',path_namespace='/org/bluez'" 2>/dev/null |
+  while IFS= read -r _; do
+    while read -r -t 1 _; do :; done   # coalesce the burst one change produces
+    emit
+  done
