@@ -9,38 +9,20 @@ set -x
 
 
 
-# if [[ $(xrandr -q | grep 'HDMI-A-0 connected')]]
-# then
-#   xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --mode 1920x1080 --rotate normal --left-of eDP
-# bspc wm -O HDMI-A-0 eDP 
-# bspc monitor eDP -d 6 7 8 9 10 
-# bspc monitor HDMI-A-0 -d 1 2 3 4 5
-# else
-# bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10 
-# fi
-
-# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --right-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# if [[ $(xrandr -q | grep 'HDMI-A-0 connected') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc wm -O eDP HDMI-A-0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# if [[ $(xrandr -q | grep -e 'HDMI-A-0 connected' -e 'eDP') ]]; then xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# # Para activar solo segundo monitor -- no funciona muy bien
-# if xrandr --listmonitors | grep 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r ; fi
- 
-# default
-# if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --right-of eDP && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-
-# on top
-# if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --output HDMI-A-0 --primary --auto --rotate normal --above eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-# vertical with laptop on the left
-# if xrandr -q | grep -q 'HDMI-A-0 connected'; then if xrandr --listmonitors | grep -q 'HDMI-A-0' && ! xrandr --listmonitors | grep -q 'eDP'; then xrandr --output HDMI-A-0 --primary --auto && bspc monitor HDMI-A-0 -d 1 2 3 4 5 6 7 8 9 10 && bspc monitor eDP -r; else xrandr --output eDP --mode 1366x768 --rotate normal --pos 0x832 --output HDMI-A-0 --primary --auto --rotate left --pos 1366x0 && bspc monitor eDP -d 1 2 3 4 5 && bspc monitor HDMI-A-0 -d 6 7 8 9 10; fi; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-
-if [[ $(xrandr -q | grep '^HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --auto --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-
-# testing monitor not working. This fixed the external hp monitor sometimes not wanting to work!
-# if [[ $(xrandr -q | grep '^HDMI-A-0 connected') ]]; then xrandr --output eDP --primary --mode 1366x768 --rotate normal --output HDMI-A-0 --mode 1600x900 --rate 60 --rotate normal --left-of eDP && bspc wm -O HDMI-A-0 eDP && bspc monitor eDP -d 6 7 8 9 10 && bspc monitor HDMI-A-0 -d 1 2 3 4 5; else bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10; fi
-
-# i think the command got too long. i made an script
-# $HOME/Documents/scripts/extmonitor.sh 
+# --- displays --------------------------------------------------------------
+# autorandr owns the xrandr layout. List: `autorandr`. Author: plug monitor,
+# arrange in `arandr`, then `autorandr --save <name>`. srandrd re-applies the
+# matching profile on hotplug (X RandR events fire *after* EDID is read, so it
+# catches monitors the raw udev rule misses); autorandr's postswitch runs
+# `reorder` to redistribute desktops. Manual pick:  super + alt + p
+#
+# NOTE: do NOT call reorder here - it ends in `bspc wm -r`, which re-runs this
+# file and would loop. reorder is only safe from postswitch (a discrete event).
+autorandr --change --default mobile 2>/dev/null
+pgrep -x srandrd >/dev/null || { command -v srandrd >/dev/null && srandrd autorandr --change & }
+# base layout for the laptop-only case; reorder handles the multi-monitor split
+xrandr -q | grep -q '^HDMI-A-0 connected' || bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10
+# -------------------------------------------------------------------------------
 
 wmname LG3D # this is for java to not missbehave
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -93,9 +75,9 @@ numlockx &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/black-arch.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/blue-arch.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/fuji.png &
+feh --bg-fill --randomize $HOME/Pictures/wallpapers/fuji.png &
 # feh --bg-fill --randomize $HOME/Pictures/wallpapers/peace.png &
-feh --bg-fill --randomize $HOME/Pictures/wallpapers/oriente.png &
+# feh --bg-fill --randomize $HOME/Pictures/wallpapers/oriente.png &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
@@ -122,7 +104,7 @@ bspc rule -a "Rofi" state=floating border=off sticky=on layer=above
 bspc rule -a "MEGAsync" state=floating center=on 
 bspc rule -a "megasync" state=floating center=on
 bspc rule -a "Inkscape" state=floating
-bbspc rule -a Alacritty:yazi-fm state=tiled
+bspc rule -a Alacritty:yazi-fm state=tiled
 
 # 2024-01-26 Fri 23:56:12
 bspc config right_padding 0

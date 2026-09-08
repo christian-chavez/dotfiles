@@ -331,3 +331,7 @@ super + @p
 
 super + y
     bspc rule -a ScratchCalc -o state=floating rectangle=360x225+970+500; alacritty --class ScratchCalc,ScratchCalc -o font.size=14 -e calc -d
+
+# monitor layout menu (autorandr profiles + auto-detect + mirror)
+super + alt + p
+    $HOME/.config/bspwm/scripts/display-menu

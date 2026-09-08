@@ -1,3 +1,6 @@
 #!/bin/bash
-
-$HOME/.config/bspwm/scripts/reorder
+# Runs after autorandr applies a profile (hotplug, boot, or the rofi menu).
+# reorder redistributes bspwm desktops across the active monitors and ends
+# with `bspc wm -r`, which re-runs bspwmrc (relaunching polybar, wallpaper,
+# rules). So this hook only needs to call reorder.
+"$HOME/.config/bspwm/scripts/reorder"

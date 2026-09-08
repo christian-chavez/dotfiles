@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# display-menu - rofi switcher for monitor layouts.
+#
+# Layouts are autorandr profiles. To create one: plug the monitor in, arrange
+# it with `arandr` (or a raw xrandr command), then `autorandr --save <name>`.
+# Good names: mobile, dock-left, dock-right, ext-only.
+#
+# Hotplug auto-applies the matching profile via srandrd (see bspwmrc). This
+# menu is for choosing a different arrangement by hand, plus "Auto-detect"
+# (re-probe and apply, no bspwm restart) and "Mirror".
+
+set -uo pipefail
+
+menu() { rofi -dmenu -i -no-custom -normal-window -p "Display"; }
+
+AUTO='>  Auto-detect'
+MIRROR='>  Mirror'
+
+declare -A ACTION
+options=''
+
+while read -r name tags; do
+	[ -z "${name:-}" ] && continue
+	case "$tags" in
+		*"(current)"*)  label="*  $name" ;;
+		*)              label="   $name" ;;
+	esac
+	ACTION["$label"]="load:$name"
+	options+="$label"$'\n'
+done < <(autorandr 2>/dev/null)
+
+options+="$AUTO"$'\n'"$MIRROR"
+ACTION["$AUTO"]='change'
+ACTION["$MIRROR"]='mirror'
+
+choice="$(printf '%s' "$options" | menu)" || exit 0
+[ -z "${choice:-}" ] && exit 0
+
+case "${ACTION[$choice]:-}" in
+	change)  autorandr --change ;;
+	mirror)  autorandr --common ;;
+	load:*)  autorandr --load "${ACTION[$choice]#load:}" ;;
+	*)       exit 0 ;;
+esac
