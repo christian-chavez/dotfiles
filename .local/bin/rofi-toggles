@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#
+# rofi-toggles - quick menu of session/system toggles.  Bound to super + alt + t.
+# Each entry shows its current state in [brackets]; picking one flips it.
+
+set -uo pipefail
+menu() { rofi -dmenu -i -no-custom -normal-window -p "Toggle"; }
+
+st_picom()     { pgrep -x picom >/dev/null 2>&1 && echo on || echo off; }
+# reflect reality (any syncthing); the toggle drives the --user unit, which is
+# only meaningful once the system unit syncthing@christian is disabled
+st_syncthing() { pgrep -x syncthing >/dev/null 2>&1 && echo on || echo off; }
+
+do_picom() {
+	if pgrep -x picom >/dev/null 2>&1; then
+		pkill -x picom
+	else
+		picom -b
+	fi
+}
+do_syncthing() {
+	if systemctl --user is-active --quiet syncthing.service; then
+		systemctl --user stop syncthing.service
+	else
+		systemctl --user start syncthing.service
+	fi
+}
+
+declare -A ACTION
+opts=""
+add() { opts+="$1"$'\n'; ACTION["$1"]="$2"; }
+
+add "$(printf 'picom       [%s]' "$(st_picom)")"     do_picom
+add "$(printf 'syncthing   [%s]' "$(st_syncthing)")" do_syncthing
+
+choice="$(printf '%s' "$opts" | menu)" || exit 0
+[ -z "${choice:-}" ] && exit 0
+"${ACTION[$choice]:-true}"

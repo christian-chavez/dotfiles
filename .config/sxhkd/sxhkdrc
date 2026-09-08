@@ -123,6 +123,10 @@ super + {Left,Down,Up,Right}
 super + alt + p
 	$HOME/.local/bin/display-menu
 
+# session/system toggles menu (picom, syncthing, ...)
+super + alt + t
+	$HOME/.local/bin/rofi-toggles
+
 # ================================================================== launchers
 # terminal
 super + Return
