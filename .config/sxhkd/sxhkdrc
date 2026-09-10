@@ -127,6 +127,10 @@ super + alt + p
 super + alt + t
 	$HOME/.local/bin/rofi-toggles
 
+# wallpaper picker (rofi thumbnails; choice persists via ~/.cache/wallpaper)
+super + alt + w
+	$HOME/.local/bin/wallpaper
+
 # ================================================================== launchers
 # terminal
 super + Return
@@ -142,7 +146,7 @@ super + @b
 
 # file manager (yazi)
 super + e
-	alacritty --class yazi-fm,Alacritty -e bash -ic 'cd "$HOME" && exec yazi .'
+	alacritty --class yazi-fm,Alacritty --working-directory "$HOME" -e yazi
 
 # clipboard history (greenclip)
 super + a
@@ -184,12 +188,13 @@ super + n
 super + u ; {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
 	$HOME/.local/bin/type_info.sh {i,c,m,e,f,F,n,s,u,U,M,k,d,j,p,a,t,l,x}
 
-# ================================================================ scratchpads
-# scratch nvim
+# ========================================================= floating quick-launch
+# (these spawn a fresh floating instance on every press -- not toggled scratchpads)
+# floating nvim
 super + @p
 	bspc rule -a ScratchNvim -o state=floating rectangle=570x225+760+500; alacritty --class ScratchNvim,ScratchNvim -e nvim
 
-# scratch calc
+# floating calc
 super + y
 	bspc rule -a ScratchCalc -o state=floating rectangle=360x225+970+500; alacritty --class ScratchCalc,ScratchCalc -o font.size=14 -e calc -d
 

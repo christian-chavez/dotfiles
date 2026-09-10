@@ -1,0 +1,9 @@
+export _JAVA_AWT_WM_NONREPARENTING=1
+# sometimes helps on newer JDKs too:
+export AWT_TOOLKIT=MToolkit
+
+# default editor for the whole graphical session (yazi, git, xdg-open handlers,
+# ...); previously only set in ~/.bashrc, so GUI-launched apps never saw it
+export EDITOR=nvim
+export VISUAL=nvim
+

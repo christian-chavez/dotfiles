@@ -18,6 +18,9 @@ set -x
 #
 # NOTE: do NOT call reorder here - it ends in `bspc wm -r`, which re-runs this
 # file and would loop. reorder is only safe from postswitch (a discrete event).
+# On a fresh boot this line applies a profile -> postswitch -> reorder ->
+# `bspc wm -r`, so bspwmrc runs twice; the second pass no-ops here because the
+# profile is already current. Guard anything below that must not run twice.
 autorandr --change --default mobile 2>/dev/null
 pgrep -x srandrd >/dev/null || { command -v srandrd >/dev/null && srandrd "$HOME/.local/bin/randr-changed" & }
 # base layout for the laptop-only case; reorder handles the multi-monitor split
@@ -41,9 +44,11 @@ bspc config click_to_focus any
 
 # sxhkd &
 # redshift &
-greenclip daemon &
+pgrep -x greenclip >/dev/null || greenclip daemon &
 
-pkill -x polybar 2>/dev/null || true
+# restart only the bars this file owns; the pdftabs bar is managed by
+# watch-polytabs.sh (further down) and rides through a bspwm restart on its own
+pkill -f 'polybar -r (example|external)' 2>/dev/null
 polybar -r example &
 polybar -r external &
 pgrep -x dunst >/dev/null || dunst &
@@ -60,32 +65,10 @@ pgrep -x xss-lock >/dev/null || xss-lock --transfer-sleep-lock -- i3lock -n -c 0
 xset s 2700 2700
 
 #light-locker &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/* &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/bttf.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/monument-valley.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/arnold.jpg &
-# feh --bg-fill $HOME/Pictures/wallpapers/wallpaper.png &
-# feh --bg-fill $HOME/Pictures/wallpapers/wallpaper0.jpg &
-# feh --bg-max $HOME/Pictures/wallpapers/grothendieck.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/mont.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/kali.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallhaven.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-aulas-b.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/road2.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/nevada.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/kurz3.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/Galaxies.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/drawn-landscape-2.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/ubuntu-wallpaper.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/pexels-rpnickson-2559941.jpg &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/beau.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/joli-arch.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/black-arch.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/blue-arch.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/wallpaper-arch-blue.jpg &
-feh --bg-fill --randomize $HOME/Pictures/wallpapers/fuji.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/peace.png &
-# feh --bg-fill --randomize $HOME/Pictures/wallpapers/oriente.png &
+# wallpaper: `wallpaper` (super + alt + w) picks one from ~/Pictures/wallpapers
+# via a rofi thumbnail menu and records the choice; --restore re-applies it
+# here on every login / `bspc wm -r`.
+"$HOME/.local/bin/wallpaper" --restore &
 
 bspc rule -a feh state=floating 
 # bspc rule -a zoom state=floating center=on
@@ -128,11 +111,11 @@ $HOME/.local/bin/unclutter-mouse.sh &
 pgrep -f '[w]acom-watch.sh' >/dev/null || $HOME/.local/bin/wacom-watch.sh &
 
 # 2024-08-12
-# Set shadow for floating windows
+# Set shadow for floating windows: shadow-script.sh flags each window with
+# _COMPTON_SHADOW=1 as it becomes floating (picom's shadow-exclude makes that
+# flag opt-in). The flag persists on the window across `bspc wm -r`, so no
+# one-shot fix-up is needed here.
 $HOME/.local/bin/shadow-script.sh &
-bspc query -N -n focused | while read -r win_id; do
-  xprop -id "$win_id" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1
-done
 
 
 # xset s off -dpms &
@@ -140,7 +123,9 @@ done
 #
 
 
-sleep 10; zathura-recent-files-rofi clean
+# backgrounded: a bare `sleep 10` here would stall everything below it (and the
+# whole file re-runs on every `bspc wm -r`)
+(sleep 10; zathura-recent-files-rofi clean) &
 
 
 # pdf tab bar (zathura) =============================================
