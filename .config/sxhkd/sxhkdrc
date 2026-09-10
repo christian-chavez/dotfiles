@@ -164,6 +164,10 @@ super + shift + @space
 super + shift + @p
 	$HOME/.local/bin/zathura-recent-files-rofi list
 
+# toggle the zathura pdf tab bar (master on/off)
+super + shift + z
+	$HOME/.local/bin/toggle-polytabs.sh
+
 # obsidian
 super + shift + o
 	$HOME/Documents/Obsidian-1.9.14.AppImage --no-sandbox
@@ -245,12 +249,8 @@ super + Print
 super + shift + r
 	redshift -O 4000
 
-# wacom tablet (external / laptop)
-super + shift + x
-	$HOME/.local/bin/xsetwacom-new.sh
-
-super + shift + alt + x
-	$HOME/.local/bin/xsetwacom-new-laptop.sh
+# wacom tablet: mapped automatically on connect (USB or BT) by
+# wacom-watch.sh -> wacom-map.sh, started from bspwmrc. No keybind needed.
 
 # suspend (on key release)
 super + @l

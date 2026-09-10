@@ -123,6 +123,10 @@ bspc config bottom_padding 0
 $HOME/.local/bin/mouse-sensitivity.sh &
 $HOME/.local/bin/unclutter-mouse.sh &
 
+# Wacom Intuos BT S: auto-map to eDP + set pad buttons whenever it connects
+# (USB or Bluetooth). Replaces the old super+shift+x / super+shift+alt+x binds.
+pgrep -f '[w]acom-watch.sh' >/dev/null || $HOME/.local/bin/wacom-watch.sh &
+
 # 2024-08-12
 # Set shadow for floating windows
 $HOME/.local/bin/shadow-script.sh &
@@ -139,17 +143,15 @@ done
 sleep 10; zathura-recent-files-rofi clean
 
 
-# pdf tabs with zathura
-# ===================================================================
-# PDFTABS_LOG="$HOME/.cache/polybar-pdftabs.log"
-#
-# if ! pgrep -a polybar |
-#     grep -qE '(^|[[:space:]])pdftabs([[:space:]]|$)'; then
-#     mkdir -p "$HOME/.cache"
-#     polybar -r pdftabs >>"$PDFTABS_LOG" 2>&1 &
-# fi
-#
-# pkill -f '[w]atch-polytabs.sh' 2>/dev/null || true
-# "$HOME/.local/bin/watch-polytabs.sh" &
-# ===================================================================
+# pdf tab bar (zathura) =============================================
+# watch-polytabs.sh is the single controller for the [bar/pdftabs] polybar:
+# it keeps ONE polybar running all session and shows/hides it (polybar-msg
+# cmd show|hide) only on desktops that hold a zathura window, keeping
+# `bspc top_padding` in sync. Renderer: polytabs.sh. Master on/off (bind in
+# sxhkd, super+shift+z): toggle-polytabs.sh. Do NOT launch `polybar pdftabs` here.
+mkdir -p "$HOME/.cache"
+pkill -f '[w]atch-polytabs.sh' 2>/dev/null || true
+rm -f /tmp/pdftabs.daemon.lock
+setsid -f "$HOME/.local/bin/watch-polytabs.sh" >>"$HOME/.cache/pdftabs.log" 2>&1
+# ==================================================================
 
