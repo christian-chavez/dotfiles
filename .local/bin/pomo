@@ -1,0 +1,301 @@
+#!/usr/bin/env bash
+# =============================================================================
+# pomo -- an enforced pomodoro cycle
+# =============================================================================
+# Runs work / break blocks back to back, forever. At the end of each work block
+# the break is ENFORCED -- the friction is the point: you have to get up.
+#
+# LOCK_STYLE picks the enforcement:
+#   math    (default) a full-screen rofi prompt asks you to solve a fresh
+#           arithmetic problem (e.g. "58 x 7 + 64 = ?"). rofi holds the
+#           keyboard grab back-to-back, so nothing -- not even a pomo keybind
+#           -- dismisses the break except the correct answer. Or wait it out;
+#           the timer ends it and returns you to work automatically.
+#   i3lock  the screen locks; your password unlocks it, which opens a short
+#           grace window (ESCAPE_GRACE sec) to run `pomo skip`, else it
+#           re-locks. Set RELOCK_ON_ESCAPE=0 to make the password a permanent
+#           exit for that break.
+#   none    no enforcement, just a countdown.
+#
+#   pomo run       run the cycle daemon (autostarted from bspwmrc)
+#   pomo toggle    start it if stopped, else pause / resume   (super+ctrl+p)
+#   pomo skip      end the current block now                  (super+ctrl+shift+p)
+#                  (during a `math` break, only reachable from a tty / ssh)
+#   pomo stop      stop entirely, unpause notifications, drop any lock
+#   pomo status    one line for polybar
+#
+# Config: the defaults below, overridden by ~/.config/pomo.conf if it exists.
+# =============================================================================
+
+set -u
+
+# ---- defaults (override in ~/.config/pomo.conf) --------------------------
+WORK_MIN=25
+BREAK_MIN=5
+LONG_BREAK_MIN=15
+LONG_EVERY=4                 # every Nth break is a long one
+WARN_SEC=30                  # "save your work" warning before a work->break lock
+START_DELAY=90              # grace period before the first block on `pomo run`
+AUTOSTART_PAUSED=0          # 1 = come up armed-but-paused, wait for `pomo toggle`
+
+LOCK_STYLE=math            # math | i3lock | none  -- how the break is enforced
+MATH_HARD=0               # 0: AA x B + CC  (B = 2..9)   1: AA x BB + CC
+
+# i3lock style only:
+RELOCK_ON_ESCAPE=1        # 1 = re-lock after the grace window; 0 = a password
+                          #     unlock is a permanent exit for that break
+ESCAPE_GRACE=7            # seconds after a password unlock to run `pomo skip`
+
+LOCK_COLOR=0d0c0c
+SND_BREAK=/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
+SND_WORK=/usr/share/sounds/freedesktop/stereo/complete.oga
+
+CONF="${XDG_CONFIG_HOME:-$HOME/.config}/pomo.conf"
+[ -f "$CONF" ] && . "$CONF"
+
+RUN="${XDG_RUNTIME_DIR:-/tmp}"
+STATE="$RUN/pomo.state"          # "<phase> <seconds-left> <running|paused>"
+PIDF="$RUN/pomo.pid"             # daemon single-instance marker
+LOCKPID="$RUN/pomo.lockpid"      # pid of the i3lock WE started
+IMG="$RUN/pomo-break.png"
+GATE=""                          # pid of the running math_gate, if any
+
+# ---- helpers ------------------------------------------------------------------
+note() { notify-send -a pomo "$@" 2>/dev/null || true; }
+ding() { [ -f "${1:-}" ] && paplay "$1" >/dev/null 2>&1 & }
+writ() { printf '%s %s %s\n' "$1" "$2" "$3" >"$STATE"; }
+fmt()  { printf '%d:%02d' $(( ${1:-0} / 60 )) $(( ${1:-0} % 60 )); }
+
+# pid of the running daemon, or nothing. Validates via /proc so it can never
+# match this shell or an unrelated process the way a bare `pgrep -f` would.
+daemon_pid() {
+    local p; p=$(cat "$PIDF" 2>/dev/null) || return 1
+    [ -n "$p" ] && kill -0 "$p" 2>/dev/null \
+        && grep -qa 'bin/pomo' "/proc/$p/cmdline" 2>/dev/null \
+        && printf '%s\n' "$p"
+}
+
+# ---- math gate (LOCK_STYLE=math) ----------------------------------------------
+math_gate() {
+    RANDOM=$(( ($(date +%s) ^ $$) & 32767 ))
+    local a b c want ans msg=""
+    while :; do
+        a=$(( RANDOM % 89 + 11 ))
+        c=$(( RANDOM % 89 + 11 ))
+        if [ "$MATH_HARD" = 1 ]; then b=$(( RANDOM % 89 + 11 )); else b=$(( RANDOM % 8 + 2 )); fi
+        want=$(( a * b + c ))
+        ans=$(printf '' | rofi -dmenu -p "$a x $b + $c =" \
+                -mesg "${msg}BREAK - solve to leave now, or wait for the timer" \
+                -theme-str '
+                  window   { location: center; width: 100%; height: 100%;
+                             background-color: #0d0c0cf2; border: 0; padding: 0; }
+                  mainbox  { padding: 24% 28%; }
+                  listview { enabled: false; }
+                  prompt   { font: "mono bold 42"; text-color: #d6d6d6; }
+                  entry    { font: "mono bold 42"; text-color: #63b1ff; }
+                  textbox, message { font: "mono 15"; text-color: #7c7c7c; }
+                ' 2>/dev/null) || ans=""
+        [ "$ans" = "$want" ] && return 0
+        msg="not quite - "
+    done
+}
+
+math_break() {   # $1 = total seconds
+    local left=$1
+    math_gate & GATE=$!
+    while [ "$left" -gt 0 ]; do
+        if [ "$PAUSED" = 1 ]; then writ break "$left" paused; sleep 1 || true; continue; fi
+        writ break "$left" running
+        if ! kill -0 "$GATE" 2>/dev/null; then
+            wait "$GATE" 2>/dev/null      # solved (rc 0), or the gate died
+            GATE=""
+            break                          # end the break either way
+        fi
+        sleep 1 || true
+        left=$(( left - 1 ))
+        [ "$SKIP" = 1 ] && { SKIP=0; break; }
+    done
+    [ -n "$GATE" ] && kill "$GATE" 2>/dev/null
+    GATE=""
+    pkill -x rofi 2>/dev/null              # close the gate's rofi if the timer won
+}
+
+# ---- i3lock gate (LOCK_STYLE=i3lock) ----------------------------------------
+screen_res() {
+    xrandr --query 2>/dev/null | awk '
+        / connected primary [0-9]/ { split($4,a,"+"); print a[1]; exit }
+        / connected [0-9]/ && !s   { split($3,a,"+"); r=a[1]; s=1 }
+        END { if (r) print r }'
+}
+
+make_img() {
+    command -v magick >/dev/null 2>&1 || return 1
+    local res; res=$(screen_res); case "$res" in *x*) ;; *) res=1920x1080 ;; esac
+    magick -size "$res" "xc:#$LOCK_COLOR" -gravity center \
+        -fill '#d0d0d0' -pointsize 128 -annotate +0-48 'BREAK' \
+        -fill '#7c7c7c' -pointsize 32  -annotate +0+84 \
+        'step away  -  the screen unlocks itself' \
+        "$IMG" 2>/dev/null
+}
+
+lock_now() {   # $1 = break seconds (for the safety ceiling)
+    if [ -f "$LOCKPID" ] && kill -0 "$(cat "$LOCKPID" 2>/dev/null)" 2>/dev/null; then
+        return 0
+    fi
+    if [ -n "${HAVE_IMG:-}" ]; then
+        setsid i3lock -n -e -f -c "$LOCK_COLOR" -i "$IMG" >/dev/null 2>&1 &
+    else
+        setsid i3lock -n -e -f -c "$LOCK_COLOR" >/dev/null 2>&1 &
+    fi
+    local lp=$!
+    echo "$lp" >"$LOCKPID"
+    ( sleep "$(( ${1:-600} + 120 ))"; kill "$lp" 2>/dev/null ) &   # hard ceiling
+}
+
+unlock_ours() {
+    local p; p=$(cat "$LOCKPID" 2>/dev/null) || return 0
+    [ -n "$p" ] && kill "$p" 2>/dev/null
+    rm -f "$LOCKPID"
+}
+
+# ---- lifecycle -------------------------------------------------------------
+cleanup() {
+    dunstctl set-paused false 2>/dev/null || true
+    unlock_ours
+    [ -n "$GATE" ] && kill "$GATE" 2>/dev/null
+    pkill -x rofi 2>/dev/null
+    rm -f "$STATE" "$PIDF"
+}
+
+countdown() {   # $1 = phase, $2 = total seconds   (work / startup / non-math break)
+    local phase=$1 left=$2 warned=0 grace=0
+    while [ "$left" -gt 0 ]; do
+        if [ "$PAUSED" = 1 ]; then
+            writ "$phase" "$left" paused
+            sleep 1 || true
+            continue
+        fi
+        writ "$phase" "$left" running
+        if [ "$phase" = work ] && [ "$left" -le "$WARN_SEC" ] && [ "$warned" = 0 ]; then
+            warned=1
+            dunstctl set-paused false 2>/dev/null || true   # so the warning shows
+            note -u critical "Break in ${WARN_SEC}s" "save your work"
+        fi
+        # i3lock style: the password unlocked i3lock mid-break -> grace window
+        if [ "$phase" = break ] && [ "$LOCK_STYLE" = i3lock ]; then
+            if pgrep -x i3lock >/dev/null; then
+                grace=0
+            elif [ "$left" -gt 15 ] && [ "$RELOCK_ON_ESCAPE" = 1 ]; then
+                if [ "$grace" -gt 0 ]; then
+                    grace=$(( grace - 1 ))
+                    [ "$grace" -le 0 ] && { rm -f "$LOCKPID"; lock_now "$left"; }
+                else
+                    grace=$ESCAPE_GRACE
+                    note -u critical -t "$(( ESCAPE_GRACE * 1000 ))" \
+                        "Break interrupted" \
+                        "super+ctrl+shift+p ends it - re-locks in ${ESCAPE_GRACE}s"
+                fi
+            fi
+        fi
+        sleep 1 || true
+        left=$(( left - 1 ))
+        [ "$SKIP" = 1 ] && { SKIP=0; break; }
+    done
+}
+
+do_break() {   # $1 = minutes
+    local secs=$(( $1 * 60 ))
+    case "$LOCK_STYLE" in
+        math)
+            note -u normal "Break - $1 min" "solve the sum to leave early, or wait"
+            math_break "$secs"
+            ;;
+        i3lock)
+            note -u normal "Break" "$1 min - get up. The screen unlocks itself."
+            lock_now "$secs"
+            countdown break "$secs"
+            unlock_ours
+            ;;
+        *)
+            note -u normal "Break" "$1 min"
+            countdown break "$secs"
+            ;;
+    esac
+}
+
+cmd_run() {
+    local old; old=$(daemon_pid) || true
+    [ -n "${old:-}" ] && { echo "pomo: already running (pid $old)" >&2; exit 0; }
+    echo $$ >"$PIDF"
+
+    PAUSED=$AUTOSTART_PAUSED; SKIP=0
+    trap 'PAUSED=$(( 1 - PAUSED ))' USR1
+    trap 'SKIP=1' USR2
+    trap 'cleanup; exit 0' TERM INT HUP
+
+    case "$LOCK_STYLE" in
+        math)   command -v rofi   >/dev/null 2>&1 || { LOCK_STYLE=none
+                    note -u critical "pomo" "rofi not found - LOCK_STYLE=none"; } ;;
+        i3lock) command -v i3lock >/dev/null 2>&1 || { LOCK_STYLE=none
+                    note -u critical "pomo" "i3lock not found - LOCK_STYLE=none"; } ;;
+    esac
+    [ "$LOCK_STYLE" = i3lock ] && { make_img && HAVE_IMG=1 || HAVE_IMG=; }
+
+    [ "$PAUSED" = 1 ] && note -u low "pomo armed" "super+ctrl+p to start"
+    countdown startup "$START_DELAY"
+
+    local cycle=0 bmin
+    while :; do
+        cycle=$(( cycle + 1 ))
+        dunstctl set-paused true 2>/dev/null || true
+        note -u low "Focus #$cycle" "${WORK_MIN} min"
+        countdown work $(( WORK_MIN * 60 ))
+
+        if [ $(( cycle % LONG_EVERY )) -eq 0 ]; then bmin=$LONG_BREAK_MIN
+        else bmin=$BREAK_MIN; fi
+        dunstctl set-paused false 2>/dev/null || true
+        ding "$SND_BREAK"
+        do_break "$bmin"
+        ding "$SND_WORK"
+        note -u low "Back to it"
+    done
+}
+
+cmd_status() {
+    daemon_pid >/dev/null || { rm -f "$STATE"; echo ""; exit 0; }
+    [ -f "$STATE" ] || { echo ""; exit 0; }
+    local phase secs state icon
+    read -r phase secs state <"$STATE" || { echo ""; exit 0; }
+    case "$phase" in
+        work|startup) icon="[w]" ;;
+        break)        icon="[b]" ;;
+        *)            echo ""; exit 0 ;;
+    esac
+    [ "$state" = paused ] && icon="[||]"
+    printf '%s %s\n' "$icon" "$(fmt "$secs")"
+}
+
+cmd_stop() {
+    local p i; p=$(daemon_pid) || true
+    if [ -n "${p:-}" ]; then
+        kill -TERM "$p" 2>/dev/null
+        for i in $(seq 1 30); do kill -0 "$p" 2>/dev/null || break; sleep 0.1; done
+    fi
+    dunstctl set-paused false 2>/dev/null || true
+    unlock_ours
+    pkill -x rofi 2>/dev/null
+    rm -f "$STATE" "$PIDF"
+    note -u low "pomo stopped"
+}
+
+case "${1:-}" in
+    run)    cmd_run ;;
+    status) cmd_status ;;
+    stop)   cmd_stop ;;
+    skip)   p=$(daemon_pid) && kill -USR2 "$p" ;;
+    toggle)
+        if p=$(daemon_pid); then kill -USR1 "$p"
+        else setsid -f "$0" run >>"$HOME/.cache/pomo.log" 2>&1; fi
+        ;;
+    *) echo "usage: pomo {run|toggle|skip|stop|status}" >&2; exit 1 ;;
+esac

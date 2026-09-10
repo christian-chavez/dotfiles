@@ -10,6 +10,7 @@ st_picom()     { pgrep -x picom >/dev/null 2>&1 && echo on || echo off; }
 # reflect reality (any syncthing); the toggle drives the --user unit, which is
 # only meaningful once the system unit syncthing@christian is disabled
 st_syncthing() { pgrep -x syncthing >/dev/null 2>&1 && echo on || echo off; }
+st_pomo()      { [ -n "$("$HOME/.local/bin/pomo" status 2>/dev/null)" ] && echo on || echo off; }
 
 do_picom() {
 	if pgrep -x picom >/dev/null 2>&1; then
@@ -25,6 +26,13 @@ do_syncthing() {
 		systemctl --user start syncthing.service
 	fi
 }
+do_pomo() {
+	if [ -n "$("$HOME/.local/bin/pomo" status 2>/dev/null)" ]; then
+		"$HOME/.local/bin/pomo" stop
+	else
+		"$HOME/.local/bin/pomo" toggle
+	fi
+}
 
 declare -A ACTION
 opts=""
@@ -32,6 +40,7 @@ add() { opts+="$1"$'\n'; ACTION["$1"]="$2"; }
 
 add "$(printf 'picom       [%s]' "$(st_picom)")"     do_picom
 add "$(printf 'syncthing   [%s]' "$(st_syncthing)")" do_syncthing
+add "$(printf 'pomodoro    [%s]' "$(st_pomo)")"      do_pomo
 
 choice="$(printf '%s' "$opts" | menu)" || exit 0
 [ -z "${choice:-}" ] && exit 0

@@ -140,3 +140,11 @@ rm -f /tmp/pdftabs.daemon.lock
 setsid -f "$HOME/.local/bin/watch-polytabs.sh" >>"$HOME/.cache/pdftabs.log" 2>&1
 # ==================================================================
 
+# enforced pomodoro: work/break cycle. Each break is gated by a full-screen
+# rofi arithmetic prompt (LOCK_STYLE in ~/.config/pomo.conf: math | i3lock |
+# none). super+ctrl+p = start / pause, super+ctrl+shift+p = skip. Set
+# AUTOSTART_PAUSED=1 to come up armed but not counting. Kill switch: `pomo
+# stop` or the rofi-toggles menu. `pomo run` self-dedups (pidfile) and rides
+# through a bspwm restart, so just launch it.
+setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
+

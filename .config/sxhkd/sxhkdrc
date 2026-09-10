@@ -254,6 +254,14 @@ super + Print
 super + shift + r
 	redshift -O 4000
 
+# pomodoro: start / pause-resume the enforced work-break cycle
+super + ctrl + p
+	$HOME/.local/bin/pomo toggle
+
+# pomodoro: skip the current block (end work now, or end the break early)
+super + ctrl + shift + p
+	$HOME/.local/bin/pomo skip
+
 # wacom tablet: mapped automatically on connect (USB or BT) by
 # wacom-watch.sh -> wacom-map.sh, started from bspwmrc. No keybind needed.
 
