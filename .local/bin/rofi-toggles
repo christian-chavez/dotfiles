@@ -11,6 +11,9 @@ st_picom()     { pgrep -x picom >/dev/null 2>&1 && echo on || echo off; }
 # only meaningful once the system unit syncthing@christian is disabled
 st_syncthing() { pgrep -x syncthing >/dev/null 2>&1 && echo on || echo off; }
 st_pomo()      { [ -n "$("$HOME/.local/bin/pomo" status 2>/dev/null)" ] && echo on || echo off; }
+# current wacom target output, remembered in ~/.cache/wacom-output (read by
+# wacom-map.sh); defaults to eDP when never set
+st_wacom() { local o; o="$(cat "$HOME/.cache/wacom-output" 2>/dev/null)"; echo "${o:-eDP}"; }
 
 do_picom() {
 	if pgrep -x picom >/dev/null 2>&1; then
@@ -33,6 +36,24 @@ do_pomo() {
 		"$HOME/.local/bin/pomo" toggle
 	fi
 }
+# cycle the wacom tablet to the next currently-connected output (eDP,
+# HDMI-A-0, ...), remember it, and re-apply the mapping right away
+do_wacom() {
+	local state="$HOME/.cache/wacom-output" cur next i
+	mapfile -t outputs < <(xrandr --query | awk '/ connected/{print $1}')
+	[ "${#outputs[@]}" -eq 0 ] && return 0
+	cur="$(st_wacom)"
+	next="${outputs[0]}"
+	for i in "${!outputs[@]}"; do
+		if [ "${outputs[$i]}" = "$cur" ]; then
+			next="${outputs[$(( (i + 1) % ${#outputs[@]} ))]}"
+			break
+		fi
+	done
+	echo "$next" > "$state"
+	command -v notify-send >/dev/null 2>&1 && notify-send "wacom" "mapped to $next"
+	setsid -f "$HOME/.local/bin/wacom-map.sh" >/dev/null 2>&1
+}
 
 declare -A ACTION
 opts=""
@@ -41,6 +62,7 @@ add() { opts+="$1"$'\n'; ACTION["$1"]="$2"; }
 add "$(printf 'picom       [%s]' "$(st_picom)")"     do_picom
 add "$(printf 'syncthing   [%s]' "$(st_syncthing)")" do_syncthing
 add "$(printf 'pomodoro    [%s]' "$(st_pomo)")"      do_pomo
+add "$(printf 'wacom       [%s]' "$(st_wacom)")"     do_wacom
 
 choice="$(printf '%s' "$opts" | menu)" || exit 0
 [ -z "${choice:-}" ] && exit 0

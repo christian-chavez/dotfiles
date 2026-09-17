@@ -1,0 +1,80 @@
+#!/bin/bash
+# Decide and apply a monitor layout.
+#
+# Modes:
+#   (no arg)  interactive - used by the srandrd hotplug handler. An unknown
+#             external display pops a rofi menu: extend right, extend left,
+#             mirror, or laptop-only. Dismissing it leaves the screen as-is.
+#   --auto    silent - used by bspwmrc on start/restart. An unknown external
+#             is extended to the LEFT of the laptop with no prompt, so a
+#             projector that is already plugged in at login works out of the
+#             box. A no-op when a layout is already active (this is the path
+#             bspwmrc's `bspc wm -r` re-enters, so it must not loop).
+#   --left    force: extend the external to the left of the laptop.
+#   --right   force: extend the external to the right of the laptop.
+#
+# In every mode, a saved autorandr profile whose EDID fingerprints match the
+# connected monitors wins and is applied as-is. Save one with
+# `autorandr --save NAME` for a dock or lecture room you use often.
+
+export DISPLAY="${DISPLAY:-:0}"
+LAPTOP=eDP
+REORDER="$HOME/.local/bin/reorder"
+
+ext_output() {   # first connected output that is not the laptop panel
+	xrandr --query | awk -v l="$LAPTOP" '/ connected/ && $1 != l {print $1; exit}'
+}
+
+ext_active() {   # external output present AND driving a mode right now
+	local e; e=$(ext_output); [ -n "$e" ] || return 1
+	xrandr --listactivemonitors | grep -qE "\\b$e\$"
+}
+
+extend() {   # $1 = left | right
+	local e; e=$(ext_output)
+	[ -z "$e" ] && return 1
+	xrandr --output "$LAPTOP" --primary --auto \
+	       --output "$e" --auto "--$1-of" "$LAPTOP"
+	"$REORDER"
+}
+
+case "${1:-}" in
+	--left)  extend left;  exit ;;
+	--right) extend right; exit ;;
+esac
+
+# A saved profile for exactly these monitors -> use it, no questions asked.
+if autorandr 2>/dev/null | grep -q '(detected)'; then
+	exec autorandr --change
+fi
+
+# Laptop only -> laptop layout.
+if [ "$(xrandr --query | grep -c ' connected')" -le 1 ]; then
+	exec autorandr --load mobile
+fi
+
+ext=$(ext_output)
+[ -z "$ext" ] && exit 0
+
+# --auto (bspwmrc): if a multi-monitor layout is already up, this is the
+# re-entrant `bspc wm -r` pass - leave it alone. Otherwise default to left.
+if [ "${1:-}" = "--auto" ]; then
+	ext_active || extend left
+	exit
+fi
+
+# Interactive (hotplug): ask where to put the unknown display.
+choice=$(printf '%s\n' \
+	'Extend  ->  right of laptop' \
+	'Extend  <-  left of laptop' \
+	'Mirror' \
+	'Laptop only' \
+	| rofi -dmenu -i -no-custom -normal-window -p "New display ($ext)")
+
+case "$choice" in
+	*right*)       extend right ;;
+	*left*)        extend left ;;
+	Mirror)        autorandr --common ;;
+	'Laptop only') autorandr --load mobile ;;
+	*)             exit 0 ;;   # dismissed -> leave the screen untouched
+esac

@@ -263,7 +263,9 @@ super + ctrl + shift + p
 	$HOME/.local/bin/pomo skip
 
 # wacom tablet: mapped automatically on connect (USB or BT) by
-# wacom-watch.sh -> wacom-map.sh, started from bspwmrc. No keybind needed.
+# wacom-watch.sh -> wacom-map.sh, started from bspwmrc. No keybind needed;
+# change the target output (eDP / HDMI-A-0 / ...) via the toggles menu
+# (super + alt + t).
 
 # suspend (on key release)
 super + @l

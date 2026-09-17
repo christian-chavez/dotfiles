@@ -9,8 +9,14 @@
 # It retries for a few seconds because X registers the tablet's input devices
 # a moment *after* the udev add event fires, whether it arrived over USB or
 # Bluetooth.
+#
+# Target output is remembered in ~/.cache/wacom-output (same pattern as
+# ~/.local/bin/wallpaper's ~/.cache/wallpaper) so it survives reconnects and
+# wacom-watch.sh's self-healing re-applies. Change it via the rofi-toggles
+# menu (super+alt+t) rather than editing this file.
 
-OUTPUT='eDP'
+OUTPUT="$(cat "$HOME/.cache/wacom-output" 2>/dev/null)"
+[ -z "$OUTPUT" ] && OUTPUT='eDP'
 PAD='Wacom Intuos BT S Pad pad'
 STYLUS='Wacom Intuos BT S Pen stylus'
 

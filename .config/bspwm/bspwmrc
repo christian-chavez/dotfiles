@@ -17,11 +17,17 @@ set -x
 # `reorder` to redistribute desktops. Manual pick:  super + alt + p
 #
 # NOTE: do NOT call reorder here - it ends in `bspc wm -r`, which re-runs this
-# file and would loop. reorder is only safe from postswitch (a discrete event).
-# On a fresh boot this line applies a profile -> postswitch -> reorder ->
-# `bspc wm -r`, so bspwmrc runs twice; the second pass no-ops here because the
-# profile is already current. Guard anything below that must not run twice.
-autorandr --change --default mobile 2>/dev/null
+# file and would loop. reorder is only safe from postswitch (a discrete event)
+# or from randr-apply, which no-ops on the re-entrant pass.
+#
+# randr-apply --auto: apply the saved autorandr profile for the connected
+# monitors if there is one; otherwise, for an unknown external (a projector we
+# have no profile for), silently extend it to the LEFT of the laptop so it
+# works even when already plugged in at login. On a fresh boot this applies a
+# layout -> postswitch/reorder -> `bspc wm -r`, so bspwmrc runs twice; the
+# second pass is a no-op because a layout is already active. Guard anything
+# below that must not run twice.
+"$HOME/.local/bin/randr-apply" --auto 2>/dev/null
 pgrep -x srandrd >/dev/null || { command -v srandrd >/dev/null && srandrd "$HOME/.local/bin/randr-changed" & }
 # base layout for the laptop-only case; reorder handles the multi-monitor split
 xrandr -q | grep -q '^HDMI-A-0 connected' || bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10
@@ -106,8 +112,10 @@ bspc config bottom_padding 0
 $HOME/.local/bin/mouse-sensitivity.sh &
 $HOME/.local/bin/unclutter-mouse.sh &
 
-# Wacom Intuos BT S: auto-map to eDP + set pad buttons whenever it connects
-# (USB or Bluetooth). Replaces the old super+shift+x / super+shift+alt+x binds.
+# Wacom Intuos BT S: auto-map to the output remembered in
+# ~/.cache/wacom-output (default eDP; change via super+alt+t -> wacom) + set
+# pad buttons whenever it connects (USB or Bluetooth). Replaces the old
+# super+shift+x / super+shift+alt+x binds.
 pgrep -f '[w]acom-watch.sh' >/dev/null || $HOME/.local/bin/wacom-watch.sh &
 
 # 2024-08-12
@@ -142,9 +150,9 @@ setsid -f "$HOME/.local/bin/watch-polytabs.sh" >>"$HOME/.cache/pdftabs.log" 2>&1
 
 # enforced pomodoro: work/break cycle. Each break is gated by a full-screen
 # rofi arithmetic prompt (LOCK_STYLE in ~/.config/pomo.conf: math | i3lock |
-# none). super+ctrl+p = start / pause, super+ctrl+shift+p = skip. Set
-# AUTOSTART_PAUSED=1 to come up armed but not counting. Kill switch: `pomo
-# stop` or the rofi-toggles menu. `pomo run` self-dedups (pidfile) and rides
-# through a bspwm restart, so just launch it.
-setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
+# none). super+ctrl+p = start / pause, super+ctrl+shift+p = skip, or use the
+# rofi-toggles menu. `pomo run` self-dedups (pidfile) and rides through a
+# bspwm restart. NOT autostarted on purpose -- start it yourself when you
+# want a session (super+ctrl+p). Uncomment to autostart instead:
+# setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
 

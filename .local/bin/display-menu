@@ -15,6 +15,8 @@ set -uo pipefail
 menu() { rofi -dmenu -i -no-custom -normal-window -p "Display"; }
 
 AUTO='>  Auto-detect'
+RIGHT='>  Extend  ->  right of laptop'
+LEFT='>  Extend  <-  left of laptop'
 MIRROR='>  Mirror'
 
 declare -A ACTION
@@ -30,8 +32,10 @@ while read -r name tags; do
 	options+="$label"$'\n'
 done < <(autorandr 2>/dev/null)
 
-options+="$AUTO"$'\n'"$MIRROR"
+options+="$AUTO"$'\n'"$RIGHT"$'\n'"$LEFT"$'\n'"$MIRROR"
 ACTION["$AUTO"]='change'
+ACTION["$RIGHT"]='right'
+ACTION["$LEFT"]='left'
 ACTION["$MIRROR"]='mirror'
 
 choice="$(printf '%s' "$options" | menu)" || exit 0
@@ -39,6 +43,8 @@ choice="$(printf '%s' "$options" | menu)" || exit 0
 
 case "${ACTION[$choice]:-}" in
 	change)  autorandr --change ;;
+	right)   "$HOME/.local/bin/randr-apply" --right ;;
+	left)    "$HOME/.local/bin/randr-apply" --left ;;
 	mirror)  autorandr --common ;;
 	load:*)  autorandr --load "${ACTION[$choice]#load:}" ;;
 	*)       exit 0 ;;
