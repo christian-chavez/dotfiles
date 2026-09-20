@@ -164,6 +164,10 @@ super + shift + a
 super + shift + @space
 	$HOME/.local/bin/rofi-files-google-drive.sh
 
+# vscode project picker (rofi)
+super + shift + v
+	$HOME/.local/bin/rofi-vscode-projects
+
 # recent pdfs (full history)
 super + shift + @p
 	$HOME/.local/bin/zathura-recent-files-rofi list

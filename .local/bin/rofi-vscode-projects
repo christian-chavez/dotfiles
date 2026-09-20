@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# VSCode project picker (rofi). Add new projects to the PROJECTS array below.
+PROJECTS=(
+    "/home/christian/Documents/website/2024-11-01"
+    "/home/christian/Documents/maitrise/these/memoire"
+    "/home/christian/Documents/maitrise/autre/cv"
+	"/home/christian/Documents/maitrise/autre/Summer2026/Indecomposable-pointwise-finite-dimensional-representations-over-a-two-branch-poset"
+)
+
+# Keep only projects that still exist
+existing=()
+for p in "${PROJECTS[@]}"; do
+    [ -d "$p" ] && existing+=("$p")
+done
+
+[ ${#existing[@]} -eq 0 ] && {
+    notify-send "rofi-vscode-projects" "Ninguno de los proyectos configurados existe" 2>/dev/null
+    exit 1
+}
+
+# Show "parent/name" as label; full path rides along after ':::' but
+# -display-columns keeps rofi from rendering it.
+chosen=$(printf '%s\n' "${existing[@]}" \
+    | awk -F/ '{print $(NF-1)"/"$NF":::"$0}' \
+    | rofi -normal-window -dmenu -i -normalize-match -p 'VSCode:' \
+        -display-columns 1 -display-column-separator ':::' \
+    | awk -F ':::' '{print $2}')
+
+[ -n "$chosen" ] && code "$chosen"
