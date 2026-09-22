@@ -6,7 +6,7 @@
   <property name="pressureMultiplier" value="1.23"/>
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
-  <property name="lastSavePath" value="/home/christian/Documents/maitrise/autre/Summer2026"/>
+  <property name="lastSavePath" value="/home/christian/Documents/maitrise/autre/talks"/>
   <property name="lastOpenPath" value="/home/christian/Documents/maitrise/autre/Summer2026"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
@@ -14,10 +14,10 @@
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="1358"/>
-  <property name="mainWndHeight" value="734"/>
+  <property name="mainWndWidth" value="1366"/>
+  <property name="mainWndHeight" value="742"/>
   <property name="maximized" value="false"/>
-  <property name="showToolbar" value="false"/>
+  <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
   <property name="sidebarWidth" value="174"/>
   <property name="sidebarNumberingStyle" value="3"/>
@@ -219,7 +219,7 @@
     </data>
   </data>
   <data name="tools">
-    <attribute name="current" type="string" value="pen"/>
+    <attribute name="current" type="string" value="text"/>
     <data name="drawArrow"/>
     <data name="drawCoordinateSystem"/>
     <data name="drawDoubleArrow"/>
@@ -249,10 +249,10 @@
     </data>
     <data name="pen">
       <attribute name="color" type="hex" value="ff0634f5"/>
-      <attribute name="drawingType" type="string" value="strokeRecognizer"/>
+      <attribute name="drawingType" type="string" value="default"/>
       <attribute name="fill" type="int" value="0"/>
       <attribute name="fillAlpha" type="int" value="255"/>
-      <attribute name="size" type="string" value="THIN"/>
+      <attribute name="size" type="string" value="MEDIUM"/>
       <attribute name="style" type="string" value="plain"/>
     </data>
     <data name="playObject"/>
