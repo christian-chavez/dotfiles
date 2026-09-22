@@ -10,7 +10,7 @@ export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'
 # <= 15%  -> every 120s
 # <  12%  -> every 60s
 # <   9%  -> every 30s
-# <   7%  -> every 7s
+# <   7%  -> every 10s
 WARNING_LEVEL=15
 MEDIUM_LEVEL=12
 HIGH_LEVEL=9
@@ -22,10 +22,11 @@ MEDIUM_INTERVAL=60
 HIGH_INTERVAL=30
 CRITICAL_INTERVAL=10
 
-# State files
-LOW_BATTERY_LAST=/tmp/battery-low-last
-LOW_BATTERY_TIER=/tmp/battery-low-tier
-FULL_FILE=/tmp/batteryfull
+# State files -- per-user runtime dir, not world-writable /tmp
+RUN="${XDG_RUNTIME_DIR:-/tmp}"
+LOW_BATTERY_LAST="$RUN/battery-low-last"
+LOW_BATTERY_TIER="$RUN/battery-low-tier"
+FULL_FILE="$RUN/batteryfull"
 
 # Collect internal batteries from /sys/class/power_supply
 BAT_DIRS=
@@ -93,6 +94,11 @@ fi
 if [ "$BATTERY_DISCHARGING" -eq 1 ] && [ -f "$FULL_FILE" ]; then
   rm -f "$FULL_FILE"
 elif [ "$BATTERY_DISCHARGING" -eq 0 ]; then
+  # A critical-urgency low-battery notification has timeout=0 in dunstrc, so
+  # it sits on screen until dismissed -- close it now that power is back.
+  if [ -f "$LOW_BATTERY_LAST" ] || [ -f "$LOW_BATTERY_TIER" ]; then
+    dunstctl close 9991 >/dev/null 2>&1 || true
+  fi
   rm -f "$LOW_BATTERY_LAST" "$LOW_BATTERY_TIER"
 fi
 
