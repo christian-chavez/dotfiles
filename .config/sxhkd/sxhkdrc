@@ -172,9 +172,7 @@ super + shift + v
 super + shift + @p
 	$HOME/.local/bin/zathura-recent-files-rofi list
 
-# toggle the zathura pdf tab bar (master on/off)
-super + shift + z
-	$HOME/.local/bin/toggle-polytabs.sh
+# pdftabs bar (master on/off) now lives in the toggles menu -- super + alt + t
 
 # obsidian
 super + shift + o
@@ -262,7 +260,8 @@ super + shift + r
 super + ctrl + p
 	$HOME/.local/bin/pomo toggle
 
-# pomodoro: skip the current block (end work now, or end the break early)
+# pomodoro: skip (work -> straight to next work session, no break/puzzle;
+# break -> ends it immediately, no puzzle)
 super + ctrl + shift + p
 	$HOME/.local/bin/pomo skip
 

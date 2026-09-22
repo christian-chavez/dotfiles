@@ -152,7 +152,7 @@ setsid -f "$HOME/.local/bin/watch-polytabs.sh" >>"$HOME/.cache/pdftabs.log" 2>&1
 # rofi arithmetic prompt (LOCK_STYLE in ~/.config/pomo.conf: math | i3lock |
 # none). super+ctrl+p = start / pause, super+ctrl+shift+p = skip, or use the
 # rofi-toggles menu. `pomo run` self-dedups (pidfile) and rides through a
-# bspwm restart. NOT autostarted on purpose -- start it yourself when you
-# want a session (super+ctrl+p). Uncomment to autostart instead:
-# setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
+# bspwm restart. Autostarted armed-but-paused (AUTOSTART_PAUSED=1 in
+# ~/.config/pomo.conf) -- super+ctrl+p starts the first work block.
+setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
 

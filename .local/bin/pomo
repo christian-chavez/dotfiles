@@ -19,8 +19,11 @@
 #
 #   pomo run       run the cycle daemon (autostarted from bspwmrc)
 #   pomo toggle    start it if stopped, else pause / resume   (super+ctrl+p)
-#   pomo skip      end the current block now                  (super+ctrl+shift+p)
-#                  (during a `math` break, only reachable from a tty / ssh)
+#   pomo skip      end the current block now               (super+ctrl+shift+p)
+#                  during work: ends work AND skips the break that would
+#                  follow it -- goes straight to the next work session, no
+#                  puzzle. During a break: ends the break immediately (no
+#                  puzzle either -- this doesn't go through rofi's grab).
 #   pomo stop      stop entirely, unpause notifications, drop any lock
 #   pomo status    one line for polybar
 #
@@ -205,6 +208,7 @@ cleanup() {
 
 countdown() {   # $1 = phase, $2 = total seconds   (work / startup / non-math break)
     local phase=$1 left=$2 warned=0 grace=0
+    CUR_PHASE=$phase
     while [ "$left" -gt 0 ]; do
         if [ "$PAUSED" = 1 ]; then
             writ "$phase" "$left" paused
@@ -241,6 +245,7 @@ countdown() {   # $1 = phase, $2 = total seconds   (work / startup / non-math br
 
 do_break() {   # $1 = minutes
     local secs=$(( $1 * 60 ))
+    CUR_PHASE=break
     case "$LOCK_STYLE" in
         math)
             note -u normal "Break - $1 min" "solve the sum to leave early, or wait"
@@ -264,9 +269,9 @@ cmd_run() {
     [ -n "${old:-}" ] && { echo "pomo: already running (pid $old)" >&2; exit 0; }
     echo $$ >"$PIDF"
 
-    PAUSED=$AUTOSTART_PAUSED; SKIP=0
+    PAUSED=$AUTOSTART_PAUSED; SKIP=0; SKIP_NEXT_BREAK=0; CUR_PHASE=""
     trap 'PAUSED=$(( 1 - PAUSED ))' USR1
-    trap 'SKIP=1' USR2
+    trap 'SKIP=1; [ "$CUR_PHASE" = work ] && SKIP_NEXT_BREAK=1' USR2
     trap 'cleanup; exit 0' TERM INT HUP
 
     case "$LOCK_STYLE" in
@@ -289,10 +294,15 @@ cmd_run() {
         note -u low "Focus #$cycle" "${WORK_MIN} min"
         countdown work $(( WORK_MIN * 60 ))
 
-        if [ $(( cycle % LONG_EVERY )) -eq 0 ]; then bmin=$LONG_BREAK_MIN
-        else bmin=$BREAK_MIN; fi
         dunstctl set-paused false 2>/dev/null || true
-        do_break "$bmin"
+        if [ "$SKIP_NEXT_BREAK" = 1 ]; then
+            SKIP_NEXT_BREAK=0
+            note -u low "Break skipped"
+        else
+            if [ $(( cycle % LONG_EVERY )) -eq 0 ]; then bmin=$LONG_BREAK_MIN
+            else bmin=$BREAK_MIN; fi
+            do_break "$bmin"
+        fi
         note -u low "Back to it"
     done
 }
