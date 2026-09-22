@@ -14,6 +14,8 @@ st_pomo()      { [ -n "$("$HOME/.local/bin/pomo" status 2>/dev/null)" ] && echo 
 # current wacom target output, remembered in ~/.cache/wacom-output (read by
 # wacom-map.sh); defaults to eDP when never set
 st_wacom() { local o; o="$(cat "$HOME/.cache/wacom-output" 2>/dev/null)"; echo "${o:-eDP}"; }
+# pdftabs bar's on/off flag, read by watch-polytabs.sh (defaults off when unset)
+st_pdftabs() { [ "$(cat /tmp/pdftabs.enabled 2>/dev/null || echo 0)" = 1 ] && echo on || echo off; }
 
 do_picom() {
 	if pgrep -x picom >/dev/null 2>&1; then
@@ -54,6 +56,7 @@ do_wacom() {
 	command -v notify-send >/dev/null 2>&1 && notify-send "wacom" "mapped to $next"
 	setsid -f "$HOME/.local/bin/wacom-map.sh" >/dev/null 2>&1
 }
+do_pdftabs() { "$HOME/.local/bin/toggle-polytabs.sh"; }
 
 declare -A ACTION
 opts=""
@@ -63,6 +66,7 @@ add "$(printf 'picom       [%s]' "$(st_picom)")"     do_picom
 add "$(printf 'syncthing   [%s]' "$(st_syncthing)")" do_syncthing
 add "$(printf 'pomodoro    [%s]' "$(st_pomo)")"      do_pomo
 add "$(printf 'wacom       [%s]' "$(st_wacom)")"     do_wacom
+add "$(printf 'pdftabs     [%s]' "$(st_pdftabs)")"   do_pdftabs
 
 choice="$(printf '%s' "$opts" | menu)" || exit 0
 [ -z "${choice:-}" ] && exit 0

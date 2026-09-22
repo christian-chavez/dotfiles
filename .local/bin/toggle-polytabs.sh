@@ -12,7 +12,7 @@ RUN_DIR='/tmp'
 ENABLED_FILE="$RUN_DIR/pdftabs.enabled"
 HERE=$(dirname "$0")
 
-if [ "$(cat "$ENABLED_FILE" 2>/dev/null || echo 1)" = 1 ]; then
+if [ "$(cat "$ENABLED_FILE" 2>/dev/null || echo 0)" = 1 ]; then
     echo 0 > "$ENABLED_FILE"
     msg='pdftabs off'
 else

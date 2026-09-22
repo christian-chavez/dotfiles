@@ -64,7 +64,7 @@ bar_pid() {
 }
 
 feature_enabled() {
-    [ "$(cat "$ENABLED_FILE" 2>/dev/null || echo 1)" = 1 ]
+    [ "$(cat "$ENABLED_FILE" 2>/dev/null || echo 0)" = 1 ]
 }
 
 zathura_anywhere() {
@@ -144,7 +144,7 @@ reconcile() {
 
 # --- entry points -------------------------------------------------------------
 
-[ -f "$ENABLED_FILE" ] || echo 1 > "$ENABLED_FILE"
+[ -f "$ENABLED_FILE" ] || echo 0 > "$ENABLED_FILE"
 
 if [ "${1:-}" = '--once' ]; then
     reconcile

@@ -6,6 +6,7 @@ PROJECTS=(
     "/home/christian/Documents/maitrise/these/memoire"
     "/home/christian/Documents/maitrise/autre/cv"
 	"/home/christian/Documents/maitrise/autre/Summer2026/Indecomposable-pointwise-finite-dimensional-representations-over-a-two-branch-poset"
+	"/home/christian/Documents/maitrise/autre/talks/reveal.js-master"
 )
 
 # Keep only projects that still exist
