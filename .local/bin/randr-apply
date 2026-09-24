@@ -43,9 +43,21 @@ case "${1:-}" in
 	--right) extend right; exit ;;
 esac
 
+# bspwm gives a monitor it has just (re)discovered a single default desktop
+# named "Desktop"; reorder always renames every desktop, so seeing one means
+# the split never ran. This happens on resume from suspend: the first
+# autorandr pass runs while the external is still missing (reorder strips it),
+# and when it returns, autorandr says "Config already loaded" and skips
+# postswitch. Self-limiting: after reorder's `bspc wm -r` this finds nothing.
+fix_desktops() {
+	bspc query -D --names 2>/dev/null | grep -qx Desktop && "$REORDER"
+}
+
 # A saved profile for exactly these monitors -> use it, no questions asked.
 if autorandr 2>/dev/null | grep -q '(detected)'; then
-	exec autorandr --change
+	autorandr --change
+	fix_desktops
+	exit 0
 fi
 
 # Laptop only -> laptop layout.
@@ -60,7 +72,8 @@ ext=$(ext_output)
 # re-entrant `bspc wm -r` pass - leave it alone. Otherwise default to left.
 if [ "${1:-}" = "--auto" ]; then
 	ext_active || extend left
-	exit
+	fix_desktops
+	exit 0
 fi
 
 # Interactive (hotplug): ask where to put the unknown display.
