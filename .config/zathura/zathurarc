@@ -13,6 +13,11 @@ set synctex "true"
 set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
 # set adjust-open width 
 set adjust-open best-fit
+set first-page-column "1:1"
+
+# d: toggle dual-page view and fit width in one keystroke
+map <A-d> toggle_page_mode
+map d feedkeys "<A-d>s"
 # set font "Iosevka 10"
 set font "Iosevka Medium 11"
 
@@ -20,11 +25,11 @@ set statusbar-fg                "#3b4252"
 set statusbar-bg                "#d8dee9"
 # set default-bg "#333333"
 set default-bg "#f2f2f2"
-set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
+set inputbar-bg "#151515"
+set inputbar-fg "#FFFFFF"
 # set statusbar-fg                "#D8DEE9"
 # set statusbar-bg                "#2E3440"
-set scroll-step 90
+set scroll-step 45
 set scroll-page-aware true
 # set smooth-scroll "true"
 set highlight-active-color rgba(60,179,113,0.5)
@@ -34,14 +39,15 @@ set completion-highlight-bg "#88c0d0"
 set index-active-bg "#88c0d0"
 set statusbar-h-padding 0
 set statusbar-v-padding 0
-set page-padding 3
+set page-v-padding 3
+set page-h-padding 3
 set page-cache-size 20
 set selection-notification false
 # set highlight-active-color "rgba(10,188,0,0.0)"
 
 # # para cambiar colores del programa
 # set recolor true
-set default-bg "#C7EDCC"
+# set default-bg "#C7EDCC"
 set recolor-lightcolor "#2e3440"
 set recolor-keephue true
 set recolor-reverse-video true
