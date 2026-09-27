@@ -54,6 +54,9 @@ bspc config click_to_focus any
 # sxhkd &
 # redshift &
 pgrep -x greenclip >/dev/null || greenclip daemon &
+# greenclip only records copies; clipboard-keeper re-offers its newest entry
+# when the app that owned the clipboard closes, so pasting still works
+pgrep -xf "python3 $HOME/.local/bin/clipboard-keeper" >/dev/null || setsid -f "$HOME/.local/bin/clipboard-keeper" >>"$HOME/.cache/clipboard-keeper.log" 2>&1
 
 # restart only the bars this file owns; the pdftabs bar is managed by
 # watch-polytabs.sh (further down) and rides through a bspwm restart on its own
@@ -72,6 +75,11 @@ numlockx &
 pgrep -x xss-lock >/dev/null || xss-lock --transfer-sleep-lock -- i3lock -n -c 0d0c0c &
 # also lock after 45 min idle (xss-lock catches the X screensaver event)
 xset s 2700 2700
+# turn the display off 1 min after that idle lock (46 min idle); any key or
+# mouse movement wakes it. overrides the "never" from xorg.conf.d/10-monitor.conf
+xset +dpms
+xset dpms 0 0 2760
+# (webcam brightness/30 fps settings live in /etc/udev/rules.d/90-webcam-settings.rules)
 
 #light-locker &
 # wallpaper: `wallpaper` (super + alt + w) picks one from ~/Pictures/wallpapers
@@ -79,7 +87,9 @@ xset s 2700 2700
 # here on every login / `bspc wm -r`.
 "$HOME/.local/bin/wallpaper" --restore &
 
-bspc rule -a feh state=floating 
+# start from an empty rule list, so reloading this file (bspc wm -r) doesn't duplicate every rule
+bspc rule -r '*:*:*'
+bspc rule -a feh state=floating
 # bspc rule -a zoom state=floating center=on
 bspc rule -a Catfish state=floating center=on 
 bspc rule -a Alacritty state=floating center=on 
@@ -99,6 +109,10 @@ bspc rule -a "zoom" center=on
 bspc rule -a "webex" state=floating
 bspc rule -a "Webex" state=floating
 bspc rule -a "Peek" state=floating
+# per-window rules by title (Zoom: tile main+meeting, float mini video/toolbars/popups)
+bspc config external_rules_command "$HOME/.config/bspwm/external_rules"
+# MEGA sometimes collapses its dialogs to ~1px wide after showing them; this resizes them back
+pgrep -f '^/bin/bash .*/bspwm/mega-size-fix$' >/dev/null || "$HOME/.config/bspwm/mega-size-fix" &
 bspc rule -a "Geogebra" state=floating
 bspc rule -a "Rofi" state=floating border=off sticky=on layer=above
 bspc rule -a "MEGAsync" state=floating center=on 

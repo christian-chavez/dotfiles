@@ -1,0 +1,37 @@
+#!/bin/sh
+# bspwm external rules: bspwm runs this for every new window with
+#   $1 = window id, $2 = class, $3 = instance, $4 = consequences so far
+# Zoom gives all its windows the class "zoom", so they're told apart by title:
+# keep the main window and the meeting tiled, float everything else (mini video,
+# screen-share toolbar, popups) so it doesn't squeeze or cover the meeting.
+
+wid=$1
+class=$2
+
+case "$class" in
+    zoom|Zoom)
+        title=$(xprop -id "$wid" _NET_WM_NAME 2>/dev/null | sed -n 's/^[^=]*= "\(.*\)"$/\1/p')
+        case "$title" in
+            "Zoom Workplace"*|"Zoom Meeting"|"Meeting")
+                echo "state=tiled" ;;
+            zoom_linux_float_video_window)
+                echo "state=floating" ;;
+            *)
+                echo "state=floating center=on" ;;
+        esac
+        ;;
+    megasync|MEGAsync)
+        # MEGA sometimes sizes a dialog before it has a width and locks it at ~1px
+        # wide (e.g. "Add sync"). Give such collapsed windows a normal size, centered.
+        geo=$(xdotool getwindowgeometry "$wid" 2>/dev/null | sed -n 's/.*Geometry: \([0-9]*\)x\([0-9]*\).*/\1 \2/p')
+        w=${geo% *}; h=${geo#* }
+        if [ -n "$geo" ] && { [ "$w" -lt 50 ] || [ "$h" -lt 50 ]; }; then
+            [ "$h" -lt 50 ] && h=604
+            [ "$w" -lt 50 ] && w=620
+            mon=$(bspc query -T -m | python3 -c 'import sys, json; r = json.load(sys.stdin)["rectangle"]; print(r["x"], r["y"], r["width"], r["height"])' 2>/dev/null)
+            set -- $mon
+            x=$(( ${1:-0} + (${3:-1366} - w) / 2 )); y=$(( ${2:-0} + (${4:-768} - h) / 2 ))
+            echo "state=floating rectangle=${w}x${h}+${x}+${y}"
+        fi
+        ;;
+esac

@@ -1,0 +1,31 @@
+#!/bin/bash
+# MEGA sometimes locks a dialog (e.g. "Add sync") to ~1px wide right after showing it.
+# bspwm reports every window size change; when a MEGA window collapses below 50px,
+# give it a normal size, centered on the monitor. Started from bspwmrc.
+# At most 3 fixes per window per minute, so it can never fight MEGA in a loop.
+
+declare -A fixes since
+
+# reconnect if bspwm restarts (e.g. after `bspc wm -r`)
+while true; do
+bspc subscribe node_geometry | while read -r _ _ _ node geo; do
+    size=${geo%%+*}
+    w=${size%x*}
+    h=${size#*x}
+    (( w >= 50 && h >= 50 )) && continue
+    xprop -id "$node" WM_CLASS 2>/dev/null | grep -qi megasync || continue
+
+    now=$(date +%s)
+    if (( now - ${since[$node]:-0} > 60 )); then
+        fixes[$node]=0
+        since[$node]=$now
+    fi
+    (( fixes[$node]++ >= 3 )) && continue
+
+    (( w < 50 )) && w=620
+    (( h < 50 )) && h=604
+    read -r mx my mw mh < <(bspc query -T -m | python3 -c 'import sys, json; r = json.load(sys.stdin)["rectangle"]; print(r["x"], r["y"], r["width"], r["height"])')
+    xdotool windowsize "$node" "$w" "$h" windowmove "$node" $(( mx + (mw - w) / 2 )) $(( my + (mh - h) / 2 ))
+done
+sleep 1
+done
