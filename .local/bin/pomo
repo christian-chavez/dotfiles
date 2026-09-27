@@ -19,6 +19,8 @@
 #
 #   pomo run       run the cycle daemon (autostarted from bspwmrc)
 #   pomo toggle    start it if stopped, else pause / resume   (super+ctrl+p)
+#                  notifications are held (dunst paused) only while a work
+#                  block is running -- pausing pomo releases them.
 #   pomo skip      end the current block now               (super+ctrl+shift+p)
 #                  during work: ends work AND skips the break that would
 #                  follow it -- goes straight to the next work session, no
@@ -50,6 +52,7 @@ RELOCK_ON_ESCAPE=1        # 1 = re-lock after the grace window; 0 = a password
 ESCAPE_GRACE=7            # seconds after a password unlock to run `pomo skip`
 
 LOCK_COLOR=0d0c0c
+FONT="Iosevka"            # font family for the math prompt and the break image
 
 CONF="${XDG_CONFIG_HOME:-$HOME/.config}/pomo.conf"
 [ -f "$CONF" ] && . "$CONF"
@@ -63,7 +66,20 @@ GATE=""                          # pid of the running math_gate, if any
 COVER_PIDS=""                    # pids of the other-monitor cover windows, if any
 
 # ---- helpers ------------------------------------------------------------------
-note() { notify-send -a pomo "$@" 2>/dev/null || true; }
+# every pomo note shares one dunst stack tag, so each replaces the previous one
+# instead of piling up on screen, in the held queue, or in history
+note() { notify-send -a pomo -h string:x-dunst-stack-tag:pomo "$@" 2>/dev/null || true; }
+
+# focus mode = dunst paused, which holds every other app's notifications until
+# it is lifted. It must only be on while a work block is actually ticking --
+# never while pomo itself is paused, or notifications pile up for hours.
+DND=0
+dnd() {   # $1 = 1 on / 0 off
+    [ "$1" = "$DND" ] && return 0
+    DND=$1
+    if [ "$1" = 1 ]; then dunstctl set-paused true 2>/dev/null || true
+    else                  dunstctl set-paused false 2>/dev/null || true; fi
+}
 writ() { printf '%s %s %s\n' "$1" "$2" "$3" >"$STATE"; }
 fmt()  { printf '%d:%02d' $(( ${1:-0} / 60 )) $(( ${1:-0} % 60 )); }
 
@@ -98,9 +114,9 @@ math_gate() {
                              background-color: #0d0c0cf2; border: 0; padding: 0; }
                   mainbox  { padding: 24% 28%; }
                   listview { enabled: false; }
-                  prompt   { font: "mono bold 42"; text-color: #d6d6d6; }
-                  entry    { font: "mono bold 42"; text-color: #63b1ff; }
-                  textbox, message { font: "mono 15"; text-color: #7c7c7c; }
+                  prompt   { font: "'"$FONT"' bold 42"; text-color: #d6d6d6; }
+                  entry    { font: "'"$FONT"' bold 42"; text-color: #63b1ff; }
+                  textbox, message { font: "'"$FONT"' 15"; text-color: #7c7c7c; }
                 ' 2>/dev/null) || ans=""
         [ "$ans" = "$want" ] && return 0
         msg="not quite - "
@@ -169,9 +185,12 @@ screen_res() {
 make_img() {
     command -v magick >/dev/null 2>&1 || return 1
     local res; res=$(screen_res); case "$res" in *x*) ;; *) res=1920x1080 ;; esac
+    local bold reg
+    bold=$(fc-match -f '%{file}' "$FONT:bold" 2>/dev/null)
+    reg=$(fc-match -f '%{file}' "$FONT" 2>/dev/null)
     magick -size "$res" "xc:#$LOCK_COLOR" -gravity center \
-        -fill '#d0d0d0' -pointsize 128 -annotate +0-48 'BREAK' \
-        -fill '#7c7c7c' -pointsize 32  -annotate +0+84 \
+        ${bold:+-font "$bold"} -fill '#d0d0d0' -pointsize 128 -annotate +0-48 'BREAK' \
+        ${reg:+-font "$reg"} -fill '#7c7c7c' -pointsize 32  -annotate +0+84 \
         'step away  -  the screen unlocks itself' \
         "$IMG" 2>/dev/null
 }
@@ -207,9 +226,15 @@ cleanup() {
 }
 
 countdown() {   # $1 = phase, $2 = total seconds   (work / startup / non-math break)
-    local phase=$1 left=$2 warned=0 grace=0
+    local phase=$1 total=$2 left=$2 warned=0 grace=0
     CUR_PHASE=$phase
     while [ "$left" -gt 0 ]; do
+        # focus mode: off while paused and after the break warning; held off
+        # for the first 4s so the 3s "Focus #N" note shows instead of queueing
+        if [ "$phase" = work ]; then
+            if [ "$PAUSED" = 0 ] && [ "$warned" = 0 ] && [ $(( total - left )) -ge 4 ]
+            then dnd 1; else dnd 0; fi
+        fi
         if [ "$PAUSED" = 1 ]; then
             writ "$phase" "$left" paused
             sleep 1 || true
@@ -218,8 +243,8 @@ countdown() {   # $1 = phase, $2 = total seconds   (work / startup / non-math br
         writ "$phase" "$left" running
         if [ "$phase" = work ] && [ "$left" -le "$WARN_SEC" ] && [ "$warned" = 0 ]; then
             warned=1
-            dunstctl set-paused false 2>/dev/null || true   # so the warning shows
-            note -u critical "Break in ${WARN_SEC}s" "save your work"
+            dnd 0                                   # so the warning shows
+            note -u critical -t "$(( WARN_SEC * 1000 ))" "Break in ${WARN_SEC}s" "save your work"
         fi
         # i3lock style: the password unlocked i3lock mid-break -> grace window
         if [ "$phase" = break ] && [ "$LOCK_STYLE" = i3lock ]; then
@@ -290,11 +315,10 @@ cmd_run() {
     local cycle=0 bmin
     while :; do
         cycle=$(( cycle + 1 ))
-        dunstctl set-paused true 2>/dev/null || true
-        note -u low "Focus #$cycle" "${WORK_MIN} min"
-        countdown work $(( WORK_MIN * 60 ))
+        note -u low -t 3000 "Focus #$cycle" "${WORK_MIN} min"
+        countdown work $(( WORK_MIN * 60 ))      # turns focus mode on/off itself
 
-        dunstctl set-paused false 2>/dev/null || true
+        dnd 0
         if [ "$SKIP_NEXT_BREAK" = 1 ]; then
             SKIP_NEXT_BREAK=0
             note -u low "Break skipped"
