@@ -3,3 +3,12 @@
 .thunar {
     -gtk-icon-style: regular;
 }
+
+/* Tooltips: square corners. With the rounded ones, the areas outside the curve
+   were painted black (e.g. Thunar's sidebar tooltips). */
+tooltip,
+tooltip.background,
+tooltip.background.csd,
+tooltip decoration {
+    border-radius: 0;
+}

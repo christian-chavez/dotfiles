@@ -7,15 +7,15 @@
   <property name="zoomGesturesEnabled" value="true"/>
   <property name="selectedToolbar" value="Dracula mod"/>
   <property name="lastSavePath" value="/home/christian/Documents/maitrise/autre/talks"/>
-  <property name="lastOpenPath" value="/home/christian/Documents/maitrise/autre/Summer2026"/>
+  <property name="lastOpenPath" value="/home/christian/Documents/maitrise/autre/Pablo"/>
   <property name="lastImagePath" value=""/>
   <property name="edgePanSpeed" value="20"/>
   <property name="edgePanMaxMult" value="5"/>
   <property name="zoomStep" value="10"/>
   <property name="zoomStepScroll" value="2"/>
   <property name="displayDpi" value="-1"/>
-  <property name="mainWndWidth" value="954"/>
-  <property name="mainWndHeight" value="521"/>
+  <property name="mainWndWidth" value="677"/>
+  <property name="mainWndHeight" value="365"/>
   <property name="maximized" value="false"/>
   <property name="showToolbar" value="true"/>
   <property name="showSidebar" value="true"/>
