@@ -110,9 +110,13 @@ set_pad() {
 ensure_running() {
     bar_pid >/dev/null && return 0
     setsid -f polybar -r "$BAR" >/dev/null 2>&1 3<&- 8>&- 9>&-
+    # wait until polybar has mapped its window, not just until the process
+    # exists: a `hide` that arrives before that first map is recorded, the
+    # window gets mapped anyway, and every later `hide` is then ignored (the
+    # bar thinks it is already hidden) -- an empty black strip under the main bar
     local i
-    for i in $(seq 1 60); do
-        bar_pid >/dev/null && break
+    for i in $(seq 1 100); do
+        xdotool search --onlyvisible --name "^polybar-${BAR}_" >/dev/null 2>&1 && break
         sleep 0.05
     done
 }
