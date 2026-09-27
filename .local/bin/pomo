@@ -312,13 +312,18 @@ cmd_status() {
     [ -f "$STATE" ] || { echo ""; exit 0; }
     local phase secs state icon
     read -r phase secs state <"$STATE" || { echo ""; exit 0; }
+    # nerd-font icon coloured by phase (polybar markup; hex = colors.ini
+    # primary / secondary); paused greys out the whole item (colors.disabled)
     case "$phase" in
-        work|startup) icon="[w]" ;;
-        break)        icon="[b]" ;;
+        work|startup) icon="%{F#63b1ff}󱎫%{F-}" ;;
+        break)        icon="%{F#a3be8c}󰅶%{F-}" ;;
         *)            echo ""; exit 0 ;;
     esac
-    [ "$state" = paused ] && icon="[||]"
-    printf '%s %s\n' "$icon" "$(fmt "$secs")"
+    if [ "$state" = paused ]; then
+        printf '%%{F#707880}󰏤 %s%%{F-}\n' "$(fmt "$secs")"
+    else
+        printf '%s %s\n' "$icon" "$(fmt "$secs")"
+    fi
 }
 
 cmd_stop() {
