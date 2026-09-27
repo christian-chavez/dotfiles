@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Polybar microphone indicator for the default PulseAudio/PipeWire source.
-#   live  : 󰍬  (foreground)
+#   live  : 󰍬  (amber, so an open mic is hard to miss)
 #   muted : 󰍭  (dim grey)
 #
 #   mic-status           print once
@@ -10,12 +10,13 @@
 # Left-click -> pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 DIM='#707880'
+CAUTION='#ffb347'   # colors.caution
 
 emit() {
   if [ "$(pactl get-source-mute @DEFAULT_SOURCE@ 2>/dev/null | awk '{print $2}')" = yes ]; then
     printf '%%{F%s}󰍭%%{F-}\n' "$DIM"
   else
-    printf '󰍬\n'
+    printf '%%{F%s}󰍬%%{F-}\n' "$CAUTION"
   fi
 }
 
