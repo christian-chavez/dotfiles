@@ -1,3 +1,6 @@
+[mgr]
+border_symbol = "┃"
+
 [flavor]
-dark  = 'catppuccin-mocha'
-light = 'catppuccin-mocha'
+dark  = 'tokyo-night'
+light = 'tokyo-night'

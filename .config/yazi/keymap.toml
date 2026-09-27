@@ -58,3 +58,8 @@ desc = "Open Alacritty here"
 on = "<C-p>"
 run = "shell -- xournalpp -p %h.pdf %h"
 desc = "Export Xournal++ to PDF"
+
+[[mgr.prepend_keymap]]
+on   = "C"
+run  = "plugin ouch zip"
+desc = "Compress selected files to zip with ouch"

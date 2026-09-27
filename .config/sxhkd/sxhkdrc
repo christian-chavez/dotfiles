@@ -146,7 +146,7 @@ super + @b
 
 # file manager (yazi)
 super + e
-	alacritty --class yazi-fm,Alacritty --working-directory "$HOME" -e yazi
+	alacritty --class Alacritty,yazi-fm --working-directory "$HOME" -e bash -ic 'y; exec bash'
 
 # clipboard history (greenclip)
 super + a

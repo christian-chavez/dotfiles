@@ -1,11 +1,13 @@
 # yazi.toml
 [mgr]
+ratio = [1, 3, 4]
 show_hidden = false
+show_symlink = true
 sort_by = "mtime"
 sort_reverse = true
 sort_sensitive = true
 sort_translit = true
-linemode = "mtime"
+linemode = "size_and_mtime"
 
 [[opener.xournalpp]]
 run = 'xournalpp %s'
