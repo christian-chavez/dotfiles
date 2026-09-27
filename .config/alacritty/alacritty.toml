@@ -1,12 +1,12 @@
 general.import = [
-  "/usr/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+  "/usr/lib/node_modules/alacritty-themes/themes/Tokyonight_Night.toml"
 ]
 
 [font]
 size = 10
 
 [font.normal]
-family = "Iosevka"
+family = "IosevkaTerm Nerd Font"
 
 [window.dimensions]
 columns = 80
@@ -16,3 +16,12 @@ lines = 22
 key = "Return"
 mods = "Shift"
 chars = "\u001B\r"
+
+# Colorful bold/dim text (Claude Code tool names, "Running…", "ctrl+o to expand")
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#0a0f0a"
+bright_foreground = "#50fa7b"
+dim_foreground = "#6f9f80"
