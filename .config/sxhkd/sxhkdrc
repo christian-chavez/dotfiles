@@ -127,9 +127,7 @@ super + alt + p
 super + alt + t
 	$HOME/.local/bin/rofi-toggles
 
-# wallpaper picker (rofi thumbnails; choice persists via ~/.cache/wallpaper)
-super + alt + w
-	$HOME/.local/bin/wallpaper
+# wallpaper picker now lives in the toggles menu -- super + alt + t
 
 # ================================================================== launchers
 # terminal

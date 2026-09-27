@@ -16,6 +16,8 @@ st_pomo()      { [ -n "$("$HOME/.local/bin/pomo" status 2>/dev/null)" ] && echo 
 st_wacom() { local o; o="$(cat "$HOME/.cache/wacom-output" 2>/dev/null)"; echo "${o:-eDP}"; }
 # pdftabs bar's on/off flag, read by watch-polytabs.sh (defaults off when unset)
 st_pdftabs() { [ "$(cat /tmp/pdftabs.enabled 2>/dev/null || echo 0)" = 1 ] && echo on || echo off; }
+# current wallpaper's file name, remembered by the wallpaper script
+st_wallpaper() { local w; w="$(cat "$HOME/.cache/wallpaper" 2>/dev/null)"; w="${w##*/}"; echo "${w%.*}"; }
 
 do_picom() {
 	if pgrep -x picom >/dev/null 2>&1; then
@@ -57,6 +59,8 @@ do_wacom() {
 	setsid -f "$HOME/.local/bin/wacom-map.sh" >/dev/null 2>&1
 }
 do_pdftabs() { "$HOME/.local/bin/toggle-polytabs.sh"; }
+# opens the wallpaper picker (rofi thumbnails); was super + alt + w
+do_wallpaper() { "$HOME/.local/bin/wallpaper"; }
 
 declare -A ACTION
 opts=""
@@ -67,6 +71,7 @@ add "$(printf 'syncthing   [%s]' "$(st_syncthing)")" do_syncthing
 add "$(printf 'pomodoro    [%s]' "$(st_pomo)")"      do_pomo
 add "$(printf 'wacom       [%s]' "$(st_wacom)")"     do_wacom
 add "$(printf 'pdftabs     [%s]' "$(st_pdftabs)")"   do_pdftabs
+add "$(printf 'wallpaper   [%s]' "$(st_wallpaper)")" do_wallpaper
 
 choice="$(printf '%s' "$opts" | menu)" || exit 0
 [ -z "${choice:-}" ] && exit 0
