@@ -10,6 +10,12 @@ return require('packer').startup(function(use)
   use 'EdenEast/nightfox.nvim'
   use 'rmehri01/onenord.nvim'
 
+  -- 2026-09-26 LaTeX (settings in lua/myconfig/latex.lua)
+  -- VimTeX must not be lazy-loaded (no `ft = 'tex'`), it breaks inverse search
+  use 'lervag/vimtex'
+  use 'L3MON4D3/LuaSnip'
+  use { 'saghen/blink.cmp', tag = 'v1.10.2' } -- main is the unreleased v2
+
   -- VimTeX plugin setup
   -- use { 'lervag/vimtex',
   --   ft = 'tex',  -- Only load for tex files
@@ -55,6 +61,8 @@ return require('packer').startup(function(use)
   -- use 'honza/vim-snippets'
   -- 2025-09-12 colorscheme
   use { "catppuccin/nvim", as = "catppuccin" }
+  -- 2026-09-26 colorscheme
+  use 'folke/tokyonight.nvim'
   use {
 		  'nvim-lualine/lualine.nvim',
 		  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -73,7 +81,13 @@ return require('packer').startup(function(use)
         callback = function(args)
           local opts = { buffer = args.buf } -- Locks the keymap to this specific buffer
 
-          vim.keymap.set("i", "<CR>", "<CR><cmd>AutolistNewBullet<cr>", opts)
+          -- in tex, blink.cmp takes over <CR> and keeps this one as its fallback;
+          -- mapping it again when the buffer reloads (:e!) would take Enter
+          -- away from the completion menu
+          local cr = vim.fn.maparg("<CR>", "i", false, true)
+          if not (cr.desc and vim.startswith(cr.desc, "blink.cmp: ")) then
+            vim.keymap.set("i", "<CR>", "<CR><cmd>AutolistNewBullet<cr>", opts)
+          end
           vim.keymap.set("n", "o", "o<cmd>AutolistNewBullet<cr>", opts)
           vim.keymap.set("n", "O", "O<cmd>AutolistNewBulletBefore<cr>", opts)
           vim.keymap.set("n", "dd", "dd<cmd>AutolistRecalculate<cr>", opts)

@@ -10,7 +10,8 @@ map w adjust_window width
 map S adjust_window width
 map i toggle_inputbar
 set synctex "true"
-set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
+# set synctex-editor-command "code --no-sandbox -r -g %{input}:%{line}"
+set synctex-editor-command "nvim --headless -c \"VimtexInverseSearch %{line}:%{column} '%{input}'\""
 # set adjust-open width 
 set adjust-open best-fit
 set first-page-column "1:1"
