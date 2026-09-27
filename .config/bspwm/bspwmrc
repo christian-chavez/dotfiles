@@ -136,10 +136,10 @@ $HOME/.local/bin/unclutter-mouse.sh &
 pgrep -f '[w]acom-watch.sh' >/dev/null || $HOME/.local/bin/wacom-watch.sh &
 
 # 2024-08-12
-# Set shadow for floating windows: shadow-script.sh flags each window with
-# _COMPTON_SHADOW=1 as it becomes floating (picom's shadow-exclude makes that
-# flag opt-in). The flag persists on the window across `bspc wm -r`, so no
-# one-shot fix-up is needed here.
+# Shadows for floating and pseudo-tiled windows: shadow-script.sh keeps
+# _COMPTON_SHADOW=1 on exactly those (picom's shadow-exclude makes that flag
+# opt-in). It re-syncs from bspwm's state on every window event and holds a
+# lock, so reloading this file doesn't start a second copy.
 $HOME/.local/bin/shadow-script.sh &
 
 
