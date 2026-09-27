@@ -14,7 +14,8 @@ set synctex "true"
 set synctex-editor-command "nvim --headless -c \"VimtexInverseSearch %{line}:%{column} '%{input}'\""
 # set adjust-open width 
 set adjust-open best-fit
-set first-page-column "1:1"
+# dual-page view: cover alone, then 2|3, 4|5 like a printed book (was 1:1)
+set first-page-column "1:2"
 
 # d: toggle dual-page view and fit width in one keystroke
 map <A-d> toggle_page_mode
@@ -69,6 +70,12 @@ set page-v-padding 10
 set page-h-padding 10
 set page-cache-size 20
 set selection-notification false
+# save the reading position continuously, not only on a clean close
+set continuous-hist-save true
+# statusbar shows [12/140 (8%)]
+set statusbar-page-percent true
+# zoom toward the middle of the view instead of its left edge
+set zoom-center true
 # set highlight-active-color "rgba(10,188,0,0.0)"
 
 # # para cambiar colores del programa
@@ -106,3 +113,10 @@ map [normal] xr exec "/home/christian/.local/bin/zathura-pages '$FILE' '$PAGE'"
 
 # rename file
 map [normal] xw exec "/home/christian/.local/bin/zathura-rename '$FILE' '$PAGE' '$DBUS'"
+
+# annotate in Xournal++ at the current page; reopens name.xopp (Xournal++'s
+# default save name next to the PDF) if there is one, so earlier notes stay
+map [normal] xa exec "sh -c 'x=\"${1%.*}.xopp\"; [ -f \"$x\" ] && set -- \"$x\" \"$2\"; exec xournalpp -n \"$2\" \"$1\"' sh '$FILE' '$PAGE'"
+
+# second window on the same PDF at the current page (e.g. keep a figure open)
+map [normal] xn exec "zathura -P '$PAGE' '$FILE'"
