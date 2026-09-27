@@ -46,6 +46,9 @@ bspc config pointer_motion_interval 25
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+# gapless monocle drops window_gap, so monocle windows would touch the floating
+# polybar; keep the same 3px under it as tiled windows get
+bspc config top_monocle_padding  3
 bspc config click_to_focus any
 
 # sxhkd &
