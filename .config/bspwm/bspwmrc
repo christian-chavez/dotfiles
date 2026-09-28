@@ -65,7 +65,10 @@ polybar -r example &
 polybar -r external &
 pgrep -x dunst >/dev/null || dunst &
 # picom --experimental-backends &
-pgrep -x picom >/dev/null || picom -b &
+# bspwmrc re-runs after every monitor change (autorandr -> reorder -> bspc wm -r):
+# reload a running picom then, instead of leaving it as is -- after one login it
+# drew no shadows until restarted. Warnings go to ~/.cache/picom.log
+if pgrep -x picom >/dev/null; then pkill -USR1 -x picom; else picom -b --log-file "$HOME/.cache/picom.log" & fi
 numlockx &
 
 # lock the screen before every suspend (super+l keybind, lid close, low
