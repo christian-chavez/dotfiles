@@ -138,9 +138,10 @@ pgrep -f '[w]acom-watch.sh' >/dev/null || $HOME/.local/bin/wacom-watch.sh &
 
 # 2024-08-12
 # Shadows for floating and pseudo-tiled windows: shadow-script.sh keeps
-# _COMPTON_SHADOW=1 on exactly those (picom's shadow-exclude makes that flag
-# opt-in). It re-syncs from bspwm's state on every window event and holds a
-# lock, so reloading this file doesn't start a second copy.
+# _COMPTON_SHADOW=1 on those and 0 on every other bspwm window (picom natively
+# drops the shadow on 0; external_rules pre-sets it for new windows). It
+# re-syncs from bspwm's state on every window event and holds a lock, so
+# reloading this file doesn't start a second copy.
 $HOME/.local/bin/shadow-script.sh &
 
 

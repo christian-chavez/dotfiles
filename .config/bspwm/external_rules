@@ -8,7 +8,7 @@
 wid=$1
 class=$2
 
-case "$class" in
+out=$(case "$class" in
     zoom|Zoom)
         title=$(xprop -id "$wid" _NET_WM_NAME 2>/dev/null | sed -n 's/^[^=]*= "\(.*\)"$/\1/p')
         case "$title" in
@@ -34,4 +34,15 @@ case "$class" in
             echo "state=floating rectangle=${w}x${h}+${x}+${y}"
         fi
         ;;
+esac)
+[ -n "$out" ] && echo "$out"
+
+# picom shadow (see ~/.local/bin/shadow-script.sh): set _COMPTON_SHADOW before
+# bspwm maps the window, so it opens with the right shadow -- 1 if it will
+# float, else 0. The last state= wins: ours above overrides bspwm's ($4).
+state=$(printf '%s %s\n' "$4" "$out" | grep -o 'state=[a-z_]*' | tail -n 1)
+case "$state" in
+    state=floating|state=pseudo_tiled) shadow=1 ;;
+    *)                                 shadow=0 ;;
 esac
+xprop -id "$wid" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW "$shadow" 2>/dev/null
