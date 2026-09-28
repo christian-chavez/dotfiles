@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# lock-screen -- the locker xss-lock runs (lid close, suspend, idle lock).
+#
+# i3lock needs the X keyboard grab, and only one client can hold it. pomo's
+# break prompt is a rofi that holds that grab back-to-back, so locking during
+# a break used to leave i3lock unable to lock, or showing a lock screen whose
+# keystrokes partly went to rofi -- mangled passwords, then pam_faillock
+# locked the account. So: tell pomo to hold its prompt (it waits while this
+# file names a live pid), close any rofi, then lock. If something still beat
+# us to the grab, i3lock exits 1 -- clear rofi again and retry.
+
+HOLD="${XDG_RUNTIME_DIR:-/tmp}/pomo.hold"
+echo $$ >"$HOLD"
+lp=""
+trap 'rm -f "$HOLD"' EXIT
+# xss-lock SIGTERMs its locker on `loginctl unlock-session` -- pass it on
+trap '[ -n "$lp" ] && kill "$lp" 2>/dev/null; exit 0' TERM INT HUP
+
+for try in 1 2 3 4 5; do
+    pkill -x rofi 2>/dev/null
+    i3lock -n -c 0d0c0c "$@" & lp=$!
+    wait "$lp"; rc=$?
+    [ "$rc" = 1 ] || break      # 0 = unlocked; 1 = "Cannot grab pointer/keyboard"
+    sleep 0.2
+done

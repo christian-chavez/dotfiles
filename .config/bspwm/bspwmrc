@@ -71,8 +71,9 @@ numlockx &
 # lock the screen before every suspend (super+l keybind, lid close, low
 # battery, `systemctl suspend`). --transfer-sleep-lock holds the sleep
 # inhibitor until i3lock has the screen, so there's no desktop flash on
-# resume.
-pgrep -x xss-lock >/dev/null || xss-lock --transfer-sleep-lock -- i3lock -n -c 0d0c0c &
+# resume. lock-screen wraps `i3lock -n -c 0d0c0c` so pomo's break prompt
+# (rofi) can't hold the keyboard grab and leave i3lock unable to take input.
+pgrep -x xss-lock >/dev/null || xss-lock --transfer-sleep-lock -- "$HOME/.local/bin/lock-screen" &
 # also lock after 45 min idle (xss-lock catches the X screensaver event)
 xset s 2700 2700
 # turn the display off 1 min after that idle lock (46 min idle); any key or

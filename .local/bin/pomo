@@ -62,6 +62,7 @@ STATE="$RUN/pomo.state"          # "<phase> <seconds-left> <running|paused>"
 PIDF="$RUN/pomo.pid"             # daemon single-instance marker
 LOCKPID="$RUN/pomo.lockpid"      # pid of the i3lock WE started
 IMG="$RUN/pomo-break.png"
+HOLD="$RUN/pomo.hold"            # pid of ~/.local/bin/lock-screen while it locks
 GATE=""                          # pid of the running math_gate, if any
 COVER_PIDS=""                    # pids of the other-monitor cover windows, if any
 
@@ -92,6 +93,13 @@ daemon_pid() {
         && printf '%s\n' "$p"
 }
 
+# the lock screen (lid close, suspend, idle) is up or about to be. The math
+# gate's rofi must stay out of its way -- both need the one keyboard grab.
+screen_locked() {
+    local p; p=$(cat "$HOLD" 2>/dev/null)
+    { [ -n "$p" ] && kill -0 "$p" 2>/dev/null; } || pgrep -x i3lock >/dev/null
+}
+
 # ---- math gate (LOCK_STYLE=math) ----------------------------------------------
 # rofi's keyboard grab is global to the X display, not per-monitor -- two
 # simultaneous `rofi -dmenu` instances fight over the same grab and get
@@ -103,6 +111,7 @@ math_gate() {
     RANDOM=$(( ($(date +%s) ^ $$) & 32767 ))
     local a b c want ans msg=""
     while :; do
+        while screen_locked; do sleep 1; done
         a=$(( RANDOM % 89 + 11 ))
         c=$(( RANDOM % 89 + 11 ))
         if [ "$MATH_HARD" = 1 ]; then b=$(( RANDOM % 89 + 11 )); else b=$(( RANDOM % 8 + 2 )); fi
@@ -159,6 +168,7 @@ math_break() {   # $1 = total seconds
     while [ "$left" -gt 0 ]; do
         if [ "$PAUSED" = 1 ]; then writ break "$left" paused; sleep 1 || true; continue; fi
         writ break "$left" running
+        screen_locked && pkill -x rofi 2>/dev/null   # never hold i3lock's grab
         if ! kill -0 "$GATE" 2>/dev/null; then
             wait "$GATE" 2>/dev/null      # solved (rc 0), or the gate died
             GATE=""
