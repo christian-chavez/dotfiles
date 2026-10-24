@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Camera import
+GenericName=Import photos from the camera
+Comment=Copy photos off the Canon into ~/Pictures/canon-2025 and offer to wipe the card
+Icon=camera-photo
+Exec=/home/christian/.local/bin/canon-pull --rofi
+Terminal=false
+Categories=Graphics;Photography;
+Keywords=camera;canon;photos;pictures;import;gphoto2;card;sd;

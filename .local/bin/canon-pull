@@ -1,0 +1,261 @@
+#!/usr/bin/env bash
+#
+# canon-pull - copy every photo off the camera into ~/Pictures/canon-2025/<folder>,
+# check they all arrived, then offer to wipe the card.
+#
+# Two front ends, same steps:
+#   * terminal (default): prompts in the shell, shows gphoto2's own output.
+#   * --rofi: rofi menus for the questions, a dunst progress notification for
+#     the download. Used by the "Camera import" launcher entry
+#     (~/.local/share/applications/canon-pull.desktop). gphoto2's output goes
+#     to ~/.cache/canon-pull.log.
+#
+# Safety: the card is only offered for wiping once every file on it is in the
+# folder at the same size. An interrupted download can leave a half-copied
+# file, and --skip-existing would skip it on every later run.
+
+set -uo pipefail
+
+BASE="$HOME/Pictures/canon-2025"
+LOG="${XDG_CACHE_HOME:-$HOME/.cache}/canon-pull.log"
+
+usage() {
+    cat <<'EOF'
+Usage: canon-pull [folder] [-j] [--rofi]
+  folder   subfolder of ~/Pictures/canon-2025 (asked for if missing;
+           today's date is the default)
+  -j       also extract JPG previews from the CR2 files (keeps the metadata)
+  --rofi   use rofi menus and notifications instead of the terminal
+EOF
+}
+
+# --- arguments -------------------------------------------------------------
+rofi_mode=false
+extract_jpg=false
+folder=""
+for arg in "$@"; do
+    case $arg in
+        --rofi)    rofi_mode=true ;;
+        -j|--jpg)  extract_jpg=true ;;
+        -h|--help) usage; exit 0 ;;
+        -*)        echo "Unknown option: $arg" >&2; usage >&2; exit 1 ;;
+        *)         folder=$arg ;;
+    esac
+done
+
+# --- output helpers: notifications in rofi mode, plain lines otherwise -----
+notify() { notify-send -a "Camera import" "$@" 2>/dev/null; return 0; }
+
+say() {   # say "summary" ["body"]
+    if $rofi_mode; then notify "$@"; else printf '%s\n' "$@"; fi
+}
+
+warn() {  # warn "summary" ["body"]
+    if $rofi_mode; then notify -u critical "$@"; else printf '%s\n' "$@" >&2; fi
+}
+
+menu() {  # menu "prompt" "message" option... -> prints the picked option
+    local prompt=$1 mesg=$2
+    shift 2
+    printf '%s\n' "$@" | rofi -dmenu -i -no-custom -normal-window -p "$prompt" -mesg "$mesg"
+}
+
+# Run a command; in rofi mode its output goes to the log instead.
+run() { if $rofi_mode; then "$@" >> "$LOG" 2>&1; else "$@"; fi; }
+
+# gphoto2 runs with LC_ALL=C so its messages are always parseable English.
+gp() { LC_ALL=C gphoto2 "$@"; }
+
+camera_connected() {
+    # auto-detect prints two header lines, then one line per camera
+    gp --auto-detect 2>/dev/null | tail -n +3 | grep -q .
+}
+
+# Files on the card as "name<TAB>size_kb" lines. A listing line looks like
+#   #1     IMG_3005.CR2               rd 24876 KB image/x-canon-cr2 1729789234
+card_files() {
+    local listing
+    listing=$(gp --list-files 2>/dev/null) || return 1
+    awk '/^#/ {
+        size = ""
+        for (i = 3; i < NF; i++) if ($(i+1) == "KB") { size = $i; break }
+        print $2 "\t" size
+    }' <<< "$listing"
+}
+
+# Only one import at a time (easy to launch twice from the menu).
+exec 9> "${XDG_RUNTIME_DIR:-/tmp}/canon-pull.lock"
+if ! flock -n 9; then
+    warn "Camera import is already running"
+    exit 1
+fi
+
+# --- folder ----------------------------------------------------------------
+if [[ -z $folder ]]; then
+    today=$(date +%F)
+    if $rofi_mode; then
+        # today's date first, then the 5 most recent folders (to resume one)
+        folder=$(
+            {
+                echo "$today"
+                find "$BASE/" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %f\n' 2>/dev/null |
+                    sort -rn | cut -d' ' -f2- | grep -vFx "$today" | head -n 5
+            } | rofi -dmenu -i -normal-window -p "Folder" \
+                     -mesg "Pick a folder or type a new name (Shift+Enter keeps exactly what you typed)"
+        ) || exit 0
+    else
+        read -r -e -i "$today" -p "Folder name: " folder
+        folder=${folder:-$today}
+    fi
+fi
+[[ -n $folder ]] || exit 0
+dest="$BASE/$folder"
+
+# --- wait for the camera ---------------------------------------------------
+until camera_connected; do
+    if $rofi_mode; then
+        choice=$(menu "Camera" "No camera found. Plug it in and turn it on." "Retry" "Cancel")
+        [[ $choice == Retry ]] || exit 0
+    else
+        read -r -p "No camera found. Plug it in and turn it on, then press Enter (q to quit) " reply
+        [[ ${reply,,} == q ]] && exit 1
+    fi
+done
+
+if ! mkdir -p "$dest" || ! cd "$dest"; then
+    warn "Can't use $dest"
+    exit 1
+fi
+before=$(find . -maxdepth 1 -type f | wc -l)
+
+# --- download --------------------------------------------------------------
+# Terminal: gphoto2's normal output. Rofi: output goes to the log, and a
+# notification with a progress bar counts files as gphoto2 saves or skips them.
+download() {
+    if ! $rofi_mode; then
+        gp --get-all-files --skip-existing
+        return
+    fi
+
+    local total status
+    total=$(card_files | wc -l)
+    if [[ -z $progress_id ]]; then
+        progress_id=$(notify-send -p -a "Camera import" -h int:value:0 \
+                      "Downloading to $folder" "0 of $total" 2>/dev/null)
+    fi
+    local replace=()
+    [[ -n $progress_id ]] && replace=(-r "$progress_id")
+
+    # stdbuf: gphoto2 would otherwise buffer its output when piped
+    LC_ALL=C stdbuf -oL gphoto2 --get-all-files --skip-existing 2>&1 |
+        tee -a "$LOG" |
+        {
+            n=0 last=-1
+            while IFS= read -r line; do
+                case $line in
+                    "Saving file as "*|"Skip existing file "*) n=$((n + 1)) ;;
+                    *) continue ;;
+                esac
+                (( total > 0 )) || continue
+                pct=$(( n * 100 / total ))
+                (( pct > 100 )) && pct=100
+                (( pct == last )) && continue
+                last=$pct
+                notify "${replace[@]}" -h "int:value:$pct" "Downloading to $folder" "$n of $total"
+            done
+        }
+    status=${PIPESTATUS[0]}
+    return "$status"
+}
+progress_id=""
+
+if $rofi_mode; then
+    echo "=== $(date '+%F %T')  $dest" > "$LOG"
+else
+    echo "Saving to $dest"
+fi
+
+until download; do
+    if $rofi_mode; then
+        err=$(grep -F '*** Error' "$LOG" | tail -n 1 | sed 's/^\*\*\* *//; s/ *\*\*\*$//')
+        choice=$(menu "Download" "Download stopped: ${err:-unknown error} (see $LOG)" "Retry" "Cancel")
+        [[ $choice == Retry ]] || break
+    else
+        read -r -p "Download stopped with an error. Retry? [Y/n] " reply
+        [[ ${reply,,} == n* ]] && break
+    fi
+done
+
+after=$(find . -maxdepth 1 -type f | wc -l)
+new=$((after - before))
+summary=("Downloaded $new new file(s)" "The folder $folder now has $after file(s).")
+if $rofi_mode && [[ -n $progress_id ]]; then
+    notify -r "$progress_id" "${summary[@]}"   # replaces the progress bar
+else
+    say "${summary[@]}"
+fi
+
+# --- optional: JPG previews from the RAW files -----------------------------
+if $extract_jpg; then
+    if compgen -G '*.CR2' > /dev/null; then
+        say "Extracting JPG previews..."
+        run exiftool -b -PreviewImage -w %f.jpg -ext CR2 .
+        run exiftool -tagsfromfile %f.CR2 -all:all -overwrite_original -ext jpg .
+    else
+        say "No CR2 files here, so there are no previews to extract."
+    fi
+fi
+
+# --- make sure everything on the card is safely here before wiping ---------
+if ! card_list=$(card_files); then
+    warn "Card NOT wiped" "Couldn't read the card to double-check the download."
+    exit 1
+fi
+if [[ -z $card_list ]]; then
+    say "The card is already empty."
+    exit 0
+fi
+mapfile -t on_card <<< "$card_list"
+
+problems=()
+for entry in "${on_card[@]}"; do
+    name=${entry%%$'\t'*}
+    card_kb=${entry#*$'\t'}
+    if [[ ! -s $name ]]; then
+        problems+=("$name (missing)")
+    elif [[ -n $card_kb ]]; then
+        local_kb=$(( ($(stat -c %s "$name") + 1023) / 1024 ))
+        diff=$(( local_kb - card_kb ))
+        (( diff < -1 || diff > 1 )) && problems+=("$name (local ${local_kb} KB, card ${card_kb} KB)")
+    fi
+done
+
+if (( ${#problems[@]} > 0 )); then
+    shown=$(printf '%s\n' "${problems[@]:0:10}")
+    (( ${#problems[@]} > 10 )) && shown+=$'\n'"...and $(( ${#problems[@]} - 10 )) more"
+    warn "Card NOT wiped: ${#problems[@]} file(s) aren't fully saved" \
+         "$shown"$'\n'"Delete any half-copied ones and run the import again (folder: $folder)."
+    exit 1
+fi
+
+# --- wipe? -----------------------------------------------------------------
+saved_msg="All ${#on_card[@]} file(s) on the card are saved in $folder."
+KEEP="No, keep the photos on the card"
+WIPE="Yes, wipe the card"
+if $rofi_mode; then
+    [[ $(menu "Wipe card?" "$saved_msg" "$KEEP" "$WIPE") == "$WIPE" ]] && wipe=true || wipe=false
+else
+    echo
+    echo "$saved_msg"
+    read -r -p "Wipe the card? [y/N] " reply
+    [[ ${reply,,} == y || ${reply,,} == yes ]] && wipe=true || wipe=false
+fi
+
+if ! $wipe; then
+    say "Card left as is" "Photos are in $dest"
+elif run gp --delete-all-files --recurse; then
+    say "Card wiped" "Photos are in $dest"
+else
+    warn "Wiping the card failed" "Your photos are still on the card and in $dest."
+    exit 1
+fi
