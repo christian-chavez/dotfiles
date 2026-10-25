@@ -105,29 +105,23 @@ ytdl() {
 zks() {
     local vault="/home/christian/Documents/obsidian-vaults/Test/Zettelkasten"
     
-    local result=$(
-        cd "$vault" || return
-        
-        (
-            # 1. Inject filenames (Strictly .md, sorted by newest first)
-            rg --files --glob "*.md" --sortr modified | awk -F/ '{print $0":1:\033[36m[FILE]\033[0m " $NF}'
-            
-            # 2. Add contents (Strictly .md, sorted by newest first)
-            rg --glob "*.md" --sortr modified --line-number --no-heading --color=always ""
-        ) | fzf --ansi \
+    # fzf doesn't filter here (--disabled): every keystroke re-runs zks-search,
+    # which keeps only notes containing ALL typed words anywhere in the note or
+    # its name (case-insensitive). "quoted words" = exact phrase. 2026-10-22
+    # Enter opens the note in nvim at its first match; quitting nvim returns
+    # here with the same query, the list refreshed and the cursor still on that
+    # note (track-current + --id-nth 1 = follow it by path). Esc leaves zks.
+    (
+        cd "$vault" || exit
+        : | fzf --ansi --disabled \
             --delimiter : \
-            --nth 3.. \
-            --no-sort \
-            --preview "bat --color=always --style=numbers --highlight-line {2} {1} 2>/dev/null || cat {1}" \
-            --preview-window "right:60%:+{2}-/3"
+            --id-nth 1 \
+            --bind "start:reload:$HOME/.local/bin/zks-search {q}" \
+            --bind "change:untrack-current+first+reload:sleep 0.05; $HOME/.local/bin/zks-search {q}" \
+            --bind "enter:execute(nvim +{2} {1})+track-current+reload($HOME/.local/bin/zks-search {q})" \
+            --preview "$HOME/.local/bin/zks-search --preview {1} {q}" \
+            --preview-window "right:60%:wrap-word:+{2}-2"
     )
-    
-    if [ -n "$result" ]; then
-        local file=$(echo "$result" | cut -d: -f1)
-        local line=$(echo "$result" | cut -d: -f2)
-        
-        nvim "+$line" "$vault/$file"
-    fi
 }
 export PATH="$HOME/.local/bin:$PATH"
 

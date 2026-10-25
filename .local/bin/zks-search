@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""zks-search: search helper for the `zks` function in ~/.bashrc.
+
+  zks-search QUERY            list matching notes (one row each, newest first)
+  zks-search --preview FILE QUERY   show FILE with bat, matched words highlighted
+
+A note matches when it contains ALL the query words, anywhere in the note or
+its file name (case-insensitive, exact substrings). Put words in quotes to
+search a phrase: "linear algebra". Empty query lists every note.
+
+Rows look like  path:line:label  -- zks's fzf splits on ':' to get the file
+and the first matching line (used for the preview scroll and for nvim +line).
+"""
+import os
+import re
+import shlex
+import sys
+
+DIR_COL, HIT_COL, DIM, RESET = "\033[90m", "\033[1;33m", "\033[90m", "\033[0m"
+
+
+def parse(query):
+    try:
+        terms = shlex.split(query)
+    except ValueError:                 # unfinished quote while typing
+        terms = query.replace('"', " ").replace("'", " ").split()
+    return [t.lower() for t in terms if t.strip()]
+
+
+def matcher(terms):
+    return re.compile("|".join(re.escape(t) for t in sorted(terms, key=len, reverse=True)),
+                      re.IGNORECASE)
+
+
+def notes():
+    found = []
+    for root, dirs, files in os.walk("."):
+        dirs[:] = [d for d in dirs if not d.startswith(".")]   # .obsidian, .trash...
+        for f in files:
+            if f.endswith(".md"):
+                p = os.path.join(root, f)[2:]                  # drop "./"
+                try:
+                    found.append((os.path.getmtime(p), p))
+                except OSError:
+                    pass
+    return [p for _, p in sorted(found, reverse=True)]
+
+
+def read(p):
+    try:
+        with open(p, encoding="utf-8", errors="replace") as fh:
+            return fh.read()
+    except OSError:
+        return None
+
+
+def label(p, hit=None):
+    folder, name = os.path.split(p[:-3])                       # drop ".md"
+    if hit:
+        name = hit.sub(lambda m: HIT_COL + m.group(0) + RESET, name)
+    return (f"{DIR_COL}{folder}/{RESET}" if folder else "") + name
+
+
+def search(query):
+    terms = parse(query)
+    out = []
+    if not terms:
+        out = [f"{p}:1:{label(p)}" for p in notes()]
+    else:
+        hit = matcher(terms)
+        for p in notes():
+            text = read(p)
+            if text is None:
+                continue
+            low, name = text.lower(), os.path.basename(p).lower()
+            if not all(t in low or t in name for t in terms):
+                continue
+            lines = [n for n, line in enumerate(text.splitlines(), 1) if hit.search(line)]
+            first = lines[0] if lines else 1
+            count = f"  {DIM}{len(lines)} line{'s' if len(lines) != 1 else ''}{RESET}" if lines else ""
+            out.append(f"{p}:{first}:{label(p, hit)}{count}")
+    try:
+        sys.stdout.write("\n".join(out) + ("\n" if out else ""))
+        sys.stdout.flush()
+    except BrokenPipeError:            # fzf reloaded mid-output (user kept typing)
+        os._exit(0)
+
+
+SGR = re.compile(r"(\x1b\[[0-9;]*m)")
+MARK = "\033[0m\033[1;38;2;13;12;12;48;2;229;192;123m"   # dark text on yellow
+NUM, NUM_HIT = "\033[38;2;131;148;150m", "\033[38;2;229;192;123m"
+
+
+def mark(line, hit):
+    """Wrap each match in MARK inside a line that already has bat's colors."""
+    toks = SGR.split(line)                     # even = text, odd = escape
+    vis = "".join(toks[0::2])
+    spans = [m.span() for m in hit.finditer(vis) if m.end() > m.start()]
+    if not spans:
+        return line
+    starts, ends = {s for s, _ in spans}, {e for _, e in spans}
+    out, active, pos, inside = [], [], 0, False
+    for i, t in enumerate(toks):
+        if i % 2:                              # bat escape: track it, defer inside a match
+            active = [] if t in ("\033[0m", "\033[m") else active + [t]
+            if not inside:
+                out.append(t)
+            continue
+        for ch in t:
+            if inside and pos in ends:
+                out.append(RESET + "".join(active))
+                inside = False
+            if not inside and pos in starts:
+                out.append(MARK)
+                inside = True
+            out.append(ch)
+            pos += 1
+    if inside:
+        out.append(RESET + "".join(active))
+    return "".join(out)
+
+
+def preview(path, query):
+    terms = parse(query)
+    hit = matcher(terms) if terms else None
+    try:                                       # one output line per source line
+        import subprocess
+        lines = subprocess.run(
+            ["bat", "--color=always", "--style=plain", "--wrap=never",
+             "--paging=never", "--", path],
+            capture_output=True, text=True, errors="replace").stdout.splitlines()
+    except OSError:                            # no bat: plain text
+        lines = (read(path) or "").splitlines()
+    out = []
+    for n, line in enumerate(lines, 1):
+        matched = hit is not None and hit.search(SGR.sub("", line))
+        out.append(f"{NUM_HIT if matched else NUM}{n:>4}{RESET} "
+                   + (mark(line, hit) if matched else line))
+    try:
+        sys.stdout.write("\n".join(out) + "\n")
+        sys.stdout.flush()
+    except BrokenPipeError:
+        os._exit(0)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) >= 3 and sys.argv[1] == "--preview":
+        preview(sys.argv[2], " ".join(sys.argv[3:]))
+    else:
+        search(" ".join(sys.argv[1:]))
