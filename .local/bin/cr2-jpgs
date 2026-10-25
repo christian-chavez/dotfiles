@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# cr2-jpgs - make a JPG next to every CR2 in a folder (default: the current one).
+#
+# Uses the full-size JPEG preview the camera embeds in each CR2 (no RAW
+# processing, so it's fast), then copies all the metadata from the CR2 into
+# it so the date, camera settings and rotation are right.
+# CR2s that already have a .jpg/.JPG (an earlier run, or a RAW+JPEG shot)
+# are skipped, so it's safe to run again.
+#
+# Usage: cr2-jpgs [folder]
+
+set -uo pipefail
+
+dir=${1:-.}
+cd "$dir" || { echo "Can't open $dir" >&2; exit 1; }
+
+todo=()
+for raw in *.CR2; do
+    [[ -e $raw ]] || continue
+    base=${raw%.*}
+    [[ -e $base.jpg || -e $base.JPG ]] && continue
+    todo+=("$raw")
+done
+
+if (( ${#todo[@]} == 0 )); then
+    echo "Every CR2 here already has a JPG."
+    exit 0
+fi
+
+echo "Making ${#todo[@]} JPG(s)..."
+exiftool -q -b -PreviewImage -w %f.jpg "${todo[@]}"
+
+made=()
+for raw in "${todo[@]}"; do
+    [[ -s ${raw%.*}.jpg ]] && made+=("${raw%.*}.jpg")
+done
+(( ${#made[@]} > 0 )) &&
+    exiftool -q -tagsfromfile %f.CR2 -all:all -overwrite_original "${made[@]}"
+
+echo "Made ${#made[@]} JPG(s)."
+if (( ${#made[@]} < ${#todo[@]} )); then
+    echo "$(( ${#todo[@]} - ${#made[@]} )) CR2(s) had no preview to extract." >&2
+    exit 1
+fi

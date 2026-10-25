@@ -3,6 +3,8 @@
 # canon-pull - copy every photo off the camera into ~/Pictures/canon-2025/<folder>,
 # check they all arrived, then offer to wipe the card.
 #
+# Optionally makes JPGs from the CR2s with cr2-jpgs (rofi asks; terminal: -j).
+#
 # Two front ends, same steps:
 #   * terminal (default): prompts in the shell, shows gphoto2's own output.
 #   * --rofi: rofi menus for the questions, a dunst progress notification for
@@ -18,13 +20,15 @@ set -uo pipefail
 
 BASE="$HOME/Pictures/canon-2025"
 LOG="${XDG_CACHE_HOME:-$HOME/.cache}/canon-pull.log"
+BIN=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")   # where cr2-jpgs lives
 
 usage() {
     cat <<'EOF'
 Usage: canon-pull [folder] [-j] [--rofi]
   folder   subfolder of ~/Pictures/canon-2025 (asked for if missing;
            today's date is the default)
-  -j       also extract JPG previews from the CR2 files (keeps the metadata)
+  -j       also make JPGs from the CR2 files (see cr2-jpgs); in rofi mode
+           you're asked instead
   --rofi   use rofi menus and notifications instead of the terminal
 EOF
 }
@@ -68,7 +72,7 @@ gp() { LC_ALL=C gphoto2 "$@"; }
 
 camera_connected() {
     # auto-detect prints two header lines, then one line per camera
-    gp --auto-detect 2>/dev/null | tail -n +3 | grep -q .
+    gp --auto-detect 2>/dev/null | awk 'NR > 2 && NF { found = 1 } END { exit !found }'
 }
 
 # Files on the card as "name<TAB>size_kb" lines. A listing line looks like
@@ -99,7 +103,7 @@ if [[ -z $folder ]]; then
             {
                 echo "$today"
                 find "$BASE/" -mindepth 1 -maxdepth 1 -type d -printf '%T@ %f\n' 2>/dev/null |
-                    sort -rn | cut -d' ' -f2- | grep -vFx "$today" | head -n 5
+                    sort -rn | cut -d' ' -f2- | grep -vFx "$today" | head -n 5 || true
             } | rofi -dmenu -i -normal-window -p "Folder" \
                      -mesg "Pick a folder or type a new name (Shift+Enter keeps exactly what you typed)"
         ) || exit 0
@@ -195,67 +199,92 @@ else
     say "${summary[@]}"
 fi
 
-# --- optional: JPG previews from the RAW files -----------------------------
-if $extract_jpg; then
-    if compgen -G '*.CR2' > /dev/null; then
-        say "Extracting JPG previews..."
-        run exiftool -b -PreviewImage -w %f.jpg -ext CR2 .
-        run exiftool -tagsfromfile %f.CR2 -all:all -overwrite_original -ext jpg .
-    else
-        say "No CR2 files here, so there are no previews to extract."
-    fi
-fi
-
-# --- make sure everything on the card is safely here before wiping ---------
-if ! card_list=$(card_files); then
-    warn "Card NOT wiped" "Couldn't read the card to double-check the download."
-    exit 1
-fi
-if [[ -z $card_list ]]; then
-    say "The card is already empty."
-    exit 0
-fi
-mapfile -t on_card <<< "$card_list"
-
-problems=()
-for entry in "${on_card[@]}"; do
-    name=${entry%%$'\t'*}
-    card_kb=${entry#*$'\t'}
-    if [[ ! -s $name ]]; then
-        problems+=("$name (missing)")
-    elif [[ -n $card_kb ]]; then
-        local_kb=$(( ($(stat -c %s "$name") + 1023) / 1024 ))
-        diff=$(( local_kb - card_kb ))
-        (( diff < -1 || diff > 1 )) && problems+=("$name (local ${local_kb} KB, card ${card_kb} KB)")
-    fi
+# --- JPGs from the RAW files? ----------------------------------------------
+# Rofi asks when some CR2 here has no JPG yet; the terminal uses -j. Both
+# questions (JPGs, wipe) come first and the JPGs are made last, so you can
+# walk away once the wipe question is answered.
+need_jpg=0
+for raw in *.CR2; do
+    [[ -e $raw && ! -e ${raw%.*}.jpg && ! -e ${raw%.*}.JPG ]] && need_jpg=$((need_jpg + 1))
 done
 
-if (( ${#problems[@]} > 0 )); then
-    shown=$(printf '%s\n' "${problems[@]:0:10}")
-    (( ${#problems[@]} > 10 )) && shown+=$'\n'"...and $(( ${#problems[@]} - 10 )) more"
-    warn "Card NOT wiped: ${#problems[@]} file(s) aren't fully saved" \
-         "$shown"$'\n'"Delete any half-copied ones and run the import again (folder: $folder)."
-    exit 1
+MAKE="Yes, make JPGs"
+if $rofi_mode && ! $extract_jpg && (( need_jpg > 0 )); then
+    [[ $(menu "JPGs?" "$need_jpg CR2 file(s) in $folder have no JPG yet." "$MAKE" "No") == "$MAKE" ]] &&
+        extract_jpg=true
 fi
 
-# --- wipe? -----------------------------------------------------------------
-saved_msg="All ${#on_card[@]} file(s) on the card are saved in $folder."
-KEEP="No, keep the photos on the card"
-WIPE="Yes, wipe the card"
-if $rofi_mode; then
-    [[ $(menu "Wipe card?" "$saved_msg" "$KEEP" "$WIPE") == "$WIPE" ]] && wipe=true || wipe=false
-else
-    echo
-    echo "$saved_msg"
-    read -r -p "Wipe the card? [y/N] " reply
-    [[ ${reply,,} == y || ${reply,,} == yes ]] && wipe=true || wipe=false
-fi
+make_jpgs() {
+    if ! $rofi_mode; then
+        "$BIN/cr2-jpgs" .
+        return
+    fi
+    (( need_jpg > 0 )) || return 0
+    notify "Making $need_jpg JPG(s)..."
+    if run "$BIN/cr2-jpgs" .; then
+        notify "Made $need_jpg JPG(s)" "They're next to the CR2s in $folder"
+    else
+        notify -u critical "Some JPGs couldn't be made" "Details in $LOG"
+    fi
+}
 
-if ! $wipe; then
-    say "Card left as is" "Photos are in $dest"
-elif run gp --delete-all-files --recurse; then
-    say "Card wiped" "Photos are in $dest"
-else
-    warn "Wiping the card failed" "Your photos are still on the card and in $dest."
-    exit 1
-fi
+# --- make sure everything on the card is safely here, then offer to wipe ---
+check_and_wipe() {
+    if ! card_list=$(card_files); then
+        warn "Card NOT wiped" "Couldn't read the card to double-check the download."
+        return 1
+    fi
+    if [[ -z $card_list ]]; then
+        say "The card is already empty."
+        return 0
+    fi
+    mapfile -t on_card <<< "$card_list"
+
+    problems=()
+    for entry in "${on_card[@]}"; do
+        name=${entry%%$'\t'*}
+        card_kb=${entry#*$'\t'}
+        if [[ ! -s $name ]]; then
+            problems+=("$name (missing)")
+        elif [[ -n $card_kb ]]; then
+            local_kb=$(( ($(stat -c %s "$name") + 1023) / 1024 ))
+            diff=$(( local_kb - card_kb ))
+            (( diff < -1 || diff > 1 )) && problems+=("$name (local ${local_kb} KB, card ${card_kb} KB)")
+        fi
+    done
+
+    if (( ${#problems[@]} > 0 )); then
+        shown=$(printf '%s\n' "${problems[@]:0:10}")
+        (( ${#problems[@]} > 10 )) && shown+=$'\n'"...and $(( ${#problems[@]} - 10 )) more"
+        warn "Card NOT wiped: ${#problems[@]} file(s) aren't fully saved" \
+             "$shown"$'\n'"Delete any half-copied ones and run the import again (folder: $folder)."
+        return 1
+    fi
+
+    # --- wipe? ---
+    saved_msg="All ${#on_card[@]} file(s) on the card are saved in $folder."
+    KEEP="No, keep the photos on the card"
+    WIPE="Yes, wipe the card"
+    if $rofi_mode; then
+        [[ $(menu "Wipe card?" "$saved_msg" "$KEEP" "$WIPE") == "$WIPE" ]] && wipe=true || wipe=false
+    else
+        echo
+        echo "$saved_msg"
+        read -r -p "Wipe the card? [y/N] " reply
+        [[ ${reply,,} == y || ${reply,,} == yes ]] && wipe=true || wipe=false
+    fi
+
+    if ! $wipe; then
+        say "Card left as is" "Photos are in $dest"
+    elif run gp --delete-all-files --recurse; then
+        say "Card wiped" "Photos are in $dest"
+    else
+        warn "Wiping the card failed" "Your photos are still on the card and in $dest."
+        return 1
+    fi
+}
+
+check_and_wipe
+status=$?
+$extract_jpg && make_jpgs
+exit "$status"
