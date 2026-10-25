@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Clipboard image history (rofi, thumbnails) -- super + alt + a.
+# clipboard-keeper saves every copied image to $dir (newest by mtime);
+# picking one puts it back on the clipboard, ready to paste.
+dir="$HOME/.cache/clipboard-images"
+
+mapfile -t files < <(ls -t "$dir"/*.png 2>/dev/null)
+
+[ ${#files[@]} -eq 0 ] && {
+    notify-send "Clipboard images" "No copied images yet" 2>/dev/null
+    exit 0
+}
+
+# label = when it was copied; the image itself is the entry's icon
+idx=$(for f in "${files[@]}"; do
+        printf '%s\0icon\x1f%s\n' "$(date -r "$f" '+%d %b  %H:%M')" "$f"
+    done | rofi -normal-window -dmenu -i -p 'Images:' -format i -show-icons \
+        -theme-str 'window { width: 60%; }
+                    listview { columns: 4; lines: 2; spacing: 6px; fixed-columns: true; }
+                    element { orientation: vertical; padding: 6px; }
+                    element-icon { size: 9em; }
+                    element-text { horizontal-align: 0.5; }')
+
+[ -n "$idx" ] && xclip -selection clipboard -t image/png -i "${files[$idx]}"

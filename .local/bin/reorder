@@ -121,5 +121,18 @@ for monitor in "${order[@]}"; do
 	i=$((i+1))
 done
 
+# While restarting, bspwm 0.9.12 re-sends the report to its `subscribe report`
+# clients (polybar's bspwm module) before it has a SIGPIPE handler again. If
+# one of them closes its socket in that instant (the bars reload on every
+# screen change, and bspwmrc pkills them), bspwm dies silently and, being the
+# session process, logs the whole session out (2026-10-12, HDMI replug).
+# bspwmrc relaunches the bars after the restart anyway, so make sure they are
+# gone first: bspwm drops closed subscribers before it saves its state.
+for _ in $(seq 40); do
+	pkill -f 'polybar -r (example|external)' 2>/dev/null || break
+	sleep 0.05
+done
+sleep 0.1
+
 # 2024-01-27 Sat 01:30:30 by christian
 bspc wm -r

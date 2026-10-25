@@ -12,10 +12,17 @@
 # clipboard) drops ownership without the owner going away, so it is left
 # alone.
 #
+# It also keeps the image history: greenclip's own image support burns ~25%
+# CPU while an image sits in the clipboard, so it is off. Each copied image is
+# saved once to IMAGE_DIR instead (newest by mtime, deduplicated by content,
+# capped at IMAGE_KEEP); rofi-clip-images (super + alt + a) pastes them back.
+#
 # Started from bspwmrc; errors go to ~/.cache/clipboard-keeper.log
 
 import ctypes
 import ctypes.util
+import hashlib
+import os
 import subprocess
 import sys
 import time
@@ -23,10 +30,15 @@ import tomllib
 from pathlib import Path
 
 GREENCLIP_CONFIG = Path.home() / ".config/greenclip.toml"
+IMAGE_DIR = Path.home() / ".cache/clipboard-images"
+IMAGE_KEEP = 60
 
 # XFixes selection event masks, from <X11/extensions/Xfixes.h>
+SELECTION_SET_OWNER = 1 << 0
 SELECTION_WINDOW_DESTROY = 1 << 1
 SELECTION_CLIENT_CLOSE = 1 << 2
+# XFixesSelectionNotifyEvent.subtype for a new owner (or a deliberate clear)
+SET_SELECTION_OWNER_NOTIFY = 0
 
 x11 = ctypes.CDLL(ctypes.util.find_library("X11"))
 xfixes = ctypes.CDLL(ctypes.util.find_library("Xfixes"))
@@ -72,6 +84,34 @@ def restore(dpy, clipboard):
         time.sleep(0.05)
 
 
+def save_image():
+    """Store the clipboard's PNG, if it offers one, in IMAGE_DIR; return its path."""
+    xclip = ["xclip", "-selection", "clipboard", "-o", "-t"]
+    targets = subprocess.run(xclip + ["TARGETS"], capture_output=True, text=True, timeout=5).stdout
+    if "image/png" not in targets.split():
+        return None
+    png = subprocess.run(xclip + ["image/png"], capture_output=True, timeout=10).stdout
+    if not png:
+        return None
+    IMAGE_DIR.mkdir(mode=0o700, parents=True, exist_ok=True)
+    path = IMAGE_DIR / f"{hashlib.sha1(png).hexdigest()[:16]}.png"
+    if path.exists():
+        os.utime(path)  # copied again: move it to the top
+    else:
+        path.write_bytes(png)
+    for old in sorted(IMAGE_DIR.glob("*.png"), key=lambda f: f.stat().st_mtime)[:-IMAGE_KEEP]:
+        old.unlink()
+    return path
+
+
+def offer_image(dpy, clipboard, path):
+    # xclip reads the file, then forks a child that owns the clipboard
+    subprocess.run(["xclip", "-selection", "clipboard", "-t", "image/png", "-i", str(path)], timeout=10)
+    deadline = time.monotonic() + 2
+    while not x11.XGetSelectionOwner(dpy, clipboard) and time.monotonic() < deadline:
+        time.sleep(0.05)
+
+
 def main():
     dpy = x11.XOpenDisplay(None)
     if not dpy:
@@ -81,14 +121,31 @@ def main():
         sys.exit("clipboard-keeper: XFixes extension not available")
     clipboard = x11.XInternAtom(dpy, b"CLIPBOARD", False)
     xfixes.XFixesSelectSelectionInput(dpy, x11.XDefaultRootWindow(dpy), clipboard,
-                                      SELECTION_WINDOW_DESTROY | SELECTION_CLIENT_CLOSE)
+                                      SELECTION_SET_OWNER | SELECTION_WINDOW_DESTROY | SELECTION_CLIENT_CLOSE)
 
     event = (ctypes.c_long * 24)()  # sizeof(XEvent)
+    last_image = None  # the clipboard's current content, if it is an image
     while True:
         x11.XNextEvent(dpy, event)
         is_selection_notify = ctypes.c_int.from_buffer(event).value == event_base.value
-        if is_selection_notify and not x11.XGetSelectionOwner(dpy, clipboard):
-            restore(dpy, clipboard)
+        if not is_selection_notify:
+            continue
+        # subtype follows type, serial, send_event, display and window
+        subtype = ctypes.c_int.from_buffer(event, 5 * ctypes.sizeof(ctypes.c_long)).value
+        owner = x11.XGetSelectionOwner(dpy, clipboard)
+        if subtype == SET_SELECTION_OWNER_NOTIFY:
+            last_image = None  # a new copy, or a deliberate clear: left empty
+            if owner:
+                try:
+                    last_image = save_image()
+                except (OSError, subprocess.TimeoutExpired) as e:
+                    print(f"clipboard-keeper: saving image failed: {e}", file=sys.stderr)
+        elif not owner:  # the owner's window or connection went away
+            # greenclip only has text, so an image is put back from its file
+            if last_image and last_image.exists():
+                offer_image(dpy, clipboard, last_image)
+            else:
+                restore(dpy, clipboard)
 
 
 if __name__ == "__main__":

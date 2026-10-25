@@ -30,8 +30,9 @@ desc = "Switch or create tab 2"
 
 [[mgr.prepend_keymap]]
 on = "<C-n>"
-run = "shell --orphan -- dragon-drop -x -i -T %h"
-desc = "Drag hovered file with dragon-drop"
+# Patched dragon-drop (~/.local/src/dragon-bigicons): 128 px icons. One file: its icon. Several selected: one "N files" item that drags them all.
+run = '''shell --orphan -- sh -c 'if [ $# -gt 1 ]; then exec "$HOME/.local/bin/dragon-drop" -x -T -A -s 128 "$@"; else exec "$HOME/.local/bin/dragon-drop" -x -i -T -s 128 "$@"; fi' _ %s'''
+desc = "Drag selected files (or hovered) with dragon-drop"
 
 [[mgr.prepend_keymap]]
 on   = "<C-g>"

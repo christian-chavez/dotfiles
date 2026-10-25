@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Polybar volume indicator for the sink you actually hear (see volume-key:
+# the default sink can be EasyEffects' virtual one, which always reads 100%).
+#   icon tracks the level: low / medium / high, then the percentage
+#   muted : crossed-out speaker (dim grey), still showing the level
+#
+#   volume-status           print once
+#   volume-status --watch   print now, then on every sink / default-output
+#                           change (used with `tail = true`; no polling)
+#
+# Left-click -> volume-key mute   scroll -> volume-key up / down
+
+DIM='#707880'       # colors.disabled
+
+# nf-md volume_low / volume_medium / volume_high / volume_off, as UTF-8 bytes
+RAMP=($'\363\260\225\277' $'\363\260\226\200' $'\363\260\225\276')
+MUTED=$'\363\260\235\237'
+
+last=
+emit() {
+  local sink pct idx out
+  sink="$(volume-key sink 2>/dev/null)"
+  pct="$(pactl get-sink-volume "$sink" 2>/dev/null | grep -o '[0-9]*%' | head -n1 | tr -d '%')"
+  pct="${pct:-0}"
+  if [ "$(pactl get-sink-mute "$sink" 2>/dev/null | awk '{print $2}')" = yes ]; then
+    out="$(printf '%%{F%s}%s %s%%{F-}' "$DIM" "$MUTED" "$pct")"
+  else
+    idx=$(( pct * 3 / 100 ))
+    [ "$idx" -gt 2 ] && idx=2
+    out="${RAMP[$idx]} $pct"
+  fi
+  [ "$out" = "$last" ] && return
+  last="$out"
+  printf '%s\n' "$out"
+}
+
+if [ "${1:-}" != --watch ]; then
+  emit
+  exit 0
+fi
+
+# outer loop: resubscribe if the audio server restarts
+while :; do
+  emit
+  while IFS= read -r line; do
+    case $line in *"on sink #"*|*"on server"*) emit ;; esac
+  done < <(pactl subscribe 2>/dev/null)
+  sleep 1
+done

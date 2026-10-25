@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#
+# volume-key - volume keys for sxhkd (XF86Audio{Raise,Lower}Volume, Mute).
+#
+#   volume-key up | down | mute
+#   volume-key sink              print the sink the keys act on (used by
+#                                the polybar volume-status script)
+#
+# When no other output is the default, PipeWire falls back to EasyEffects'
+# virtual sink (easyeffects_sink), whose own volume is NOT applied to the
+# audio. In that case act on the hardware sink EasyEffects plays into, so the
+# keys always change what you actually hear. Capped at 100%.
+
+set -uo pipefail
+
+STEP=5
+
+sink="$(pactl get-default-sink)"
+if [ "$sink" = easyeffects_sink ]; then
+  real="$(pw-link -l 2>/dev/null | awk '
+    /^ee_soe_output_level:output_FL/ { getline; sub(/^ *\|-> /, ""); sub(/:[^:]*$/, ""); print; exit }')"
+  [ -n "$real" ] && sink="$real"
+fi
+
+case "${1:-}" in
+  up)
+    cur="$(pactl get-sink-volume "$sink" | grep -o '[0-9]*%' | head -n1 | tr -d '%')"
+    new=$(( ${cur:-0} + STEP ))
+    [ "$new" -gt 100 ] && new=100
+    pactl set-sink-volume "$sink" "${new}%"
+    ;;
+  down) pactl set-sink-volume "$sink" "-${STEP}%" ;;
+  mute) pactl set-sink-mute "$sink" toggle ;;
+  sink) printf '%s\n' "$sink" ;;
+  *)    echo "usage: volume-key up|down|mute|sink" >&2; exit 2 ;;
+esac

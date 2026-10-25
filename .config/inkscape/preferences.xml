@@ -316,7 +316,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -598,7 +598,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -1098,7 +1098,7 @@
        height="671"
        x="1994"
        y="12"
-       maximized="0"
+       maximized="1"
        fullscreen="0"
        id="geometry" />
     <group

@@ -1,5 +1,6 @@
 local pensize = require('pen-size')
 local colorcycle = require('color-cycle')
+local zoomfit = require('zoom-fit')
 
 function initUi()
     registerShortcut('Undo', 'doUndo', 'g')
@@ -79,6 +80,5 @@ function useText()
 end
 
 function zoomFit()
-    app.uiAction({ action = 'ACTION_ZOOM_OUT' })
-    app.uiAction({ action = 'ACTION_ZOOM_FIT' })
+    zoomfit.zoomFit()
 end

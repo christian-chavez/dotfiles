@@ -9,7 +9,7 @@ alias bsprc='nvim ~/.config/bspwm/bspwmrc'
 alias cl='calc'
 alias sxhrc='nvim ~/.config/sxhkd/sxhkdrc'
 alias lf='.lf-gadgets/lf-ueberzug/lf-ueberzug ~'
-alias camera='mpv av://v4l2:/dev/video0 --profile=low-latency --untimed --no-correct-pts > /dev/null 2>&1 &'
+alias camera='mpv av://v4l2:/dev/video0 --no-config --profile=low-latency --untimed --no-correct-pts --no-osc --panscan=1.0 --autofit=320 --title=Camera > /dev/null 2>&1 &'
 export GEM_HOME="$HOME/.local/share/gem/ruby/3.3.0"
 export PATH="$GEM_HOME/bin:$PATH"
 # 2025-09-08 zathura recent list of pdfs with rofi integration

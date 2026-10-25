@@ -2,6 +2,7 @@
 
 # VSCode project picker (rofi). Add new projects to the PROJECTS array below.
 PROJECTS=(
+	"/home/christian/Documents/maitrise/autre/talks/RTA2026/reveal.js-master"
     "/home/christian/Documents/website/2024-11-01"
     "/home/christian/Documents/maitrise/these/memoire"
     "/home/christian/Documents/maitrise/autre/cv"

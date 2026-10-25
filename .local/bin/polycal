@@ -1,0 +1,408 @@
+#!/usr/bin/env python3
+"""polycal - small popup calendar for polybar, styled like the bar.
+
+`polycal` toggles the popup. It talks to a resident `polycal --daemon`
+(started from bspwmrc, or on the first click) so the popup appears instantly
+instead of paying ~0.5 s of Python+GTK startup on every click.
+Opens under the mouse when clicked from the bar, otherwise top-right.
+
+  scroll / ← → / h l   previous / next month
+  ↑ ↓ / k j            previous / next year
+  t / Home / click footer   back to today
+  Esc / q / click outside   close
+"""
+import os
+import signal
+import sys
+
+PIDFILE = os.path.join(os.environ.get("XDG_RUNTIME_DIR", "/tmp"), "polycal.pid")
+
+
+def daemon_pid():
+    try:
+        pid = int(open(PIDFILE).read().strip())
+        with open(f"/proc/{pid}/cmdline", "rb") as f:
+            if b"polycal" in f.read():
+                return pid
+    except (OSError, ValueError):
+        pass
+    return None
+
+
+# fast path for clicks: poke the daemon without importing GTK
+if __name__ == "__main__" and len(sys.argv) == 1:
+    pid = daemon_pid()
+    if pid:
+        os.kill(pid, signal.SIGUSR1)
+    else:
+        import subprocess
+        log = open(os.path.expanduser("~/.cache/polycal.log"), "a")
+        subprocess.Popen([sys.executable, os.path.abspath(__file__), "--daemon", "--show"],
+                         start_new_session=True, stdin=subprocess.DEVNULL,
+                         stdout=log, stderr=log)
+    sys.exit(0)
+
+import calendar  # noqa: E402
+import datetime as dt  # noqa: E402
+
+import gi  # noqa: E402
+gi.require_version("Gtk", "3.0")
+gi.require_version("Gdk", "3.0")
+gi.require_version("PangoCairo", "1.0")
+from gi.repository import Gdk, GLib, Gtk, Pango, PangoCairo  # noqa: E402
+
+# --- look (same palette as ~/.config/polybar/colors.ini) ---
+BG = (0x0d / 255, 0x0c / 255, 0x0c / 255, 0.94)
+BORDER = (1, 1, 1, 0.07)
+FG = (0xd1 / 255, 0xd1 / 255, 0xd1 / 255, 1)
+DIM = (0x70 / 255, 0x78 / 255, 0x80 / 255, 1)
+FAINT = (0x70 / 255, 0x78 / 255, 0x80 / 255, 0.45)
+WEEKEND = (0xd1 / 255, 0xd1 / 255, 0xd1 / 255, 0.62)
+ACCENT = (0x63 / 255, 0xb1 / 255, 0xff / 255, 0.85)
+ACCENT_FG = (0x0d / 255, 0x0c / 255, 0x0c / 255, 1)
+HOVER = (1, 1, 1, 0.07)
+FONT = "Iosevka"
+ICON_FONT = "FiraCode Nerd Font"
+
+# --- layout (px) ---
+FIRST_WEEKDAY = 0          # 0 = Monday, 6 = Sunday
+PAD = 14
+RADIUS = 10
+CELL_W, CELL_H = 30, 26
+HEADER_H = 24
+WEEKDAY_H = 20
+FOOTER_H = 20
+GAP = 6
+W = PAD * 2 + CELL_W * 7
+GRID_Y = PAD + HEADER_H + GAP + WEEKDAY_H
+FOOTER_Y = GRID_Y + CELL_H * 6 + GAP + 1 + GAP
+H = FOOTER_Y + FOOTER_H + PAD
+
+BAR_BOTTOM = 29            # polybar offset-y (3) + height (26)
+EDGE = 3                   # = bspwm window_gap / bar offset-x
+
+
+def rounded(cr, x, y, w, h, r):
+    cr.new_sub_path()
+    cr.arc(x + w - r, y + r, r, -1.5708, 0)
+    cr.arc(x + w - r, y + h - r, r, 0, 1.5708)
+    cr.arc(x + r, y + h - r, r, 1.5708, 3.1416)
+    cr.arc(x + r, y + r, r, 3.1416, 4.7124)
+    cr.close_path()
+
+
+class Cal(Gtk.Window):
+    def __init__(self):
+        super().__init__(type=Gtk.WindowType.POPUP)
+        self.set_app_paintable(True)
+        visual = self.get_screen().get_rgba_visual()
+        if visual:
+            self.set_visual(visual)
+        self.set_size_request(W, H)
+        self.resize(W, H)
+
+        self.today = dt.date.today()
+        self.year, self.month = self.today.year, self.today.month
+        self.cal = calendar.Calendar(FIRST_WEEKDAY)
+        self.hover = None   # ("day", col, row) | "prev" | "next" | "footer"
+        self.grabbed = False
+
+        self.add_events(Gdk.EventMask.BUTTON_PRESS_MASK
+                        | Gdk.EventMask.POINTER_MOTION_MASK
+                        | Gdk.EventMask.LEAVE_NOTIFY_MASK
+                        | Gdk.EventMask.SCROLL_MASK
+                        | Gdk.EventMask.SMOOTH_SCROLL_MASK
+                        | Gdk.EventMask.KEY_PRESS_MASK)
+        self.connect("draw", self.on_draw)
+        self.connect("button-press-event", self.on_click)
+        self.connect("motion-notify-event", self.on_motion)
+        self.connect("leave-notify-event", self.on_leave)
+        self.connect("scroll-event", self.on_scroll)
+        self.connect("key-press-event", self.on_key)
+        self.connect("map-event", lambda *_: self.try_grab(0))
+        self.connect("destroy", Gtk.main_quit)
+        self.scroll_acc = 0.0
+
+        # roll "today" over if left open past midnight
+        GLib.timeout_add_seconds(30, self.tick)
+
+    # --- placement / grab ---------------------------------------------
+    def place(self):
+        display = Gdk.Display.get_default()
+        _, px, py = display.get_default_seat().get_pointer().get_position()
+        mon = display.get_monitor_at_point(px, py).get_geometry()
+        right = mon.x + mon.width - EDGE - W
+        if py - mon.y <= BAR_BOTTOM + 4:      # clicked on the bar: sit under the pointer
+            x = max(mon.x + EDGE, min(px - W // 2, right))
+        else:                                  # keyboard / elsewhere: top-right corner
+            x = right
+        self.move(x, mon.y + BAR_BOTTOM + EDGE)
+
+    def try_grab(self, tries):
+        # polybar may still hold the pointer for a moment after the click
+        if not self.get_visible() or self.grabbed:
+            return False
+        seat = Gdk.Display.get_default().get_default_seat()
+        status = seat.grab(self.get_window(), Gdk.SeatCapabilities.ALL,
+                           True, None, None, None)
+        if status == Gdk.GrabStatus.SUCCESS:
+            self.grabbed = True
+        elif tries < 40:
+            GLib.timeout_add(25, self.try_grab, tries + 1)
+        return False
+
+    def toggle(self):
+        if self.get_visible():
+            self.close()
+        else:
+            self.go_today()
+            self.hover = None
+            self.scroll_acc = 0.0
+            self.place()
+            self.show_all()
+        return True
+
+    def close(self):
+        if self.grabbed:
+            Gdk.Display.get_default().get_default_seat().ungrab()
+            self.grabbed = False
+        self.hide()
+
+    def tick(self):
+        if dt.date.today() != self.today:
+            self.today = dt.date.today()
+            self.queue_draw()
+        return True
+
+    # --- navigation ----------------------------------------------------
+    def shift(self, months):
+        m = self.year * 12 + (self.month - 1) + months
+        self.year, self.month = divmod(m, 12)
+        self.month += 1
+        self.queue_draw()
+
+    def go_today(self):
+        self.today = dt.date.today()
+        self.year, self.month = self.today.year, self.today.month
+        self.queue_draw()
+
+    # --- hit testing -----------------------------------------------------
+    def hit(self, x, y):
+        if PAD <= y <= PAD + HEADER_H:
+            if W - PAD - 22 <= x <= W - PAD:
+                return "next"
+            if W - PAD - 48 <= x < W - PAD - 24:
+                return "prev"
+            if PAD <= x <= W - PAD - 52:
+                return "title"
+        if GRID_Y <= y < GRID_Y + CELL_H * 6 and PAD <= x < W - PAD:
+            return ("day", int((x - PAD) // CELL_W), int((y - GRID_Y) // CELL_H))
+        if FOOTER_Y - 4 <= y <= FOOTER_Y + FOOTER_H + 4 and PAD <= x <= W - PAD:
+            return "footer"
+        return None
+
+    def on_motion(self, _w, ev):
+        h = self.hit(ev.x, ev.y)
+        if h != self.hover:
+            self.hover = h
+            self.queue_draw()
+
+    def on_leave(self, *_):
+        if self.hover is not None:
+            self.hover = None
+            self.queue_draw()
+
+    def on_click(self, _w, ev):
+        if not (0 <= ev.x < W and 0 <= ev.y < H):
+            self.close()
+            return True
+        h = self.hit(ev.x, ev.y)
+        if h == "prev":
+            self.shift(-1)
+        elif h == "next":
+            self.shift(1)
+        elif h in ("footer", "title"):
+            self.go_today()
+        return True
+
+    def on_scroll(self, _w, ev):
+        if ev.direction == Gdk.ScrollDirection.UP:
+            self.shift(-1)
+        elif ev.direction == Gdk.ScrollDirection.DOWN:
+            self.shift(1)
+        elif ev.direction == Gdk.ScrollDirection.SMOOTH:
+            # touchpad: one month per ~1 unit of scroll
+            self.scroll_acc += ev.delta_y
+            while abs(self.scroll_acc) >= 1:
+                step = 1 if self.scroll_acc > 0 else -1
+                self.shift(step)
+                self.scroll_acc -= step
+        return True
+
+    def on_key(self, _w, ev):
+        k = Gdk.keyval_name(ev.keyval)
+        if k in ("Escape", "q"):
+            self.close()
+        elif k in ("Left", "h", "Page_Up"):
+            self.shift(-1)
+        elif k in ("Right", "l", "Page_Down"):
+            self.shift(1)
+        elif k in ("Up", "k"):
+            self.shift(-12)
+        elif k in ("Down", "j"):
+            self.shift(12)
+        elif k in ("t", "Home", "space", "Return"):
+            self.go_today()
+        return True
+
+    # --- drawing ---------------------------------------------------------
+    def text(self, cr, s, x, y, w=None, size=10.5, weight="normal",
+             color=FG, align="left", font=FONT, h=None):
+        layout = PangoCairo.create_layout(cr)
+        desc = Pango.FontDescription(f"{font} {size}")
+        desc.set_weight({"normal": Pango.Weight.NORMAL,
+                         "medium": Pango.Weight.MEDIUM,
+                         "semibold": Pango.Weight.SEMIBOLD,
+                         "bold": Pango.Weight.BOLD}[weight])
+        layout.set_font_description(desc)
+        layout.set_markup(s, -1)
+        _, log = layout.get_pixel_extents()
+        if w is not None:
+            if align == "center":
+                x += (w - log.width) / 2
+            elif align == "right":
+                x += w - log.width
+        if h is not None:
+            y += (h - log.height) / 2
+        cr.set_source_rgba(*color)
+        cr.move_to(x, y)
+        PangoCairo.show_layout(cr, layout)
+        return log.width
+
+    def on_draw(self, _w, cr):
+        cr.set_operator(0)          # CLEAR: fully transparent corners
+        cr.paint()
+        cr.set_operator(2)          # OVER
+
+        rounded(cr, 0.5, 0.5, W - 1, H - 1, RADIUS)
+        cr.set_source_rgba(*BG)
+        cr.fill_preserve()
+        cr.set_source_rgba(*BORDER)
+        cr.set_line_width(1)
+        cr.stroke()
+
+        # header: "October 2026"        󰅁 󰅂
+        month = calendar.month_name[self.month]
+        self.text(cr, f"{month} <span foreground='#707880'>{self.year}</span>",
+                  PAD + 2, PAD, size=11.5, weight="semibold", h=HEADER_H)
+        for key, glyph, x in (("prev", "󰅁", W - PAD - 48), ("next", "󰅂", W - PAD - 22)):
+            if self.hover == key:
+                rounded(cr, x, PAD + 1, 22, HEADER_H - 2, 6)
+                cr.set_source_rgba(*HOVER)
+                cr.fill()
+            self.text(cr, glyph, x, PAD, w=22, h=HEADER_H, align="center",
+                      size=11, font=ICON_FONT,
+                      color=FG if self.hover == key else DIM)
+
+        # weekday names
+        y = PAD + HEADER_H + GAP
+        for i, wd in enumerate(self.cal.iterweekdays()):
+            self.text(cr, calendar.day_abbr[wd][:2], PAD + i * CELL_W, y,
+                      w=CELL_W, h=WEEKDAY_H, align="center", size=9,
+                      weight="medium", color=DIM)
+
+        # day grid (always 6 rows so the popup never changes size)
+        days = list(self.cal.itermonthdates(self.year, self.month))
+        while len(days) < 42:
+            days.append(days[-1] + dt.timedelta(days=1))
+        for idx, d in enumerate(days[:42]):
+            col, row = idx % 7, idx // 7
+            x, y = PAD + col * CELL_W, GRID_Y + row * CELL_H
+            in_month = d.month == self.month
+            is_today = d == self.today
+            if is_today:
+                rounded(cr, x + 2, y + 2, CELL_W - 4, CELL_H - 4, 7)
+                cr.set_source_rgba(*ACCENT)
+                cr.fill()
+            elif self.hover == ("day", col, row):
+                rounded(cr, x + 2, y + 2, CELL_W - 4, CELL_H - 4, 7)
+                cr.set_source_rgba(*HOVER)
+                cr.fill()
+            if is_today:
+                color, weight = ACCENT_FG, "bold"
+            elif not in_month:
+                color, weight = FAINT, "normal"
+            elif d.weekday() >= 5:
+                color, weight = WEEKEND, "normal"
+            else:
+                color, weight = FG, "normal"
+            self.text(cr, str(d.day), x, y, w=CELL_W, h=CELL_H,
+                      align="center", weight=weight, color=color)
+
+        # divider + footer: "Thursday, 22 October"            week 43
+        dy = FOOTER_Y - GAP - 0.5
+        cr.set_source_rgba(1, 1, 1, 0.06)
+        cr.move_to(PAD, dy)
+        cr.line_to(W - PAD, dy)
+        cr.stroke()
+        t = self.today
+        away = (self.year, self.month) != (t.year, t.month)
+        label = "󰑓  back to today" if away else t.strftime("%A, %-d %B")
+        foot_col = FG if self.hover == "footer" else (
+            (0x63 / 255, 0xb1 / 255, 0xff / 255, 1) if away else DIM)
+        self.text(cr, label, PAD + 2, FOOTER_Y, h=FOOTER_H, size=9.5,
+                  color=foot_col, font=f"{FONT}, {ICON_FONT}")
+        self.text(cr, f"week {t.isocalendar()[1]}", PAD, FOOTER_Y,
+                  w=W - PAD * 2 - 2, h=FOOTER_H, align="right", size=9.5,
+                  color=FAINT)
+        return True
+
+
+def main():
+    if len(sys.argv) == 3 and sys.argv[1] == "--png":   # preview without showing
+        import cairo
+        win = Cal()
+        if os.environ.get("POLYCAL_SHIFT"):
+            win.shift(int(os.environ["POLYCAL_SHIFT"]))
+        win.hover = ("day", 3, 1)
+        surf = cairo.ImageSurface(cairo.FORMAT_ARGB32, W, H)
+        win.on_draw(None, cairo.Context(surf))
+        surf.write_to_png(sys.argv[2])
+        return
+    if "--daemon" not in sys.argv:
+        sys.exit("usage: polycal | polycal --daemon [--show] | polycal --png FILE")
+    other = daemon_pid()
+    if other and other != os.getpid():      # already running
+        if "--show" in sys.argv:
+            os.kill(other, signal.SIGUSR1)
+        return
+    with open(PIDFILE, "w") as f:
+        f.write(str(os.getpid()))
+    win = Cal()
+    # warm up fonts/layouts offscreen so the first real show is instant
+    import cairo
+    win.on_draw(None, cairo.Context(cairo.ImageSurface(cairo.FORMAT_ARGB32, W, H)))
+    win.realize()
+    try:
+        gi.require_version("GLibUnix", "2.0")
+        from gi.repository import GLibUnix
+        add_signal = GLibUnix.signal_add
+    except (ImportError, ValueError):
+        add_signal = GLib.unix_signal_add
+    add_signal(GLib.PRIORITY_DEFAULT, signal.SIGUSR1, win.toggle)
+    add_signal(GLib.PRIORITY_DEFAULT, signal.SIGTERM,
+               lambda *_: (Gtk.main_quit(), False)[1])
+    if "--show" in sys.argv:
+        win.toggle()
+    try:
+        Gtk.main()
+    finally:
+        try:
+            if open(PIDFILE).read().strip() == str(os.getpid()):
+                os.remove(PIDFILE)
+        except OSError:
+            pass
+
+
+if __name__ == "__main__":
+    sys.exit(main())

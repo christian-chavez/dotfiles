@@ -1,5 +1,5 @@
 #! /bin/sh
-setxkbmap latam 
+setxkbmap latam -option caps:hyper
 xmodmap ~/.Xmodmap 
 
 exec > /tmp/bspwmrc.log 2>&1
@@ -33,6 +33,11 @@ pgrep -x srandrd >/dev/null || { command -v srandrd >/dev/null && srandrd "$HOME
 xrandr -q | grep -q '^HDMI-A-0 connected' || bspc monitor eDP -d 1 2 3 4 5 6 7 8 9 10
 # -------------------------------------------------------------------------------
 
+# EasyEffects' "Deep Noise Remover" needs the DeepFilterNet LADSPA plugin, which
+# is installed per-user in ~/.local/lib/ladspa; exported before sxhkd starts so
+# EasyEffects finds it however it gets launched in this session
+export LADSPA_PATH="$HOME/.local/lib/ladspa:/usr/lib/ladspa"
+
 wmname LG3D # this is for java to not missbehave
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -64,6 +69,14 @@ pkill -f 'polybar -r (example|external)' 2>/dev/null
 polybar -r example &
 polybar -r external &
 pgrep -x dunst >/dev/null || dunst &
+# alt+tab is now ~/.local/bin/win-carousel (thumbnails, bound in sxhkdrc); the old
+# alttab switcher below is kept for reference -- it grabs alt+Tab itself, so
+# drop the sxhkd binding before re-enabling it.
+# patched build: 2px frame (FRAME_W) -- src in ~/.local/src/alttab-thinframe
+#pgrep -x alttab >/dev/null || { [ -x "$HOME/.local/bin/alttab" ] && "$HOME/.local/bin/alttab" -w 1 -d 0 -bg "#0d0c0c" -fg "#C5C8C6" -frame "#63b1ff" -inact "#0d0c0c" -bc "#4d5666" -bw 2 -t 120x96 -i 48x48 -theme Papirus-Dark -font "xft:Iosevka-10" & }
+# mic noise removal: runs hidden and keeps the last loaded input preset
+# (`easyeffects -l voice-df` / `-l voice` / `-l basic`); plain `easyeffects` opens the window
+pgrep -x easyeffects >/dev/null || easyeffects --service-mode -w &
 # picom --experimental-backends &
 # bspwmrc re-runs after every monitor change (autorandr -> reorder -> bspc wm -r):
 # reload a running picom then, instead of leaving it as is -- after one login it
@@ -97,6 +110,7 @@ bspc rule -a feh state=floating
 # bspc rule -a zoom state=floating center=on
 bspc rule -a Catfish state=floating center=on 
 bspc rule -a Alacritty state=floating center=on 
+bspc rule -a FilePicker state=floating center=on rectangle=1100x620+0+0
 # bspc rule -a Zathura state=floating center=on 
 # bspc rule -a Evince state=fullscreen 
 bspc rule -a "Mathpix Snipping Tool - Snip View"  state=floating center=on 
@@ -105,7 +119,8 @@ bspc rule -a "Engrampa"  state=floating center=on
 bspc rule -a "Yad"  state=floating center=on 
 bspc rule -a "Display"  state=floating center=on 
 bspc rule -a "mpv"  state=floating center=on 
-bspc rule -a "sumatrapdf.exe" desktop=^2
+# bspc rule -a "sumatrapdf.exe" desktop=^2
+# bspc rule -a org.pwmt.zathura desktop=^2 follow=on
 bspc rule -a "obsidian" desktop=^8
 bspc rule -a "Code" desktop=^5
 bspc rule -a "zoom" center=on 
@@ -177,4 +192,8 @@ setsid -f "$HOME/.local/bin/watch-polytabs.sh" >>"$HOME/.cache/pdftabs.log" 2>&1
 # bspwm restart. Autostarted armed-but-paused (AUTOSTART_PAUSED=1 in
 # ~/.config/pomo.conf) -- super+ctrl+p starts the first work block.
 setsid -f "$HOME/.local/bin/pomo" run >>"$HOME/.cache/pomo.log" 2>&1
+
+# polybar calendar popup: kept resident (hidden) so clicking the clock opens it
+# instantly; `polycal --daemon` self-dedups via its pidfile.
+setsid -f "$HOME/.local/bin/polycal" --daemon >>"$HOME/.cache/polycal.log" 2>&1
 

@@ -56,19 +56,116 @@ local _generate_description = ya.sync(function(state, file)
 	return tostring(file.url)
 end)
 
+local function _compare_keys(a, b)
+	local key_a, key_b = a.on, b.on
+
+	-- Numbers first
+	if key_a:match("%d") and not key_b:match("%d") then
+		return true
+	elseif key_b:match("%d") and not key_a:match("%d") then
+		return false
+	end
+
+	-- Uppercase before lowercase
+	if key_a:match("%u") and key_b:match("%l") then
+		return true
+	elseif key_b:match("%u") and key_a:match("%l") then
+		return false
+	end
+
+	-- Regular alphabetical sorting
+	return key_a < key_b
+end
+
+-- LOCAL PATCH: bookmarks are also kept in a file that is written on every change and read back
+-- before every action. DDS only flushes its state when Yazi exits cleanly (closing the terminal
+-- loses it) and running instances never pick up each other's changes.
+local function _state_file()
+	local dir = os.getenv("XDG_STATE_HOME")
+	if not dir or dir == "" then
+		dir = os.getenv("HOME") .. "/.local/state"
+	end
+	return dir .. "/yazi/bookmarks.lua"
+end
+
+local function _read_file()
+	local chunk = loadfile(_state_file(), "t", {})
+	if not chunk then
+		return nil
+	end
+
+	local ok, bookmarks = pcall(chunk)
+	if ok and type(bookmarks) == "table" then
+		return bookmarks
+	end
+	return nil
+end
+
+local function _write_file(bookmarks)
+	local path = _state_file()
+	local file = io.open(path .. ".tmp", "w")
+	if not file then
+		return
+	end
+
+	file:write("return {\n")
+	for _, value in ipairs(bookmarks) do
+		file:write(
+			string.format(
+				"\t{ on = %q, desc = %q, path = %q, is_parent = %s },\n",
+				value.on,
+				value.desc,
+				value.path,
+				tostring(value.is_parent == true)
+			)
+		)
+	end
+	file:write("}\n")
+	file:close()
+	os.rename(path .. ".tmp", path)
+end
+
 local _load_state = ya.sync(function(state)
+	state.bookmarks = _read_file()
+	if state.bookmarks then
+		return
+	end
+
+	-- No bookmarks file yet, import the bookmarks saved in DDS
 	ps.sub_remote("@bookmarks", function(body)
 		if not state.bookmarks and body then
 			state.bookmarks = {}
 			for _, value in pairs(body) do
 				table.insert(state.bookmarks, value)
 			end
+			table.sort(state.bookmarks, _compare_keys)
+			_write_file(state.bookmarks)
 		end
 	end)
 end)
 
+local _reload_state = ya.sync(function(state)
+	local bookmarks = state.persist and _read_file()
+	if not bookmarks then
+		return
+	end
+
+	if state.persist == "vim" then
+		-- Lower case keys aren't saved, keep the ones from this instance
+		for _, value in pairs(state.bookmarks or {}) do
+			if not string.match(value.on, "%u") then
+				table.insert(bookmarks, value)
+			end
+		end
+		table.sort(bookmarks, _compare_keys)
+	end
+
+	state.bookmarks = bookmarks
+end)
+
 local _save_state = ya.sync(function(state, bookmarks)
 	if not bookmarks then
+		_write_file({})
 		ps.pub_to(0, "@bookmarks", nil)
 		return
 	end
@@ -87,6 +184,7 @@ local _save_state = ya.sync(function(state, bookmarks)
 		end
 	end
 
+	_write_file(save_state)
 	ps.pub_to(0, "@bookmarks", save_state)
 end)
 
@@ -183,26 +281,7 @@ local save_bookmark = ya.sync(function(state, idx, custom_desc)
 	}
 
 	-- Custom sorting function
-	table.sort(state.bookmarks, function(a, b)
-		local key_a, key_b = a.on, b.on
-
-		-- Numbers first
-		if key_a:match("%d") and not key_b:match("%d") then
-			return true
-		elseif key_b:match("%d") and not key_a:match("%d") then
-			return false
-		end
-
-		-- Uppercase before lowercase
-		if key_a:match("%u") and key_b:match("%l") then
-			return true
-		elseif key_b:match("%u") and key_a:match("%l") then
-			return false
-		end
-
-		-- Regular alphabetical sorting
-		return key_a < key_b
-	end)
+	table.sort(state.bookmarks, _compare_keys)
 
 	if state.persist then
 		_save_state(state.bookmarks)
@@ -269,6 +348,8 @@ return {
 		if not action then
 			return
 		end
+
+		_reload_state()
 
 		if action == "save" then
 			if _is_show_keys_enabled() then

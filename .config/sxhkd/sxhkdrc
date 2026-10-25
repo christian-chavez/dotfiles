@@ -78,6 +78,11 @@ super + bracket{left,right}
 super + Tab
 	bspc desktop -f last
 
+# window switcher with thumbnails (current desktop): hold alt, tap Tab to
+# move, release alt to focus
+alt + {_,shift + }Tab
+	$HOME/.local/bin/win-carousel {_,prev}
+
 # focus older / newer in the focus history
 super + {o,i}
 	bspc wm -h off; \
@@ -150,6 +155,11 @@ super + e
 super + a
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -normal-window
 
+# clipboard images (thumbnails; saved by clipboard-keeper)
+# hyper = Caps Lock (setxkbmap -option caps:hyper in bspwmrc)
+hyper + a
+	$HOME/.local/bin/rofi-clip-images
+
 # google search
 super + d
 	$HOME/.local/bin/rofi-google.sh
@@ -205,13 +215,13 @@ super + shift + i
 
 # ===================================================================== media
 XF86AudioRaiseVolume
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1
+	volume-key up
 
 XF86AudioLowerVolume
-	wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
+	volume-key down
 
 XF86AudioMute
-	wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+	volume-key mute
 
 XF86AudioPlay
 	playerctl play-pause
@@ -224,10 +234,10 @@ XF86AudioPrev
 
 # ================================================================ brightness
 XF86MonBrightnessDown
-	brillo -u 100000 -U 5
+	pkill -x brillo; brillo -u 150000 -U 5
 
 XF86MonBrightnessUp
-	brillo -u 100000 -A 5
+	pkill -x brillo; brillo -u 150000 -A 5
 
 # max / min brightness
 super + alt + m

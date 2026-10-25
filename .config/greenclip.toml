@@ -1,6 +1,6 @@
 [greenclip]
   blacklisted_applications = []
-  enable_image_support = true
+  enable_image_support = false
   history_file = "/home/christian/.cache/greenclip.history"
   image_cache_directory = "/tmp/greenclip"
   max_history_length = 100

@@ -17,9 +17,14 @@ set adjust-open best-fit
 # dual-page view: cover alone, then 2|3, 4|5 like a printed book (was 1:1)
 set first-page-column "1:2"
 
-# d: toggle dual-page view and fit width in one keystroke
+# s: fit width, then jump to the top of the current page
+# d: toggle dual-page view, then do the same as s
+# (feedkeys cannot be nested, so both go through the <A-…> helper keys)
 map <A-d> toggle_page_mode
-map d feedkeys "<A-d>s"
+map <A-s> adjust_window width
+map <A-t> scroll page-top
+map s feedkeys "<A-s><A-t>"
+map d feedkeys "<A-d><A-s><A-t>"
 # set font "Iosevka 10"
 set font "Iosevka Medium 11"
 
@@ -96,7 +101,9 @@ set recolor-reverse-video true
 # map <C-1> set first-page-column 1
 
 # map . feedkeys ":exec dragon-drop -x -i -T \"$FILE\"<Return>"
-map . exec "env GDK_SCALE=2 dragon-drop -x -i -T '$FILE'"
+# map . exec "env GDK_SCALE=2 dragon-drop -x -i -T '$FILE'"
+# Patched dragon-drop (~/.local/src/dragon-bigicons): sharp 128 px icon, same as yazi Ctrl+N.
+map . exec "/home/christian/.local/bin/dragon-drop -x -i -T -s 128 '$FILE'"
 
 # Copy the PDF path to the clipboard
 map [normal] xp exec "sh -c 'printf %s \"$1\" | xclip -selection clipboard' sh '$FILE'"

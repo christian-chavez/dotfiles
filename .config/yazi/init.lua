@@ -12,6 +12,7 @@ function Entity:icon()
 end
 require('bookmarks'):setup({
 	persist = 'all',
+	last_directory = { enable = true, mode = 'jump', persist = false },
 })
 
 function Linemode:size_and_mtime()
