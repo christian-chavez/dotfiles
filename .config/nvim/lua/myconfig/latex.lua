@@ -101,10 +101,25 @@ function M.setup()
     -- Enter accepts, Tab/S-Tab jump between snippet fields, like VSCode
     keymap = { preset = 'enter' },
     snippets = { preset = 'luasnip' },
+    completion = {
+      trigger = {
+        -- tex_delims opens the menu on \, but not on the second one of \\:
+        -- Enter after a row break has to stay a line break
+        show_on_blocked_trigger_characters = function()
+          local blocked = { ' ', '\n', '\t' }
+          local col = vim.api.nvim_win_get_cursor(0)[2]
+          local slashes = vim.api.nvim_get_current_line():sub(1, col):match('\\*$')
+          if #slashes % 2 == 0 then table.insert(blocked, '\\') end
+          return blocked
+        end,
+      },
+    },
     -- omni is VimTeX: \ref{, \cite{, \begin{, commands from loaded packages
     sources = {
-      default = { 'snippets', 'omni', 'path', 'buffer' },
+      default = { 'tex_delims', 'snippets', 'omni', 'path', 'buffer' },
       providers = {
+        -- \(\) first in the menu that a \ opens (LaTeX Workshop's \ menu)
+        tex_delims = { name = 'delims', module = 'myconfig.tex_delims', score_offset = 100 },
         -- inside \ref{ or \cite{ only VimTeX's labels/keys show; snippets and
         -- words from the file (which repeat the keys) come back when it has none
         omni = { score_offset = 5, fallbacks = { 'snippets', 'buffer' } },
@@ -148,6 +163,10 @@ function M.setup()
         ensure_compiling()
       end, opts)
       vim.keymap.set('n', '<C-A-d>', '<Plug>(vimtex-env-toggle-math)', opts)
+      -- back to the main file from preamble.tex or any other \input'ed file
+      vim.keymap.set('n', '<localleader>m', function()
+        vim.cmd.edit(vim.fn.fnameescape(vim.b.vimtex.tex))
+      end, opts)
       -- paragraphs are one long wrapped line: move by screen line unless a
       -- count is given, so relative-number jumps like 5j still work
       vim.keymap.set({ 'n', 'x' }, 'j', "v:count ? 'j' : 'gj'", { buffer = args.buf, expr = true })

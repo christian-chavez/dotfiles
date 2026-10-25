@@ -1,4 +1,5 @@
 require("myconfig")
+require("myconfig.plugins")
 vim.o.number = true
 vim.o.relativenumber = true
 
@@ -30,9 +31,8 @@ vim.g.clipboard = {
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.formatoptions:remove({ 'r', 'o', 'c' })
--- formatoptions is per-buffer and filetype plugins add 'cro' back (packer even
--- re-runs them when it lazy-loads autolist), so strip them again once the
--- FileType handling is done
+-- formatoptions is per-buffer and filetype plugins add 'cro' back, so strip
+-- them again once the FileType handling is done
 vim.api.nvim_create_autocmd('FileType', {
 		group = vim.api.nvim_create_augroup('no-auto-comment', {}),
 		callback = function(args)
